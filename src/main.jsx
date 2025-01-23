@@ -11,6 +11,7 @@ import Banner from './Banner/Banner.jsx';
 import Home from './Home/Home.jsx';
 import Navbar from './Navbar/Navbar.jsx';
 import Footer from './Footer/Footer.jsx';
+import Onze from './Onze/Onze.jsx';
 
 
 const router = createBrowserRouter([
@@ -34,6 +35,10 @@ const router = createBrowserRouter([
       {
         path:"Footer",
         element:<Footer></Footer>
+      },
+      {
+        path:"Onze",
+        element:<Onze></Onze>
       }
     ]
   }
