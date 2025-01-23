@@ -13,6 +13,7 @@ import Navbar from './Navbar/Navbar.jsx';
 import Footer from './Footer/Footer.jsx';
 import Onze from './Onze/Onze.jsx';
 import Waaram from './Waarom/Waaram.jsx';
+import Prest from './Prest/Prest.jsx';
 
 
 const router = createBrowserRouter([
@@ -44,6 +45,10 @@ const router = createBrowserRouter([
       {
         path:"Waarom",
         element:<Waaram/>
+      },
+      {
+        path:"Prest",
+        element:<Prest/>
       }
     ]
   }

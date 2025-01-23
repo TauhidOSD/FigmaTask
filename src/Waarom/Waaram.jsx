@@ -68,7 +68,7 @@ const Waaram = () => {
           </div>
 
           <div>
-            <button className="bg-[#263238] text-white py-3 px-6 rounded-lg shadow-lg hover:bg-[#1e2a30] transition duration-300 ease-in-out">
+            <button className="bg-[#263238] text-white ml-2 py-3 px-6 rounded-lg shadow-lg hover:bg-[#1e2a30] transition duration-300 ease-in-out">
               Ontdek meer over onze aanpak
             </button>
           </div>
