@@ -1,4 +1,5 @@
 import Banner from "../Banner/Banner";
+import Card from "../Card/Card";
 import Onze from "../Onze/Onze";
 import Prest from "../Prest/Prest";
 import Waaram from "../Waarom/Waaram";
@@ -11,6 +12,7 @@ const Home = () => {
           <Onze/>
           <Waaram/>
           <Prest/>
+          <Card/>
 
         </div>
     );

@@ -14,6 +14,7 @@ import Footer from './Footer/Footer.jsx';
 import Onze from './Onze/Onze.jsx';
 import Waaram from './Waarom/Waaram.jsx';
 import Prest from './Prest/Prest.jsx';
+import Card from './Card/Card.jsx';
 
 
 const router = createBrowserRouter([
@@ -49,6 +50,10 @@ const router = createBrowserRouter([
       {
         path:"Prest",
         element:<Prest/>
+      },
+      {
+        path:"Card",
+        element:<Card/>
       }
     ]
   }

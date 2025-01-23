@@ -9,7 +9,7 @@ const Prest = () => {
         <img src={bgImg} alt="Background" className=" object-cover ml-96 " />
         <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center text-[#FFFFFF]">
           <h2 className="text-3xl lg:text-4xl font-bold mb-2 text-[#FFFFFF]">Prestaties die resultaten leveren</h2>
-          <h2 className="text-xl lg:text-2xl text-[#FFFFFF]">Onze aanpak is gericht op het bieden van</h2>
+          <h2 className="text-xl lg:text-base text-[#FFFFFF]">Onze aanpak is gericht op het bieden van</h2>
         </div>
       </div>
 
