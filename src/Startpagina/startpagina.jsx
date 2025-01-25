@@ -1,5 +1,6 @@
 import img from "../assets/rafiki3.png";
 import icon from "../assets/Heading 6 (1).png";
+import icon1 from "../assets/Heading 6 (2).png";
 
 const Startpagina = () => {
   return (
@@ -23,7 +24,7 @@ const Startpagina = () => {
         <div className="p-6 bg-white shadow-lg rounded-xl border border-gray-200">
           <div className="flex justify-between items-center mb-4">
             <div className="flex items-center gap-2">
-              <img src={icon} alt="Icon" className="w-8 h-8" />
+              <img src={icon} alt="Icon" className="w-4 h-4" />
               <h2 className="text-lg font-semibold text-gray-800">Starter</h2>
             </div>
             <h2 className="text-lg font-bold text-gray-800">$37 <span className="text-[#7E7E7E] text-sm">/ month</span></h2>
@@ -38,7 +39,7 @@ const Startpagina = () => {
         <div className="p-6 bg-white shadow-lg rounded-xl border border-gray-200">
           <div className="flex justify-between items-center mb-4">
             <div className="flex items-center gap-2">
-              <img src={icon} alt="Icon" className="w-8 h-8" />
+              <img src={icon1} alt="Icon" className="w-4 h-4" />
               <h2 className="text-lg font-semibold text-gray-800">Professional</h2>
             </div>
             <h2 className="text-lg font-bold text-gray-800">$67<span className="text-[#7E7E7E] text-sm">/ month</span></h2>
@@ -53,7 +54,7 @@ const Startpagina = () => {
         <div className="p-6 bg-white shadow-lg rounded-xl border border-gray-200">
           <div className="flex justify-between items-center mb-4">
             <div className="flex items-center gap-2">
-              <img src={icon} alt="Icon" className="w-8 h-8" />
+              <img src={icon1} alt="Icon" className="w-4 h-4" />
               <h2 className="text-lg font-semibold text-gray-800">Enterprise</h2>
             </div>
             <h2 className="text-lg font-bold text-gray-800">$97<span className="text-[#7E7E7E] text-sm">/ month</span></h2>
