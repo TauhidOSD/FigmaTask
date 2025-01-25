@@ -68,7 +68,7 @@ const Veelgestelde = () => {
           gerust contact met ons op.
         </p>
         <div className="flex items-center gap-4 mb-4">
-          <img src={icon} alt="Icon" className="w-8 h-8" />
+          <img src={icon} alt="Icon" className="w-6 h-6" />
           <h2 className="text-lg font-semibold">Heeft u vragen?</h2>
         </div>
         <h2 className="text-blue-600 font-semibold">info@younitech.nl</h2>
@@ -80,7 +80,7 @@ const Veelgestelde = () => {
           <div key={index} className="mb-4">
             <button
               onClick={() => toggleContent(index)}
-              className="flex justify-between items-center w-full text-[#FFFFFF] bg-[#468AFF] text-left px-4 py-2 rounded shadow-md hover:bg-blue-400"
+              className="flex justify-between items-center w-full text-[#FFFFFF] bg-[#468AFF] text-left px-6 py-2 rounded-md shadow-md hover:bg-blue-400"
             >
               {item.question}
               <img
