@@ -10,14 +10,14 @@ const Brand = () => {
   };
 
   return (
-    <div className="flex gap-8 px-36 py-8">
+    <div className="flex flex-col lg:flex-row gap-8 px-6 lg:px-36 py-8">
       {/* Left Section with Image */}
-      <div className="w-1/2">
-        <img src={img} alt="Branding" className="w-full" />
+      <div className="w-full lg:w-1/2">
+        <img src={img} alt="Branding" className="w-full rounded-lg shadow-md" />
       </div>
 
       {/* Right Section with Buttons */}
-      <div className="w-1/2 space-y-6">
+      <div className="w-full lg:w-1/2 space-y-6">
         <div>
           <button
             onClick={() => toggleSection("logo")}
@@ -27,13 +27,15 @@ const Brand = () => {
             <img
               src={icon}
               alt="Icon"
-              className={`w-2 h-2 transform transition-transform ${
+              className={`w-4 h-4 transform transition-transform ${
                 activeSection === "logo" ? "rotate-180" : ""
               }`}
             />
           </button>
           {activeSection === "logo" && (
-            <p className="mt-2 text-gray-600">Een uniek logo dat de essentie van uw merk vastlegt.</p>
+            <p className="mt-2 text-gray-600">
+              Een uniek logo dat de essentie van uw merk vastlegt.
+            </p>
           )}
         </div>
 
@@ -46,14 +48,15 @@ const Brand = () => {
             <img
               src={icon}
               alt="Icon"
-              className={`w-2 h-2 transform transition-transform ${
+              className={`w-4 h-4 transform transition-transform ${
                 activeSection === "visualGuidelines" ? "rotate-180" : ""
               }`}
             />
           </button>
           {activeSection === "visualGuidelines" && (
             <p className="mt-2 text-gray-600">
-              Uniformiteit in kleuren, lettertypes en stijl voor consistente branding.
+              Uniformiteit in kleuren, lettertypes en stijl voor consistente
+              branding.
             </p>
           )}
         </div>
@@ -67,13 +70,15 @@ const Brand = () => {
             <img
               src={icon}
               alt="Icon"
-              className={`w-2 h-2 transform transition-transform ${
+              className={`w-4 h-4 transform transition-transform ${
                 activeSection === "printMedia" ? "rotate-180" : ""
               }`}
             />
           </button>
           {activeSection === "printMedia" && (
-            <p className="mt-2 text-gray-600">Materialen die zowel online als offline indruk maken.</p>
+            <p className="mt-2 text-gray-600">
+              Materialen die zowel online als offline indruk maken.
+            </p>
           )}
         </div>
       </div>
