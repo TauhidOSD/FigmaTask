@@ -233,9 +233,9 @@ const Diensten = () => {
 
       {/* Final Section */}
 
-      <div className="flex flex-col lg:flex-row  gap-8 px-6 md:px-44 py-10">
+      <div className="flex flex-col lg:flex-row gap-8 px-6 md:px-20 lg:px-44 py-10">
   {/* Left Section */}
-  <div className="w-full lg:w-1/3 space-y-6">
+  <div className="w-full lg:w-1/3 space-y-6 text-center lg:text-left">
     <button className="bg-[#B47D9D] text-white py-2 px-6 rounded-full hover:bg-blue-600 transition duration-300">
       Getuigenissen
     </button>
@@ -245,13 +245,13 @@ const Diensten = () => {
     <p className="text-gray-600 text-base leading-relaxed">
       Wij bieden ondersteuning aan meer dan 15.000 bedrijven.
     </p>
-    <button className="bg-[#468AFF] text-white py-2 px-6 rounded-full hover:bg-blue-600 transition duration-300">
+    <button className="bg-[#468AFF] text-white py-2 px-6 rounded-md hover:bg-blue-600 transition duration-300">
       Meer Getuigenissen
     </button>
   </div>
 
   {/* Right Section (Cards) */}
-  <div className="w-full lg:w-1/2 grid grid-cols-2 gap-6">
+  <div className="w-full lg:w-2/3 grid grid-cols-1 md:grid-cols-2 gap-6">
     {/* Card 1 */}
     <div className="bg-white shadow-md rounded-lg p-6 space-y-4">
       <h2 className="text-lg font-semibold text-gray-800">
@@ -297,6 +297,8 @@ const Diensten = () => {
     </div>
   </div>
 </div>
+
+
 
     </div>
   );
