@@ -55,7 +55,7 @@ const Veelgestelde = () => {
   ];
 
   return (
-    <div className="flex flex-col md:px-36 md:flex-row gap-6 p-6">
+    <div className="flex flex-col md:px-36 md:flex-row gap-6 p-6 md:py-16">
       {/* Left Section */}
       <div className="w-full md:w-1/2">
         <button className="bg-[#B479d9] rounded-full  text-[#FFFFFF] font-bold py-2 px-4  mb-4">

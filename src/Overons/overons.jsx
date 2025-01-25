@@ -1,4 +1,4 @@
-import img from "../assets/rafiki1.png";
+import img from "../assets/rafiki.png";
 import icon1 from "../assets/Icon (2).png"
 import icon2 from "../assets/Icon (3).png"
 import icon3 from "../assets/Icon (4).png"
