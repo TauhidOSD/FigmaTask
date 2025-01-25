@@ -32,8 +32,8 @@ const Navbar = () => {
             tabIndex={0}
             className="menu dropdown-content bg-white mt-2 p-2 shadow-lg rounded-box w-42 right-0 z-10"
           >
-            <li><a href="#startpagina">Startpagina</a></li>
-            <li><a href="#overons">Over Ons</a></li>
+            <li><a href="/startpagina">Startpagina</a></li>
+            <li><a href="/Overons">Over Ons</a></li>
             <li><a href="#diensten">Diensten</a></li>
             <li><a href="#vragen">Veelgestelde Vragen</a></li>
             <li><a href="#prijzen">Prijzen</a></li>
@@ -42,8 +42,8 @@ const Navbar = () => {
 
         {/* Desktop Menu */}
         <div className="hidden lg:flex space-x-6">
-          <a href="#startpagina" className="text-gray-600 hover:text-blue-600">Startpagina</a>
-          <a href="#overons" className="text-gray-600 hover:text-blue-600">Over Ons</a>
+          <a href="/startpagina" className="text-gray-600 hover:text-blue-600">Startpagina</a>
+          <a href="/Overons" className="text-gray-600 hover:text-blue-600">Over Ons</a>
           <a href="#diensten" className="text-gray-600 hover:text-blue-600">Diensten</a>
           <a href="#vragen" className="text-gray-600 hover:text-blue-600">Veelgestelde Vragen</a>
           <a href="#prijzen" className="text-gray-600 hover:text-blue-600">Prijzen</a>

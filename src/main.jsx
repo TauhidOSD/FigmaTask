@@ -15,6 +15,8 @@ import Onze from './Onze/Onze.jsx';
 import Waaram from './Waarom/Waaram.jsx';
 import Prest from './Prest/Prest.jsx';
 import Card from './Card/Card.jsx';
+import Startpagina from './Startpagina/startpagina.jsx';
+import Overons from './Overons/overons.jsx';
 
 
 const router = createBrowserRouter([
@@ -54,7 +56,15 @@ const router = createBrowserRouter([
       {
         path:"Card",
         element:<Card/>
-      }
+      },
+      {
+        path:"/startpagina",
+        element:<Startpagina/>
+      },
+      {
+        path:"/overons",
+        element:<Overons/>
+      },
     ]
   }
   
