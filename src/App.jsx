@@ -1,13 +1,23 @@
 
+import { Outlet } from 'react-router-dom'
 import './App.css'
+import Navbar from './Navbar/Navbar'
+import Footer from './Footer/Footer'
 
 function App() {
 
   return (
     <>
-    <h1 className='color bg-red-500'>Hellow,developer</h1>
+    <Navbar/>
+    <Outlet/>
+    <Footer/>
+    
+    
     </>
   )
 }
 
+
 export default App
+
+
