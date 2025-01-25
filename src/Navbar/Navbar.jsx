@@ -35,7 +35,7 @@ const Navbar = () => {
             <li><a href="/startpagina">Startpagina</a></li>
             <li><a href="/Overons">Over Ons</a></li>
             <li><a href="#diensten">Diensten</a></li>
-            <li><a href="#vragen">Veelgestelde Vragen</a></li>
+            <li><a href="/Veelgestelde">Veelgestelde Vragen</a></li>
             <li><a href="#prijzen">Prijzen</a></li>
           </ul>
         </div>
@@ -45,7 +45,7 @@ const Navbar = () => {
           <a href="/startpagina" className="text-gray-600 hover:text-blue-600">Startpagina</a>
           <a href="/Overons" className="text-gray-600 hover:text-blue-600">Over Ons</a>
           <a href="#diensten" className="text-gray-600 hover:text-blue-600">Diensten</a>
-          <a href="#vragen" className="text-gray-600 hover:text-blue-600">Veelgestelde Vragen</a>
+          <a href="/Veelgestelde" className="text-gray-600 hover:text-blue-600">Veelgestelde Vragen</a>
           <a href="#prijzen" className="text-gray-600 hover:text-blue-600">Prijzen</a>
         </div>
 

@@ -17,6 +17,7 @@ import Prest from './Prest/Prest.jsx';
 import Card from './Card/Card.jsx';
 import Startpagina from './Startpagina/startpagina.jsx';
 import Overons from './Overons/overons.jsx';
+import Veelgestelde from './Veelgestelde/Veelgestelde.jsx';
 
 
 const router = createBrowserRouter([
@@ -64,6 +65,10 @@ const router = createBrowserRouter([
       {
         path:"/overons",
         element:<Overons/>
+      },
+      {
+        path:"/Veelgestelde",
+        element:<Veelgestelde/>
       },
     ]
   }
