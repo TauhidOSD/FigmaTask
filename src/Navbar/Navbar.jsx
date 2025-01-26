@@ -1,6 +1,8 @@
 import NavLogo from "../assets/logo black 1.png";
+import { useNavigate } from "react-router-dom";
 
 const Navbar = () => {
+  const navigate=useNavigate();
   return (
     <header className="bg-white shadow-md sticky top-0 z-50">
       <nav className="container mx-auto flex items-center justify-between px-4 py-3 lg:py-5">
@@ -50,7 +52,7 @@ const Navbar = () => {
         </div>
 
         {/* Contact Button */}
-        <a href="#contact" className="hidden lg:block btn bg-blue-600 text-white px-6 py-4                                                                                                                                                       rounded-md shadow-md">
+        <a onClick={()=>navigate("/Contact")} href="#contact" className="hidden lg:block btn bg-blue-600 text-white px-6 py-4                                                                                                                                                       rounded-md shadow-md">
           Contact
         </a>
       </nav>

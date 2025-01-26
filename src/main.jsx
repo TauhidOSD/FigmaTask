@@ -25,6 +25,7 @@ import CardsComponent from './CardsComponent/CardsComponent.jsx';
 import InputField from './InputField/InputField.jsx';
 import Payment from './Payment/Payment.jsx';
 import { Toaster } from 'react-hot-toast'; // Toast for notifications
+import Contact from './Contact/Contact.jsx';
 
 // Load Stripe
 const stripePromise = loadStripe("your-public-stripe-key");
@@ -41,6 +42,10 @@ const router = createBrowserRouter([
       {
         path: "Banner",
         element: <Banner />,
+      },
+      {
+        path: "/Contact",
+        element: < Contact />,
       },
       {
         path: "NavBar",
@@ -94,6 +99,7 @@ const router = createBrowserRouter([
         path: "/InputField",
         element: <InputField />,
       },
+
       {
         path: "/payment",
         element: (
