@@ -9,7 +9,7 @@ import { AiFillInstagram } from "react-icons/ai";
 const Contact = () => {
     return (
         <div>
-            <div className=" flex justify-between items-center m-20">
+            <div className=" flex md:px-36 justify-between items-center m-20">
 
 <div className=" bg-slate-100 rounded-md">
 
