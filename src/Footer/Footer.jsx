@@ -4,8 +4,10 @@ import email from "../assets/Vector.png";
 import instra from "../assets/bx_bxl-instagram-alt.png";
 import twiter from "../assets/Group.png";
 import linkedin from "../assets/Vector 2.png";
+import { useNavigate } from "react-router-dom";
 
 const Footer = () => {
+  const navigate=useNavigate();
   return (
     <footer className="bg-gray-100 py-10 px-6 md:px-16">
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8">
@@ -37,7 +39,7 @@ const Footer = () => {
           <ul className="space-y-2 text-gray-600">
             <li>Functies</li>
             <li>About</li>
-            <li>Service</li>
+            <li onClick={()=>navigate("/henna")}>Service</li>
             <li>Team</li>
           </ul>
         </div>
@@ -61,6 +63,7 @@ const Footer = () => {
             <li>Team</li>
             <li>Hulpmiddelen</li>
             <li>Ondersteuning</li>
+            
           </ul>
         </div>
       </div>

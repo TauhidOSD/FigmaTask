@@ -64,7 +64,7 @@ const Marketing = () => {
 
 <div className=" flex items-center justify-center  "><p className="rounded-lg bg-fuchsia-100 font-sans text-fuchsia-500  text-center w-1/6" >Ontwerp uw eigen</p></div>
 <h1  className="text-4xl text-center font-medium">Marketingont</h1>
-<p className="text-xs text-slate-400 mt-2">Wij maken het ontwikkelen van uw marketingstrategie eenvoudig:</p>
+<p className="text-xs text-slate-400 text-center mt-2">Wij maken het ontwikkelen van uw marketingstrategie eenvoudig:</p>
 
 {/** second part end here */}
 

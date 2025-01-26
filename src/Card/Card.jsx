@@ -1,9 +1,12 @@
 import img1 from "../assets/Link → blog-6.jpg.png";
 import img2 from "../assets/Link → blog-6.jpg (1).png";
 import img3 from "../assets/Link → blog-6.jpg (2).png";
+import { useNavigate } from "react-router-dom";
 
 const Card = () => {
+  const navigate=useNavigate();
   return (
+
     <div className="bg-gray-50 py-12 px-6 lg:px-20">
       {/* Header Section */}
       <div className="text-center  mb-10">
@@ -20,7 +23,7 @@ const Card = () => {
       {/* Cards Section */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
         {/* Card 1 */}
-        <div className="bg-white shadow-lg rounded-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+        <div onClick={()=>navigate("/blog")}  className="bg-white shadow-lg rounded-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
           <img src={img1} alt="Blog 1" className="w-full h-56 object-cover" />
           <div className="p-6">
             <div className="flex gap-2 mb-4">
@@ -45,7 +48,7 @@ const Card = () => {
         </div>
 
         {/* Card 2 */}
-        <div className="bg-white shadow-lg rounded-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+        <div onClick={()=>navigate("/blog")} className="bg-white shadow-lg rounded-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
           <img src={img2} alt="Blog 2" className="w-full h-56 object-cover" />
           <div className="p-6">
             <div className="flex gap-2 mb-4">
@@ -70,7 +73,7 @@ const Card = () => {
         </div>
 
         {/* Card 3 */}
-        <div className="bg-white shadow-lg rounded-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+        <div onClick={()=>navigate("/blog")} className="bg-white shadow-lg rounded-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
           <img src={img3} alt="Blog 3" className="w-full h-56 object-cover" />
           <div className="p-6">
             <div className="flex gap-2 mb-4">
