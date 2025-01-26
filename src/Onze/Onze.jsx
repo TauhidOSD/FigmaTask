@@ -1,8 +1,13 @@
 import image1 from "../assets/Device (1).png";
 import image2 from "../assets/Device (2).png";
 import image3 from "../assets/rafiki.png";
+import { useNavigate } from "react-router-dom";
+
 
 const Onze = () => {
+
+  const navigate=useNavigate();
+
   return (
     <div className="bg-gray-50 py-12">
       {/* Header Section */}
@@ -18,7 +23,7 @@ const Onze = () => {
       {/* Services Section */}
       <div className="container mx-auto flex flex-wrap justify-center gap-8 px-6">
         {/* Service Card 1 */}
-        <div className="bg-white shadow-lg rounded-lg p-6 text-center w-full sm:w-64 md:w-80">
+        <div onClick={()=>navigate("/appmarket")} className="bg-white shadow-lg rounded-lg p-6 text-center w-full sm:w-64 md:w-80">
           <img
             src={image1}
             alt="Applicaties"
@@ -31,7 +36,7 @@ const Onze = () => {
         </div>
 
         {/* Service Card 2 */}
-        <div className="bg-white shadow-lg rounded-lg p-6 text-center w-full sm:w-64 md:w-80">
+        <div onClick={()=>navigate("/marketing")} className="bg-white shadow-lg rounded-lg p-6 text-center w-full sm:w-64 md:w-80">
           <img
             src={image2}
             alt="Marketing & Branding"

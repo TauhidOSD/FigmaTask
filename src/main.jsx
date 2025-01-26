@@ -25,6 +25,11 @@ import CardsComponent from './CardsComponent/CardsComponent.jsx';
 import InputField from './InputField/InputField.jsx';
 import Payment from './Payment/Payment.jsx';
 import { Toaster } from 'react-hot-toast'; // Toast for notifications
+import Contact from './Contact/Contact.jsx';
+import Appmarket from './Appmarket/Appmarket.jsx';
+import Marketing from './Marketing/Marketing.jsx';
+import Blog from './Blog/Blog.jsx';
+import Henna from './Henna/Henna.jsx';
 
 // Load Stripe
 const stripePromise = loadStripe("your-public-stripe-key");
@@ -41,6 +46,10 @@ const router = createBrowserRouter([
       {
         path: "Banner",
         element: <Banner />,
+      },
+      {
+        path: "/Contact",
+        element: < Contact />,
       },
       {
         path: "NavBar",
@@ -71,6 +80,22 @@ const router = createBrowserRouter([
         element: <Startpagina />,
       },
       {
+        path: "/appmarket",
+        element: <Appmarket/>,
+      },
+      {
+        path: "/marketing",
+        element: <Marketing />,
+      },
+      {
+        path: "/blog",
+        element: <Blog />,
+      },
+      {
+        path: "/henna",
+        element: <Henna />,
+      },
+      {
         path: "/overons",
         element: <Overons />,
       },
@@ -94,6 +119,7 @@ const router = createBrowserRouter([
         path: "/InputField",
         element: <InputField />,
       },
+
       {
         path: "/payment",
         element: (
