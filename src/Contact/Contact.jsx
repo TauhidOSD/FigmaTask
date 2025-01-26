@@ -9,7 +9,7 @@ import { AiFillInstagram } from "react-icons/ai";
 const Contact = () => {
     return (
         <div>
-            <div className=" flex justify-between items-center  m-24 ">
+            <div className=" flex justify-between items-center m-20">
 
                 <div className=" bg-slate-100 rounded-md">
 
@@ -133,9 +133,6 @@ const Contact = () => {
                 </div>
 
                 </div>
-
-
-
 
                 <label className="form-control">
                 <div className="label">
