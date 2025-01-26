@@ -36,7 +36,7 @@ const Navbar = () => {
             <li><a href="/Overons">Over Ons</a></li>
             <li><a href="/Diensten">Diensten</a></li>
             <li><a href="/Veelgestelde">Veelgestelde Vragen</a></li>
-            <li><a href="#prijzen">Prijzen</a></li>
+            <li><a href="/prijzen">Prijzen</a></li>
           </ul>
         </div>
 
@@ -46,7 +46,7 @@ const Navbar = () => {
           <a href="/Overons" className="text-gray-600 hover:text-blue-600">Over Ons</a>
           <a href="/Diensten" className="text-gray-600 hover:text-blue-600">Diensten</a>
           <a href="/Veelgestelde" className="text-gray-600 hover:text-blue-600">Veelgestelde Vragen</a>
-          <a href="#prijzen" className="text-gray-600 hover:text-blue-600">Prijzen</a>
+          <a href="/prijzen" className="text-gray-600 hover:text-blue-600">Prijzen</a>
         </div>
 
         {/* Contact Button */}
