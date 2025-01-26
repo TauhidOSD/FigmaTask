@@ -4,72 +4,72 @@
     {
       "id": 1,
       "image": "/src/assets/Article.png",
-      "title": "Card Title 1",
+      "title": "FamiPress - Genealogy & Family Tree WordPress theme",
       "description": "This is a description for card 1.",
       "list": [
-        "Feature 1 for Card 1",
-        "Feature 2 for Card 1",
-        "Feature 3 for Card 1",
-        "Feature 4 for Card 1",
-        "Feature 5 for Card 1"
+        "One Click Demo Installation",
+        "03+ Homepages version",
+        "03+ Blog page ready-made styles",
+        "06+ Single Product layout styles",
+        "03+ pre-made Header styles "
       ],
-      "buttonText": "Read More"
+      "buttonText": "Choose Theme"
     },
     {
       "id": 2,
       "image": "/src/assets/Article (1).png",
-      "title": "Card Title 2",
+      "title": "FamiPress - Genealogy & Family Tree WordPress theme",
       "description": "This is a description for card 2.",
       "list": [
-        "Feature 1 for Card 2",
-        "Feature 2 for Card 2",
-        "Feature 3 for Card 2",
-        "Feature 4 for Card 2",
-        "Feature 5 for Card 2"
+      "One Click Demo Installation",
+        "03+ Homepages version",
+        "03+ Blog page ready-made styles",
+        "06+ Single Product layout styles",
+        "03+ pre-made Header styles "
       ],
-      "buttonText": "Read More"
+      "buttonText": "Choose Theme"
     },
     {
       "id": 3,
       "image": "/src/assets/Article (2).png",
-      "title": "Card Title 3",
+      "title": "FamiPress - Genealogy & Family Tree WordPress theme",
       "description": "This is a description for card 3.",
       "list": [
-        "Feature 1 for Card 3",
-        "Feature 2 for Card 3",
-        "Feature 3 for Card 3",
-        "Feature 4 for Card 3",
-        "Feature 5 for Card 3"
+        "One Click Demo Installation",
+        "03+ Homepages version",
+        "03+ Blog page ready-made styles",
+        "06+ Single Product layout styles",
+        "03+ pre-made Header styles "
       ],
-      "buttonText": "Read More"
+      "buttonText": "Choose Theme"
     },
     {
       "id": 4,
       "image": "/src/assets/Article (3).png",
-      "title": "Card Title 4",
+      "title": "FamiPress - Genealogy & Family Tree WordPress theme",
       "description": "This is a description for card 4.",
       "list": [
-        "Feature 1 for Card 4",
-        "Feature 2 for Card 4",
-        "Feature 3 for Card 4",
-        "Feature 4 for Card 4",
-        "Feature 5 for Card 4"
+       "One Click Demo Installation",
+        "03+ Homepages version",
+        "03+ Blog page ready-made styles",
+        "06+ Single Product layout styles",
+        "03+ pre-made Header styles "
       ],
-      "buttonText": "Read More"
+      "buttonText": "Choose Theme"
     },
     {
       "id": 5,
       "image": "/src/assets/Article (4).png",
-      "title": "Card Title 5",
+      "title": "FamiPress - Genealogy & Family Tree WordPress theme",
       "description": "This is a description for card 5.",
       "list": [
-        "Feature 1 for Card 5",
-        "Feature 2 for Card 5",
-        "Feature 3 for Card 5",
-        "Feature 4 for Card 5",
-        "Feature 5 for Card 5"
+       "One Click Demo Installation",
+        "03+ Homepages version",
+        "03+ Blog page ready-made styles",
+        "06+ Single Product layout styles",
+        "03+ pre-made Header styles "
       ],
-      "buttonText": "Read More"
+      "buttonText": "Choose Theme"
     }
   ]
   

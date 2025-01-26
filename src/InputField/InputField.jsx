@@ -21,9 +21,9 @@ const InputField = () => {
     };
 
     return (
-        <div className="max-w-4xl mx-auto p-6  px-36">
+        <div className="max-w-4xl mx-auto p-6 sm:px-10 lg:px-16">
             <h2 className="text-2xl font-bold text-gray-800 mb-6 flex justify-between items-center">
-                <span>Enter Your Details</span>
+                <span>Provide your content</span>
                 <span className="text-sm text-gray-600">{name}</span>
             </h2>
 
@@ -93,7 +93,7 @@ const InputField = () => {
                 </div>
 
                 {/* Submit, Next, and Back Buttons */}
-                <div className="flex justify-center gap-6">
+                <div className="flex flex-col sm:flex-row justify-center gap-4">
                     <button
                         type="button"
                         onClick={() => navigate(-1)} // Back button: go to the previous page
