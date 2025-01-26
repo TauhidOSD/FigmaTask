@@ -2,21 +2,21 @@
 
 const Marketing = () => {
     return (
-        <div>
+        <div className="m-18">
             <div className="flex justify-between items-center m-20">
 
-<div className="">
-<div className="items-center text-left mb-3 "><p className="rounded-lg bg-fuchsia-100 font-sans text-fuchsia-500  text-center w-3/5" >Ontwerp uw eigen</p></div>
-<div className="">
+<div className="mr-5">
+<div className=""><p className=" rounded-3xl bg-fuchsia-100 font-medium p-2 text-base text-center text-fuchsia-500 mb-3 font-sans  w-3/6">Ontwerp uw eigen</p></div>
+<div className="mb-6">
 <h1  className="text-4xl text-left ">Marketingont</h1>
 <h1  className="text-4xl text-left mb-3 relative ">wikkeling</h1>
 <img className="-mt-6" src="/article/Heading 2.png" alt=""></img>
 </div>
-<p className="text-left text-xs text-slate-400">Creëer een krachtige marketingstrategie voor uw bedrijf Bij</p>
-<p className="text-left text-xs text-slate-400">Younitech helpen we bedrijven om op te vallen in een steeds</p>
-<p className="text-left text-xs text-slate-400">veranderend digitaal landschap. Wij combineren innovatieve</p>
-<p className="text-left text-xs text-slate-400">technologie met data-gedreven strategieën om uw merk </p>
-<p className="text-left text-xs text-slate-400">zichtbaarder te maken en uw doelgroep te bereiken.</p>
+<p className="text-left text-xs text-slate-500">Creëer een krachtige marketingstrategie voor uw bedrijf Bij</p>
+<p className="text-left text-xs text-slate-500">Younitech helpen we bedrijven om op te vallen in een steeds</p>
+<p className="text-left text-xs text-slate-500">veranderend digitaal landschap. Wij combineren innovatieve</p>
+<p className="text-left text-xs text-slate-500">technologie met data-gedreven strategieën om uw merk </p>
+<p className="text-left text-xs text-slate-500">zichtbaarder te maken en uw doelgroep te bereiken.</p>
 
 
 <div className="flex gap-5 items-center mt-6">
@@ -46,12 +46,12 @@ const Marketing = () => {
 
 </div>
 
-<div className="mt-5 mr-6"><button className="btn btn-sm btn-primary w-40">Neem contact op</button></div>
+<div className="mt-5 mr-6"><button className="btn btn-sm btn-info w-40">Neem contact op</button></div>
 
 
 </div>
 
-<div className=""><img src="/linkImages/pana.png" alt="" /></div>
+<div className=""><img className="w-full" src="/linkImages/pana.png" alt="" /></div>
 </div>
 
 {/** first part end here */}
@@ -62,9 +62,9 @@ const Marketing = () => {
 
 {/** second part start from here */}
 
-<div className=" flex items-center justify-center  "><p className="rounded-lg bg-fuchsia-100 font-sans text-fuchsia-500  text-center w-1/6" >Ontwerp uw eigen</p></div>
+<div className="flex items-center justify-center "><p className=" rounded-3xl bg-fuchsia-100 font-medium p-2 text-base text-center text-fuchsia-500 mb-3 font-sans  w-1/6">Ontwerp uw eigen</p></div>
 <h1  className="text-4xl text-center font-medium">Marketingont</h1>
-<p className="text-xs text-slate-400 text-center mt-2">Wij maken het ontwikkelen van uw marketingstrategie eenvoudig:</p>
+<p className="text-base text-slate-400 text-center mt-2">Wij maken het ontwikkelen van uw marketingstrategie eenvoudig:</p>
 
 {/** second part end here */}
 
