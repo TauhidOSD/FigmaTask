@@ -137,9 +137,9 @@ const Diensten = () => {
           </div>
 
           {/* Right Section */}
-          <div className="lg:w-2/3 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 ">
+          <div className="lg:w-4/5 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 ">
             {/* Card 1 */}
-            <div className="p-4 bg-white shadow-md rounded-lg hover:shadow-lg">
+            <div className="p-4  bg-white shadow-md rounded-lg hover:shadow-lg">
               <div className="mb-4">
                 <img
                   src={link}
