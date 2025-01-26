@@ -26,6 +26,10 @@ import InputField from './InputField/InputField.jsx';
 import Payment from './Payment/Payment.jsx';
 import { Toaster } from 'react-hot-toast'; // Toast for notifications
 import Contact from './Contact/Contact.jsx';
+import Appmarket from './Appmarket/Appmarket.jsx';
+import Marketing from './Marketing/Marketing.jsx';
+import Blog from './Blog/Blog.jsx';
+import Henna from './Henna/Henna.jsx';
 
 // Load Stripe
 const stripePromise = loadStripe("your-public-stripe-key");
@@ -74,6 +78,22 @@ const router = createBrowserRouter([
       {
         path: "/startpagina",
         element: <Startpagina />,
+      },
+      {
+        path: "/appmarket",
+        element: <Appmarket/>,
+      },
+      {
+        path: "/marketing",
+        element: <Marketing />,
+      },
+      {
+        path: "/blog",
+        element: <Blog />,
+      },
+      {
+        path: "/henna",
+        element: <Henna />,
       },
       {
         path: "/overons",
