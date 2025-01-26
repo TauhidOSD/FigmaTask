@@ -1,0 +1,75 @@
+
+
+[
+    {
+      "id": 1,
+      "image": "/src/assets/Article.png",
+      "title": "FamiPress - Genealogy & Family Tree WordPress theme",
+      "description": "This is a description for card 1.",
+      "list": [
+        "One Click Demo Installation",
+        "03+ Homepages version",
+        "03+ Blog page ready-made styles",
+        "06+ Single Product layout styles",
+        "03+ pre-made Header styles "
+      ],
+      "buttonText": "Choose Theme"
+    },
+    {
+      "id": 2,
+      "image": "/src/assets/Article (1).png",
+      "title": "FamiPress - Genealogy & Family Tree WordPress theme",
+      "description": "This is a description for card 2.",
+      "list": [
+      "One Click Demo Installation",
+        "03+ Homepages version",
+        "03+ Blog page ready-made styles",
+        "06+ Single Product layout styles",
+        "03+ pre-made Header styles "
+      ],
+      "buttonText": "Choose Theme"
+    },
+    {
+      "id": 3,
+      "image": "/src/assets/Article (2).png",
+      "title": "FamiPress - Genealogy & Family Tree WordPress theme",
+      "description": "This is a description for card 3.",
+      "list": [
+        "One Click Demo Installation",
+        "03+ Homepages version",
+        "03+ Blog page ready-made styles",
+        "06+ Single Product layout styles",
+        "03+ pre-made Header styles "
+      ],
+      "buttonText": "Choose Theme"
+    },
+    {
+      "id": 4,
+      "image": "/src/assets/Article (3).png",
+      "title": "FamiPress - Genealogy & Family Tree WordPress theme",
+      "description": "This is a description for card 4.",
+      "list": [
+       "One Click Demo Installation",
+        "03+ Homepages version",
+        "03+ Blog page ready-made styles",
+        "06+ Single Product layout styles",
+        "03+ pre-made Header styles "
+      ],
+      "buttonText": "Choose Theme"
+    },
+    {
+      "id": 5,
+      "image": "/src/assets/Article (4).png",
+      "title": "FamiPress - Genealogy & Family Tree WordPress theme",
+      "description": "This is a description for card 5.",
+      "list": [
+       "One Click Demo Installation",
+        "03+ Homepages version",
+        "03+ Blog page ready-made styles",
+        "06+ Single Product layout styles",
+        "03+ pre-made Header styles "
+      ],
+      "buttonText": "Choose Theme"
+    }
+  ]
+  
