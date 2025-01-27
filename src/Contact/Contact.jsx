@@ -6,10 +6,13 @@ import { FaFacebook } from "react-icons/fa";
 import { AiFillInstagram } from "react-icons/ai";
 
 
+
 const Contact = () => {
     return (
+        
         <div>
-            <div className=" flex justify-between items-center m-20">
+            {/** flex sm:grid-cols-1 justify-between items-center m-20 */}
+            <div className="grid lg:grid-cols-2 gap-10 mr-20 ml-20 mb-20 mt-20 sm: grid-cols-1">
 
                 <div className=" bg-slate-100 rounded-md">
 
@@ -20,9 +23,6 @@ const Contact = () => {
 
                 <h1 className="font-medium text-base text-left mt-5 mb-5">Contactgegevens</h1>
 
-
-
-
                 <div className="">
                 <div className="flex  items-center ">  
                 <div className="mr-2  "> < GrLocation></GrLocation></div>
@@ -30,8 +30,6 @@ const Contact = () => {
                 </div>
                 <p className="ml-12 text-slate-500">Voorbeeldstraat 10, 1055 AB Amsterdam</p>
                 </div>
-
-
 
                 <div className="flex  items-center mt-4">
                 <div className="mr-2"> < FiPhone ></FiPhone ></div>
@@ -46,7 +44,6 @@ const Contact = () => {
                 </div>
 
                 <div className="m-8">
-
                 <h1 className="text-base font-bold text-left mt-16 mb-3">Volg ons op sociale media</h1>
 
                 <div className="flex  items-center mt-2"> 
@@ -67,7 +64,6 @@ const Contact = () => {
                 <div className=""><span className="font-medium">Facebook:</span> <span className="text-slate-500">facebook.com/younitech</span> </div>
                 </div>
 
-
                 </div>
 
                 </div>
@@ -81,7 +77,7 @@ const Contact = () => {
                     <h1 className="font-medium">Heeft u een vraag?</h1>
                     <p className="text-xs text-slate-400">Vul ons contactformulier in op de website en wij nemen zo snel mogelijk contact met u op.</p>
 
-                <div className="flex justify-between items-center">
+                <div className="lg:flex justify-between items-center">
                     <div className="">
                     <label className="form-control w-full max-w-xs">
                             <div className="label">
@@ -108,7 +104,7 @@ const Contact = () => {
 
                 <div className="">
 
-                    <div className="flex justify-between items-center">
+                    <div className="lg:flex justify-between items-center">
                     <div className="">
                     <label className="form-control w-full max-w-xs">
                             <div className="label">
@@ -140,13 +136,16 @@ const Contact = () => {
                 </div>
                 <textarea className="textarea textarea-bordered h-36 bg-slate-100" placeholder="Schrijf hier uw vraag"></textarea>
                 </label>
-                <div className="flex justify-start mt-5"><button className="btn btn-md text-slate-100 btn-info w-1/3 ">Verstuur Bericht</button></div>
+                <div className="flex  justify-start mt-5"><button className="btn sm:btn-sm lg:btn-md sm:text-xs text-slate-100 btn-info lg:w-1/3 sm:2/3 ">Verstuur Bericht</button></div>
 
     </div>
 </div>
-</div>
 
-        </div>
+
+
+   </div>
+
+ </div>
     );
 };
 
