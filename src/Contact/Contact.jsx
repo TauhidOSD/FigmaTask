@@ -28,7 +28,7 @@ const Contact = () => {
                 <div className="mr-2  "> < GrLocation></GrLocation></div>
                 <div className=" "><span className="font-medium">Addres: </span> <span className="text-slate-500">Younitech Hoofdkantoor </span></div>
                 </div>
-                <p className="ml-12 text-slate-500">Voorbeeldstraat 10, 1055 AB Amsterdam</p>
+                <p className="ml-12 text-slate-500">De Entree 201, 1101HG Amsterdam</p>
                 </div>
 
                 <div className="flex  items-center mt-4">
