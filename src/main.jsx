@@ -17,7 +17,7 @@ import Waaram from './Waarom/Waaram.jsx';
 import Prest from './Prest/Prest.jsx';
 import Card from './Card/Card.jsx';
 import Startpagina from './Startpagina/startpagina.jsx';
-import Overons from './Overons/Overons.jsx';
+
 import Veelgestelde from './Veelgestelde/Veelgestelde.jsx';
 import Diensten from './Diensten/Diensten.jsx';
 import Prijzen from './Prijzen/Prijzen.jsx';
@@ -30,6 +30,7 @@ import Appmarket from './Appmarket/Appmarket.jsx';
 import Marketing from './Marketing/Marketing.jsx';
 import Blog from './Blog/Blog.jsx';
 import Henna from './Henna/Henna.jsx';
+import Overons from './Overons/overons.jsx';
 
 // Load Stripe
 const stripePromise = loadStripe("your-public-stripe-key");
@@ -97,7 +98,7 @@ const router = createBrowserRouter([
       },
       {
         path: "/overons",
-        element: <Overons />,
+        element: <Overons/>,
       },
       {
         path: "/Veelgestelde",

@@ -1,4 +1,4 @@
-import React from "react";
+
 import { useLocation, useNavigate } from "react-router-dom"; // Import useNavigate
 
 const CardsComponent = () => {
@@ -12,17 +12,17 @@ const CardsComponent = () => {
     };
 
     return (
-        <div className="p-8">
+        <div className="p-8">J
             <h1 className="text-2xl font-bold text-gray-800 mb-6 text-center">Choose A Theme</h1>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
                 {cards.map((card) => (
                     <div
-                        key={card.id}
+                        key={card?.id}
                         className="bg-white shadow-md rounded-xl p-6 hover:shadow-lg transition cursor-pointer" // Add cursor-pointer for better UX
                         onClick={handleCardClick} // Add onClick to handle navigation
                     >
                         <img
-                            src={card.image}
+                            src={card?.image}
                             alt={card.title}
                             className="w-full h-40 object-cover rounded-lg mb-4"
                         />
