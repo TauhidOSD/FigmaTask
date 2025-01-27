@@ -1,4 +1,6 @@
 
+import sophie from "../shassets/avater-testi-1.png.png"
+import mark from "../shassets/avater-testi-2.png.png"
 
 const Marketing = () => {
     return (
@@ -150,47 +152,95 @@ const Marketing = () => {
 
 
 
-<div className="flex relative justify-between items-center -m-8 bg-slate-100">
-
-<div className=" ml-28"> 
-<h1 className="font-bold text-blue-600">$36M</h1>
-<p>aan </p>
-<p>marketingprojecten </p>
-<p>gerealiseerd.</p>
-</div>
-
-<div className=""> 
-<h1 className="font-bold text-blue-600">19M+</h1>
-<p>klanten wereldwijd</p>
-<p>bereikt.</p>
-</div>
-
-<div className=""> 
-<h1 className="font-bold text-blue-600">$48M+</h1>
-<p>omzetgroei voor</p>
-<p>onze klanten.</p>
-</div>
-
-<div className="mr-28"> 
-<h1 className="font-bold text-blue-600">1056</h1>
-
-<p>succesvolle campagnes  </p>
-<p>afgerond.</p>
-</div>
-
-
-
-</div>
-
+<div className="bg-[#F8F8F8]  my-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 text-center">
+        <div className="p-6 text-start ml-20 ">
+          <h1 className="text-4xl font-bold text-[#468AFF]">$36M</h1>
+          <p className="mt-2 text-lg ">aan afgeronde projecten wereldwijd.</p>
+        </div>
+        <div className="p-6 text-start">
+          <h1 className="text-4xl font-bold text-[#468AFF]">19M+</h1>
+          <p className="mt-2 text-lg">
+            klanten geholpen met betrouwbare en schaalbare oplossingen.
+          </p>
+        </div>
+        <div className="p-6  text-start">
+          <h1 className="text-4xl font-bold text-[#468AFF]">$48M+</h1>
+          <p className="mt-2 text-lg">
+            aan omzetgroei gerealiseerd voor onze partners.
+          </p>
+        </div>
+        <div className="p-6 text-start ">
+          <h1 className="text-4xl font-bold text-[#468AFF]">1056</h1>
+          <p className="mt-2 text-lg">
+            succesvolle projecten afgerond in Noord-Amerika en Europa.
+          </p>
+        </div>
+      </div>
 
 
 {/** 5th   part end  here */}
 
 
-{/** 6th   part start here */}
+{/** 6th   part start here <div className=""><img src="/avatar/Main (1).png" alt="" /></div> */}
 
 
-<div className=""><img src="/avatar/Main (1).png" alt="" /></div>
+<div className="bg-custom-bg mt-10  bg-cover bg-center h-dvh w-auto">
+  
+        <div className="flex items-center justify-center "><p className=" rounded-3xl bg-fuchsia-100 font-medium p-2 text-base text-center text-fuchsia-500 mb-3 font-sans  w-1/6">Getuigenissen</p></div>
+        <h1  className="text-3xl text-center font-medium">Wat klanten over ons zeggen</h1>
+
+        <div className="w-full lg:mt-10 lg:ml-56 lg:w-2/3 grid grid-cols-1 md:grid-cols-2 gap-6">
+            {/* Card 1 */}
+            <div className="bg-white shadow-md rounded-lg p-6 space-y-4">
+              <h2 className="text-lg font-semibold text-gray-800">
+                5 manieren om uw website te laten opvallen
+              </h2>
+              <p className="text-gray-600 leading-relaxed">
+                “Younitech gaf mijn merk de professionele uitstraling die het nodig had.
+                Dankzij hun brandingstrategieën zijn we zichtbaar gegroeid.”
+              </p>
+              <div className="flex items-center gap-4">
+                <img
+                  src={sophie}
+                  alt="Sophie de Vries"
+                  className="w-12 h-12 rounded-full"
+                />
+                <div>
+                  <h3 className="font-semibold text-gray-800">Sophie de Vries</h3>
+                  <p className="text-sm text-gray-500">Eigenaar van een retailbedrijf</p>
+                </div>
+              </div>
+            </div>
+        
+            {/* Card 2 */}
+            <div className="bg-white shadow-md rounded-lg p-6 space-y-4">
+              <h2 className="text-lg font-semibold text-gray-800">
+                De toekomst van mobiele applicaties
+              </h2>
+              <p className="text-gray-600 leading-relaxed">
+                “Het creatieve team van Younitech heeft onze verwachtingen overtroffen.
+                Van logo tot complete huisstijl – alles klopt!”
+              </p>
+              <div className="flex items-center gap-4">
+                <img
+                  src={mark}
+                  alt="Mark Janssen"
+                  className="w-12 h-12 rounded-full"
+                />
+                <div>
+                  <h3 className="font-semibold text-gray-800">Mark Janssen</h3>
+                  <p className="text-sm text-gray-500">CEO van een tech-startup</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+</div>
+
+
+
+
 
         </div>
     );
