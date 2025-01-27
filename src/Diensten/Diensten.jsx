@@ -4,7 +4,7 @@ import icon2 from "../assets/Link (2).png";
 import icon3 from "../assets/Link (3).png";
 import Brand from "../Brand/Brand";
 // import icon4 from "../assets/Vector (4).png";
-import icon5 from "../assets/Icon (6).png";
+//import icon5 from "../assets/Icon (6).png";
 import img from "../assets/rafiki5.png";
 import link from "../assets/Link.png";
 import link1 from "../assets/Link (1).png";
@@ -296,6 +296,7 @@ const Diensten = () => {
       </div>
     </div>
   </div>
+  
 </div>
 
 

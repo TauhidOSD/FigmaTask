@@ -3,27 +3,30 @@
 const Appmarket = () => {
     return (
         <div>
-            <div className="flex justify-center gap-20 items-center m-20">
+
+{/** First part flex justify-center gap-20 items-center m-20 start from here  */}
+
+            <div className="grid lg:grid-cols-2 sm: grid-cols-1 m-20">
 
 
-<div className="">
-        <img className="w-96" src="/linkImages/amico.png" alt="" />
-</div>
+        <div className="mb-5">
+                <img className="w-96" src="/linkImages/amico.png" alt="" />
+        </div>
 
-        
+                
 
-<div className="">
+        <div className="">
 
-<div className="rounded-lg bg-fuchsia-100 font-sans  text-sm text-fuchsia-500 w-1/3 "><p>Ontwerp uw eigen</p></div>
-    <h1  className="text-4xl text-left font-medium">Uw visie, onze </h1>
-    <h1  className="text-4xl text-left font-medium mb-6">expertise</h1>
-    <p className="text-xs text-left text-slate-500"> expertise Bij Younitech begrijpen we dat een sterke,goed ontworpen </p>
-    <p className="text-xs text-left text-slate-500"> applicatie essentieel is voorsucces in de moderne wereld.</p>
-    <p className="text-xs text-left text-slate-500"> Of u nu een nieuwe mobiele app wilt lanceren, </p>
-    <p className="text-xs text-left text-slate-500"> een webapplicatie wilt bouwen of een bestaande applicatie</p>
-    <p className="text-xs text-left text-slate-500">wilt optimaliseren – wij zorgen voor oplossingen die impact maken.</p> 
+        <div className=""><p className=" rounded-3xl bg-fuchsia-100 font-medium p-2 text-base text-center text-fuchsia-500 mb-3 font-sans  lg:w-3/6">Ontwerp uw eigen</p></div>
+            <h1  className="text-4xl text-left font-medium">Uw visie, onze </h1>
+            <h1  className="text-4xl text-left font-medium mb-6">expertise</h1>
+            <p className="text-sm text-left text-slate-500"> expertise Bij Younitech begrijpen we dat een sterke,goed ontworpen </p>
+            <p className="text-sm text-left text-slate-500"> applicatie essentieel is voorsucces in de moderne wereld.</p>
+            <p className="text-sm text-left text-slate-500"> Of u nu een nieuwe mobiele app wilt lanceren, </p>
+            <p className="text-sm text-left text-slate-500"> een webapplicatie wilt bouwen of een bestaande applicatie</p>
+            <p className="text-sm text-left text-slate-500">wilt optimaliseren – wij zorgen voor oplossingen die impact maken.</p> 
 
-</div>
+        </div>
 </div>
 
 {/** First part end  */}
@@ -34,7 +37,7 @@ const Appmarket = () => {
 
 {/** second  part start */}
 
-<div className="m-20 flex justify-center">
+<div className="lg:mr-20 lg:ml-20 lg:mt-20 lg:mb-20 gap-5 grid items-center justify-center  lg:grid-cols-3 sm:grid-cols-1">
 
 <div className="flex items-center mr-14">
     <div className="mr-5"> <img src="/grouppic/Group.png" alt="" /></div>
@@ -46,7 +49,7 @@ const Appmarket = () => {
 </div>
 
 
-<div className="flex items-center mr-14">
+<div className="flex  items-center mr-14">
 <div className="mr-5"> <img src="/grouppic/Clip path group.png" alt="" /></div>
     <div className="">
         <h1 className="text-center text-lg font-medium">Innovatieve ontwerpen</h1>
@@ -78,7 +81,7 @@ const Appmarket = () => {
 <div className="">
 
 <div className="ml-28">
-<div className="rounded-lg bg-fuchsia-100 font-sans  text-sm text-fuchsia-500 w-1/6 "><p>Ontwerp uw eigen</p></div>
+<div className=""><p className=" lg:rounded-3xl   bg-fuchsia-100 font-medium lg:p-2  text-base text-center text-fuchsia-500 mb-3 font-sans mt-5 lg:w-2/12">Ontwerp uw eigen</p></div>
 <h1  className="text-3xl text-left font-medium">Waarom kiezen voor Younitech?</h1>
 
 </div>
@@ -98,9 +101,9 @@ const Appmarket = () => {
         </div>    
     </div>
 
-    <h1 className="text-xs text-left font-sans text-slate-500">Elke app wordt volledig afgestemd</h1>
-    <h1 className="text-xs text-left font-sans text-slate-500 ">op uw specifieke eisen en </h1>
-    <h1 className="text-xs text-left font-sans text-slate-500">doelstellingen.</h1>
+    <h1 className="text-sm text-left font-sans text-slate-500">Elke app wordt volledig afgestemd</h1>
+    <h1 className="text-sm text-left font-sans text-slate-500 ">op uw specifieke eisen en </h1>
+    <h1 className="text-sm text-left font-sans text-slate-500">doelstellingen.</h1>
     </div>
     
 
@@ -185,7 +188,7 @@ const Appmarket = () => {
 
 
 <div className=" justify-center mt-7">
-<div className="items-center justify-center flex mb-4"><p className="rounded-lg bg-fuchsia-100  text-xs  text-violet-400  text-center w-1/12  ml-0.5">Hoe het werkt</p></div>
+<div className="items-center justify-center flex mb-4"><p className=" rounded-3xl bg-fuchsia-100 font-medium p-2 text-base text-center text-fuchsia-500 mb-3 font-sans  w-2/12">Hoe het werkt</p></div>
 <h1  className="text-3xl decoration-4 text-center font-semibold">Hoe wij uw idee tot leven brengen</h1>
 
 </div>
@@ -197,7 +200,7 @@ const Appmarket = () => {
 <h1 className="font-semibold">Concept en</h1>
 <h1 className="font-semibold">Strategie</h1>
 <div className="text-xs">
-<p className="text-xs text-slate-500 text-center">
+<p className="text-sm text-slate-500 text-center">
 We beginnen met een uitgebreide analyse van uw behoeften en doelen
 Samen met u ontwikkelen we een duidelijke strategie en roadmap die
 uw project richting geeft.
@@ -220,7 +223,7 @@ uw project richting geeft.
 <div className="text-xs">
 
 
-<p className="text-xs text-slate-500 text-center">
+<p className="text-sm text-slate-500 text-center">
 Ons team creëert een visueel aantrekkelijk en functioneel ontwerp 
 dat aansluit bij uw merkidentiteit. Daarna bouwen we de applicatie 
 met behulp van de nieuwste technologieën en frameworks.
@@ -236,7 +239,7 @@ met behulp van de nieuwste technologieën en frameworks.
 <h1 className="font-semibold">Optimalisatie</h1>
 <div className="text-xs">
 
-<p className="text-xs text-slate-500 text-center">
+<p className="text-sm text-slate-500 text-center">
 We voeren rigoureuze tests uit om ervoor te zorgen dat de applicatie
 perfect functioneert. Onze focus ligt op kwaliteit, snelheid en prestaties.
 </p>
@@ -250,7 +253,7 @@ perfect functioneert. Onze focus ligt op kwaliteit, snelheid en prestaties.
 <h1 className="font-semibold">Implementatie en </h1>
 <h1 className="font-semibold">Ondersteuning</h1>
 <div className="text-xs">
-<p className="text-xs text-slate-500 text-center">
+<p className="text-sm text-slate-500 text-center">
 Na de lancering bieden wij doorlopende ondersteuning en onderhoud, 
 zodat uw app altijd up-to-date en operationeel blijft.
 </p>
@@ -272,7 +275,8 @@ zodat uw app altijd up-to-date en operationeel blijft.
 
 <div className=" flex justify-between m-20 items-center" >
 <div className=" ml-10 ">
-            <p className="rounded-3xl bg-fuchsia-100 font-sans font-medium text-xs text-fuchsia-500  w-1/3">Ondersteuning</p>
+            
+            <p className="rounded-3xl bg-fuchsia-100 font-medium p-2 text-sm text-center text-fuchsia-500 mb-3 font-sans  w-2/5">Ondersteuning</p>
             <h1 className="text-4xl font-sans font-semibold mb-2 text-left ">Veelgestelde</h1>
             <h1 className="text-4xl font-sans font-semibold mb-2 text-left "> Vragen</h1>
             
@@ -330,11 +334,11 @@ zodat uw app altijd up-to-date en operationeel blijft.
 {/** sixth part start here */}
 
 
-<div className="flex justify-between m-20 items-center">
+<div className="flex justify-between m-24 items-center">
 <div className="mt-6 ml-10">
-           <p className="rounded-3xl bg-fuchsia-100 font-medium text-xs text-fuchsia-500 mb-3 font-sans  w-2/5">Testimonials</p>
+           <p className="rounded-3xl bg-fuchsia-100 font-medium p-2 text-sm text-center text-fuchsia-500 mb-3 font-sans  w-2/5">Testimonials</p>
             
-            <div className="">
+            <div className=" mb-5">
             <h1 className="text-4xl font-sans text-left">Wat onze</h1>
             <h1 className="text-4xl mb-5 font-sans text-left relative">klanten zeggen</h1>
             <img className="-mt-8 w-3/4" src="/article/Heading 2.png" alt=""></img>
@@ -342,16 +346,16 @@ zodat uw app altijd up-to-date en operationeel blijft.
              
             <p className="font-sans text-left">Wij bieden ondersteuning aan </p>
             <p className="mb-9 font-sans text-left">meer dan 15.000 bedrijven.</p>
-            <div className=" flex justify-start"> <button className="btn btn-primary font-sans">Nu Kopen</button></div>
+            <div className=" flex justify-start"> <button className="btn btn-info text-slate-100 btn-sm font-sans">Nu Kopen</button></div>
 </div>
 
 
-<div className="flex">
+<div className="flex ">
 <div className="mr-10">
 <div className="card bg-base-100 w-72 shadow-xl h-80">
         <div className="card-body">
-            <h2 className="card-title text-sm font-sans">5 manieren om uw website te laten opvallen</h2>
-            <p className="text-xs font-sans">“Younitech gaf mijn merk de professionele uitstraling die het nodig had. Dankzij hun 
+            <h2 className="card-title text-lg font-sans">5 manieren om uw website te laten opvallen</h2>
+            <p className="text-sm font-sans">“Younitech gaf mijn merk de professionele uitstraling die het nodig had. Dankzij hun 
                 brandingstrategieën zijn we zichtbaar gegroeid.”</p>
             <div className="card-actions justify-end">
             </div>
@@ -371,8 +375,8 @@ zodat uw app altijd up-to-date en operationeel blijft.
 <div className="">
 <div className="card bg-base-100 w-72 shadow-xl h-80">
         <div className="card-body">
-            <h2 className="card-title  text-sm font-sans">De toekomst van mobiele applicaties</h2>
-            <p className="text-xs font-sans">“Het creatieve team van Younitech heeft onze verwachtingen overtroffen. 
+            <h2 className="card-title  text-lg font-sans">De toekomst van mobiele applicaties</h2>
+            <p className="text-sm font-sans">“Het creatieve team van Younitech heeft onze verwachtingen overtroffen. 
                 Van logo tot complete huisstijl – alles klopt!”</p>
             <div className="card-actions justify-end">
             </div>
