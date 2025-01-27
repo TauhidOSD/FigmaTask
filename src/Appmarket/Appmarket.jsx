@@ -3,27 +3,30 @@
 const Appmarket = () => {
     return (
         <div>
-            <div className="flex justify-center gap-20 items-center m-20">
+
+{/** First part flex justify-center gap-20 items-center m-20 start from here  */}
+
+            <div className="grid lg:grid-cols-2 sm: grid-cols-1 m-20">
 
 
-<div className="">
-        <img className="w-96" src="/linkImages/amico.png" alt="" />
-</div>
+        <div className="mb-5">
+                <img className="w-96" src="/linkImages/amico.png" alt="" />
+        </div>
 
-        
+                
 
-<div className="">
+        <div className="">
 
-<div className=""><p className=" rounded-3xl bg-fuchsia-100 font-medium p-2 text-base text-center text-fuchsia-500 mb-3 font-sans  w-3/6">Ontwerp uw eigen</p></div>
-    <h1  className="text-4xl text-left font-medium">Uw visie, onze </h1>
-    <h1  className="text-4xl text-left font-medium mb-6">expertise</h1>
-    <p className="text-sm text-left text-slate-500"> expertise Bij Younitech begrijpen we dat een sterke,goed ontworpen </p>
-    <p className="text-sm text-left text-slate-500"> applicatie essentieel is voorsucces in de moderne wereld.</p>
-    <p className="text-sm text-left text-slate-500"> Of u nu een nieuwe mobiele app wilt lanceren, </p>
-    <p className="text-sm text-left text-slate-500"> een webapplicatie wilt bouwen of een bestaande applicatie</p>
-    <p className="text-sm text-left text-slate-500">wilt optimaliseren – wij zorgen voor oplossingen die impact maken.</p> 
+        <div className=""><p className=" rounded-3xl bg-fuchsia-100 font-medium p-2 text-base text-center text-fuchsia-500 mb-3 font-sans  lg:w-3/6">Ontwerp uw eigen</p></div>
+            <h1  className="text-4xl text-left font-medium">Uw visie, onze </h1>
+            <h1  className="text-4xl text-left font-medium mb-6">expertise</h1>
+            <p className="text-sm text-left text-slate-500"> expertise Bij Younitech begrijpen we dat een sterke,goed ontworpen </p>
+            <p className="text-sm text-left text-slate-500"> applicatie essentieel is voorsucces in de moderne wereld.</p>
+            <p className="text-sm text-left text-slate-500"> Of u nu een nieuwe mobiele app wilt lanceren, </p>
+            <p className="text-sm text-left text-slate-500"> een webapplicatie wilt bouwen of een bestaande applicatie</p>
+            <p className="text-sm text-left text-slate-500">wilt optimaliseren – wij zorgen voor oplossingen die impact maken.</p> 
 
-</div>
+        </div>
 </div>
 
 {/** First part end  */}
@@ -34,7 +37,7 @@ const Appmarket = () => {
 
 {/** second  part start */}
 
-<div className="m-20 flex justify-center">
+<div className="lg:mr-20 lg:ml-20 lg:mt-20 lg:mb-20 gap-5 grid items-center justify-center  lg:grid-cols-3 sm:grid-cols-1">
 
 <div className="flex items-center mr-14">
     <div className="mr-5"> <img src="/grouppic/Group.png" alt="" /></div>
@@ -46,7 +49,7 @@ const Appmarket = () => {
 </div>
 
 
-<div className="flex items-center mr-14">
+<div className="flex  items-center mr-14">
 <div className="mr-5"> <img src="/grouppic/Clip path group.png" alt="" /></div>
     <div className="">
         <h1 className="text-center text-lg font-medium">Innovatieve ontwerpen</h1>
@@ -78,7 +81,7 @@ const Appmarket = () => {
 <div className="">
 
 <div className="ml-28">
-<div className=""><p className=" rounded-3xl bg-fuchsia-100 font-medium p-2 text-base text-center text-fuchsia-500 mb-3 font-sans  w-2/12">Ontwerp uw eigen</p></div>
+<div className=""><p className=" lg:rounded-3xl   bg-fuchsia-100 font-medium lg:p-2  text-base text-center text-fuchsia-500 mb-3 font-sans mt-5 lg:w-2/12">Ontwerp uw eigen</p></div>
 <h1  className="text-3xl text-left font-medium">Waarom kiezen voor Younitech?</h1>
 
 </div>
