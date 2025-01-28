@@ -1,0 +1,44 @@
+version: '3.7'
+services:
+  figma-development:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: figma-development/app
+    container_name: figma-development
+    restart: always
+    tty: true
+    environment:
+      SERVICE_NAME: app
+      SERVICE_TAGS: dev
+      TZ: Asia/Dhaka
+    working_dir: /var/www/frontend
+    ports:
+      - 4080:3000
+    volumes:
+     - ./public:/var/www/frontend/public
+    #  - ./node_modules:/var/www/frontend/node_modules
+     - type: bind
+       source: ./.env.local
+       target: /var/www/frontend/.env.local
+    #  - type: bind
+    #    source: ./yarn.lock
+    #    target: /var/www/frontend/yarn.lock
+ 
+#    network_mode: host
+    networks:
+      - app-network
+
+    # healthcheck:
+    #   test: curl -sS http://lgm-development:3000 || exit 1
+    #   interval: 5s
+    #   timeout: 10s
+    #   retries: 3
+networks:
+  app-network:
+    driver: bridge
+    external: true
+#Volumes
+volumes:
+  dbdata:
+    driver: local
