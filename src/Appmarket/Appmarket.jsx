@@ -81,8 +81,8 @@ const Appmarket = () => {
 <div className="">
 
 <div className="ml-28">
-<div className=""><p className=" lg:rounded-3xl   bg-fuchsia-100 font-medium lg:p-2  text-base text-center text-fuchsia-500 mb-3 font-sans mt-5 lg:w-2/12">Ontwerp uw eigen</p></div>
-<h1  className="text-3xl text-left font-medium">Waarom kiezen voor Younitech?</h1>
+<div className="mt-5 mb-5  mr-20 "><p className="rounded-3xl   bg-fuchsia-100 font-medium lg:p-2  text-base text-center text-fuchsia-500 mb-3 font-sans mt-5 lg:w-2/12">Ontwerp uw eigen</p></div>
+<h1  className="text-3xl mb-5 text-left font-medium">Waarom kiezen voor Younitech?</h1>
 
 </div>
 
@@ -188,13 +188,13 @@ const Appmarket = () => {
 
 
 <div className=" justify-center mt-7">
-<div className="items-center justify-center flex mb-4"><p className=" rounded-3xl bg-fuchsia-100 font-medium p-2 text-base text-center text-fuchsia-500 mb-3 font-sans  w-2/12">Hoe het werkt</p></div>
+<div className="items-center justify-center flex mb-4"><p className=" rounded-3xl bg-fuchsia-100 font-medium p-2 text-base text-center text-fuchsia-500 mb-3 font-sans  lg:w-2/12">Hoe het werkt</p></div>
 <h1  className="text-3xl decoration-4 text-center font-semibold">Hoe wij uw idee tot leven brengen</h1>
 
 </div>
 
 
-<div className="flex gap-5 m-20">
+<div className="grid lg:grid-cols-4 sm: grid-cols-1 gap-5  m-20">
 <div className="text-center m-7">
 <div className="items-center justify-center flex"><img className="w-15 h-15" src="/textpic/Text (1).png" alt="" /></div>
 <h1 className="font-semibold">Concept en</h1>
@@ -273,10 +273,11 @@ zodat uw app altijd up-to-date en operationeel blijft.
 {/** fifth part start from here */}
 
 
-<div className=" flex justify-between m-20 items-center" >
+
+<div className=" grid lg:grid-cols-2 sm:grid-cols-1 m-20 items-center" >
 <div className=" ml-10 ">
             
-            <p className="rounded-3xl bg-fuchsia-100 font-medium p-2 text-sm text-center text-fuchsia-500 mb-3 font-sans  w-2/5">Ondersteuning</p>
+            <div className="mr-10"><p className="rounded-3xl bg-fuchsia-100 font-medium p-2 text-sm text-center text-fuchsia-500 mb-3 font-sans  lg:w-2/5">Ondersteuning</p></div>
             <h1 className="text-4xl font-sans font-semibold mb-2 text-left ">Veelgestelde</h1>
             <h1 className="text-4xl font-sans font-semibold mb-2 text-left "> Vragen</h1>
             
@@ -331,17 +332,18 @@ zodat uw app altijd up-to-date en operationeel blijft.
 {/** fifth part end here */}
 
 
-{/** sixth part start here */}
+{/** sixth part start here flex justify-between m-24 items-center */}
 
 
-<div className="flex justify-between m-24 items-center">
-<div className="mt-6 ml-10">
-           <p className="rounded-3xl bg-fuchsia-100 font-medium p-2 text-sm text-center text-fuchsia-500 mb-3 font-sans  w-2/5">Testimonials</p>
+<div className="grid lg:grid-cols-2 m-20 sm:grid-cols-1">
+<div className="mt-6 lg:ml-10 sm:-ml-4 mb-5">
+           
+           <div className="mr-10"><p className="rounded-3xl  bg-fuchsia-100 font-medium p-2 text-sm text-center text-fuchsia-500 mb-3 font-sans sm:w-1/3  lg:w-2/5">Testimonials</p></div>
             
-            <div className=" mb-5">
+            <div className=" mb-5 ">
             <h1 className="text-4xl font-sans text-left">Wat onze</h1>
             <h1 className="text-4xl mb-5 font-sans text-left relative">klanten zeggen</h1>
-            <img className="-mt-8 w-3/4" src="/article/Heading 2.png" alt=""></img>
+            <img className="-mt-8  lg:w-2/4" src="/article/Heading 2.png" alt=""></img>
             </div>
              
             <p className="font-sans text-left">Wij bieden ondersteuning aan </p>
@@ -350,7 +352,7 @@ zodat uw app altijd up-to-date en operationeel blijft.
 </div>
 
 
-<div className="flex ">
+<div className="grid lg:grid-cols-2 gap-20 sm:grid-cols-1">
 <div className="mr-10">
 <div className="card bg-base-100 w-72 shadow-xl h-80">
         <div className="card-body">

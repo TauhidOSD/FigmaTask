@@ -12,7 +12,7 @@ const Contact = () => {
         
         <div>
             {/** flex sm:grid-cols-1 justify-between items-center m-20 */}
-            <div className="grid lg:grid-cols-2 gap-10 mr-20 ml-20 mb-20 mt-20 sm: grid-cols-1">
+            <div className="grid lg:grid-cols-2 gap-10 mr-20 ml-10 mb-10 mt-20 sm: grid-cols-1">
 
                 <div className=" bg-slate-100 rounded-md">
 

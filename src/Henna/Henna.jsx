@@ -4,8 +4,8 @@ const Henna = () => {
     return (
         <div>
             <div className="">
-            <div className="flex justify-between items-center mr-20 ml-20">
-                <div className="mr-12"><img className="w-fit" src="/article/landing (1).png" alt="" /></div>
+            <div className="grid grid-cols-1 lg:grid-cols-2 items-center mr-10 ml-10">
+                <div className="mr-12 mb-10"><img className="w-fit" src="/article/landing (1).png" alt="" /></div>
 
                 <div className="">
                     <h1 className="text-sky-400 font-semibold text-xl">Henna Ghizlan Website</h1>
@@ -34,7 +34,7 @@ const Henna = () => {
                         <p className="text-sm text-slate-500">Facebook,Twitter,Linkedin</p>
                     </div>
                     
-                    <div className="flex justify-start mt-5 mb-8"><button className="btn btn-sm btn-info w-2/3 text-xs text-white">View Live Site</button></div>
+                    <div className="flex justify-start mt-5 mb-8"><button className="btn btn-sm btn-info lg:w-2/3 text-xs text-white">View Live Site</button></div>
 
                 </div>
             </div>
