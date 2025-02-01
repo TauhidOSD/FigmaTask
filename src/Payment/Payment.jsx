@@ -1,12 +1,34 @@
-import React from "react";
 import { CardElement, useStripe, useElements } from "@stripe/react-stripe-js";
 import { toast } from "react-hot-toast";
-import { useNavigate } from "react-router-dom"; // Import useNavigate
+import { useNavigate } from "react-router-dom";
 
 const Payment = () => {
   const stripe = useStripe();
   const elements = useElements();
-  const navigate = useNavigate(); // Initialize navigate hook
+  const navigate = useNavigate();
+
+  const validateCardDetails = (cardDetails) => {
+    const validCardNumber = "4242 4242 4242 4242";
+    const expiryRegex = /^(0[1-9]|1[0-2])\/\d{2}$/; // MM/YY format
+    const cvcRegex = /^\d{3}$/; // 3 digits
+    const zipRegex = /^\d{5,}$/; // At least 5 digits
+
+    const isCardNumberValid = cardDetails.number === validCardNumber;
+    const isExpiryValid = expiryRegex.test(cardDetails.expiry) && !isExpired(cardDetails.expiry);
+    const isCvcValid = cvcRegex.test(cardDetails.cvc);
+    const isZipValid = zipRegex.test(cardDetails.zip);
+
+    return isCardNumberValid && isExpiryValid && isCvcValid && isZipValid;
+  };
+
+  const isExpired = (expiry) => {
+    const [month, year] = expiry.split("/").map(Number);
+    const currentDate = new Date();
+    const currentYear = currentDate.getFullYear() % 100; // Last 2 digits of year
+    const currentMonth = currentDate.getMonth() + 1; // Month is 0-based
+
+    return year < currentYear || (year === currentYear && month < currentMonth);
+  };
 
   const handlePayment = async (e) => {
     e.preventDefault();
@@ -17,19 +39,25 @@ const Payment = () => {
     }
 
     const card = elements.getElement(CardElement);
-
     if (!card) {
       toast.error("Card details are missing!");
       return;
     }
 
-    // Simulate a payment process (replace this with your backend integration for real payments)
-    const paymentResult = { paymentIntent: { status: "succeeded" } }; // Simulated result
+    // Simulated user input (Replace this with real user input collection)
+    const userCardInput = {
+      number: "4242 4242 4242 4242", 
+      expiry: "12/34", 
+      cvc: "123", 
+      zip: "12345",
+    };
 
-    if (paymentResult?.paymentIntent?.status === "succeeded") {
-      toast.success("Payment successful!");
+    const isValid = validateCardDetails(userCardInput);
+
+    if (isValid) {
+      toast.success("Payment successful! 🎉");
     } else {
-      toast.error("Payment failed. Please try again!");
+      toast.error("Please provide valid card details!");
     }
   };
 
@@ -69,7 +97,7 @@ const Payment = () => {
         </button>
       </form>
       <button
-        onClick={() => navigate(-1)} // Go back to the previous route
+        onClick={() => navigate(-1)}
         className="mt-6 w-full py-3 px-5 bg-gray-200 text-gray-700 font-medium rounded-lg shadow-md hover:bg-gray-300 transition"
       >
         Back

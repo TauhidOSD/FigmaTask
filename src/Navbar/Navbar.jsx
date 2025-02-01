@@ -4,12 +4,12 @@ import { useNavigate } from "react-router-dom";
 const Navbar = () => {
   const navigate=useNavigate();
   return (
-    <header className="bg-white shadow-md sticky top-0 z-50">
+    <header className="bg-sky-300 shadow-md sticky top-0 z-50">
       <nav className="container mx-auto flex items-center justify-between px-4 py-3 lg:py-5">
         {/* Logo */}
         <a href="/" className="flex items-center space-x-2">
           <img src={NavLogo} alt="Logo" className="h-8 lg:h-10 w-auto" />
-          <span className="text-lg font-bold text-gray-800"></span>
+          <span className="text-lg font-bold text-gray-900"></span>
         </a>
 
         {/* Mobile Dropdown */}
@@ -44,15 +44,15 @@ const Navbar = () => {
 
         {/* Desktop Menu */}
         <div className="hidden lg:flex space-x-6">
-          <a href="/startpagina" className="text-gray-600 hover:text-blue-600">Startpagina</a>
-          <a href="/Overons" className="text-gray-600 hover:text-blue-600">Over Ons</a>
-          <a href="/Diensten" className="text-gray-600 hover:text-blue-600">Diensten</a>
-          <a href="/Veelgestelde" className="text-gray-600 hover:text-blue-600">Veelgestelde Vragen</a>
-          <a href="/prijzen" className="text-gray-600 hover:text-blue-600">Prijzen</a>
+          <a href="/startpagina" className="text-gray-900 hover:text-blue-600">Startpagina</a>
+          <a href="/Overons" className="text-gray-900 hover:text-blue-600">Over Ons</a>
+          <a href="/Diensten" className="text-gray-900 hover:text-blue-600">Diensten</a>
+          <a href="/Veelgestelde" className="text-gray-900 hover:text-blue-600">Veelgestelde Vragen</a>
+          <a href="/prijzen" className="text-gray-900 hover:text-blue-600">Prijzen</a>
         </div>
 
         {/* Contact Button */}
-        <a onClick={()=>navigate("/Contact")} href="#contact" className="hidden lg:block btn bg-blue-600 text-white px-6 py-4                                                                                                                                                       rounded-md shadow-md">
+        <a onClick={()=>navigate("/Contact")} href="#contact" className="hidden lg:block btn bg-blue-500 text-white px-6 py-4                                                                                                                                                       rounded-md shadow-md">
           Contact
         </a>
       </nav>
