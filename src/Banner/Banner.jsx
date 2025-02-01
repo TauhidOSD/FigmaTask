@@ -7,7 +7,7 @@ import six from "../assets/Background (4).png";
 
 const Banner = () => {
   return (
-    <div className="relative flex flex-col-reverse lg:flex-row items-center justify-between px-6 lg:px-16 py-12 lg:pb-20">
+    <div className="relative flex flex-col-reverse lg:flex-row items-center justify-between px-6 lg:px-16  lg:pb-20">
       {/* Text Section */}
       <div className="lg:w-1/2 space-y-6 z-10">
         <h2 className="text-3xl lg:text-4xl font-bold text-gray-800">
