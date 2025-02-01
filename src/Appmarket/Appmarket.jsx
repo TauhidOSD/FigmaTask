@@ -6,7 +6,7 @@ const Appmarket = () => {
 
 {/** First part flex justify-center gap-20 items-center m-20 start from here  */}
 
-            <div className="grid lg:grid-cols-2 sm: grid-cols-1 m-20">
+            <div className="grid lg:grid-cols-2 sm:grid-cols-1 m-20">
 
 
         <div className="mb-5">
