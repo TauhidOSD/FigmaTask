@@ -115,14 +115,14 @@ const Marketing = () => {
         <div>
           <img className="w-32" src="/linkImages/Link → logo-feedly-fill.png.png" alt="" />
         </div>
-        <div className="text-center">
+        <div className="text-center ">
           <div className="-mb-4 flex justify-center items-center">
             <img className="w-32" src="/linkImages/Link → logo-hopin-fill.png.png" alt="" />
           </div>
-          <h1 className="font-bold text-2xl">Sluit u aan bij de 7.000+</h1>
+          <h1 className="font-bold  text-2xl">Sluit u aan bij de 7.000+</h1>
           <h1 className="font-bold text-2xl">bedrijven die ons vertrouwen</h1>
           <p className="mb-7 text-slate-400">U heeft de ideeën, wij hebben de tools</p>
-          <button className="btn text-slate-300 btn-primary">Aan de Slag</button>
+          <button className="btn text-slate-300  btn-primary">Aan de Slag</button>
         </div>
         <div>
           <img className="w-32" src="/linkImages/Link → logo-google-fill.png.png" alt="" />
