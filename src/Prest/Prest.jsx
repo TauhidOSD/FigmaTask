@@ -35,8 +35,8 @@ const Prest = () => {
         <div className="lg:w-1/2  relative">
           <img src={Img} alt="Image" className="w-full h-full object-cover rounded-lg shadow-lg" />
           <div className="absolute top-40 left-4 w-40 bg-white p-6 rounded-lg shadow-xl">
-            <h2 className="text-4xl font-bold text-gray-800">27%</h2>
-            <h2 className="text-lg text-gray-600">Productivity increase on average</h2>
+            
+            <h2 className="text-sm text-gray-600">Helpt bedrijven <br /> om hun <br /> productiviteit te <br /> optimaliseren.</h2>
           </div>
         </div>
       </div>
