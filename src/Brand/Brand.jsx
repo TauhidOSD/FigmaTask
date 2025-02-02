@@ -24,7 +24,7 @@ const Brand = () => {
             onClick={() => toggleSection("logo")}
             className="w-full bg-[#468AFF] text-white py-2 px-4 text-left rounded-md flex justify-between items-center"
           >
-            Logo-ontwerp
+            Branding
             <GoChevronDown
               className={`transform transition-transform ${
                 activeSection === "logo" ? "rotate-180" : ""
@@ -33,7 +33,7 @@ const Brand = () => {
           </button>
           {activeSection === "logo" && (
             <p className="mt-2 text-gray-600">
-              Een uniek logo dat de essentie van uw merk vastlegt.
+              Branding bouwt een sterke band en vertrouwen op met je doelgroep. We helpen bestaande ondernemers met een authentieke merkbeleving en nieuwe ondernemers met een herkenbare identiteit. Zo versterken we je merk voor duurzame groei.
             </p>
           )}
         </div>
@@ -79,6 +79,7 @@ const Brand = () => {
           )}
         </div>
       </div>
+      
     </div>
   );
 };

@@ -15,9 +15,6 @@ const Onze = () => {
         <h2 className="text-3xl lg:text-4xl font-bold text-gray-800">
           Onze diensten, op maat voor uw succes
         </h2>
-        <p className="text-gray-600 mt-4 text-md lg:text-lg">
-          Ontdek hoe wij u kunnen helpen om te groeien en excelleren.
-        </p>
       </div>
 
       {/* Services Section */}

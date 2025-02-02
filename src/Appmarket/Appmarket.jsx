@@ -1,6 +1,14 @@
+import { useState } from "react";
 
+import { GoChevronDown } from "react-icons/go";
 
 const Appmarket = () => {
+    const [activeSection, setActiveSection] = useState(null);
+
+    const toggleSection = (section) => {
+      setActiveSection(activeSection === section ? null : section);
+    };
+  
     return (
         <div>
 
@@ -274,8 +282,8 @@ zodat uw app altijd up-to-date en operationeel blijft.
 
 
 
-<div className=" grid lg:grid-cols-2 sm:grid-cols-1 m-20 items-center" >
-<div className=" ml-10 ">
+<div className=" flex flex-col lg:flex-row gap-8 px-6 lg:px-30 py-8" >
+<div className="ml-20 mr-16">
             
             <div className="mr-10"><p className="rounded-3xl bg-fuchsia-100 font-medium p-2 text-sm text-center text-fuchsia-500 mb-3 font-sans  lg:w-2/5">Ondersteuning</p></div>
             <h1 className="text-4xl font-sans font-semibold mb-2 text-left ">Veelgestelde</h1>
@@ -287,44 +295,68 @@ zodat uw app altijd up-to-date en operationeel blijft.
             en u te begeleiden in het brandingproces.</p>
         </div>
         
-        <div className="">
-                 <div className="collapse collapse-arrow bg-sky-400  m-7">
-                <input type="radio" name="my-accordion-2" defaultChecked />
-                <div className="collapse-title text-xl  text-white font-medium">Hoe lang duurt het om een app te ontwikkelen?</div>
-                <div className="collapse-content">
-                    <p className="text-left" >De tijd hangt af van de complexiteit van het project. Gemiddeld duurt een </p>
-                    <p className="text-left" > app-ontwikkelingsprojecttussen de 8-16 weken.</p>
+        <div className="w-full lg:w-1/2 space-y-6">
+                {/* Button 1 */}
+                <div>
+                  <button
+                    onClick={() => toggleSection("logo")}
+                    className="w-full bg-[#468AFF] text-white py-2 px-4 text-left rounded-md flex justify-between items-center"
+                  >
+                    Branding
+                    <GoChevronDown
+                      className={`transform transition-transform ${
+                        activeSection === "logo" ? "rotate-180" : ""
+                      }`}
+                    />
+                  </button>
+                  {activeSection === "logo" && (
+                    <p className="mt-2 text-gray-600">
+                      Branding bouwt een sterke band en vertrouwen op met je doelgroep. We helpen bestaande ondernemers met een authentieke merkbeleving en nieuwe ondernemers met een herkenbare identiteit. Zo versterken we je merk voor duurzame groei.
+                    </p>
+                  )}
                 </div>
+        
+                {/* Button 2 */}
+                <div>
+                  <button
+                    onClick={() => toggleSection("visualGuidelines")}
+                    className="w-full bg-[#468AFF] text-white py-2 px-4 text-left rounded-md flex justify-between items-center"
+                  >
+                    Visuele Richtlijnen
+                    <GoChevronDown
+                      className={`transform transition-transform ${
+                        activeSection === "visualGuidelines" ? "rotate-180" : ""
+                      }`}
+                    />
+                  </button>
+                  {activeSection === "visualGuidelines" && (
+                    <p className="mt-2 text-gray-600">
+                      Uniformiteit in kleuren, lettertypes en stijl voor consistente
+                      branding.
+                    </p>
+                  )}
                 </div>
-
-                <div className="collapse collapse-arrow bg-sky-400 m-7">
-                <input type="radio" name="my-accordion-2" />
-                <div className="collapse-title text-xl   text-white font-medium">Wat voor soort apps ontwikkelen jullie?</div>
-                <div className="collapse-content">
-                    <p className="text-left" >Wij ontwikkelen mobiele apps (iOS en Android), webapplicaties en hybride </p>
-                    <p className="text-left"> oplossingen die schaalbaar enefficiënt zijn.</p>
+        
+                {/* Button 3 */}
+                <div>
+                  <button
+                    onClick={() => toggleSection("printMedia")}
+                    className="w-full bg-[#468AFF] text-white py-2 px-4 text-left rounded-md flex justify-between items-center"
+                  >
+                    Print- en Digitale Media
+                    <GoChevronDown
+                      className={`transform transition-transform ${
+                        activeSection === "printMedia" ? "rotate-180" : ""
+                      }`}
+                    />
+                  </button>
+                  {activeSection === "printMedia" && (
+                    <p className="mt-2 text-gray-600">
+                      Materialen die zowel online als offline indruk maken.
+                    </p>
+                  )}
                 </div>
-                </div>
-
-                <div className="collapse collapse-arrow bg-sky-400 m-7">
-                <input type="radio" name="my-accordion-2" />
-                <div className="collapse-title text-xl   text-white font-medium">Bieden jullie ondersteuning na de lancering?</div>
-                <div className="collapse-content">
-                    <p className="text-left">Ja, wij bieden onderhouds- en ondersteuningsdiensten om ervoor te zorgen dat uw app  </p>
-                    <p className="text-left"> probleemloos blijft functioneren en blijft voldoen aan de behoeften van uw gebruikers</p>
-                </div>
-                </div>
-
-                <div className="collapse collapse-arrow bg-sky-400 m-7">
-                <input type="radio" name="my-accordion-2" />
-                <div className="collapse-title text-xl   text-white font-medium">Hoe weet ik zeker dat mijn app uniek is?</div>
-                <div className="collapse-content">
-                    <p className="text-left">Wij werken nauw samen met u om een app te ontwerpen die uniek is voor uw merk, met </p>
-                    <p className="text-left"> functies en ontwerpen die uw onderscheidend vermogen benadrukken.</p>
-                </div>
-                </div>
-                
-     </div>
+              </div>
 
 </div>
 

@@ -1,8 +1,21 @@
 
 import sophie from "../shassets/avater-testi-1.png.png"
 import mark from "../shassets/avater-testi-2.png.png"
+import { useState } from "react";
+import img from "../shassets/consult.png";
+import { GoChevronDown } from "react-icons/go";
+import i1 from "../assets/rectangle.png"
+import i2 from "../assets/tree.png"
+import i3 from "../assets/light.png"
+import i4 from "../assets/watch.png"
+
 
 const Marketing = () => {
+  const [activeSection, setActiveSection] = useState(null);
+
+  const toggleSection = (section) => {
+    setActiveSection(activeSection === section ? null : section);
+  };
     return (
         <div className="m-18">
 
@@ -67,76 +80,93 @@ const Marketing = () => {
 {/** second part end here */}
 
 
-{/** 3rd  part start from here */}
+{/** 3rd  part start from here <img className="" src="/linkImages/consult.png" alt="" /> */}
 
 
 
-<div className="grid lg:grid-cols-2 sm:grid-cols-1 items-center m-20">
-    <div className="">
-            <img className="" src="/linkImages/consult.png" alt="" />
+<div className="flex flex-col lg:flex-row gap-8 px-6 lg:px-36 py-8">
+      {/* Left Section with Image */}
+      <div className="w-full lg:w-1/2">
+        <img src={img} alt="Branding" className="w-full rounded-lg shadow-md" />
+      </div>
+
+      {/* Right Section with Buttons */}
+      <div className="w-full lg:w-1/2 space-y-6">
+        {/* Button 1 */}
+        <div>
+          <button
+            onClick={() => toggleSection("logo")}
+            className="w-full bg-[#468AFF] text-white py-2 px-4 text-left rounded-md flex justify-between items-center"
+          >
+            Strategische Planning
+            <GoChevronDown
+              className={`transform transition-transform ${
+                activeSection === "logo" ? "rotate-180" : ""
+              }`}
+            />
+          </button>
+          {activeSection === "logo" && (
+            <p className="mt-2 text-gray-600">
+              Onze eerste stap is het creëren van een doordachte strategie die gericht is op jouw specifieke doelen en doelgroepen. We starten met een grondige analyse van je bedrijf, merk en de markt waarin je opereert. Op basis hiervan ontwikkelen we een strategisch plan dat gericht is op het maximaliseren van je marketinginspanningen. Geen onnodige kosten, maar een doelgerichte benadering waarbij we de juiste marketingkanalen kiezen, van Google en YouTube tot sociale media en offline media. Alles is afgestemd op wat jouw bedrijf nodig heef
+            </p>
+          )}
+        </div>
+
+        {/* Button 2 */}
+        <div>
+          <button
+            onClick={() => toggleSection("visualGuidelines")}
+            className="w-full bg-[#468AFF] text-white py-2 px-4 text-left rounded-md flex justify-between items-center"
+          >
+            Creatieve Uitvoering
+            <GoChevronDown
+              className={`transform transition-transform ${
+                activeSection === "visualGuidelines" ? "rotate-180" : ""
+              }`}
+            />
+          </button>
+          {activeSection === "visualGuidelines" && (
+            <p className="mt-2 text-gray-600">
+             Na de strategische planning zetten we de ideeën om in actie. Onze creatieve uitvoering is simpel maar krachtig, gericht op het effectief bereiken van je doelgroep. We zorgen ervoor dat je merk zich onderscheidt met unieke campagnes die jouw klanten aanspreken. Of het nu gaat om online advertenties of offline marketing zoals onze straatsteen marketing, we creëren campagnes die niet alleen opvallen, maar ook impact maken. Jij bent geen nummer voor ons, we zorgen ervoor dat de boodschap aansluit bij jouw merkidentiteit en klantbehoeften.
+            </p>
+          )}
+        </div>
+
+        {/* Button 3 */}
+        <div>
+          <button
+            onClick={() => toggleSection("printMedia")}
+            className="w-full bg-[#468AFF] text-white py-2 px-4 text-left rounded-md flex justify-between items-center"
+          >
+           Analyse en Optimalisatie
+            <GoChevronDown
+              className={`transform transition-transform ${
+                activeSection === "printMedia" ? "rotate-180" : ""
+              }`}
+            />
+          </button>
+          {activeSection === "printMedia" && (
+            <p className="mt-2 text-gray-600">
+              Onze aanpak stopt niet bij de lancering van de campagnes. We monitoren en analyseren de resultaten voortdurend om te zien wat werkt en waar we kunnen verbeteren. Door gebruik te maken van verschillende marketingtools optimaliseren we de campagnes voor de beste prestaties. We passen onze strategieën aan op basis van data en feedback, zodat jouw marketinginspanningen altijd blijven groeien en verbeteren. Zo zorgen we ervoor dat je de beste resultaten haalt zonder verspilling van middelen
+            </p>
+          )}
+        </div>
+      </div>
+      
     </div>
-    <div className="">
-                   <div className=" collapse collapse-arrow bg-sky-400 m-7">
-                    <input type="radio" name="my-accordion-2" defaultChecked />
-                    <div className="collapse-title text-xl text-white font-medium">Strategische planning</div>
-                    <div className="collapse-content">
-                    <p className="text-left">Wij analyseren uw doelen en ontwikkelen een </p>
-                    <p className="text-left"> op maat gemaakte strategie.</p>
-                    </div>
-                    </div>
-
-
-                    <div className="collapse collapse-arrow bg-sky-400 m-7">
-                    <input type="radio" name="my-accordion-2" />
-                    <div className="collapse-title text-xl text-white font-medium">Creatieve uitvoering</div>
-                    <div className="collapse-content">
-                    <p className="text-left">Onze experts creëren campagnes en content </p>
-                    <p className="text-left"> die uw merk versterken</p>
-                    </div>
-                    </div>
-
-
-                    <div className="collapse collapse-arrow bg-sky-400 m-7">
-                    <input type="radio" name="my-accordion-2" />
-                    <div className="collapse-title text-xl text-white font-medium">Analyse en optimalisatie</div>
-                    <div className="collapse-content">
-                    <p className="text-left">Doorlopende analyse en verbetering voor maximale resultaten.</p>
-                    <p className="text-left"></p>
-                    </div>
-                </div>
-    </div>
-</div>
-
-
 
 {/** 3rd  part end  here */}
 
 
 {/** 4th   part start from here */}
 
-<div className=" flex justify-between ite h-64 m-48">
-<div className=" mt-32 "> <img className="w-32" src="/linkImages/Link → logo-amazon-fill.png.png" alt="" /></div>
-<div className="">
-    <div className=""><img className="w-32" src="/linkImages/Link → logo-feedly-fill.png.png" alt="" /></div>
-    <div className="mt-32"><img className="w-32" src="/linkImages/Link → logo-craft-fill.png.png" alt="" /></div>
-</div>
-
-<div className="text-center">
-    <div className="-mb-4 flex justify-center items-center"><img className="w-32" src="/linkImages/Link → logo-hopin-fill.png.png" alt="" /></div>
-    <h1 className="font-bold text-2xl ">Sluit u aan bij de 7.000+ </h1>
-    <h1 className="font-bold text-2xl">bedrijven die ons vertrouwen</h1>
+<div className=" relative bg-custom-bg lg:bg-cover bg-center mt-36 h-60 ml-10  lg:w-auto  ">
+<div className="text-center lg:ml-96  absolute  ">
+    
+    <h1 className="font-bold text-xl lg:text-2xl ">Word onderdeel van onze groeiende</h1>
+    <h1 className="font-bold text-xl lg:text-2xl">gemeenschap van tevreden klanten</h1>
     <p className="mb-7 text-slate-400">U heeft de ideeën, wij hebben de tools</p>
-    <button className="btn text-slate-300 btn-primary">Aan de Slag</button>
-</div>
-
-<div className="">
-<div className=""><img className="w-32" src="/linkImages/div.elementor-widget-container.png" alt="" /></div>
-<div className="mt-32"><img className="w-32" src="/linkImages/div.elementor-widget-container (1).png" alt="" /></div>
-</div>
-
-
-<div className="">
-<div className=" mt-32 "> <img className="w-32" src="/linkImages/Link → logo-google-fill.png.png" alt="" /></div>
+    <button className="btn text-slate-100 btn-info">Aan de Slag</button>
 </div>
 </div>
 
@@ -148,30 +178,38 @@ const Marketing = () => {
 
 
 
-<div className="bg-[#F8F8F8]  my-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 text-center">
-        <div className="p-6 text-start  ">
-          <h1 className="text-4xl font-bold text-[#468AFF]">$36M</h1>
-          <p className="mt-2 text-lg ">aan afgeronde projecten wereldwijd.</p>
+<div className="md:px-36 px-8 py-12 bg-gray-50">
+<div className="bg-[#F8F8F8] my-16  grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 text-center">
+        <div className="p-6 text-start ">
+          <div className=""> <img className="flex justify-center items-center" src={i1} alt="" /></div>
+          <h1 className="mt-2 text-xl font-bold "> Oprechtheid</h1>
+          <p className="mt-2 text-sm ">Eerlijke en transparante <br />bedrijfsvoering staat centraal in alles <br />wat we doen</p>
         </div>
+
         <div className="p-6 text-start">
-          <h1 className="text-4xl font-bold text-[#468AFF]">19M+</h1>
-          <p className="mt-2 text-lg">
-            klanten geholpen met betrouwbare en schaalbare oplossingen.
+        <div className=""><img src={i2} alt="" /></div>
+        <h1 className="mt-2 text-xl font-bold ">Maatschappelijke betrokkenheid</h1>
+          <p className="mt-2 text-sm">
+          We bieden kansen aan werknemers om hun <br />potentieel te benutten, zonder hiermee te <br />koop te lopen
           </p>
         </div>
+
         <div className="p-6  text-start">
-          <h1 className="text-4xl font-bold text-[#468AFF]">$48M+</h1>
-          <p className="mt-2 text-lg">
-            aan omzetgroei gerealiseerd voor onze partners.
+        <div className=""><img src={i3} alt="" /></div>
+        <h1 className="mt-2 text-xl font-bold ">Innovativiteit</h1>
+          <p className="mt-2 text-sm">
+          We denken contrarian en kiezen voor <br />unieke oplossingen in een <br />concurrerende markt.
           </p>
         </div>
         <div className="p-6 text-start ">
-          <h1 className="text-4xl font-bold text-[#468AFF]">1056</h1>
-          <p className="mt-2 text-lg">
-            succesvolle projecten afgerond in Noord-Amerika en Europa.
+        <div className=""> <img src={i4} alt="" /></div>
+        <h1 className="mt-2 text-xl font-bold "> Authenticiteit</h1>
+          <p className="mt-2 text-sm">
+          We blijven trouw aan onze principes en laten ons niet leiden door trends of competitie
           </p>
         </div>
       </div>
+</div>
 
 
 {/** 5th   part end  here */}
@@ -180,7 +218,7 @@ const Marketing = () => {
 {/** 6th   part start here <div className=""><img src="/avatar/Main (1).png" alt="" /></div> */}
 
 
-<div className="bg-custom-bg mt-10  bg-cover bg-center h-dvh w-auto">
+<div className=" mt-10  bg-cover bg-center h-dvh w-auto">
   
         <div className="flex items-center justify-center "><p className=" rounded-3xl bg-fuchsia-100 font-medium p-2 text-base text-center text-fuchsia-500 mb-3 font-sans  lg:w-1/6">Getuigenissen</p></div>
         <h1  className="text-3xl text-center font-medium">Wat klanten over ons zeggen</h1>

@@ -11,13 +11,13 @@ const Banner = () => {
       {/* Text Section */}
       <div className="lg:w-1/2 space-y-6 z-10">
         <h2 className="text-3xl lg:text-4xl font-bold text-gray-800">
-          Younitech - Uw Partner in Digitale Innovatie
+          Younitech - <br /> Uw Partner in Digitale <br /> Innovatie
         </h2>
         <p className="text-lg text-gray-700">
           “Transformeer uw digitale aanwezigheid met op maat gemaakte oplossingen”
         </p>
         <p className="text-md text-gray-600">
-          Bij Younitech begrijpen we dat een sterke online aanwezigheid essentieel is voor succes in de moderne wereld. Met jarenlange ervaring in webdesign, applicatieontwikkeling, marketing, en branding helpen we bedrijven van elke omvang om te groeien en te excelleren. Onze expertise combineert creativiteit met technologie om resultaten te leveren die impact maken.
+        Bij Younitech begrijpen we dat een sterke online aanwezigheid essentieel is voor succes in de moderne wereld. Met jarenlange ervaring in webdesign, applicatieontwikkeling, marketing, en branding helpen we bedrijven van elke omvang om te groeien en te excelleren. Onze expertise combineert creativiteit met technologie om resultaten te leveren die impact maken
         </p>
       </div>
 
