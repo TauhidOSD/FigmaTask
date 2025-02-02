@@ -360,7 +360,7 @@ zodat uw app altijd up-to-date en operationeel blijft.
 {/** sixth part start here flex justify-between m-24 items-center */}
 
 
-<div className="grid lg:grid-cols-2 m-20 sm:grid-cols-1">
+<div className="grid m-20 grid-cols-1 lg:grid-cols-2">
 <div className="mt-6 lg:ml-10 sm:-ml-4 mb-5">
            
            <div className="mr-10"><p className="rounded-3xl  bg-fuchsia-100 font-medium p-2 text-sm text-center text-fuchsia-500 mb-3 font-sans sm:w-1/3  lg:w-2/5">Testimonials</p></div>
@@ -378,48 +378,52 @@ zodat uw app altijd up-to-date en operationeel blijft.
 
 
 
-<div className="grid  gap-20 grid-cols-1 lg:grid-cols-2">
-<div className="mr-10">
-<div className="card bg-base-100 w-72 shadow-xl h-80">
-        <div className="card-body">
-            <h2 className="card-title text-lg font-sans">5 manieren om uw website te laten opvallen</h2>
-            <p className="text-sm font-sans">“Younitech gaf mijn merk de professionele uitstraling die het nodig had. Dankzij hun 
-                brandingstrategieën zijn we zichtbaar gegroeid.”</p>
-            <div className="card-actions justify-end">
-            </div>
+<div className="grid grid-cols-1 lg:grid-cols-2 gap-20">
+                <div className="mr-10">
+                <div className="card bg-base-100 w-72 shadow-xl h-80">
+                        <div className="card-body">
+                            <h2 className="card-title text-sm font-sans">5 manieren om uw website te laten opvallen</h2>
+                            <p className="text-xs font-sans">“Younitech gaf mijn merk de professionele uitstraling die het nodig had. Dankzij hun 
+                                brandingstrategieën zijn we zichtbaar gegroeid.”</p>
+                            <div className="card-actions justify-end">
+                            </div>
 
-            <div className="flex justify-between items-center mt-5">
-            <div className=""><img className="w-16" src="/avatar/avater-testi-3.png.png" alt="" /></div>
-            <div className="">
-                <div className="text-base font-sans"><h1>Sophie de Vries</h1></div>
-                 <div className="text-xs font-sans"><p>eigenaar van een retailbedrijf</p></div>
-            </div>
-          
-        </div>
-        </div>
- </div>
+                            <div className="flex justify-between items-center mt-5">
+                            <div className=""><img className="w-16" src="/avatar/avater-testi-3.png.png" alt="" /></div>
+                            <div className="">
+                                <div className="text-base font-sans"><h1>Sophie de Vries</h1></div>
+                                 <div className="text-xs font-sans"><p>eigenaar van een retailbedrijf</p></div>
+                            </div>
+                        </div>
+                        </div>
+                        </div>
+                </div>
 
-        <div className="card bg-base-100 w-72 shadow-xl h-80">
-        <div className="card-body">
-            <h2 className="card-title text-lg font-sans">5 manieren om uw website te laten opvallen</h2>
-            <p className="text-sm font-sans">“Younitech gaf mijn merk de professionele uitstraling die het nodig had. Dankzij hun 
-                brandingstrategieën zijn we zichtbaar gegroeid.”</p>
-            <div className="card-actions justify-end">
-            </div>
 
-            <div className="flex justify-between items-center mt-5">
-            <div className=""><img className="w-16" src="/avatar/avater-testi-3.png.png" alt="" /></div>
-            <div className="">
-                <div className="text-base font-sans"><h1>Sophie de Vries</h1></div>
-                 <div className="text-xs font-sans"><p>eigenaar van een retailbedrijf</p></div>
-            </div>
-          
-        </div>
-        </div>
-        </div>
-        </div>
+                <div className="">
+                <div className="card bg-base-100 w-72 shadow-xl h-80">
+                        <div className="card-body">
+                            <h2 className="card-title  text-sm font-sans">De toekomst van mobiele applicaties</h2>
+                            <p className="text-xs font-sans">“Het creatieve team van Younitech heeft onze verwachtingen overtroffen. 
+                                Van logo tot complete huisstijl – alles klopt!”</p>
+                            <div className="card-actions justify-end">
+                            </div>
 
-      </div>
+                            <div className="flex justify-between items-center mt-5">
+                            <div className=""><img className="w-16" src="/avatar/avater-testi-2.png.png " alt="" /></div>
+                            <div className="">
+                                <div className="text-base font-sans"><h1>Mark Janssen</h1></div>
+                                 <div className="text-xs font-sans"><p>CEO van een tech-startup</p></div>
+                            </div>
+                        </div>
+                        </div>
+                        </div>     
+                </div>
+            </div>
+            
+
+
+
       </div>
       </div>
     
