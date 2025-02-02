@@ -1,8 +1,8 @@
 import { useState } from "react";
-
 import { GoChevronDown } from "react-icons/go";
 
 const Appmarket = () => {
+    
     const [activeSection, setActiveSection] = useState(null);
 
     const toggleSection = (section) => {
@@ -12,7 +12,7 @@ const Appmarket = () => {
     return (
         <div>
 
-{/** First part flex justify-center gap-20 items-center m-20 start from here  */}
+            {/** First part flex justify-center gap-20 items-center m-20 start from here  */}
 
             <div className="grid lg:grid-cols-2 sm:grid-cols-1 m-20">
 
@@ -76,6 +76,7 @@ const Appmarket = () => {
     </div>
 </div>
 </div>
+
 
 {/** second  part end  */}
 
@@ -181,8 +182,6 @@ const Appmarket = () => {
 
 </div>
 
-
-
 {/** third   part end here */}
 
 
@@ -201,8 +200,8 @@ const Appmarket = () => {
 
 </div>
 
-
 <div className="grid lg:grid-cols-4 sm: grid-cols-1 gap-5  m-20">
+
 <div className="text-center m-7">
 <div className="items-center justify-center flex"><img className="w-15 h-15" src="/textpic/Text (1).png" alt="" /></div>
 <h1 className="font-semibold">Concept en</h1>
@@ -213,13 +212,7 @@ We beginnen met een uitgebreide analyse van uw behoeften en doelen
 Samen met u ontwikkelen we een duidelijke strategie en roadmap die
 uw project richting geeft.
 </p>
-{/*
-     <p className="text-xs text-slate-500 text-center">We beginnen met een uitgebreide</p>
-<p className="text-xs text-slate-500 text-center">analyse van uw behoeften en doelen</p>
-<p className="text-xs text-slate-500 text-center">Samen met u ontwikkelen we een </p>
-<p className="text-xs text-slate-500 text-center">duidelijke strategie en roadmap die</p>
-<p className="text-xs text-slate-500 text-center">uw project richting geeft.</p>
-*/ }
+
 </div>
 </div>
 
@@ -384,7 +377,8 @@ zodat uw app altijd up-to-date en operationeel blijft.
 </div>
 
 
-<div className="grid lg:grid-cols-2 gap-20 sm:grid-cols-1">
+
+<div className="grid  gap-20 grid-cols-1 lg:grid-cols-2">
 <div className="mr-10">
 <div className="card bg-base-100 w-72 shadow-xl h-80">
         <div className="card-body">
@@ -400,36 +394,38 @@ zodat uw app altijd up-to-date en operationeel blijft.
                 <div className="text-base font-sans"><h1>Sophie de Vries</h1></div>
                  <div className="text-xs font-sans"><p>eigenaar van een retailbedrijf</p></div>
             </div>
+          
         </div>
         </div>
-        </div>
-</div>
+ </div>
 
-
-<div className="">
-<div className="card bg-base-100 w-72 shadow-xl h-80">
+        <div className="card bg-base-100 w-72 shadow-xl h-80">
         <div className="card-body">
-            <h2 className="card-title  text-lg font-sans">De toekomst van mobiele applicaties</h2>
-            <p className="text-sm font-sans">“Het creatieve team van Younitech heeft onze verwachtingen overtroffen. 
-                Van logo tot complete huisstijl – alles klopt!”</p>
+            <h2 className="card-title text-lg font-sans">5 manieren om uw website te laten opvallen</h2>
+            <p className="text-sm font-sans">“Younitech gaf mijn merk de professionele uitstraling die het nodig had. Dankzij hun 
+                brandingstrategieën zijn we zichtbaar gegroeid.”</p>
             <div className="card-actions justify-end">
             </div>
 
             <div className="flex justify-between items-center mt-5">
-            <div className=""><img className="w-16" src="/avatar/avater-testi-2.png.png " alt="" /></div>
+            <div className=""><img className="w-16" src="/avatar/avater-testi-3.png.png" alt="" /></div>
             <div className="">
-                <div className="text-base font-sans"><h1>Mark Janssen</h1></div>
-                 <div className="text-xs font-sans"><p>CEO van een tech-startup</p></div>
+                <div className="text-base font-sans"><h1>Sophie de Vries</h1></div>
+                 <div className="text-xs font-sans"><p>eigenaar van een retailbedrijf</p></div>
             </div>
+          
         </div>
         </div>
-        </div>     
-</div>
-</div>
-</div>
+        </div>
+        </div>
 
-        </div>
+      </div>
+      </div>
+      </div>
+    
+
     );
 };
-
+  
 export default Appmarket;
+  
