@@ -6,7 +6,7 @@ import Brand from "../Brand/Brand";
 // import icon4 from "../assets/Vector (4).png";
 //import icon5 from "../assets/Icon (6).png";
 import img from "../assets/rafiki5.png";
-import link from "../assets/Link.png";
+import iconPark from "../assets/icon-park.png";
 import link1 from "../assets/Link (1).png";
 import link2 from "../assets/Link (2).png";
 import link3 from "../assets/Link (3).png";
@@ -118,7 +118,7 @@ const Diensten = () => {
           {/* Left Section */}
           <div className="lg:w-1/2 space-y-6">
             <h1 className="text-3xl font-bold text-gray-800">
-              Onze Branding Oplossingen
+            Onze brandingoplossingen
             </h1>
             <div className="flex items-center gap-4">
               <button className="px-4 py-2 flex justify-center items-center gap-2 bg-blue-500 text-white font-semibold rounded-lg shadow-md hover:bg-blue-600">
@@ -143,13 +143,13 @@ const Diensten = () => {
             <div className="p-4  bg-white shadow-md rounded-lg hover:shadow-lg">
               <div className="mb-4">
                 <img
-                  src={link}
+                  src={iconPark}
                   alt="Strategie & Conceptont"
                   className="w-14 h-14 object-cover rounded-md"
                 />
               </div>
               <h1 className="text-lg font-semibold text-gray-800">
-                Strategie & Conceptont
+              strategie en conceptontwerp
               </h1>
               <h2 className="text-gray-600 mt-2">
                 Zet uw ideeën om in een doordachte strategie.
@@ -166,7 +166,7 @@ const Diensten = () => {
                 />
               </div>
               <h1 className="text-lg font-semibold text-gray-800">
-                Corporate Identity
+              Huisstijl
               </h1>
               <h2 className="text-gray-600 mt-2">
                 Bouw een merk dat blijft hangen bij uw doelgroep.
@@ -297,6 +297,8 @@ const Diensten = () => {
       </div>
     </div>
   </div>
+  
+
   
 </div>
 
