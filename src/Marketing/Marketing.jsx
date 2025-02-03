@@ -19,33 +19,33 @@ const Marketing = () => {
     return (
         <div className="m-18">
 
-        <div className="grid lg:grid-cols-2 sm:grid-cols-1 items-center m-20">
+        <div className="grid grid-cols-1 lg:grid-cols-2 items-center lg:px-12 ml-10 mt-10 lg:m-20">
 
 
         <div className="mr-5">
           <div className="">
-            <p className=" rounded-3xl bg-fuchsia-100 font-medium p-2 text-base text-center text-fuchsia-500 mb-3 font-sans  w-3/6">
+            <p className=" rounded-3xl bg-fuchsia-100 font-medium p-2 text-base text-center text-fuchsia-500 mb-3 font-sans w-4/6  lg:w-3/6">
               Ontwerp uw eigen
             </p>
           </div>
           <div className="mb-6">
-            <h1 className="text-4xl text-left ">Marketingont</h1>
-            <h1 className="text-4xl text-left mb-3 relative ">wikkeling</h1>
-            <img className="-mt-6" src="/article/Heading 2.png" alt=""></img>
+            <h1 className=" text-3xl lg:text-4xl font-bold text-left ">Marketingont</h1>
+            <h1 className="text-3xl lg:text-4xl font-bold text-left mb-3 relative ">wikkeling</h1>
+            <img className="-mt-6 w-40 lg:w-64" src="/article/Heading 2.png" alt=""></img>
           </div>
-          <p className="text-left text-xs text-slate-500">
+          <p className="text-left text-base lg:text-lg text-slate-500">
             Creëer een krachtige marketingstrategie voor uw bedrijf Bij
           </p>
-          <p className="text-left text-xs text-slate-500">
+          <p className="text-left text-base lg:text-lg text-slate-500">
             Younitech helpen we bedrijven om op te vallen in een steeds
           </p>
-          <p className="text-left text-xs text-slate-500">
+          <p className="text-left text-base lg:text-lg text-slate-500">
             veranderend digitaal landschap. Wij combineren innovatieve
           </p>
-          <p className="text-left text-xs text-slate-500">
+          <p className="text-left text-base lg:text-lg text-slate-500">
             technologie met data-gedreven strategieën om uw merk{" "}
           </p>
-          <p className="text-left text-xs text-slate-500">
+          <p className="text-left text-base lg:text-lg text-slate-500">
             zichtbaarder te maken en uw doelgroep te bereiken.
           </p>
 
@@ -76,155 +76,12 @@ const Marketing = () => {
           </div>
         </div>
 
-        <div className="">
+        <div className="mt-10 mb-5 mr-10">
           <img className="w-full" src="/linkImages/pana.png" alt="" />
         </div>
       </div>
 
       {/** first part end here */}
-
-      {/** second part start from here */}
-
-      <div className="flex items-center justify-center ">
-        <p className=" rounded-3xl bg-fuchsia-100 font-medium p-2 text-base text-center text-fuchsia-500 mb-3 font-sans  w-1/6">
-          Ontwerp uw eigen
-        </p>
-      </div>
-      <h1 className="text-4xl text-center font-medium">Marketingont</h1>
-      <p className="text-base text-slate-400 text-center mt-2">
-        Wij maken het ontwikkelen van uw marketingstrategie eenvoudig:
-      </p>
-
-      {/** second part end here */}
-
-      {/** 3rd  part start from here */}
-
-      <div className="flex justify-between items-center m-20">
-        <div className="">
-          <img src="/linkImages/consult.png" alt="" />
-        </div>
-        <div className="">
-          <div className="collapse collapse-arrow bg-sky-400 m-7 ">
-            <input type="radio" name="my-accordion-2" defaultChecked />
-            <div className="collapse-title text-xl text-white font-medium">
-              Strategische planning
-            </div>
-            <div className="collapse-content">
-              <p className="text-left">
-                Wij analyseren uw doelen en ontwikkelen een{" "}
-              </p>
-              <p className="text-left"> op maat gemaakte strategie.</p>
-            </div>
-          </div>
-
-          <div className="collapse collapse-arrow bg-sky-400 m-7">
-            <input type="radio" name="my-accordion-2" />
-            <div className="collapse-title text-xl text-white font-medium">
-              Creatieve uitvoering
-            </div>
-            <div className="collapse-content">
-              <p className="text-left">
-                Onze experts creëren campagnes en content{" "}
-              </p>
-              <p className="text-left"> die uw merk versterken</p>
-            </div>
-          </div>
-
-          <div className="collapse collapse-arrow bg-sky-400 m-7">
-            <input type="radio" name="my-accordion-2" />
-            <div className="collapse-title text-xl text-white font-medium">
-              Analyse en optimalisatie
-            </div>
-            <div className="collapse-content">
-              <p className="text-left">
-                Doorlopende analyse en verbetering voor maximale resultaten.
-              </p>
-              <p className="text-left"></p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      {/** 3rd  part end  here */}
-
-      {/** 4th   part start from here */}
-
-      <div className=" flex justify-between ite h-64 m-48">
-        <div className=" mt-32 ">
-          {" "}
-          <img
-            className="w-32"
-            src="/linkImages/Link → logo-amazon-fill.png.png"
-            alt=""
-          />
-        </div>
-        <div className="">
-          <div className="">
-            <img
-              className="w-32"
-              src="/linkImages/Link → logo-feedly-fill.png.png"
-              alt=""
-            />
-          </div>
-          <div className="mt-32">
-            <img
-              className="w-32"
-              src="/linkImages/Link → logo-craft-fill.png.png"
-              alt=""
-            />
-          </div>
-        </div>
-
-        <div className="text-center">
-          <div className="-mb-4 flex justify-center items-center">
-            <img
-              className="w-32"
-              src="/linkImages/Link → logo-hopin-fill.png.png"
-              alt=""
-            />
-          </div>
-          <h1 className="font-bold text-2xl ">Sluit u aan bij de 7.000+ </h1>
-          <h1 className="font-bold text-2xl">bedrijven die ons vertrouwen</h1>
-          <p className="mb-7 text-slate-400">
-            U heeft de ideeën, wij hebben de tools
-          </p>
-          <button className="btn text-slate-300 btn-primary">
-            Aan de Slag
-          </button>
-        </div>
-
-        <div className="">
-          <div className="">
-            <img
-              className="w-32"
-              src="/linkImages/div.elementor-widget-container.png"
-              alt=""
-            />
-          </div>
-          <div className="mt-32">
-            <img
-              className="w-32"
-              src="/linkImages/div.elementor-widget-container (1).png"
-              alt=""
-            />
-          </div>
-        </div>
-
-        <div className="">
-          <div className=" mt-32 ">
-            {" "}
-            <img
-              className="w-32"
-              src="/linkImages/Link → logo-google-fill.png.png"
-              alt=""
-            />
-          </div>
-        </div>
-      </div>
-
-      {/** 4th   part end  here */}
-
-      {/** 5th   part start  here */}
 
 
 {/** second part start from here */}
@@ -334,7 +191,7 @@ const Marketing = () => {
 
 
 
-<div className="md:px-36 px-8 py-12 bg-gray-50">
+<div className="md:px-36 px-8 py-3 bg-gray-50">
 <div className="bg-[#F8F8F8] my-16  grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 text-center">
         <div className="p-6 text-start ">
           <div className=""> <img className="flex justify-center items-center" src={i1} alt="" /></div>
