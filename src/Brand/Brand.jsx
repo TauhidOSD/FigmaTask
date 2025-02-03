@@ -79,7 +79,6 @@ const Brand = () => {
           )}
         </div>
       </div>
-      
     </div>
   );
 };
