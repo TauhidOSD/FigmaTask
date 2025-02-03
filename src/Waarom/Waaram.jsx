@@ -25,7 +25,7 @@ const Waaram = () => {
         {/* Right Side: Text */}
         <div className="lg:w-1/2 z-10">
           <h2 className="text-3xl lg:text-4xl font-bold mb-6 text-gray-800">
-            Waarom kiezen voor Younitech?
+            Waaromkiezen voor <br /> Younitech?
           </h2>
           <p className="text-lg lg:text-xl mb-6 text-gray-700 leading-relaxed">
             Met Younitech kiest u voor een partner die uw visie begrijpt en
@@ -33,15 +33,15 @@ const Waaram = () => {
           </p>
           <ul className="space-y-4 text-lg text-gray-700">
             <li className="flex items-start">
-              <span className="mr-3 text-2xl text-green-500">✔</span>
+              <span className="mr-3 text-2xl text-black">•</span>
               Technologische oplossingen die met uw bedrijf meegroeien.
             </li>
             <li className="flex items-start">
-              <span className="mr-3 text-2xl text-green-500">✔</span>
+              <span className="mr-3 text-2xl text-black">•</span>
               Een focus op meetbare resultaten en een naadloze klantbeleving.
             </li>
             <li className="flex items-start">
-              <span className="mr-3 text-2xl text-green-500">✔</span>
+              <span className="mr-3 text-2xl text-black">•</span>
               Toegang tot een team van ervaren experts.
             </li>
           </ul>
@@ -51,8 +51,8 @@ const Waaram = () => {
               <div className="mb-4">
                 <img src={icon} alt="Experience Icon" className="w-18 h-12" />
               </div>
-              <h2 className="text-2xl font-bold text-gray-800">5 Years of</h2>
-              <h2 className="text-2xl font-bold text-gray-800">Experience</h2>
+              <h2 className="text-2xl font-bold text-gray-800">Uitgebreide <br /> ervaring en <br /> kennis</h2>
+            
             </div>
 
             {/* Right Section */}
@@ -60,10 +60,7 @@ const Waaram = () => {
               <div className="mb-4">
                 <img src={icon1} alt="Projects Icon" className="w-16 h-12" />
               </div>
-              <h2 className="text-2xl font-bold text-gray-800">50+ Projects</h2>
-              <h2 className="text-2xl font-bold text-gray-800">
-                Done Together
-              </h2>
+              <h2 className="text-2xl font-bold text-gray-800">Ruime ervaring met <br />Het bereiken van <br />Jouw doelgroep</h2>
             </div>
           </div>
 
