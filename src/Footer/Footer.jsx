@@ -5,7 +5,7 @@ import instra from "../assets/bx_bxl-instagram-alt.png";
 import twiter from "../assets/Group.png";
 import linkedin from "../assets/Vector 2.png";
 import { useNavigate } from "react-router-dom";
-
+import{ FaRegAddressCard } from "react-icons/fa";
 const Footer = () => {
   const navigate=useNavigate();
   return (
@@ -22,10 +22,17 @@ const Footer = () => {
             <img src={phone} alt="Phone" className="mr-2 w-5 h-5" />
             <span className="text-gray-900">(888) 1234-5678</span>
           </div>
+
           <div className="flex items-center">
             <img src={email} alt="Email" className="mr-2 w-5 h-5" />
             <span className="text-gray-900">info@example.com</span>
           </div>
+
+          <div className="flex items-center mt-2 gap-3">
+           <FaRegAddressCard className="text-4xl"></FaRegAddressCard>
+            <span className="text-gray-900">Younitech Hoofdkantoor De Entree 201, 1101HG Amsterdam</span>
+          </div>
+
           <div className="flex space-x-4 mt-4">
             <img src={instra} alt="Instagram" className="w-6 h-6 cursor-pointer" />
             <img src={twiter} alt="Twitter" className="w-6 h-6 cursor-pointer" />
