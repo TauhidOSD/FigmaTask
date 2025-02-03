@@ -3,6 +3,11 @@ import icon1 from "../assets/Icon (2).png"
 import icon2 from "../assets/Icon (3).png"
 import icon3 from "../assets/Icon (4).png"
 import icon4 from "../assets/Icon (5).png"
+import i1 from "../assets/rectangle.png"
+import i2 from "../assets/tree.png"
+import i3 from "../assets/light.png"
+import i4 from "../assets/watch.png"
+
 const Overons = () => {
   return (
     <div className="md:px-36 px-8 py-12 bg-gray-50">
@@ -45,27 +50,33 @@ const Overons = () => {
 
       {/* Second Section  */}
 
-      <div className="bg-[#F8F8F8] my-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 text-center">
+      <div className="bg-[#F8F8F8] my-16  grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 text-center">
         <div className="p-6 text-start ">
-          <h1 className="text-4xl font-bold text-[#468AFF]">$36M</h1>
-          <p className="mt-2 text-lg ">aan afgeronde projecten wereldwijd.</p>
+          <div className=""> <img className="flex justify-center items-center" src={i1} alt="" /></div>
+          <h1 className="mt-2 text-xl font-bold "> Oprechtheid</h1>
+          <p className="mt-2 text-sm ">Eerlijke en transparante <br />bedrijfsvoering staat centraal in alles <br />wat we doen</p>
         </div>
+
         <div className="p-6 text-start">
-          <h1 className="text-4xl font-bold text-[#468AFF]">19M+</h1>
-          <p className="mt-2 text-lg">
-            klanten geholpen met betrouwbare en schaalbare oplossingen.
+        <div className=""><img src={i2} alt="" /></div>
+        <h1 className="mt-2 text-xl font-bold ">Maatschappelijke betrokkenheid</h1>
+          <p className="mt-2 text-sm">
+          We bieden kansen aan werknemers om hun <br />potentieel te benutten, zonder hiermee te <br />koop te lopen
           </p>
         </div>
+
         <div className="p-6  text-start">
-          <h1 className="text-4xl font-bold text-[#468AFF]">$48M+</h1>
-          <p className="mt-2 text-lg">
-            aan omzetgroei gerealiseerd voor onze partners.
+        <div className=""><img src={i3} alt="" /></div>
+        <h1 className="mt-2 text-xl font-bold ">Innovativiteit</h1>
+          <p className="mt-2 text-sm">
+          We denken contrarian en kiezen voor <br />unieke oplossingen in een <br />concurrerende markt.
           </p>
         </div>
         <div className="p-6 text-start ">
-          <h1 className="text-4xl font-bold text-[#468AFF]">1056</h1>
-          <p className="mt-2 text-lg">
-            succesvolle projecten afgerond in Noord-Amerika en Europa.
+        <div className=""> <img src={i4} alt="" /></div>
+        <h1 className="mt-2 text-xl font-bold "> Authenticiteit</h1>
+          <p className="mt-2 text-sm">
+          We blijven trouw aan onze principes en laten ons niet leiden door trends of competitie
           </p>
         </div>
       </div>
@@ -118,12 +129,11 @@ const Overons = () => {
   <div className="text-center mb-12">
     <h1>
       <button className="text-3xl font-bold border p-5 bg-[#EFECFF] rounded-full text-blue-600 hover:text-blue-800 transition">
-        Onze Kernwaarden
+      Onze Missie
       </button>
     </h1>
-    <h2 className="text-4xl font-bold text-[#263238] mt-4">
-      Younitech wordt gedreven door een duidelijke visie en vier kernwaarden die
-      de kern vormen van alles wat we doen:
+    <h2 className="text-sm font-sans text-[#263238] mt-4">
+    Bij Younitech bouwen we voort op jarenlange ervaring in dienstverlening die echt verder helpt. Onze visie? Bedrijven zo <br />ondersteunen dat samenwerken met ons niet alleen vanzelfsprekend is, maar een blijvende verbinding creëert.
     </h2>
   </div>
 
@@ -135,10 +145,9 @@ const Overons = () => {
         <img src={icon1} alt="Innovatie" className="w-24 h-28 mr-4" />
       </div>
       <div>
-        <h1 className="text-xl font-semibold text-[#263238]">Innovatie</h1>
+        <h1 className="text-xl font-semibold text-[#263238]">Impactvolle projecten afgerond</h1>
         <h3 className="text-gray-700 mt-2">
-          Technologieën en strategieën toepassen die bedrijven vooruithelpen,
-          altijd met een creatieve blik op de toekomst.
+        Onze oplossingen hebben meetbare resultaten opgeleverd
         </h3>
       </div>
     </div>
@@ -149,10 +158,11 @@ const Overons = () => {
         <img src={icon2} alt="Teamwork" className="w-24 h-28 mr-4" />
       </div>
       <div>
-        <h1 className="text-xl font-semibold text-[#263238]">Teamwork</h1>
+        <h1 className="text-xl font-semibold text-[#263238]">Klanten geholpen met 
+        betrouwbare oplossingen</h1>
+
         <h3 className="text-gray-700 mt-2">
-          Samenwerking is onze sleutel tot succes. Wij werken nauw met onze
-          klanten samen om oplossingen te ontwerpen die écht waarde toevoegen.
+          We bieden technologieën die bedrijven vooruithelpen
         </h3>
       </div>
     </div>
@@ -163,10 +173,11 @@ const Overons = () => {
         <img src={icon3} alt="Uitmuntendheid" className="w-24 h-28 mr-4" />
       </div>
       <div>
-        <h1 className="text-xl font-semibold text-[#263238]">Uitmuntendheid</h1>
+        <h1 className="text-xl font-semibold text-[#263238]">Waarde gecreëerd 
+        voor groei en succes</h1>
+
         <h3 className="text-gray-700 mt-2">
-          Kwaliteit staat centraal. Wij leveren alleen het beste, van strategie
-          tot implementatie, om uw verwachtingen te overtreffen.
+          Gericht op het stimuleren van vooruitgang door innovatie en samenwerking
         </h3>
       </div>
     </div>
@@ -178,11 +189,11 @@ const Overons = () => {
       </div>
       <div>
         <h1 className="text-xl font-semibold text-[#263238]">
-          Verantwoordelijkheid
+        Succesvolle projecten 
+        in diverse sectoren
         </h1>
         <h3 className="text-gray-700 mt-2">
-          Wij geloven in verantwoordelijkheid voor onze klanten, onze
-          oplossingen, en de resultaten die wij beloven te leveren.
+        Onze expertise ondersteunt bedrijven in verschillende markten
         </h3>
       </div>
     </div>

@@ -1,4 +1,4 @@
-import icon from "../assets/Link.png";
+
 import icon1 from "../assets/Link (1).png";
 import icon2 from "../assets/Link (2).png";
 import icon3 from "../assets/Link (3).png";
@@ -6,11 +6,12 @@ import Brand from "../Brand/Brand";
 // import icon4 from "../assets/Vector (4).png";
 //import icon5 from "../assets/Icon (6).png";
 import img from "../assets/rafiki5.png";
-import link from "../assets/Link.png";
+import iconPark from "../assets/icon-park.png";
 import link1 from "../assets/Link (1).png";
 import link2 from "../assets/Link (2).png";
 import link3 from "../assets/Link (3).png";
 import link4 from "../assets/Link (5).png";
+import link12 from "../assets/Link (12).png"
 import { GoArrowRight } from "react-icons/go";
 import Vragen from "../Vragen/Vragen";
 import img2 from "../assets/avater-testi-2.png.png"
@@ -37,13 +38,13 @@ const Diensten = () => {
         <div className="flex flex-col items-center text-center p-6 space-y-4">
           <div className="w-16 h-16 flex justify-center items-center bg-blue-100 rounded-full">
             <img
-              src={icon}
+              src={link12}
               alt="Strategische Merkontwikkeling"
               className="w-8 h-8"
             />
           </div>
           <h2 className="text-lg font-semibold text-gray-800">
-            Strategische Merkontwikkeling
+          Doelgerichte branding
           </h2>
           <p className="text-sm text-gray-600">
             Creëer een merk dat de kern van uw bedrijf vertegenwoordigt.
@@ -98,9 +99,9 @@ const Diensten = () => {
         {/* Third Section */}
         <div className="p-6 text-center space-y-4">
           <h1 className="text-2xl lg:text-3xl font-bold text-gray-800">
-            Personaliseer uw Merk voor Online Succes
+          Personaliseer uw merk voor online succes
           </h1>
-          <p className="text-[#7E7E7E] leading-relaxed font-semibold px-4 lg:px-72 text-center">
+          <p className="text-[#7E7E7E] leading-relaxed font-sans px-4 lg:px-72 text-center">
             Wij bieden flexibele en creatieve oplossingen die aansluiten op uw
             specifieke behoeften, waaronder:
           </p>
@@ -117,7 +118,7 @@ const Diensten = () => {
           {/* Left Section */}
           <div className="lg:w-1/2 space-y-6">
             <h1 className="text-3xl font-bold text-gray-800">
-              Onze Branding Oplossingen
+            Onze brandingoplossingen
             </h1>
             <div className="flex items-center gap-4">
               <button className="px-4 py-2 flex justify-center items-center gap-2 bg-blue-500 text-white font-semibold rounded-lg shadow-md hover:bg-blue-600">
@@ -142,13 +143,13 @@ const Diensten = () => {
             <div className="p-4  bg-white shadow-md rounded-lg hover:shadow-lg">
               <div className="mb-4">
                 <img
-                  src={link}
+                  src={iconPark}
                   alt="Strategie & Conceptont"
                   className="w-14 h-14 object-cover rounded-md"
                 />
               </div>
               <h1 className="text-lg font-semibold text-gray-800">
-                Strategie & Conceptont
+              strategie en conceptontwerp
               </h1>
               <h2 className="text-gray-600 mt-2">
                 Zet uw ideeën om in een doordachte strategie.
@@ -165,7 +166,7 @@ const Diensten = () => {
                 />
               </div>
               <h1 className="text-lg font-semibold text-gray-800">
-                Corporate Identity
+              Huisstijl
               </h1>
               <h2 className="text-gray-600 mt-2">
                 Bouw een merk dat blijft hangen bij uw doelgroep.
@@ -296,6 +297,8 @@ const Diensten = () => {
       </div>
     </div>
   </div>
+  
+
   
 </div>
 
