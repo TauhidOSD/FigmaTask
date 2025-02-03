@@ -8,9 +8,10 @@ import i1 from "../assets/rectangle.png"
 import i2 from "../assets/tree.png"
 import i3 from "../assets/light.png"
 import i4 from "../assets/watch.png"
-
+import { useNavigate } from "react-router-dom";
 
 const Marketing = () => {
+  const navigate=useNavigate();
   const [activeSection, setActiveSection] = useState(null);
 
   const toggleSection = (section) => {
@@ -70,7 +71,7 @@ const Marketing = () => {
           </div>
 
           <div className="mt-5 mr-6">
-            <button className="btn btn-sm btn-info w-40">
+            <button onClick={()=>navigate("/Contact")} className="btn btn-sm btn-info text-slate-100 w-40">
               Neem contact op
             </button>
           </div>
@@ -232,7 +233,7 @@ const Marketing = () => {
 {/** 6th   part start here <div className=""><img src="/avatar/Main (1).png" alt="" /></div> */}
 
 
-<div className=" mt-10  bg-cover bg-center h-dvh w-auto">
+<div className=" mt-10">
   
         <div className="flex items-center justify-center "><p className=" rounded-3xl bg-fuchsia-100 font-medium p-2 text-base text-center text-fuchsia-500 mb-3 font-sans  lg:w-1/6">Getuigenissen</p></div>
         <h1  className="text-3xl text-center font-medium">Wat klanten over ons zeggen</h1>
