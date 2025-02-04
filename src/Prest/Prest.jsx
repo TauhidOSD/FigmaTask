@@ -53,14 +53,22 @@ const Prest = () => {
           {data.map((item, index) => (
             <div key={index} className="mb-8">
               <h2
-                className="text-2xl font-semibold text-[#FFFFFF] cursor-pointer flex items-center justify-start gap-4"
+                className="text-2xl font-semibold text-[#D4D4D8] py-4 cursor-pointer flex items-center justify-start gap-4 relative"
                 onClick={() => handleSelect(index)}
               >
                 {item.title}
                 <span className="text-lg">{selected === index ? "-" : "+"}</span>
+                {selected !== index && (
+                  <span className="absolute  bottom-[-1px] left-0 w-full h-[1px] bg-[#FFFFFF]"></span>
+                )}
               </h2>
               {selected === index && (
-                <h2 className="text-xs text-[#FFFFFF] mt-2">{item.description}</h2>
+                <>
+                  <h2 className="text-sm py-4  text-[#FFFFFF] mt-2 relative">
+                    {item.description}
+                    <span className="absolute  bottom-[-1px] left-0 w-full h-[1px] bg-[#D4D4D8]"></span>
+                  </h2>
+                </>
               )}
             </div>
           ))}
@@ -68,11 +76,11 @@ const Prest = () => {
 
         {/* Right Side */}
         <div className="lg:w-1/2 relative">
-          <img src={currentImg} alt="Selected Image" className="w-full h-full object-cover rounded-lg shadow-lg" />
-          {/* <div className="absolute top-40 left-4 w-40 bg-white p-6 rounded-lg shadow-xl">
-            <h2 className="text-4xl font-bold text-gray-800">27%</h2>
-            <h2 className="text-lg text-gray-600">Productivity increase on average</h2>
-          </div> */}
+          <img
+            src={currentImg}
+            alt="Selected Image"
+            className="w-full h-full object-cover rounded-lg shadow-lg"
+          />
         </div>
       </div>
     </div>

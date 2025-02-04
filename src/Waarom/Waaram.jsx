@@ -46,7 +46,7 @@ const Waaram = () => {
             </li>
           </ul>
 
-          <div className="flex flex-col sm:flex-row justify-center lg:justify-start items-center sm:gap-10 md:gap-20 py-6">
+          <div className="flex flex-col sm:flex-row justify-center lg:justify-start items-center sm:gap-10 md:gap-36 py-6">
             {/* Left Section */}
             <div className="flex flex-col items-center lg:items-start text-center lg:text-left">
               <div className="mb-3 sm:mb-4">
