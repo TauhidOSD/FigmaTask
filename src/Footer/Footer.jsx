@@ -9,7 +9,7 @@ import{ FaRegAddressCard } from "react-icons/fa";
 const Footer = () => {
   const navigate=useNavigate();
   return (
-    <footer className="bg-sky-300 py-10 px-6 md:px-16">
+    <footer className="bg-[#FFFFFF] py-10 px-6 md:px-16">
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8">
         {/* Company Info */}
         <div>

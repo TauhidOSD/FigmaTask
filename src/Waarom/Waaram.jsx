@@ -7,65 +7,69 @@ const Waaram = () => {
   return (
     <div className="relative bg-white py-12">
       {/* Background Section */}
-      <div className="absolute bottom-0 left-0 w-full h-[300px] lg:h-[400px] bg-cover bg-center">
-        <img src={bgImg} className="h-[620px] -mt-48 w-[460px]" alt="" />
+      <div className="absolute bottom-0 left-0 w-full h-[250px] sm:h-[300px] lg:h-[400px] bg-cover bg-center">
+        <img src={bgImg} className="h-[500px] sm:h-[620px] -mt-32 sm:-mt-48 w-full max-w-xs sm:max-w-sm" alt="" />
       </div>
 
       {/* Content Section */}
-      <div className="relative container mx-auto flex flex-col lg:flex-row items-center justify-between px-6 lg:px-12 gap-8">
+      <div className="relative container mx-auto flex flex-col lg:flex-row items-center justify-between px-4 sm:px-6 lg:px-12 gap-6 sm:gap-8">
         {/* Left Side: Image */}
-        <div className="lg:w-1/2 flex justify-center z-10">
+        <div className="w-full lg:w-1/2 flex justify-center z-10">
           <img
             src={image}
             alt="Visual Representation"
-            className="w-full max-w-md lg:max-w-lg"
+            className="w-4/5 sm:w-full max-w-xs sm:max-w-md lg:max-w-lg"
           />
         </div>
 
         {/* Right Side: Text */}
-        <div className="lg:w-1/2 z-10">
-          <h2 className="text-3xl lg:text-4xl font-bold mb-6 text-gray-800">
-            Waaromkiezen voor <br /> Younitech?
+        <div className="w-full lg:w-1/2 z-10 text-center lg:text-left">
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-4 sm:mb-6 text-gray-800">
+            Waarom kiezen voor <br /> Younitech?
           </h2>
-          <p className="text-lg lg:text-xl mb-6 text-gray-700 leading-relaxed">
+          <p className="text-base sm:text-lg lg:text-xl mb-4 sm:mb-6 text-gray-700 leading-relaxed">
             Met Younitech kiest u voor een partner die uw visie begrijpt en
             omvormt tot praktische resultaten. Wij bieden:
           </p>
-          <ul className="space-y-4 text-lg text-gray-700">
+          <ul className="space-y-3 sm:space-y-4 text-base sm:text-lg text-gray-700">
             <li className="flex items-start">
-              <span className="mr-3 text-2xl text-black">•</span>
+              <span className="mr-2 sm:mr-3 text-xl sm:text-2xl text-black">•</span>
               Technologische oplossingen die met uw bedrijf meegroeien.
             </li>
             <li className="flex items-start">
-              <span className="mr-3 text-2xl text-black">•</span>
+              <span className="mr-2 sm:mr-3 text-xl sm:text-2xl text-black">•</span>
               Een focus op meetbare resultaten en een naadloze klantbeleving.
             </li>
             <li className="flex items-start">
-              <span className="mr-3 text-2xl text-black">•</span>
+              <span className="mr-2 sm:mr-3 text-xl sm:text-2xl text-black">•</span>
               Toegang tot een team van ervaren experts.
             </li>
           </ul>
-          <div className="flex flex-col lg:flex-row justify-start items-center gap-8 p-6 rounded-lg ">
+
+          <div className="flex flex-col sm:flex-row justify-center lg:justify-start items-center sm:gap-10 md:gap-20 py-6">
             {/* Left Section */}
-            <div className="flex flex-col items-start text-center lg:text-left">
-              <div className="mb-4">
-                <img src={icon} alt="Experience Icon" className="w-18 h-12" />
+            <div className="flex flex-col items-center lg:items-start text-center lg:text-left">
+              <div className="mb-3 sm:mb-4">
+                <img src={icon} alt="Experience Icon" className="w-12 sm:w-16" />
               </div>
-              <h2 className="text-2xl font-bold text-gray-800">Uitgebreide <br /> ervaring en <br /> kennis</h2>
-            
+              <h2 className="text-lg sm:text-2xl font-bold text-gray-800">
+                Uitgebreide <br /> ervaring en <br /> kennis
+              </h2>
             </div>
 
             {/* Right Section */}
-            <div className="flex flex-col items-start text-center lg:text-left">
-              <div className="mb-4">
-                <img src={icon1} alt="Projects Icon" className="w-16 h-12" />
+            <div className="flex flex-col items-center lg:items-start text-center lg:text-left mt-4 sm:mt-0">
+              <div className="mb-3 sm:mb-4">
+                <img src={icon1} alt="Projects Icon" className="w-12 sm:w-16" />
               </div>
-              <h2 className="text-2xl font-bold text-gray-800">Ruime ervaring met <br />Het bereiken van <br />Jouw doelgroep</h2>
+              <h2 className="text-lg sm:text-2xl font-bold text-gray-800">
+                Ruime ervaring met <br /> het bereiken van <br /> jouw doelgroep
+              </h2>
             </div>
           </div>
 
-          <div>
-            <button className="bg-[#263238] text-white ml-2 py-3 px-6 rounded-lg shadow-lg hover:bg-[#1e2a30] transition duration-300 ease-in-out">
+          <div className="flex justify-center lg:justify-start">
+            <button className="bg-[#263238] text-white py-3 px-5 sm:px-6 rounded-lg shadow-lg hover:bg-[#1e2a30] transition duration-300 ease-in-out">
               Ontdek meer over onze aanpak
             </button>
           </div>

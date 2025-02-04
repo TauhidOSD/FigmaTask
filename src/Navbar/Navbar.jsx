@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 const Navbar = () => {
   const navigate=useNavigate();
   return (
-    <header className="bg-sky-300 shadow-md sticky top-0 z-50">
+    <header className="bg-[#FFFFFF] shadow-md sticky top-0 z-50">
       <nav className="container mx-auto flex items-center justify-between px-4 py-3 lg:py-5">
         {/* Logo */}
         <a href="/" className="flex items-center space-x-2">
