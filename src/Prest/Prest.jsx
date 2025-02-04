@@ -32,10 +32,10 @@ const Prest = () => {
   };
 
   return (
-    <div className="bg-[#263238] mt-8">
+    <div className="bg-[#263238] mt-8 md:px-16">
       {/* Header Section */}
       <div className="relative top-16 flex flex-col items-center lg:items-start">
-        <img src={bgImg} alt="Background" className="object-cover w-28 h-28 lg:w-auto lg:h-auto lg:ml-96" />
+        <img src={bgImg} alt="Background" className=" object-cover w-28 h-28 lg:w-auto lg:h-auto lg:ml-96 " />
         <div className="text-center lg:absolute lg:top-1/2 lg:left-1/2 lg:transform lg:-translate-x-1/2 lg:-translate-y-1/2 text-[#FFFFFF]">
           <h2 className="text-2xl lg:text-4xl font-bold mb-2">Prestaties die resultaten leveren</h2>
           <h2 className="text-lg lg:text-base">Onze aanpak is gericht op het bieden van</h2>
@@ -73,7 +73,7 @@ const Prest = () => {
           <img
             src={currentImg}
             alt="Selected Image"
-            className="w-full max-w-xs mx-auto lg:max-w-full lg:mx-0 h-auto object-cover rounded-lg shadow-lg"
+            className="w-full  max-w-xs mx-auto lg:max-w-full lg:mx-0 h-auto object-cover rounded-lg shadow-lg"
           />
         </div>
       </div>

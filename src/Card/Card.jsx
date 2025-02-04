@@ -7,13 +7,13 @@ const Card = () => {
   const navigate=useNavigate();
   return (
 
-    <div className="bg-gray-50 py-12 px-6 lg:px-20">
+    <div className="bg-gray-50 py-12 px-6 lg:px-36">
       {/* Header Section */}
       <div className="text-center  mb-10">
         <h1 className="text-3xl lg:text-4xl font-bold text-gray-800 mb-4">
           Inspiratie en Inzichten
         </h1>
-        <h3 className="text-lg lg:text-md    text-gray-600 leading-relaxed">
+        <h3 className="text-lg lg:text-md md:px-52    text-gray-600 leading-relaxed">
           Blijf op de hoogte van trends, tips en succesverhalen met onze
           blogselectie. Ontdek nieuwe ideeën om uw digitale strategie te
           versterken.
