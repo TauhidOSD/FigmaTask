@@ -3,7 +3,7 @@
 const Blog = () => {
     return (
         <div>
-             <div className=" grid grid-cols-1 lg:grid-cols-3 ml-10 mt-20 mr-10 mb-20 gap-6">
+             <div className=" grid grid-cols-1 lg:grid-cols-3 ml-10 mt-20 mr-10 mb-20 gap-6 md:px-28">
                 <div className="">
                             <img src="/article/Article.png" alt="" />
                             <div className="">
