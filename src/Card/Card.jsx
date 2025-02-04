@@ -1,6 +1,9 @@
 import img1 from "../assets/Link → blog-6.jpg.png";
 import img2 from "../assets/Link → blog-6.jpg (1).png";
 import img3 from "../assets/Link → blog-6.jpg (2).png";
+import img4 from "../assets/Article (5).png";
+import img5 from "../assets/Article (6).png";
+import img6 from "../assets/mehadi.jpg";
 import { useNavigate } from "react-router-dom";
 
 const Card = () => {
@@ -75,6 +78,78 @@ const Card = () => {
         {/* Card 3 */}
         <div onClick={()=>navigate("/blog")} className="bg-white shadow-lg rounded-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
           <img src={img3} alt="Blog 3" className="w-full h-56 object-cover" />
+          <div className="p-6">
+            <div className="flex gap-2 mb-4">
+              <button className="bg-blue-500 text-white text-sm px-4 py-1 rounded-full hover:bg-blue-600 transition duration-300">
+                Website Design
+              </button>
+              <button className="bg-green-500 text-white text-sm px-4 py-1 rounded-full hover:bg-green-600 transition duration-300">
+                App Dev
+              </button>
+            </div>
+            <h2 className="text-xl font-semibold text-gray-800 mb-2">
+              “De toekomst van mobiele applicaties”
+            </h2>
+            <p className="text-gray-600 mb-4">
+              Mobiele applicaties blijven evolueren. Welke trends mogen
+              bedrijven niet missen om relevant te blijven?
+            </p>
+            <button className="text-blue-500 font-semibold hover:underline">
+              Lees meer
+            </button>
+          </div>
+        </div>
+        {/* Card 4 */}
+        <div onClick={()=>navigate("/blog")} className="bg-white shadow-lg rounded-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+          <img src={img4} alt="Blog 3" className="w-full h-56 object-cover" />
+          <div className="p-6">
+            <div className="flex gap-2 mb-4">
+              <button className="bg-blue-500 text-white text-sm px-4 py-1 rounded-full hover:bg-blue-600 transition duration-300">
+                Website Design
+              </button>
+              <button className="bg-green-500 text-white text-sm px-4 py-1 rounded-full hover:bg-green-600 transition duration-300">
+                App Dev
+              </button>
+            </div>
+            <h2 className="text-xl font-semibold text-gray-800 mb-2">
+              “De toekomst van mobiele applicaties”
+            </h2>
+            <p className="text-gray-600 mb-4">
+              Mobiele applicaties blijven evolueren. Welke trends mogen
+              bedrijven niet missen om relevant te blijven?
+            </p>
+            <button className="text-blue-500 font-semibold hover:underline">
+              Lees meer
+            </button>
+          </div>
+        </div>
+        {/* Card 5 */}
+        <div onClick={()=>navigate("/blog")} className="bg-white shadow-lg rounded-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+          <img src={img5} alt="Blog 3" className="w-full h-56 object-cover" />
+          <div className="p-6">
+            <div className="flex gap-2 mb-4">
+              <button className="bg-blue-500 text-white text-sm px-4 py-1 rounded-full hover:bg-blue-600 transition duration-300">
+                Website Design
+              </button>
+              <button className="bg-green-500 text-white text-sm px-4 py-1 rounded-full hover:bg-green-600 transition duration-300">
+                App Dev
+              </button>
+            </div>
+            <h2 className="text-xl font-semibold text-gray-800 mb-2">
+              “De toekomst van mobiele applicaties”
+            </h2>
+            <p className="text-gray-600 mb-4">
+              Mobiele applicaties blijven evolueren. Welke trends mogen
+              bedrijven niet missen om relevant te blijven?
+            </p>
+            <button className="text-blue-500 font-semibold hover:underline">
+              Lees meer
+            </button>
+          </div>
+        </div>
+        {/* Card 6 */}
+        <div onClick={()=>navigate("/blog")} className="bg-white shadow-lg rounded-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+          <img src={img6} alt="Blog 3" className="w-full h-56 object-cover" />
           <div className="p-6">
             <div className="flex gap-2 mb-4">
               <button className="bg-blue-500 text-white text-sm px-4 py-1 rounded-full hover:bg-blue-600 transition duration-300">
