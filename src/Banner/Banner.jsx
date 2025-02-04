@@ -3,11 +3,12 @@ import two from "../assets/4 (2).png";
 import three from "../assets/2.png";
 import four from "../assets/3.png";
 import five from "../assets/5.png";
-import six from "../assets/Background (4).png";
+// import six from "../assets/Background (4).png";
+import six from "../assets/bg.jpg";
 
 const Banner = () => {
   return (
-    <div className="relative flex flex-col-reverse lg:flex-row items-center justify-between px-6 lg:px-16  lg:pb-20">
+    <div className="relative flex flex-col-reverse md:bg-[#FFFFFF] lg:flex-row items-center justify-between px-6 md:pl-36 md:pr-0  lg:pb-20">
       {/* Text Section */}
       <div className="lg:w-1/2 space-y-6 z-10">
         <h2 className="text-3xl lg:text-4xl font-bold text-gray-800">
@@ -28,7 +29,7 @@ const Banner = () => {
           <img
             src={six}
             alt="Background"
-            className="w-full h-[500px] object-cover"
+            className="w-full h-[524px] object-cover"
           />
           <div className="absolute flex flex-col gap-6 items-center">
             <div className="flex">
@@ -38,7 +39,7 @@ const Banner = () => {
             <div className="flex">
               <img src={three} alt="Overlay 3" className="w-36 h-36 lg:w-[348px] -ml-48 -mt-32 lg:h-[336px]" />
               <img src={four} alt="Overlay 4" className="w-36 h-36 -ml-20 lg:w-[336px] -mt-52 lg:h-[304px]" />
-              <img src={five} alt="Overlay 5" className="w-36 h-36 lg:w-[336px] -ml-[400px] mt-8 lg:h-64" />
+              <img src={five} alt="Overlay 5" className="w-36 h-36 lg:w-[336px] -ml-[400px] mt-8 lg:h-60" />
             </div>
           </div>
         </div>
