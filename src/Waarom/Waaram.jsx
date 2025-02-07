@@ -7,8 +7,11 @@ const Waaram = () => {
   return (
     <div className="relative bg-white py-12">
       {/* Background Section */}
-      <div className="absolute bottom-0 left-0 w-full h-[250px] sm:h-[300px] lg:h-[400px] bg-cover bg-center">
+      {/* <div className="absolute bottom-0 left-0 w-full h-[250px] sm:h-[300px] lg:h-[400px] bg-cover bg-center">
         <img src={bgImg} className="h-[500px] sm:h-[620px] -mt-32 sm:-mt-48 w-full max-w-xs sm:max-w-sm" alt="" />
+      </div> */}
+      <div className="absolute top-0 left-0 w-full h-[200px] sm:h-[300px] lg:h-[400px] bg-cover bg-center">
+        <img src={bgImg} className="h-[350px] sm:h-[620px] w-full max-w-xs sm:max-w-sm" alt="" />
       </div>
 
       {/* Content Section */}
@@ -23,7 +26,7 @@ const Waaram = () => {
         </div>
 
         {/* Right Side: Text */}
-        <div className="w-full lg:w-1/2 z-10 text-center lg:text-left">
+        <div className="w-full lg:w-1/2 z-10 text-start lg:text-left">
           <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-4 sm:mb-6 text-gray-800">
             Waarom kiezen voor <br /> Younitech?
           </h2>
@@ -46,9 +49,9 @@ const Waaram = () => {
             </li>
           </ul>
 
-          <div className="flex flex-col sm:flex-row justify-center lg:justify-start items-center sm:gap-10 md:gap-36 py-6">
+          <div className="flex flex-col ml-2 sm:flex-row justify-center lg:justify-start items-start sm:gap-10 md:gap-36 py-6">
             {/* Left Section */}
-            <div className="flex flex-col items-center lg:items-start text-center lg:text-left">
+            <div className="flex flex-col items-start lg:items-start text-start lg:text-left">
               <div className="mb-3 sm:mb-4">
                 <img src={icon} alt="Experience Icon" className="w-12 sm:w-16" />
               </div>
@@ -58,7 +61,7 @@ const Waaram = () => {
             </div>
 
             {/* Right Section */}
-            <div className="flex flex-col items-center lg:items-start text-center lg:text-left mt-4 sm:mt-0">
+            <div className="flex flex-col items-start lg:items-start text-start mt-8 lg:text-left  sm:mt-0">
               <div className="mb-3 sm:mb-4">
                 <img src={icon1} alt="Projects Icon" className="w-12 sm:w-16" />
               </div>
