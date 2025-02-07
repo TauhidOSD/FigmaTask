@@ -134,8 +134,8 @@ const router = createBrowserRouter([
 ]);
 
 createRoot(document.getElementById('root')).render(
-  <>
+  <div >
     <RouterProvider router={router} />
     <Toaster position="top-center" reverseOrder={false} />
-  </>
+  </div>
 );

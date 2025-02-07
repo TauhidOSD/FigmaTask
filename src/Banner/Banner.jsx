@@ -45,7 +45,7 @@ const Banner = () => {
         </div>
 
         {/* Mobile View: Styled Image Cards */}
-        <div className="flex flex-col items-center gap-6 lg:hidden mt-8">
+        {/* <div className="flex flex-col items-center gap-6 lg:hidden mt-8">
           {[one, two, three, four, five, six].map((img, index) => (
             <div
               key={index}
@@ -55,7 +55,7 @@ const Banner = () => {
               <div className="absolute inset-0 bg-black bg-opacity-10 rounded-2xl"></div>
             </div>
           ))}
-        </div>
+        </div> */}
       </div>
     </div>
   );
