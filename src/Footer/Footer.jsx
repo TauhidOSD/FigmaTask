@@ -28,7 +28,7 @@ const Footer = () => {
               <span className="text-gray-900 text-sm">Info@younitech.nl</span>
             </div>
           </div>
-          <div className="flex space-x-4 mt-4">
+          <div className="flex -mx-1 space-x-4 mt-4">
             <img src={instra} alt="Instagram" className="w-6 h-6 cursor-pointer" />
             <img src={twiter} alt="Twitter" className="w-6 h-6 cursor-pointer" />
             <img src={linkedin} alt="LinkedIn" className="w-6 h-6 cursor-pointer" />
