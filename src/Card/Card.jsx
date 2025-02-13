@@ -26,14 +26,14 @@ const Card = () => {
       {/* Cards Section */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
         {/* Card 1 */}
-        <div onClick={()=>navigate("/blog")}  className="bg-white shadow-lg rounded-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+        <div onClick={()=>navigate("/blog")}  className="bg-[#F5F5F5] shadow-lg rounded-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
           <img src={img1} alt="Blog 1" className="w-full h-56 object-cover" />
           <div className="p-6">
             <div className="flex gap-2 mb-4">
-              <button className="bg-blue-500 text-white text-sm px-4 py-1 rounded-full hover:bg-blue-600 transition duration-300">
+              <button className="bg-[#FFFFFF] text-[#468AFF] text-sm px-4 py-1 rounded-full  transition duration-300">
                 Website Design
               </button>
-              <button className="bg-green-500 text-white text-sm px-4 py-1 rounded-full hover:bg-green-600 transition duration-300">
+              <button className="bg-[#FFFFFF] text-[#468AFF] text-sm px-4 py-1 rounded-full  transition duration-300">
                 App Dev
               </button>
             </div>
@@ -44,21 +44,21 @@ const Card = () => {
               Een goed ontworpen website is meer dan een visitekaartje. Leer hoe
               u met design, snelheid en content uw conversies....
             </p>
-            <button className="text-blue-500 font-semibold hover:underline">
+            <button className="text-[#FFFFFF] btn bg-[#468AFF] px-8 ">
               Lees meer
             </button>
           </div>
         </div>
 
         {/* Card 2 */}
-        <div onClick={()=>navigate("/blog")} className="bg-white shadow-lg rounded-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+        <div onClick={()=>navigate("/blog")} className="bg-[#F5F5F5] shadow-lg rounded-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
           <img src={img2} alt="Blog 2" className="w-full h-56 object-cover" />
           <div className="p-6">
             <div className="flex gap-2 mb-4">
-              <button className="bg-blue-500 text-white text-sm px-4 py-1 rounded-full hover:bg-blue-600 transition duration-300">
+            <button className="bg-[#FFFFFF] text-[#468AFF] text-sm px-4 py-1 rounded-full  transition duration-300">
                 Website Design
               </button>
-              <button className="bg-green-500 text-white text-sm px-4 py-1 rounded-full hover:bg-green-600 transition duration-300">
+              <button className="bg-[#FFFFFF] text-[#468AFF] text-sm px-4 py-1 rounded-full  transition duration-300">
                 App Dev
               </button>
             </div>
@@ -69,21 +69,21 @@ const Card = () => {
               In een tijdperk van constante digitale prikkels is een sterke
               merkidentiteit essentieel. Ontdek hoe u een blijvende....
             </p>
-            <button className="text-blue-500 font-semibold hover:underline">
+            <button className="text-[#FFFFFF] btn bg-[#468AFF] px-8 ">
               Lees meer
             </button>
           </div>
         </div>
 
         {/* Card 3 */}
-        <div onClick={()=>navigate("/blog")} className="bg-white shadow-lg rounded-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+        <div onClick={()=>navigate("/blog")} className="bg-[#F5F5F5] shadow-lg rounded-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
           <img src={img3} alt="Blog 3" className="w-full h-56 object-cover" />
           <div className="p-6">
             <div className="flex gap-2 mb-4">
-              <button className="bg-blue-500 text-white text-sm px-4 py-1 rounded-full hover:bg-blue-600 transition duration-300">
+            <button className="bg-[#FFFFFF] text-[#468AFF] text-sm px-4 py-1 rounded-full  transition duration-300">
                 Website Design
               </button>
-              <button className="bg-green-500 text-white text-sm px-4 py-1 rounded-full hover:bg-green-600 transition duration-300">
+              <button className="bg-[#FFFFFF] text-[#468AFF] text-sm px-4 py-1 rounded-full  transition duration-300">
                 App Dev
               </button>
             </div>
@@ -94,20 +94,20 @@ const Card = () => {
               Mobiele applicaties blijven evolueren. Welke trends mogen
               bedrijven niet missen om relevant te blijven?
             </p>
-            <button className="text-blue-500 font-semibold hover:underline">
+            <button className="text-[#FFFFFF] btn bg-[#468AFF] px-8 ">
               Lees meer
             </button>
           </div>
         </div>
         {/* Card 4 */}
-        <div onClick={()=>navigate("/blog")} className="bg-white shadow-lg rounded-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+        <div onClick={()=>navigate("/blog")} className="bg-[#F5F5F5] shadow-lg rounded-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
           <img src={img4} alt="Blog 3" className="w-full h-56 object-cover" />
           <div className="p-6">
             <div className="flex gap-2 mb-4">
-              <button className="bg-blue-500 text-white text-sm px-4 py-1 rounded-full hover:bg-blue-600 transition duration-300">
+            <button className="bg-[#FFFFFF] text-[#468AFF] text-sm px-4 py-1 rounded-full  transition duration-300">
                 Website Design
               </button>
-              <button className="bg-green-500 text-white text-sm px-4 py-1 rounded-full hover:bg-green-600 transition duration-300">
+              <button className="bg-[#FFFFFF] text-[#468AFF] text-sm px-4 py-1 rounded-full  transition duration-300">
                 App Dev
               </button>
             </div>
@@ -118,20 +118,20 @@ const Card = () => {
               Mobiele applicaties blijven evolueren. Welke trends mogen
               bedrijven niet missen om relevant te blijven?
             </p>
-            <button className="text-blue-500 font-semibold hover:underline">
+            <button className="text-[#FFFFFF] btn bg-[#468AFF] px-8 ">
               Lees meer
             </button>
           </div>
         </div>
         {/* Card 5 */}
-        <div onClick={()=>navigate("/blog")} className="bg-white shadow-lg rounded-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+        <div onClick={()=>navigate("/blog")} className="bg-[#F5F5F5] shadow-lg rounded-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
           <img src={img5} alt="Blog 3" className="w-full h-56 object-cover" />
           <div className="p-6">
             <div className="flex gap-2 mb-4">
-              <button className="bg-blue-500 text-white text-sm px-4 py-1 rounded-full hover:bg-blue-600 transition duration-300">
+            <button className="bg-[#FFFFFF] text-[#468AFF] text-sm px-4 py-1 rounded-full  transition duration-300">
                 Website Design
               </button>
-              <button className="bg-green-500 text-white text-sm px-4 py-1 rounded-full hover:bg-green-600 transition duration-300">
+              <button className="bg-[#FFFFFF] text-[#468AFF] text-sm px-4 py-1 rounded-full  transition duration-300">
                 App Dev
               </button>
             </div>
@@ -142,20 +142,20 @@ const Card = () => {
               Mobiele applicaties blijven evolueren. Welke trends mogen
               bedrijven niet missen om relevant te blijven?
             </p>
-            <button className="text-blue-500 font-semibold hover:underline">
+            <button className="text-[#FFFFFF] btn bg-[#468AFF] px-8 ">
               Lees meer
             </button>
           </div>
         </div>
         {/* Card 6 */}
-        <div onClick={()=>navigate("/blog")} className="bg-white shadow-lg rounded-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+        <div onClick={()=>navigate("/blog")} className="bg-[#F5F5F5] shadow-lg rounded-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
           <img src={img6} alt="Blog 3" className="w-full h-56 object-cover" />
           <div className="p-6">
             <div className="flex gap-2 mb-4">
-              <button className="bg-blue-500 text-white text-sm px-4 py-1 rounded-full hover:bg-blue-600 transition duration-300">
+            <button className="bg-[#FFFFFF] text-[#468AFF] text-sm px-4 py-1 rounded-full  transition duration-300">
                 Website Design
               </button>
-              <button className="bg-green-500 text-white text-sm px-4 py-1 rounded-full hover:bg-green-600 transition duration-300">
+              <button className="bg-[#FFFFFF] text-[#468AFF] text-sm px-4 py-1 rounded-full  transition duration-300">
                 App Dev
               </button>
             </div>
@@ -166,7 +166,7 @@ const Card = () => {
               Mobiele applicaties blijven evolueren. Welke trends mogen
               bedrijven niet missen om relevant te blijven?
             </p>
-            <button className="text-blue-500 font-semibold hover:underline">
+            <button className="text-[#FFFFFF] btn bg-[#468AFF] px-8 ">
               Lees meer
             </button>
           </div>
