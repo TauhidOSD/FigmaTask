@@ -11,9 +11,9 @@ const Footer = () => {
 
   return (
     <footer className="bg-white py-10 px-6 md:px-36">
-      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+      <div className="max-w-7xl gap-8 mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 ">
         {/* Company Info */}
-        <div>
+        <div >
           <img src={logo} alt="Logo" className="mb-4 w-36" />
           <p className="text-gray-900 text-sm leading-relaxed">
             Younitech is een softwarebedrijf gespecialiseerd in app-ontwikkeling, marketing en branding. Het bedrijf onderscheidt zich door een unieke aanpak in een wereld vol concurrentie.
@@ -36,7 +36,7 @@ const Footer = () => {
         </div>
 
         {/* Useful Links */}
-        <div>
+        <div  >
           <h3 className="text-lg font-semibold mb-4">Handige Links</h3>
           <ul className="space-y-2 text-gray-900 text-sm">
             <li className="hover:text-blue-600 cursor-pointer">Functies</li>
