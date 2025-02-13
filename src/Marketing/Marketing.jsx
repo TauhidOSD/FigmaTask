@@ -18,61 +18,48 @@ const Marketing = () => {
     setActiveSection(activeSection === section ? null : section);
   };
     return (
-        <div className="m-18">
+        <div className=" mx-auto lg:w-[1260px]">
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 items-center lg:px-12 ml-10 mt-10 lg:m-20">
+        <div className="grid grid-cols-1 lg:grid-cols-2 items-center lg:px-12 ml-10 mt-10 lg:m-20 ">
 
 
         <div className="mr-5">
           <div className="">
-            <p className=" rounded-3xl bg-fuchsia-100 font-medium p-2 text-base text-center text-fuchsia-500 mb-3 font-sans w-4/6  lg:w-3/6">
-              Ontwerp uw eigen
+            <p className=" rounded-3xl bg-[rgba(180,121,217,0.15)] text-[rgba(180,121,217,1)] font-bold p-2  text-center  mb-3 font-plus-jakarta w-4/6  lg:w-2/6">
+            Marketing
             </p>
           </div>
-          <div className="mb-6">
-            <h1 className=" text-3xl lg:text-4xl font-bold text-left ">Marketingont</h1>
+          <div className="mb-6"> 
+            <h1 className=" text-3xl lg:text-[40px] font-plus-jakarta font-bold text-left ">Marketingont</h1>
             <h1 className="text-3xl lg:text-4xl font-bold text-left mb-3 relative ">wikkeling</h1>
-            <img className="-mt-6 w-40 lg:w-64" src="/article/Heading 2.png" alt=""></img>
+          {/* <img className="-mt-6 w-40 lg:w-64" src="/article/Heading 2.png" alt=""></img>*/}
           </div>
-          <p className="text-left text-base lg:text-lg text-slate-500">
-            Creëer een krachtige marketingstrategie voor uw bedrijf Bij
-          </p>
-          <p className="text-left text-base lg:text-lg text-slate-500">
-            Younitech helpen we bedrijven om op te vallen in een steeds
-          </p>
-          <p className="text-left text-base lg:text-lg text-slate-500">
-            veranderend digitaal landschap. Wij combineren innovatieve
-          </p>
-          <p className="text-left text-base lg:text-lg text-slate-500">
-            technologie met data-gedreven strategieën om uw merk{" "}
-          </p>
-          <p className="text-left text-base lg:text-lg text-slate-500">
-            zichtbaarder te maken en uw doelgroep te bereiken.
-          </p>
+          
+          <p className="text-left text-base lg:text-lg text-slate-500">Creëer een krachtige marketingstrategie voor uw bedrijf Bij Younitech helpen we bedrijven om op te vallen in een steeds veranderend digitaal landschap. Wij combineren innovatieve technologie met data-gedreven strategieën om uw merk zichtbaarder te maken en uw doelgroep te bereiken.</p>
 
           <div className="flex gap-5 items-center mt-6">
             <img src="/textpic/List → Item.png" alt="" />
-            <h1>Data-gedreven strategieën</h1>
+            <h1 className="text-[rgba(38,50,56,1) text-[18px] font-medium">Data-gedreven strategieën</h1>
           </div>
 
           <div className="flex gap-5 items-center">
             <img src="/textpic/List → Item.png" alt="" />
-            <h1>Multichannel campagnes</h1>
+            <h1 className="text-[rgba(38,50,56,1) text-[18px] font-medium">Multichannel campagnes</h1>
           </div>
 
           <div className="flex gap-5 items-center">
             <img src="/textpic/List → Item.png" alt="" />
-            <h1>Contentcreatie</h1>
+            <h1 className="text-[rgba(38,50,56,1) text-[18px] font-medium">Contentcreatie</h1>
           </div>
 
           <div className="flex gap-5 items-center">
             <img src="/textpic/List → Item.png" alt="" />
-            <h1>Resultaatgericht</h1>
+            <h1 className="text-[rgba(38,50,56,1) text-[18px] font-medium">Resultaatgericht</h1>
           </div>
 
           <div className="mt-5 mr-6">
             <button onClick={()=>navigate("/Contact")} className="btn btn-sm btn-info text-slate-100 w-40">
-              Neem contact op
+            Bereik jouw klant
             </button>
           </div>
         </div>
@@ -87,9 +74,11 @@ const Marketing = () => {
 
 {/** second part start from here */}
 
-<div className="flex items-center justify-center "><p className=" rounded-3xl bg-fuchsia-100 font-medium p-2 text-base text-center text-fuchsia-500 mb-3 font-sans  lg:w-1/6">Ontwerp uw eigen</p></div>
-<h1  className="text-4xl text-center font-medium">Marketingont</h1>
-<p className="text-base text-slate-400 text-center mt-2">Wij maken het ontwikkelen van uw marketingstrategie eenvoudig:</p>
+<div className="flex items-center justify-center "><p className=" rounded-3xl mb-5 font-medium p-2 text-base text-center bg-[rgba(180,121,217,0.15)] text-[rgba(180,121,217,1)]mb-3 font-sans  lg:w-1/5">Snelle en Kwalitatieve Service</p></div>
+<h1  className="text-[40px] text-center font-bold font-plus-jakarta">Een marketingaanpak die eenvoudig werkt</h1>
+<p className="text-base text-slate-400 text-center mt-2">We bieden complete online marketing, van Google tot sociale media, met een doelgerichte en </p>
+<p className="text-base text-slate-400 text-center mt-2">kostenefficiënte aanpak. Geen standaardoplossingen – we begrijpen jouw merk en gebruiken unieke </p>
+<p className="text-base text-slate-400 text-center mt-2">strategieën, zoals straatsteen marketing, om jouw bedrijf creatief en impactvol te laten opvallen! </p>
 
 {/** second part end here */}
 
@@ -98,7 +87,7 @@ const Marketing = () => {
 
 
 
-<div className="flex flex-col lg:flex-row gap-8 px-6 lg:px-36 py-8">
+<div className="flex flex-col lg:flex-row gap-8 mt-5 px-6 lg:px-36 py-8">
       {/* Left Section with Image */}
       <div className="w-full lg:w-1/2">
         <img src={img} alt="Branding" className="w-full rounded-lg shadow-md" />
@@ -110,7 +99,7 @@ const Marketing = () => {
         <div>
           <button
             onClick={() => toggleSection("logo")}
-            className="w-full bg-[#468AFF] text-white py-2 px-4 text-left rounded-md flex justify-between items-center"
+            className="w-full drop-shadow-[0_0_10px_rgba(0,0,0,0.4)] bg-[#FFFFFF] text-[#263238] text-[20px] font-bold font-plus-jakarta py-2 px-4 text-left rounded-md flex justify-between items-center"
           >
             Strategische Planning
             <GoChevronDown
@@ -130,7 +119,7 @@ const Marketing = () => {
         <div>
           <button
             onClick={() => toggleSection("visualGuidelines")}
-            className="w-full bg-[#468AFF] text-white py-2 px-4 text-left rounded-md flex justify-between items-center"
+            className="w-full drop-shadow-[0_0_10px_rgba(0,0,0,0.4)] bg-[#FFFFFF] text-[#263238] text-[20px] font-bold font-plus-jakarta py-2 px-4 text-left rounded-md flex justify-between items-center"
           >
             Creatieve Uitvoering
             <GoChevronDown
@@ -150,7 +139,7 @@ const Marketing = () => {
         <div>
           <button
             onClick={() => toggleSection("printMedia")}
-            className="w-full bg-[#468AFF] text-white py-2 px-4 text-left rounded-md flex justify-between items-center"
+            className="w-full drop-shadow-[0_0_10px_rgba(0,0,0,0.4)] bg-[#FFFFFF] text-[#263238] text-[20px] font-bold font-plus-jakarta py-2 px-4 text-left rounded-md flex justify-between items-center"
           >
            Analyse en Optimalisatie
             <GoChevronDown
@@ -174,8 +163,8 @@ const Marketing = () => {
 
 {/** 4th   part start from here */}
 
-<div className=" relative bg-custom-bg lg:bg-cover bg-center mt-36 h-60 ml-10  lg:w-auto  ">
-<div className="text-center lg:ml-96  absolute  ">
+<div className=" relative bg-custom-bg lg:bg-cover bg-center bg-slate-50 w-full mt-36 h-60  lg:w-auto  ">
+<div className="text-center ml-10 lg:ml-96  absolute mt-9 ">
     
     <h1 className="font-bold text-xl lg:text-2xl ">Word onderdeel van onze groeiende</h1>
     <h1 className="font-bold text-xl lg:text-2xl">gemeenschap van tevreden klanten</h1>
