@@ -14,7 +14,7 @@ const PrijzenDropdown = () => {
         onClick={() => setIsOpen(!isOpen)}
         className="flex items-center gap-2 px-4 py-2 text-gray-700 hover:text-black"
       >
-        Prijzen
+        Diensten
         <ChevronDownIcon
           className="w-5 h-5 text-gray-500 transition-transform duration-200"
           style={{ transform: isOpen ? "rotate(180deg)" : "rotate(0deg)" }}
@@ -45,7 +45,7 @@ const DienstenDropdown = () => {
         onClick={() => setIsOpen(!isOpen)}
         className="flex items-center gap-2 px-4 py-2 text-gray-700 hover:text-black"
       >
-        Diensten
+        Prijzen
         <ChevronDownIcon
           className="w-5 h-5 text-gray-500 transition-transform duration-200"
           style={{ transform: isOpen ? "rotate(180deg)" : "rotate(0deg)" }}
@@ -54,12 +54,12 @@ const DienstenDropdown = () => {
 
       {/* Dropdown Menu */}
       {isOpen && (
-        <div className="absolute right-0 mt-2 w-48 bg-white border rounded-lg shadow-lg">
-          <a href="#" className="block px-4 py-2 hover:bg-gray-100">Web Ontwikkeling</a>
-          <a href="#" className="block px-4 py-2 hover:bg-gray-100">SEO Diensten</a>
-          <a href="#" className="block px-4 py-2 hover:bg-gray-100">Marketing</a>
-          <a href="#" className="block px-4 py-2 hover:bg-gray-100">Social Media</a>
-        </div>
+         <div className="absolute right-0 mt-2 w-48 bg-white border rounded-lg shadow-lg">
+         <a href="#" className="block px-4 py-2 hover:bg-gray-100">App Ontwikkeling</a>
+         <a href="#" className="block px-4 py-2 hover:bg-gray-100">Branding</a>
+         <a href="#" className="block px-4 py-2 hover:bg-gray-100">Marketingsdiensten</a>
+         <a href="#" className="block px-4 py-2 hover:bg-gray-100">Website Builder</a>
+       </div>
       )}
     </div>
   );
