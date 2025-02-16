@@ -6,9 +6,12 @@ export default {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        'plus-jakarta': ['"Plus Jakarta Sans"', 'sans-serif'],
+      },
       backgroundImage: {
-        'custom-bg': "url('/grouppic/bgMarjet.png')",
-      }
+        'custom-bg': "url('/src/shassets/adan-bg.png')",
+      },
     },
   },
   plugins: [
