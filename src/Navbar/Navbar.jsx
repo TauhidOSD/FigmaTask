@@ -56,7 +56,7 @@ const DienstenDropdown = () => {
       {isOpen && (
          <div className="absolute right-0 mt-2 w-48 bg-white border rounded-lg shadow-lg">
          <a href="#" className="block px-4 py-2 hover:bg-gray-100">App Ontwikkeling</a>
-         <a href="#" className="block px-4 py-2 hover:bg-gray-100">Branding</a>
+         <a href="/PrijzenBranding" className="block px-4 py-2 hover:bg-gray-100">Branding</a>
          <a href="#" className="block px-4 py-2 hover:bg-gray-100">Marketingsdiensten</a>
          <a href="#" className="block px-4 py-2 hover:bg-gray-100">Website Builder</a>
        </div>
