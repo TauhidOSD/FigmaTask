@@ -18,7 +18,7 @@ const Marketing = () => {
     setActiveSection(activeSection === section ? null : section);
   };
     return (
-        <div className=" mx-auto lg:w-[1260px]">
+        <div className=" mx-auto md:px-6 px-6">
 
         <div className="grid grid-cols-1 lg:grid-cols-2 items-center lg:px-12 ml-10 mt-10 lg:m-20 ">
 
@@ -75,7 +75,7 @@ const Marketing = () => {
 {/** second part start from here */}
 
 <div className="flex items-center justify-center "><p className=" rounded-3xl mb-5 font-medium p-2 text-base text-center bg-[rgba(180,121,217,0.15)] text-[rgba(180,121,217,1)]mb-3 font-sans  lg:w-1/5">Snelle en Kwalitatieve Service</p></div>
-<h1  className="text-[40px] text-center font-bold font-plus-jakarta">Een marketingaanpak die eenvoudig werkt</h1>
+<h1  className="md:text-[40px] text-xl text-center font-bold font-plus-jakarta">Een marketingaanpak die eenvoudig werkt</h1>
 <p className="text-base text-slate-400 text-center mt-2">We bieden complete online marketing, van Google tot sociale media, met een doelgerichte en </p>
 <p className="text-base text-slate-400 text-center mt-2">kostenefficiënte aanpak. Geen standaardoplossingen – we begrijpen jouw merk en gebruiken unieke </p>
 <p className="text-base text-slate-400 text-center mt-2">strategieën, zoals straatsteen marketing, om jouw bedrijf creatief en impactvol te laten opvallen! </p>
@@ -163,13 +163,13 @@ const Marketing = () => {
 
 {/** 4th   part start from here */}
 
-<div className=" relative bg-custom-bg lg:bg-cover bg-center bg-slate-50 w-full mt-36 h-60  lg:w-auto  ">
-<div className="text-center ml-10 lg:ml-96  absolute mt-9 ">
+<div className=" relative bg-custom-bg lg:bg-cover bg-center bg-slate-50 w-full md:mt-36 mt-6 h-60  lg:w-auto  ">
+<div className="text-center ml-10 md:ml-[500px] md:mt-12  absolute  ">
     
     <h1 className="font-bold text-xl lg:text-2xl ">Word onderdeel van onze groeiende</h1>
     <h1 className="font-bold text-xl lg:text-2xl">gemeenschap van tevreden klanten</h1>
-    <p className="mb-7 text-slate-400">U heeft de ideeën, wij hebben de tools</p>
-    <button className="btn text-slate-100 btn-info">Aan de Slag</button>
+    <p className="mb-6 mt-4 text-slate-600">U heeft de ideeën, wij hebben de tools</p>
+    <button className="btn   text-slate-100 btn-info">Aan de Slag</button>
 </div>
 </div>
 
@@ -182,30 +182,30 @@ const Marketing = () => {
 
 
 <div className="md:px-36 px-8 py-3 bg-gray-50">
-<div className="bg-[#F8F8F8] my-16  grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 text-center">
-        <div className="p-6 text-start ">
-          <div className=""> <img className="flex justify-center items-center" src={i1} alt="" /></div>
+<div className="bg-[#F8F8F8] md:my-16 my-2 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 md:gap-8 gap-3 text-center">
+        <div className="p-6 text-center ">
+          <div className="flex justify-center items-center"> <img className="flex justify-center items-center" src={i1} alt="" /></div>
           <h1 className="mt-2 text-xl font-bold "> Oprechtheid</h1>
           <p className="mt-2 text-sm ">Eerlijke en transparante <br />bedrijfsvoering staat centraal in alles <br />wat we doen</p>
         </div>
 
-        <div className="p-6 text-start">
-        <div className=""><img src={i2} alt="" /></div>
+        <div className="p-6 text-center">
+        <div className="flex justify-center items-center"><img src={i2} alt="" /></div>
         <h1 className="mt-2 text-xl font-bold ">Maatschappelijke betrokkenheid</h1>
           <p className="mt-2 text-sm">
           We bieden kansen aan werknemers om hun <br />potentieel te benutten, zonder hiermee te <br />koop te lopen
           </p>
         </div>
 
-        <div className="p-6  text-start">
-        <div className=""><img src={i3} alt="" /></div>
+        <div className="p-6  text-center">
+        <div className="flex justify-center items-center"><img src={i3} alt="" /></div>
         <h1 className="mt-2 text-xl font-bold ">Innovativiteit</h1>
           <p className="mt-2 text-sm">
           We denken contrarian en kiezen voor <br />unieke oplossingen in een <br />concurrerende markt.
           </p>
         </div>
-        <div className="p-6 text-start ">
-        <div className=""> <img src={i4} alt="" /></div>
+        <div className="p-6 text-center ">
+        <div className="flex justify-center items-center"> <img src={i4} alt="" /></div>
         <h1 className="mt-2 text-xl font-bold "> Authenticiteit</h1>
           <p className="mt-2 text-sm">
           We blijven trouw aan onze principes en laten ons niet leiden door trends of competitie
