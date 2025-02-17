@@ -16,11 +16,11 @@ const Appmarket = () => {
     };
   
     return (
-        <div>
+        <div className=" lg:w-[1260px] 2xl:w-[1440px]">
 
             {/** First part flex justify-center gap-20 items-center m-20 start from here  */}
 
-            <div className="grid  sm:grid-cols-1 lg:grid-cols-2 lg:w-[1440px] mx-auto  mt-20 ">
+            <div className="grid  sm:grid-cols-1 lg:grid-cols-2 mx-auto  mt-20 ">
 
 
         <div className="mb-5 ml-2 lg:ml-32">
@@ -47,7 +47,7 @@ const Appmarket = () => {
 
 {/** second  part start lg:mr-20 lg:ml-20 lg:mt-20 lg:mb-20 */}
 
-<div className=" mt-10 lg:px-32 mx-auto lg:w-[1440px] gap-16 grid sm:grid-cols-1 lg:grid-cols-3 items-center justify-center  ">
+<div className=" mt-10 lg:px-32 mx-auto  gap-16 grid sm:grid-cols-1 lg:grid-cols-3 items-center justify-center  ">
 
 <div className=" ">
     <div className="flex items-center">
@@ -88,15 +88,15 @@ const Appmarket = () => {
 {/** third   part start from here */}
 
 
-<div className="mx-auto pt-20 lg:w-[1440px]]">
+<div className="mx-auto pt-20 ">
 
 
 <div className="grid grid-cols-1 lg:grid-cols-2  gap-5 items-center lg:px-[60px] ">
 
 <div className=" flex justify-between ml-10 gap-20 w-auto">
-    <div className=" ml-2 lg:ml-20">
+    <div className=" ml-2 lg:ml-12">
 
-    <div className="mt-5 mb-5  mr-20 "><p className="rounded-3xl   bg-[rgba(180,121,217,0.15)] text-[rgba(180,121,217,1)]  p-1 lg:p-2 text-[14px] lg:text-[18px] text-center font-bold mb-3 font-plus-jakarta mt-5 w-3/6 lg:w-2/5">Ontwerp uw eigen</p></div>
+    <div className="mt-5 mb-5  mr-20 "><p className="rounded-3xl   bg-[rgba(180,121,217,0.15)] text-[rgba(180,121,217,1)]  p-1 lg:p-2 text-[14px] lg:text-[18px] text-center font-bold mb-3 font-plus-jakarta mt-5 w-3/6 lg:w-3/5">Ontwerp uw eigen</p></div>
     <h1  className="text-[36px] mb-10  text-left font-bold font-plus-jakarta ">Waarom kiezen voor Younitech?</h1>
 
 
@@ -162,7 +162,7 @@ const Appmarket = () => {
 
 
 
-<div className=" justify-center mx-auto lg:w-[1440px] mt-10">
+<div className=" justify-center mx-auto  mt-10">
 <div className="items-center justify-center flex mt-10 mb-4"><p className=" rounded-3xl bg-[rgba(180,121,217,0.15)] text-[rgba(180,121,217,1)] font-bold p-1 lg:p-2  text-[14px] lg:text-[18px] text-center  mb-3 font-plus-jakarta w-2/6  lg:w-2/12">Hoe het werkt</p></div>
 <h1  className="text-[40px] font-bold decoration-4 text-center">Hoe wij uw idee tot leven brengen</h1>
 
@@ -243,7 +243,7 @@ zodat uw app altijd up-to-date en operationeel blijft.
 
 
 
-<div className=" flex flex-col lg:flex-row gap-8 px-6 lg:px-30 py-8 mx-auto lg:w-[1260px]" >
+<div className=" flex flex-col lg:flex-row gap-8 px-6 lg:px-30 py-8 mx-auto" >
 <div className="lg:ml-20 ml-3 lg:mr-16">
             
             <div className="mr-10"><p className="rounded-3xl bg-[#B479D926] text-[#B479D9] font-medium p-1 lg:p-2 lg:text-[18px] text-center  mb-3 font-plus-jakarta   w-3/6  lg:w-3/5">Ondersteuning</p></div>
@@ -328,7 +328,7 @@ zodat uw app altijd up-to-date en operationeel blijft.
 {/** sixth part start here flex justify-between m-24 items-center */}
 
 
-<div className="flex flex-col lg:flex-row gap-8 px-6 md:px-20 lg:px-20 py-10 mx-auto lg:w-[1260px]">
+<div className="flex flex-col lg:flex-row gap-8 px-6 md:px-20 lg:px-20 py-10 mx-auto">
   {/* Left Section */}
   <div className="mt-6 ml-3">
                            <p className="rounded-3xl  p-1 lg:p-2 text-center font-medium text-[18px] bg-[#B479D926] text-[#B479D9] mb-3 font-plus-jakarta  w-2/5 lg:w-3/5">Testimonials</p>
