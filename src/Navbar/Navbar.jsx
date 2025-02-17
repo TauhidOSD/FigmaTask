@@ -119,7 +119,7 @@ const Navbar = () => {
         <a
           onClick={() => navigate("/Contact")}
           href="#contact"
-          className="hidden lg:block btn bg-blue-500 text-white px-6 py-4 rounded-md shadow-md"
+          className="hidden lg:block hover:bg-[#468AFFE6] bg-[#468AFF] text-white px-8 py-3 rounded-md shadow-md"
         >
           Contact
         </a>
