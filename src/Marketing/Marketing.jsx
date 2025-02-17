@@ -183,29 +183,29 @@ const Marketing = () => {
 
 <div className="md:px-36 px-8 py-3 bg-gray-50">
 <div className="bg-[#F8F8F8] my-16  grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 text-center">
-        <div className="p-6 text-start ">
-          <div className=""> <img className="flex justify-center items-center" src={i1} alt="" /></div>
+        <div className="p-6 text-center ">
+          <div className="flex justify-center items-center"> <img className="flex justify-center items-center" src={i1} alt="" /></div>
           <h1 className="mt-2 text-xl font-bold "> Oprechtheid</h1>
           <p className="mt-2 text-sm ">Eerlijke en transparante <br />bedrijfsvoering staat centraal in alles <br />wat we doen</p>
         </div>
 
-        <div className="p-6 text-start">
-        <div className=""><img src={i2} alt="" /></div>
+        <div className="p-6 text-center">
+        <div className="flex justify-center items-center"><img src={i2} alt="" /></div>
         <h1 className="mt-2 text-xl font-bold ">Maatschappelijke betrokkenheid</h1>
           <p className="mt-2 text-sm">
           We bieden kansen aan werknemers om hun <br />potentieel te benutten, zonder hiermee te <br />koop te lopen
           </p>
         </div>
 
-        <div className="p-6  text-start">
-        <div className=""><img src={i3} alt="" /></div>
+        <div className="p-6  text-center">
+        <div className="flex justify-center items-center"><img src={i3} alt="" /></div>
         <h1 className="mt-2 text-xl font-bold ">Innovativiteit</h1>
           <p className="mt-2 text-sm">
           We denken contrarian en kiezen voor <br />unieke oplossingen in een <br />concurrerende markt.
           </p>
         </div>
-        <div className="p-6 text-start ">
-        <div className=""> <img src={i4} alt="" /></div>
+        <div className="p-6 text-center ">
+        <div className="flex justify-center items-center"> <img src={i4} alt="" /></div>
         <h1 className="mt-2 text-xl font-bold "> Authenticiteit</h1>
           <p className="mt-2 text-sm">
           We blijven trouw aan onze principes en laten ons niet leiden door trends of competitie
