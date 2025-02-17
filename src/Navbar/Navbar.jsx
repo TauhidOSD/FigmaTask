@@ -28,7 +28,7 @@ const PrijzenDropdown = () => {
           <a href="#" onClick={()=>navigate("/appmarket")} className="block px-4 py-2 hover:bg-gray-100">App Ontwikkeling</a>
           <a href="#" onClick={()=>navigate("/Diensten")} className="block px-4 py-2 hover:bg-gray-100">Branding</a>
           <a href="#" onClick={()=>navigate("/marketing")} className="block px-4 py-2 hover:bg-gray-100">Marketingsdiensten</a>
-          <a href="#" className="block px-4 py-2 hover:bg-gray-100">Website Builder</a>
+          <a href="/prijzen" className="block px-4 py-2 hover:bg-gray-100">Website Builder</a>
         </div>
       )}
     </div>
@@ -56,10 +56,10 @@ const DienstenDropdown = () => {
       {/* Dropdown Menu */}
       {isOpen && (
          <div className="absolute right-0 mt-2 w-48 bg-white border rounded-lg shadow-lg">
-         <a href="#" className="block px-4 py-2 hover:bg-gray-100">App Ontwikkeling</a>
+         <a href="/startpagina" className="block px-4 py-2 hover:bg-gray-100">App Ontwikkeling</a>
          <a href="/PrijzenBranding" className="block px-4 py-2 hover:bg-gray-100">Branding</a>
-         <a href="#" className="block px-4 py-2 hover:bg-gray-100">Marketingsdiensten</a>
-         <a href="#" className="block px-4 py-2 hover:bg-gray-100">Website Builder</a>
+         <a href="/PrijzenMarkeing" className="block px-4 py-2 hover:bg-gray-100">Marketingsdiensten</a>
+         <a href="/prijzen" className="block px-4 py-2 hover:bg-gray-100">Website Builder</a>
        </div>
       )}
     </div>
@@ -98,10 +98,10 @@ const Navbar = () => {
             <li className="z-20 -ml-4"><PrijzenDropdown /></li> {/* Prijzen Dropdown */}
             <li className="z-10 -ml-4"><DienstenDropdown /></li> {/* Diensten Dropdown */}
 
-            <li><a href="/startpagina">Startpagina</a></li>
+            {/* <li><a href="/startpagina">Startpagina</a></li> */}
             <li><a href="/Overons">Over Ons</a></li>
-            <li><a href="/Veelgestelde">Veelgestelde Vragen</a></li>
-            <li><a href="/prijzen">Prijzen</a></li>
+            <li><a href="/Veelgestelde">FAQ</a></li>
+            <li><a href="/blog">Portfolio</a></li>
           </ul>
         </div>
 
@@ -109,10 +109,10 @@ const Navbar = () => {
         <div className="hidden lg:flex space-x-6 items-center">
           <PrijzenDropdown /> {/* Prijzen Dropdown */}
           <DienstenDropdown /> {/* Diensten Dropdown */}
-          <a href="/startpagina" className="text-gray-900 hover:text-blue-600">Startpagina</a>
+          {/* <a href="/startpagina" className="text-gray-900 hover:text-blue-600">Startpagina</a> */}
           <a href="/Overons" className="text-gray-900 hover:text-blue-600">Over Ons</a>
-          <a href="/Veelgestelde" className="text-gray-900 hover:text-blue-600">Veelgestelde Vragen</a>
-          <a href="/prijzen" className="text-gray-900 hover:text-blue-600">Prijzen</a>
+          <a href="/Veelgestelde" className="text-gray-900 hover:text-blue-600">FAQ</a>
+          <a href="/blog" className="text-gray-900 hover:text-blue-600">Portfolio</a>
         </div>
 
         {/* Contact Button */}

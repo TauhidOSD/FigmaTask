@@ -32,6 +32,7 @@ import Blog from './Blog/Blog.jsx';
 import Henna from './Henna/Henna.jsx';
 import Overons from './Overons/overons.jsx';
 import PrijzenBranding from './PrijzenBranding/PrijzenBranding.jsx';
+import PrijzenMarketing from './PrijzenMarketing/PrijzenMarketing.jsx';
 
 // Load Stripe
 const stripePromise = loadStripe("your-public-stripe-key");
@@ -133,7 +134,11 @@ const router = createBrowserRouter([
       {
         path:"/PrijzenBranding",
         element: <PrijzenBranding/>
-      }
+      },
+      {
+        path:"/PrijzenMarkeing",
+        element: <PrijzenMarketing/>
+      },
     ],
   },
 ]);
