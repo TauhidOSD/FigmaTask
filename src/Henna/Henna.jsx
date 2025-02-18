@@ -7,23 +7,23 @@ const Henna = () => {
             {/* Left Image */}
             <div className="flex justify-center">
               <img
-                className="w-full max-w-sm object-contain"
+                className="w-full max-w-lg object-contain"
                 src="/article/landing (1).png"
                 alt="Henna Ghizlan Website Preview"
               />
             </div>
   
             {/* Right Details */}
-            <div className="space-y-6">
-              <h1 className="text-2xl sm:text-3xl text-sky-400 font-semibold">
-                Henna Ghizlan Website
+            <div className="space-y-2">
+              <h1 className=" text-xl lg:text-lg text-sky-400 font-bold">
+              Shiftguide: De Ultieme Roosterplanning App voor de Uitzendbranche en Multi-Location Bedrijven
               </h1>
               <p className="text-sm sm:text-base font-serif text-slate-400 leading-relaxed">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
               </p>
   
               {/* Details List */}
-              <div className="space-y-3 border-b border-slate-200 py-4">
+              <div className="space-y-3 border-b border-slate-200 py-2">
                 <div className="flex justify-between items-center px-2">
                   <p className="text-sm text-slate-500">Category:</p>
                   <p className="text-sm text-slate-500 font-medium">UI Design</p>
@@ -54,7 +54,7 @@ const Henna = () => {
               </div>
   
               <div className="mt-5">
-                <button className="btn btn-sm btn-info w-full max-w-xs text-xs text-white">
+                <button className="relative text-white btn bg-[#468AFF] px-6 py-2 sm:px-8 sm:py-3 rounded-lg shadow-lg transition-all duration-300 ease-in-out hover:bg-[#3570D4] hover:scale-105 active:scale-95 focus:outline-none text-sm sm:text-base">
                   View Live Site
                 </button>
               </div>

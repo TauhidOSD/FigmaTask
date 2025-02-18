@@ -33,6 +33,7 @@ import Henna from './Henna/Henna.jsx';
 import Overons from './Overons/overons.jsx';
 import PrijzenBranding from './PrijzenBranding/PrijzenBranding.jsx';
 import PrijzenMarketing from './PrijzenMarketing/PrijzenMarketing.jsx';
+import ShiftMode from './ShiftMode/ShiftMode.jsx';
 
 // Load Stripe
 const stripePromise = loadStripe("your-public-stripe-key");
@@ -97,6 +98,10 @@ const router = createBrowserRouter([
       {
         path: "/henna",
         element: <Henna />,
+      },
+      {
+        path: "/shift",
+        element: <ShiftMode />,
       },
       {
         path: "/overons",
