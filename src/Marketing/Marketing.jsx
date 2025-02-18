@@ -20,7 +20,7 @@ const Marketing = () => {
     return (
         <div className=" mx-auto md:px-6 px-6">
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 items-center lg:px-12 ml-10 mt-10 lg:m-20 ">
+        <div className="grid grid-cols-1 lg:grid-cols-2 items-center lg:px-12 mt-10 lg:m-20 ">
 
 
         <div className="mr-5">
@@ -74,11 +74,11 @@ const Marketing = () => {
 
 {/** second part start from here */}
 
-<div className="flex items-center justify-center "><p className=" rounded-3xl mb-5 font-medium p-2 text-base text-center bg-[rgba(180,121,217,0.15)] text-[rgba(180,121,217,1)]  font-sans w-3/5  lg:w-1/5">Snelle en Kwalitatieve Service</p></div>
+<div className="flex items-center justify-center "><p className=" rounded-3xl mb-5 font-medium p-2 text-base text-center bg-[rgba(180,121,217,0.15)] text-[rgba(180,121,217,1)]  font-sans w-5/6  lg:w-1/5">Snelle en Kwalitatieve Service</p></div>
 <h1  className=" text-[30px] lg:text-[40px] text-center font-bold font-plus-jakarta">Een marketingaanpak die eenvoudig werkt</h1>
-<p className="text-base text-slate-400 text-center px-2 mt-2">We bieden complete online marketing, van Google tot sociale media, met een doelgerichte en </p>
-<p className="text-base text-slate-400 text-center px-2 mt-2">kostenefficiënte aanpak. Geen standaardoplossingen – we begrijpen jouw merk en gebruiken unieke </p>
-<p className="text-base text-slate-400 text-center px-2 mt-2">strategieën, zoals straatsteen marketing, om jouw bedrijf creatief en impactvol te laten opvallen! </p>
+<p className=" text-sm lg:text-base text-slate-400 text-center px-2 mt-2">We bieden complete online marketing, van Google tot sociale media, met een doelgerichte en </p>
+<p className=" text-sm lg:text-base text-slate-400 text-center px-2 mt-2">kostenefficiënte aanpak. Geen standaardoplossingen – we begrijpen jouw merk en gebruiken unieke </p>
+<p className=" text-sm lg:text-base text-slate-400 text-center px-2 mt-2">strategieën, zoals straatsteen marketing, om jouw bedrijf creatief en impactvol te laten opvallen! </p>
 
 {/** second part end here */}
 
@@ -89,7 +89,7 @@ const Marketing = () => {
 
 <div className="flex flex-col lg:flex-row gap-8 mt-5 px-6 lg:px-36 py-8">
       {/* Left Section with Image */}
-      <div className="w-full lg:w-1/2">
+      <div className="w-full  lg:w-1/2">
         <img src={img} alt="Branding" className="w-full rounded-lg shadow-md" />
       </div>
 
@@ -99,7 +99,7 @@ const Marketing = () => {
         <div>
           <button
             onClick={() => toggleSection("logo")}
-            className="w-full drop-shadow-[0_0_10px_rgba(0,0,0,0.4)] bg-[#FFFFFF] text-[#263238] text-[20px] font-bold font-plus-jakarta py-2 px-4 text-left rounded-md flex justify-between items-center"
+            className="w-full drop-shadow-[0_0_10px_rgba(0,0,0,0.4)] bg-[#FFFFFF] text-[#263238] lg:text-[20px] font-bold font-plus-jakarta py-2 px-4 text-left rounded-md flex justify-between items-center"
           >
             Strategische Planning
             <GoChevronDown
@@ -119,7 +119,7 @@ const Marketing = () => {
         <div>
           <button
             onClick={() => toggleSection("visualGuidelines")}
-            className="w-full drop-shadow-[0_0_10px_rgba(0,0,0,0.4)] bg-[#FFFFFF] text-[#263238] text-[20px] font-bold font-plus-jakarta py-2 px-4 text-left rounded-md flex justify-between items-center"
+            className="w-full drop-shadow-[0_0_10px_rgba(0,0,0,0.4)] bg-[#FFFFFF] text-[#263238] lg:text-[20px] font-bold font-plus-jakarta py-2 px-4 text-left rounded-md flex justify-between items-center"
           >
             Creatieve Uitvoering
             <GoChevronDown
@@ -139,7 +139,7 @@ const Marketing = () => {
         <div>
           <button
             onClick={() => toggleSection("printMedia")}
-            className="w-full drop-shadow-[0_0_10px_rgba(0,0,0,0.4)] bg-[#FFFFFF] text-[#263238] text-[20px] font-bold font-plus-jakarta py-2 px-4 text-left rounded-md flex justify-between items-center"
+            className="w-full drop-shadow-[0_0_10px_rgba(0,0,0,0.4)] bg-[#FFFFFF] text-[#263238] lg:text-[20px] font-bold font-plus-jakarta py-2 px-4 text-left rounded-md flex justify-between items-center"
           >
            Analyse en Optimalisatie
             <GoChevronDown
@@ -164,7 +164,7 @@ const Marketing = () => {
 {/** 4th   part start from here */}
 
 <div className=" relative bg-custom-bg lg:bg-cover bg-center bg-slate-50 w-full mt-36 h-60  lg:w-auto  ">
-<div className="text-center ml-5 lg:ml-96  absolute mt-9 ">
+<div className="text-center lg:ml-96  absolute mt-9 ">
     
     <h1 className="font-bold text-xl lg:text-2xl ">Word onderdeel van onze groeiende</h1>
     <h1 className="font-bold text-xl lg:text-2xl">gemeenschap van tevreden klanten</h1>
@@ -181,7 +181,7 @@ const Marketing = () => {
 
 
 
-<div className="md:px-36 px-2 py-3 bg-gray-50">
+<div className="md:px-36  py-3 bg-gray-50">
 <div className="bg-[#F8F8F8] my-16  grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 text-center">
         <div className="p-6 text-start ">
           <div className="lg:px-7"> <img className="flex justify-center items-center" src={i1} alt="" /></div>
