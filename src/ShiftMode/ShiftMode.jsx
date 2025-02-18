@@ -4,7 +4,7 @@ const ShiftMode = () => {
     return (
         <div className="space-y-16 mt-10 mx-auto lg:w-[1260px] 2xl:w-[1440px] ">
         {/* Section 1 */}
-        <div className="px-4 md:px-10 ml-12">
+        <div className="px-4 md:px-10 lg:ml-12">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center lg:ml-10 lg:mr-24">
             {/* Left Image */}
             <div className="flex justify-center">
@@ -61,7 +61,7 @@ const ShiftMode = () => {
                 </button>
               </div>
             </div>
-            
+
           </div>
   
           {/* Description */}
