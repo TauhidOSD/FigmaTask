@@ -18,7 +18,7 @@ const Marketing = () => {
     setActiveSection(activeSection === section ? null : section);
   };
     return (
-        <div className=" mx-auto lg:w-[1260px]">
+        <div className=" mx-auto md:px-6 px-6">
 
         <div className="grid grid-cols-1 lg:grid-cols-2 items-center lg:px-12 ml-10 mt-10 lg:m-20 ">
 

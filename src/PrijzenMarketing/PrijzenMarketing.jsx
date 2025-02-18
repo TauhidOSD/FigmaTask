@@ -264,7 +264,7 @@ const PrijzenMarketing = () => {
                   </div>
                 </div>
                 <div className="flex justify-center items-center md:my-8 my-4 ">
-                  <button className="btn bg-[#468AFF]  md:px-60 px-36 py-2 text-[#FFFFFF] text-lg md:text-md lg:text-xl">
+                  <button className="btn hover:bg-[#468AFFE6] bg-[#468AFF]  md:px-60 px-36 py-2 text-[#FFFFFF] text-lg md:text-md lg:text-xl">
                   Nu Kopen
                   </button>
                 </div>
