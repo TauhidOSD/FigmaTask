@@ -31,7 +31,7 @@ const Appmarket = () => {
 
         <div className="mt-10 mb-10 mr-2 lg:mr-32">
 
-        <div className="ml-5 "><p className=" rounded-3xl bg-[rgba(180,121,217,0.15)] text-[rgba(180,121,217,1)] font-bold font-plus-jakarta p-1 lg:p-2 text-[14px] lg:text-[18px] text-center mb-3  w-2/5  lg:w-2/5">Ontwerp uw eigen</p></div>
+        <div className="ml-5 "><p className=" rounded-3xl bg-[rgba(180,121,217,0.15)] text-[rgba(180,121,217,1)] font-bold font-plus-jakarta p-1 lg:p-2 text-[14px] lg:text-[18px] text-center mb-3  w-5/12  lg:w-2/5">Ontwerp uw eigen</p></div>
             <h1  className="text-[40px] font-bold text-left font-plus-jakarta ml-5">Uw visie, onze </h1>
             <h1  className="text-[40px] font-bold text-left font-plus-jakarta mb-6 ml-5">expertise</h1>
             <p className="text-[18px] text-left text-[rgba(126,126,126,1)] font-medium font-plus-jakarta  ml-5 mr-5">Bij Younitech begrijpen we dat een sterke, goed ontworpen applicatie essentieel is voor succes in de moderne wereld. Of u nu een nieuwe mobiele app wilt lanceren, een webapplicatie wilt bouwen of een bestaande applicatie wilt optimaliseren – wij zorgen voor oplossingen die impact maken.</p>
