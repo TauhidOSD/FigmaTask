@@ -13,7 +13,7 @@ const Vragen = () => {
       {/* Left Section */}
       <div className="md:w-1/2 space-y-4">
         <div>
-          <button className="bg-[#B47D9D] text-white py-2 px-4 rounded-full hover:bg-blue-600">
+          <button className="bg-[rgba(180,121,217,0.15)] text-[rgba(180,121,217,1)] py-2 px-4 rounded-full font-bold text-[18px] ">
             Ondersteuning
           </button>
         </div>
@@ -39,7 +39,7 @@ const Vragen = () => {
                 <div>
                   <button
                     onClick={() => toggleSection("logo")}
-                    className="w-full bg-[#468AFF] text-white py-2 px-4 text-left rounded-md flex justify-between items-center"
+                    className="w-full drop-shadow-[0_0_10px_rgba(0,0,0,0.4)] bg-[#FFFFFF] text-[#263238] py-2 px-4 text-left rounded-md flex justify-between items-center"
                   >
                    Wat is branding precies?
                     <GoChevronDown
@@ -59,7 +59,7 @@ const Vragen = () => {
                 <div>
                   <button
                     onClick={() => toggleSection("visualGuidelines")}
-                    className="w-full bg-[#468AFF] text-white py-2 px-4 text-left rounded-md flex justify-between items-center"
+                    className="w-full drop-shadow-[0_0_10px_rgba(0,0,0,0.4)] bg-[#FFFFFF] text-[#263238] py-2 px-4 text-left rounded-md flex justify-between items-center"
                   >
                     Waarom is branding zo belangrijk voor mijn bedrijf?
                     <GoChevronDown
@@ -79,7 +79,7 @@ const Vragen = () => {
                 <div>
                   <button
                     onClick={() => toggleSection("printMedia")}
-                    className="w-full bg-[#468AFF] text-white py-2 px-4 text-left rounded-md flex justify-between items-center"
+                    className="w-full drop-shadow-[0_0_10px_rgba(0,0,0,0.4)] bg-[#FFFFFF] text-[#263238] py-2 px-4 text-left rounded-md flex justify-between items-center"
                   >
                    Hoe begin ik met het opbouwen van mijn merk?
                     <GoChevronDown
@@ -99,7 +99,7 @@ const Vragen = () => {
                 <div>
                   <button
                     onClick={() => toggleSection("forthToggle")}
-                    className="w-full bg-[#468AFF] text-white py-2 px-4 text-left rounded-md flex justify-between items-center"
+                    className="w-full drop-shadow-[0_0_10px_rgba(0,0,0,0.4)] bg-[#FFFFFF] text-[#263238] py-2 px-4 text-left rounded-md flex justify-between items-center"
                   >
                    Kan ik branding zelf doen, of moet ik een professional inschakelen?
                     <GoChevronDown
@@ -119,7 +119,7 @@ const Vragen = () => {
                 <div>
                   <button
                     onClick={() => toggleSection("fifthToggle")}
-                    className="w-full bg-[#468AFF] text-white py-2 px-4 text-left rounded-md flex justify-between items-center"
+                    className="w-full drop-shadow-[0_0_10px_rgba(0,0,0,0.4)] bg-[#FFFFFF] text-[#263238] py-2 px-4 text-left rounded-md flex justify-between items-center"
                   >
                     Hoe lang duurt het om een merk te bouwen?
                     <GoChevronDown
