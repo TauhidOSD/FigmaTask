@@ -224,7 +224,7 @@ const Marketing = () => {
 
 <div className=" mt-10 mb-10">
   
-        <div className="flex items-center justify-center "><p className=" rounded-3xl bg-[rgba(180,121,217,0.15)] text-[rgba(180,121,217,1)] font-medium p-2 text-base text-center  mb-3 font-sans  w-2/6  lg:w-1/6">Getuigenissen</p></div>
+        <div className="flex items-center justify-center "><p className=" rounded-3xl bg-[rgba(180,121,217,0.15)] text-[rgba(180,121,217,1)] font-medium p-2 text-base text-center  mb-3 font-sans  w-3/6  lg:w-1/6">Getuigenissen</p></div>
         <h1  className="text-3xl text-center font-medium">Wat klanten over ons zeggen</h1>
 
         <div className="w-full lg:mt-10 lg:ml-56 lg:w-2/3 grid grid-cols-1 md:grid-cols-2 gap-6">
