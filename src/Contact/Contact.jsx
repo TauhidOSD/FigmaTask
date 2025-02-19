@@ -6,7 +6,7 @@ import { AiFillInstagram } from "react-icons/ai";
 
 const Contact = () => {
   return (
-    <div className="container mx-auto px-4 py-10">
+    <div className="container mx-auto lg:px-36 py-10">
       <div className="grid lg:grid-cols-2 grid-cols-1 gap-10">
         {/* Left Section - Contact Details & Social Media */}
         <div className="bg-slate-100 rounded-md p-8">
@@ -136,7 +136,7 @@ const Contact = () => {
             <div>
               <button
                 type="submit"
-                className="btn btn-info w-full lg:w-1/3 text-sm text-white"
+                className="relative text-white btn bg-[#468AFF] px-4 py-2 sm:px-8 sm:py-3 rounded-lg shadow-lg transition-all duration-300 ease-in-out hover:bg-[#3570D4] hover:scale-105 active:scale-95 focus:outline-none text-xs sm:text-base w-2/4 lg:w-2/4 "
               >
                 Verstuur Bericht
               </button>
