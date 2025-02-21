@@ -36,7 +36,7 @@ const Prijzen = () => {
         {/* Standard Template */}
         <div
           onClick={() => handleCardClick(1)}
-          className={`cursor-pointer bg-[#DAE8FF59] shadow-md rounded-2xl p-6 flex flex-col items-center max-w-xs ${
+          className={`cursor-pointer bg-[#F5F5F5] shadow-md rounded-2xl p-6 flex flex-col items-center max-w-xs ${
             selectedCard === 1 ? "border-4 border-blue-500" : ""
           }`}
         >

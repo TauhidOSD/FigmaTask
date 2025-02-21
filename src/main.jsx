@@ -149,7 +149,7 @@ const router = createBrowserRouter([
 ]);
 
 createRoot(document.getElementById('root')).render(
-  <div >
+  <div className='max-w-[1440px] w-full mx-auto px-4'>
     <RouterProvider router={router} />
     <Toaster position="top-center" reverseOrder={false} />
   </div>
