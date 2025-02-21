@@ -1,4 +1,3 @@
-
 import icon1 from "../assets/Link (1).png";
 import icon2 from "../assets/Link (2).png";
 import icon3 from "../assets/Link (3).png";
@@ -11,13 +10,15 @@ import link1 from "../assets/Link (1).png";
 import link2 from "../assets/Link (2).png";
 import link3 from "../assets/Link (3).png";
 import link4 from "../assets/Link (5).png";
-import link12 from "../assets/Link (12).png"
+import link12 from "../assets/Link (12).png";
 import { GoArrowRight } from "react-icons/go";
 import Vragen from "../Vragen/Vragen";
-import img2 from "../assets/avater-testi-2.png.png"
-import img3 from "../assets/avater-testi-3.png.png"
+import img2 from "../assets/avater-testi-2.png.png";
+import img3 from "../assets/avater-testi-3.png.png";
+
 
 const Diensten = () => {
+ 
   return (
     <div>
       {/* first section */}
@@ -25,7 +26,7 @@ const Diensten = () => {
         <h1 className="text-2xl sm:text-3xl font-bold text-gray-800">
           Snel en Kwalitatief
         </h1>
-        <p className="text-[#7E7E7E] leading-relaxed font-semibold px-4 sm:px-12 md:px-24 lg:px-36 xl:px-72">
+        <p className="text-[#7E7E7E] leading-relaxed font-plus-jakarta px-4 sm:px-12 md:px-24 lg:px-36 xl:px-72">
           Bij Younitech geloven we in de kracht van een sterke merkidentiteit.
           Onze brandingdiensten zijn ontworpen om uw bedrijf te laten opvallen
           in een competitieve markt. Wij bieden:
@@ -44,7 +45,7 @@ const Diensten = () => {
             />
           </div>
           <h2 className="text-lg font-semibold text-gray-800">
-          Doelgerichte branding
+            Doelgerichte <br /> branding
           </h2>
           <p className="text-sm text-gray-600">
             Creëer een merk dat de kern van uw bedrijf vertegenwoordigt.
@@ -99,7 +100,7 @@ const Diensten = () => {
         {/* Third Section */}
         <div className="p-6 text-center space-y-4">
           <h1 className="text-2xl lg:text-3xl font-bold text-gray-800">
-          Personaliseer uw merk voor online succes
+            Personaliseer uw merk voor online succes
           </h1>
           <p className="text-[#7E7E7E] leading-relaxed font-sans px-4 lg:px-72 text-center">
             Wij bieden flexibele en creatieve oplossingen die aansluiten op uw
@@ -118,7 +119,7 @@ const Diensten = () => {
           {/* Left Section */}
           <div className="lg:w-1/2 space-y-6">
             <h1 className="text-3xl font-bold text-gray-800">
-            Onze brandingoplossingen
+              Onze brandingoplossingen
             </h1>
             <div className="flex items-center gap-4">
               <button className="px-4 py-2 flex justify-center items-center gap-2 bg-blue-500 text-white font-semibold rounded-lg shadow-md hover:bg-blue-600">
@@ -149,7 +150,7 @@ const Diensten = () => {
                 />
               </div>
               <h1 className="text-lg font-semibold text-gray-800">
-              strategie en conceptontwerp
+                strategie en conceptontwerp
               </h1>
               <h2 className="text-gray-600 mt-2">
                 Zet uw ideeën om in een doordachte strategie.
@@ -165,9 +166,7 @@ const Diensten = () => {
                   className="w-14 h-14 object-cover rounded-md"
                 />
               </div>
-              <h1 className="text-lg font-semibold text-gray-800">
-              Huisstijl
-              </h1>
+              <h1 className="text-lg font-semibold text-gray-800">Huisstijl</h1>
               <h2 className="text-gray-600 mt-2">
                 Bouw een merk dat blijft hangen bij uw doelgroep.
               </h2>
@@ -235,75 +234,74 @@ const Diensten = () => {
       {/* Final Section */}
 
       <div className="flex flex-col lg:flex-row gap-8 px-6 md:px-20 lg:px-44 py-10">
-  {/* Left Section */}
-  <div className="w-full lg:w-1/3 space-y-6 text-center lg:text-left">
-    <button className="bg-[#B47D9D] text-white py-2 px-6 rounded-full hover:bg-blue-600 transition duration-300">
-      Getuigenissen
-    </button>
-    <h2 className="text-2xl font-bold text-gray-800">
-      Wat klanten zeggen over ons
-    </h2>
-    <p className="text-gray-600 text-base leading-relaxed">
-      Wij bieden ondersteuning aan meer dan 15.000 bedrijven.
-    </p>
-    <button className="bg-[#468AFF] text-white py-2 px-6 rounded-md hover:bg-blue-600 transition duration-300">
-      Meer Getuigenissen
-    </button>
-  </div>
+        {/* Left Section */}
+        <div className="w-full lg:w-1/3 space-y-6 text-center lg:text-left">
+          <button className="bg-[rgba(180,121,217,0.15)] font-bold text-[18px] text-[rgba(180,121,217,1)] py-2 px-6 rounded-full">
+            Getuigenissen
+          </button>
+          <h2 className="text-2xl font-bold text-gray-800">
+            Wat klanten zeggen over ons
+          </h2>
+          <p className="text-gray-600 text-base leading-relaxed">
+            Wij bieden ondersteuning aan meer dan 15.000 bedrijven.
+          </p>
+          <button className="bg-[#468AFF] text-white py-2 px-6 rounded-md hover:bg-blue-600 transition duration-300">
+            Meer Getuigenissen
+          </button>
+        </div>
 
-  {/* Right Section (Cards) */}
-  <div className="w-full lg:w-2/3 grid grid-cols-1 md:grid-cols-2 gap-6">
-    {/* Card 1 */}
-    <div className="bg-white shadow-md rounded-lg p-6 space-y-4">
-      <h2 className="text-lg font-semibold text-gray-800">
-        5 manieren om uw website te laten opvallen
-      </h2>
-      <p className="text-gray-600 leading-relaxed">
-        “Younitech gaf mijn merk de professionele uitstraling die het nodig had.
-        Dankzij hun brandingstrategieën zijn we zichtbaar gegroeid.”
-      </p>
-      <div className="flex items-center gap-4">
-        <img
-          src={img2}
-          alt="Sophie de Vries"
-          className="w-12 h-12 rounded-full"
-        />
-        <div>
-          <h3 className="font-semibold text-gray-800">Sophie de Vries</h3>
-          <p className="text-sm text-gray-500">Eigenaar van een retailbedrijf</p>
+        {/* Right Section (Cards) */}
+        <div className="w-full lg:w-2/3 grid grid-cols-1 md:grid-cols-2 gap-6">
+          {/* Card 1 */}
+          <div className="bg-white shadow-md rounded-lg p-6 space-y-4">
+            <h2 className="text-lg font-semibold text-gray-800">
+              5 manieren om uw website te laten opvallen
+            </h2>
+            <p className="text-gray-600 leading-relaxed">
+              “Younitech gaf mijn merk de professionele uitstraling die het
+              nodig had. Dankzij hun brandingstrategieën zijn we zichtbaar
+              gegroeid.”
+            </p>
+            <div className="flex items-center gap-4">
+              <img
+                src={img2}
+                alt="Sophie de Vries"
+                className="w-12 h-12 rounded-full"
+              />
+              <div>
+                <h3 className="font-semibold text-gray-800">Sophie de Vries</h3>
+                <p className="text-sm text-gray-500">
+                  Eigenaar van een retailbedrijf
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* Card 2 */}
+          <div className="bg-white shadow-md rounded-lg p-6 space-y-4">
+            <h2 className="text-lg font-semibold text-gray-800">
+              De toekomst van mobiele applicaties
+            </h2>
+            <p className="text-gray-600 leading-relaxed">
+              “Het creatieve team van Younitech heeft onze verwachtingen
+              overtroffen. Van logo tot complete huisstijl – alles klopt!”
+            </p>
+            <div className="flex items-center gap-4">
+              <img
+                src={img3}
+                alt="Mark Janssen"
+                className="w-12 h-12 rounded-full"
+              />
+              <div>
+                <h3 className="font-semibold text-gray-800">Mark Janssen</h3>
+                <p className="text-sm text-gray-500">
+                  CEO van een tech-startup
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-
-    {/* Card 2 */}
-    <div className="bg-white shadow-md rounded-lg p-6 space-y-4">
-      <h2 className="text-lg font-semibold text-gray-800">
-        De toekomst van mobiele applicaties
-      </h2>
-      <p className="text-gray-600 leading-relaxed">
-        “Het creatieve team van Younitech heeft onze verwachtingen overtroffen.
-        Van logo tot complete huisstijl – alles klopt!”
-      </p>
-      <div className="flex items-center gap-4">
-        <img
-          src={img3}
-          alt="Mark Janssen"
-          className="w-12 h-12 rounded-full"
-        />
-        <div>
-          <h3 className="font-semibold text-gray-800">Mark Janssen</h3>
-          <p className="text-sm text-gray-500">CEO van een tech-startup</p>
-        </div>
-      </div>
-    </div>
-  </div>
-  
-
-  
-</div>
-
-
-
     </div>
   );
 };

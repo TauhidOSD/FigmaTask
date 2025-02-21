@@ -26,7 +26,7 @@ const Card = () => {
       {/* Cards Section */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
         {/* Card 1 */}
-        <div onClick={()=>navigate("/blog")}  className="bg-[#F5F5F5] shadow-lg rounded-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+        <div onClick={()=>navigate("/shift")}  className="bg-[#F5F5F5] shadow-lg rounded-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
           <img src={img1} alt="Blog 1" className="w-full h-56 object-cover" />
           <div className="p-6">
             <div className="flex gap-2 mb-4">
@@ -44,7 +44,7 @@ const Card = () => {
               Een goed ontworpen website is meer dan een visitekaartje. Leer hoe
               u met design, snelheid en content uw conversies....
             </p>
-            <button className="text-[#FFFFFF] btn bg-[#468AFF] px-8 ">
+            <button className="relative text-white btn bg-[#468AFF]  py-2 sm:px-8 sm:py-3 rounded-lg shadow-lg transition-all duration-300 ease-in-out hover:bg-[#3570D4] hover:scale-105 active:scale-95 focus:outline-none text-sm sm:text-base px-6 ">
               Lees meer
             </button>
           </div>
@@ -69,7 +69,7 @@ const Card = () => {
               In een tijdperk van constante digitale prikkels is een sterke
               merkidentiteit essentieel. Ontdek hoe u een blijvende....
             </p>
-            <button className="text-[#FFFFFF] btn bg-[#468AFF] px-8 ">
+            <button className="relative text-white btn bg-[#468AFF] px-6 py-2 sm:px-8 sm:py-3 rounded-lg shadow-lg transition-all duration-300 ease-in-out hover:bg-[#3570D4] hover:scale-105 active:scale-95 focus:outline-none text-sm sm:text-base">
               Lees meer
             </button>
           </div>
@@ -94,7 +94,7 @@ const Card = () => {
               Mobiele applicaties blijven evolueren. Welke trends mogen
               bedrijven niet missen om relevant te blijven?
             </p>
-            <button className="text-[#FFFFFF] btn bg-[#468AFF] px-8 ">
+            <button className="relative text-white btn bg-[#468AFF] px-6 py-2 sm:px-8 sm:py-3 rounded-lg shadow-lg transition-all duration-300 ease-in-out hover:bg-[#3570D4] hover:scale-105 active:scale-95 focus:outline-none text-sm sm:text-base ">
               Lees meer
             </button>
           </div>
@@ -118,7 +118,7 @@ const Card = () => {
               Mobiele applicaties blijven evolueren. Welke trends mogen
               bedrijven niet missen om relevant te blijven?
             </p>
-            <button className="text-[#FFFFFF] btn bg-[#468AFF] px-8 ">
+            <button className="relative text-white btn bg-[#468AFF] px-6 py-2 sm:px-8 sm:py-3 rounded-lg shadow-lg transition-all duration-300 ease-in-out hover:bg-[#3570D4] hover:scale-105 active:scale-95 focus:outline-none text-sm sm:text-base">
               Lees meer
             </button>
           </div>
@@ -142,13 +142,13 @@ const Card = () => {
               Mobiele applicaties blijven evolueren. Welke trends mogen
               bedrijven niet missen om relevant te blijven?
             </p>
-            <button className="text-[#FFFFFF] btn bg-[#468AFF] px-8 ">
+            <button className="relative text-white btn bg-[#468AFF] px-6 py-2 sm:px-8 sm:py-3 rounded-lg shadow-lg transition-all duration-300 ease-in-out hover:bg-[#3570D4] hover:scale-105 active:scale-95 focus:outline-none text-sm sm:text-base">
               Lees meer
             </button>
           </div>
         </div>
         {/* Card 6 */}
-        <div onClick={()=>navigate("/blog")} className="bg-[#F5F5F5] shadow-lg rounded-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+        <div onClick={()=>navigate("/henna")} className="bg-[#F5F5F5] shadow-lg rounded-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
           <img src={img6} alt="Blog 3" className="w-full h-56 object-cover" />
           <div className="p-6">
             <div className="flex gap-2 mb-4">
@@ -166,7 +166,7 @@ const Card = () => {
               Mobiele applicaties blijven evolueren. Welke trends mogen
               bedrijven niet missen om relevant te blijven?
             </p>
-            <button className="text-[#FFFFFF] btn bg-[#468AFF] px-8 ">
+            <button className="relative text-white btn bg-[#468AFF] px-6 py-2 sm:px-8 sm:py-3 rounded-lg shadow-lg transition-all duration-300 ease-in-out hover:bg-[#3570D4] hover:scale-105 active:scale-95 focus:outline-none text-sm sm:text-base">
               Lees meer
             </button>
           </div>

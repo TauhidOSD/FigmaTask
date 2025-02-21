@@ -9,6 +9,27 @@ const Brand = () => {
     setActiveSection(activeSection === section ? null : section);
   };
 
+  const questions = [
+    {
+      id: "logo",
+      question: "Hoe lang duurt het om een app te ontwikkelen?",
+      answer:
+        "Branding bouwt een sterke band en vertrouwen op met je doelgroep. We helpen bestaande ondernemers met een authentieke merkbeleving en nieuwe ondernemers met een herkenbare identiteit. Zo versterken we je merk voor duurzame groei.",
+    },
+    {
+      id: "apps",
+      question: "Wat voor soort apps ontwikkelen jullie?",
+      answer:
+        "Wij ontwikkelen een breed scala aan apps, van op maat gemaakte mobiele applicaties tot webgebaseerde platforms. We richten ons op het creëren van gebruiksvriendelijke apps voor verschillende sectoren zoals gezondheid, e-commerce en onderwijs.",
+    },
+    {
+      id: "support",
+      question: "Bieden jullie ondersteuning na de lancering?",
+      answer:
+        "Ja, wij bieden volledige ondersteuning na de lancering. Dit omvat het monitoren van de prestaties van de app, het oplossen van eventuele technische problemen, en het aanbieden van updates en onderhoud om ervoor te zorgen dat de app altijd optimaal blijft functioneren.",
+    },
+  ];
+
   return (
     <div className="flex flex-col lg:flex-row gap-8 px-6 lg:px-36 py-8">
       {/* Left Section with Image */}
@@ -16,68 +37,28 @@ const Brand = () => {
         <img src={img} alt="Branding" className="w-full rounded-lg shadow-md" />
       </div>
 
-      {/* Right Section with Buttons */}
+      {/* Right Section with Questions */}
       <div className="w-full lg:w-1/2 space-y-6">
-        {/* Button 1 */}
-        <div>
-          <button
-            onClick={() => toggleSection("logo")}
-            className="w-full bg-[#468AFF] text-white py-2 px-4 text-left rounded-md flex justify-between items-center"
-          >
-            Branding
-            <GoChevronDown
-              className={`transform transition-transform ${
-                activeSection === "logo" ? "rotate-180" : ""
+        {questions.map((item) => (
+          <div key={item.id}>
+            <button
+              onClick={() => toggleSection(item.id)}
+              className={`w-full drop-shadow-[0_0_10px_rgba(0,0,0,0.4)] bg-[#FFFFFF] text-[#263238] py-2 px-4 text-left rounded-md flex justify-between items-center ${
+                activeSection === item.id ? "text-blue-500" : "text-black"
               }`}
-            />
-          </button>
-          {activeSection === "logo" && (
-            <p className="mt-2 text-gray-600">
-              Branding bouwt een sterke band en vertrouwen op met je doelgroep. We helpen bestaande ondernemers met een authentieke merkbeleving en nieuwe ondernemers met een herkenbare identiteit. Zo versterken we je merk voor duurzame groei.
-            </p>
-          )}
-        </div>
-
-        {/* Button 2 */}
-        <div>
-          <button
-            onClick={() => toggleSection("visualGuidelines")}
-            className="w-full bg-[#468AFF] text-white py-2 px-4 text-left rounded-md flex justify-between items-center"
-          >
-            Visuele Richtlijnen
-            <GoChevronDown
-              className={`transform transition-transform ${
-                activeSection === "visualGuidelines" ? "rotate-180" : ""
-              }`}
-            />
-          </button>
-          {activeSection === "visualGuidelines" && (
-            <p className="mt-2 text-gray-600">
-              Uniformiteit in kleuren, lettertypes en stijl voor consistente
-              branding.
-            </p>
-          )}
-        </div>
-
-        {/* Button 3 */}
-        <div>
-          <button
-            onClick={() => toggleSection("printMedia")}
-            className="w-full bg-[#468AFF] text-white py-2 px-4 text-left rounded-md flex justify-between items-center"
-          >
-            Print- en Digitale Media
-            <GoChevronDown
-              className={`transform transition-transform ${
-                activeSection === "printMedia" ? "rotate-180" : ""
-              }`}
-            />
-          </button>
-          {activeSection === "printMedia" && (
-            <p className="mt-2 text-gray-600">
-              Materialen die zowel online als offline indruk maken.
-            </p>
-          )}
-        </div>
+            >
+              {item.question}
+              <GoChevronDown
+                className={`transform transition-transform ${
+                  activeSection === item.id ? "rotate-180" : ""
+                }`}
+              />
+            </button>
+            {activeSection === item.id && (
+              <p className="mt-2 text-gray-600">{item.answer}</p>
+            )}
+          </div>
+        ))}
       </div>
     </div>
   );

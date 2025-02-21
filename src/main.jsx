@@ -33,6 +33,7 @@ import Henna from './Henna/Henna.jsx';
 import Overons from './Overons/overons.jsx';
 import PrijzenBranding from './PrijzenBranding/PrijzenBranding.jsx';
 import PrijzenMarketing from './PrijzenMarketing/PrijzenMarketing.jsx';
+import ShiftMode from './ShiftMode/ShiftMode.jsx';
 
 // Load Stripe
 const stripePromise = loadStripe("your-public-stripe-key");
@@ -99,6 +100,10 @@ const router = createBrowserRouter([
         element: <Henna />,
       },
       {
+        path: "/shift",
+        element: <ShiftMode />,
+      },
+      {
         path: "/overons",
         element: <Overons/>,
       },
@@ -144,7 +149,7 @@ const router = createBrowserRouter([
 ]);
 
 createRoot(document.getElementById('root')).render(
-  <div >
+  <div className='max-w-[1440px] w-full mx-auto px-4'>
     <RouterProvider router={router} />
     <Toaster position="top-center" reverseOrder={false} />
   </div>

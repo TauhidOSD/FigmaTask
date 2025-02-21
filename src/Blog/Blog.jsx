@@ -32,7 +32,7 @@ const Blog = () => {
                       Een goed ontworpen website is meer dan een visitekaartje. Leer hoe
                       u met design, snelheid en content uw conversies....
                     </p>
-                    <button className="text-[#FFFFFF] btn bg-[#468AFF] px-8 ">
+                    <button className="relative text-white btn bg-[#468AFF] px-6 py-2 sm:px-8 sm:py-3 rounded-lg shadow-lg transition-all duration-300 ease-in-out hover:bg-[#3570D4] hover:scale-105 active:scale-95 focus:outline-none text-sm sm:text-base">
                       Lees meer
                     </button>
                   </div>
@@ -57,7 +57,7 @@ const Blog = () => {
                       In een tijdperk van constante digitale prikkels is een sterke
                       merkidentiteit essentieel. Ontdek hoe u een blijvende....
                     </p>
-                    <button className="text-[#FFFFFF] btn bg-[#468AFF] px-8 ">
+                    <button className="relative text-white btn bg-[#468AFF] px-6 py-2 sm:px-8 sm:py-3 rounded-lg shadow-lg transition-all duration-300 ease-in-out hover:bg-[#3570D4] hover:scale-105 active:scale-95 focus:outline-none text-sm sm:text-base">
                       Lees meer
                     </button>
                   </div>
@@ -82,7 +82,7 @@ const Blog = () => {
                       Mobiele applicaties blijven evolueren. Welke trends mogen
                       bedrijven niet missen om relevant te blijven?
                     </p>
-                    <button className="text-[#FFFFFF] btn bg-[#468AFF] px-8 ">
+                    <button className="relative text-white btn bg-[#468AFF] px-6 py-2 sm:px-8 sm:py-3 rounded-lg shadow-lg transition-all duration-300 ease-in-out hover:bg-[#3570D4] hover:scale-105 active:scale-95 focus:outline-none text-sm sm:text-base">
                       Lees meer
                     </button>
                   </div>
@@ -106,7 +106,7 @@ const Blog = () => {
                       Mobiele applicaties blijven evolueren. Welke trends mogen
                       bedrijven niet missen om relevant te blijven?
                     </p>
-                    <button className="text-[#FFFFFF] btn bg-[#468AFF] px-8 ">
+                    <button className="relative text-white btn bg-[#468AFF] px-6 py-2 sm:px-8 sm:py-3 rounded-lg shadow-lg transition-all duration-300 ease-in-out hover:bg-[#3570D4] hover:scale-105 active:scale-95 focus:outline-none text-sm sm:text-base">
                       Lees meer
                     </button>
                   </div>
@@ -130,7 +130,7 @@ const Blog = () => {
                       Mobiele applicaties blijven evolueren. Welke trends mogen
                       bedrijven niet missen om relevant te blijven?
                     </p>
-                    <button className="text-[#FFFFFF] btn bg-[#468AFF] px-8 ">
+                    <button className="relative text-white btn bg-[#468AFF] px-6 py-2 sm:px-8 sm:py-3 rounded-lg shadow-lg transition-all duration-300 ease-in-out hover:bg-[#3570D4] hover:scale-105 active:scale-95 focus:outline-none text-sm sm:text-base">
                       Lees meer
                     </button>
                   </div>
@@ -154,7 +154,7 @@ const Blog = () => {
                       Mobiele applicaties blijven evolueren. Welke trends mogen
                       bedrijven niet missen om relevant te blijven?
                     </p>
-                    <button className="text-[#FFFFFF] btn bg-[#468AFF] px-8 ">
+                    <button className="relative text-white btn bg-[#468AFF] px-6 py-2 sm:px-8 sm:py-3 rounded-lg shadow-lg transition-all duration-300 ease-in-out hover:bg-[#3570D4] hover:scale-105 active:scale-95 focus:outline-none text-sm sm:text-base">
                       Lees meer
                     </button>
                   </div>

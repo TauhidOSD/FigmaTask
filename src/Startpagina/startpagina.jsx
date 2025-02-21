@@ -30,7 +30,7 @@ const Startpagina = () => {
           agressieve marketingcampagne? Dan worden extra mediakosten direct
           doorgerekend, uiteraard altijd in goed overleg.
         </p>
-        <p className="text-[#FF4B32] leading-relaxed">
+        <p className="text-[#FF4B32] font-semibold text-xl leading-relaxed">
           ⚠ Let op: Alle vermelde prijzen zijn exclusief BTW.
         </p>
         <p className="text-gray-600 leading-relaxed">
