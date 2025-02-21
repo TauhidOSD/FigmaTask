@@ -210,8 +210,6 @@ const Appmarket = () => {
         </h1>
       </div>
 
-      
-
       <div className="grid grid-cols-1 lg:grid-cols-4 gap-5 m-10 lg:m-24">
         {[
           {
@@ -273,7 +271,6 @@ const Appmarket = () => {
             Vragen
           </h1>
 
-        
           <p className="font-plus-jakarta mt-3  text-left text-[#7E7E7E]">
             Heeft u vragen over onze brandingdiensten?{" "}
           </p>
@@ -285,7 +282,6 @@ const Appmarket = () => {
             {" "}
             en u te begeleiden in het brandingproces.
           </p>
-          
         </div>
 
         <div className="w-full lg:w-1/2 space-y-6">
@@ -415,28 +411,26 @@ const Appmarket = () => {
         <div className="w-full lg:w-2/3 grid grid-cols-1 md:grid-cols-2 gap-6">
           {/* Card 1 */}
           <div className="bg-white shadow-md rounded-lg p-6 space-y-4">
-            <h2 className="text-lg font-bold font-plus-jakarta text-[rgba(38,50,56,1)]">
-              Efficiënte Routeplanning met Younitech
+            <h2 className="text-lg font-semibold text-gray-800">
+            Efficiënte Routeplanning met Younitech
             </h2>
-            <p className="text-[rgba(38,50,56,1)] text-[18px] font-plus-jakarta  leading-relaxed">
-              “Voorheen was routeplanning een nachtmerrie – alles ging via Excel
+            <p className="text-gray-600 leading-relaxed">
+              "Voorheen was routeplanning een nachtmerrie – alles ging via Excel
               en efficiëntie was ver te zoeken. Younitech ontwikkelde een
               planningssysteem dat ritten eerlijk en milieuvriendelijk verdeelt.
               Mijn planner kan eindelijk rustig een kop koffie drinken zonder
-              boze telefoontjes. Beste keuze van het jaar!”
+              boze telefoontjes. Beste keuze van het jaar!"
             </p>
             <div className="flex items-center gap-4">
               <img
-                src={img3}
+                src={img2}
                 alt="Sophie de Vries"
                 className="w-12 h-12 rounded-full"
               />
               <div>
-                <h3 className="font-bold font-plus-jakarta text-[rgba(38,50,56,1)] text-[18px]">
-                  Mohammed Munzur
-                </h3>
-                <p className="text-[15px] font-plus-jakarta  text-[rgba(126,126,126,1)]">
-                  ABC Autotransport
+                <h3 className="font-semibold text-gray-800">Sophie de Vries</h3>
+                <p className="text-sm text-gray-500">
+                  Eigenaar van een retailbedrijf
                 </p>
               </div>
             </div>
@@ -444,28 +438,26 @@ const Appmarket = () => {
 
           {/* Card 2 */}
           <div className="bg-white shadow-md rounded-lg p-6 space-y-4">
-            <h2 className="text-lg font-bold font-plus-jakarta text-[rgba(38,50,56,1)]">
-              Slimmer HR-beheer met Geautomatiseerde Processen
+            <h2 className="text-lg font-semibold text-gray-800">
+            Slimmer HR-beheer met Geautomatiseerde Processen
             </h2>
-            <p className="text-[rgba(38,50,56,1)] text-[18px] font-plus-jakarta  leading-relaxed">
-              “Ons HR-proces was chaotisch, met eindeloze vragen over documenten
-              en startdata. Dankzij Younitech <span></span> CRM-systeem is alles
+            <p className="text-gray-600 leading-relaxed">
+              "Ons HR-proces was chaotisch, met eindeloze vragen over documenten
+              en startdata. Dankzij Younitech's CRM-systeem is alles
               geautomatiseerd, krijgen kandidaten direct updates en werkt ons
               team veel efficiënter. Dit bracht rust én verhoogde de
-              productiviteit enorm!”
+              productiviteit enorm!"
             </p>
             <div className="flex items-center gap-4">
               <img
-                src={img2}
+                src={img3}
                 alt="Mark Janssen"
                 className="w-12 h-12 rounded-full"
               />
               <div>
-                <h3 className="font-bold font-plus-jakarta text-[rgba(38,50,56,1)] text-[18px]">
-                  Wesley Groenbeek
-                </h3>
-                <p className="text-[15px] font-plus-jakarta  text-[rgba(126,126,126,1)]">
-                  Allround Uitzendbureau
+                <h3 className="font-semibold text-gray-800">Mark Janssen</h3>
+                <p className="text-sm text-gray-500">
+                  CEO van een tech-startup
                 </p>
               </div>
             </div>

@@ -15,18 +15,10 @@ import { GoArrowRight } from "react-icons/go";
 import Vragen from "../Vragen/Vragen";
 import img2 from "../assets/avater-testi-2.png.png";
 import img3 from "../assets/avater-testi-3.png.png";
-import { useState } from "react";
+
 
 const Diensten = () => {
-  const [color, setColor] = useState("text-black");
-  const [color1, setColor1] = useState("text-black");
-  const [color2, setColor2] = useState("text-black");
-
-  const onChangeColor = (setColorFunc) => {
-    setColorFunc((prevColor) =>
-      prevColor === "text-black" ? "text-blue-500" : "text-black"
-    );
-  };
+ 
   return (
     <div>
       {/* first section */}
