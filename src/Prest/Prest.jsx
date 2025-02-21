@@ -52,7 +52,7 @@ const Prest = () => {
       </div>
 
       {/* Middle Section */}
-      <div className="flex flex-col lg:flex-row py-12 px-6 lg:px-20 gap-6 lg:gap-12">
+      <div className="flex flex-col lg:flex-row pt-12 px-6 lg:px-20 gap-6 lg:gap-12">
         {/* Left Side */}
         <div className="lg:w-1/2 mt-12 lg:mt-24 lg:ml-36">
           {data.map((item, index) => (

@@ -22,7 +22,7 @@ const Onze = () => {
           <img
             src={image1}
             alt="Applicaties"
-            className="mx-auto h-32 w-auto mb-4"
+            className="mx-auto h-48 w-auto mb-4"
           />
           <h2 className="text-xl font-semibold text-gray-800">Applicaties</h2>
           {/* <p className="text-gray-600 mt-2 text-sm">
@@ -35,7 +35,7 @@ const Onze = () => {
           <img
             src={image2}
             alt="Marketing & Branding"
-            className="mx-auto h-32 w-auto mb-4"
+            className="mx-auto h-48 w-auto mb-4"
           />
           <h2 className="text-xl font-semibold text-gray-800">
             Marketing & Branding
@@ -50,7 +50,7 @@ const Onze = () => {
           <img
             src={image3}
             alt="Hosting & Onderhoud"
-            className="mx-auto h-32 w-auto mb-4"
+            className="mx-auto h-48 w-auto mb-4"
           />
           <h2 className="text-xl font-semibold text-gray-800">
             Hosting & Onderhoud
