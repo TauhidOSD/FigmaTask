@@ -3,16 +3,16 @@ import icon1 from "../assets/Icon (2).png"
 import icon2 from "../assets/Icon (3).png"
 import icon3 from "../assets/Icon (4).png"
 import icon4 from "../assets/Icon (5).png"
-import i1 from "../assets/rectangle.png"
-import i2 from "../assets/tree.png"
-import i3 from "../assets/light.png"
-import i4 from "../assets/watch.png"
+import i1 from "../assets/Vector11.png"
+import i2 from "../assets/Vector12.png"
+import i3 from "../assets/Vector13.png"
+import i4 from "../assets/Vector14.png"
 
 const Overons = () => {
   return (
-    <div className="md:px-36 px-8 py-12 bg-gray-50">
+    <div className="w-full  py-12 bg-gray-50">
       {/* First Section */}
-      <div className="flex flex-col md:flex-row items-start gap-8">
+      <div className="flex flex-col md:flex-row md:px-36 items-start gap-8">
         {/* Left Section */}
         <div className="md:w-1/2">
           <h1 className="text-3xl font-bold text-gray-800 mb-4">
@@ -50,7 +50,7 @@ const Overons = () => {
 
       {/* Second Section  */}
 
-      <div className="bg-[#F8F8F8] my-16  grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 text-center">
+      <div className="bg-[#F8F8F8] md:px-32  my-16  grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 text-center">
         <div className="p-6 text-start ">
           <div className=""> <img className="flex justify-center items-center" src={i1} alt="" /></div>
           <h1 className="mt-2 text-xl font-bold "> Oprechtheid</h1>
@@ -59,7 +59,7 @@ const Overons = () => {
 
         <div className="p-6 text-start">
         <div className=""><img src={i2} alt="" /></div>
-        <h1 className="mt-2 text-xl font-bold ">Maatschappelijke betrokkenheid</h1>
+        <h1 className="mt-2 text-xl font-bold ">Maatschappelijke </h1>
           <p className="mt-2 text-sm">
           We bieden kansen aan werknemers om hun <br />potentieel te benutten, zonder hiermee te <br />koop te lopen
           </p>
@@ -83,7 +83,7 @@ const Overons = () => {
 
       {/* Third Section  */}
 
-      <div className="flex flex-col lg:flex-row items-center my-16 lg:gap-12">
+      <div className="flex flex-col md:px-36 lg:flex-row items-center my-16 lg:gap-12">
         {/* Left Section */}
         <div className="w-full lg:w-1/2 text-center lg:text-left space-y-6">
           <h1 className="text-3xl font-bold text-blue-600">Onze Missie</h1>
@@ -124,11 +124,11 @@ const Overons = () => {
 
       {/* Fourth Section  */}
 
-      <div className="my-16 px-6 lg:px-16">
+      <div className="my-16  px-6 lg:px-16">
   {/* Header Section */}
   <div className="text-center mb-12">
     <h1>
-      <button className="text-3xl font-bold border p-5 bg-[#EFECFF] rounded-full text-blue-600 hover:text-blue-800 transition">
+      <button className="text-2xl font-bold border px-4 py-1 bg-[#EFECFF] rounded-full text-blue-600 hover:text-blue-800 transition">
       Onze Missie
       </button>
     </h1>
@@ -138,7 +138,7 @@ const Overons = () => {
   </div>
 
   {/* Grid Section */}
-  <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+  <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:px-20">
     {/* Card 1 */}
     <div className="flex items-center bg-gray-50 p-6 rounded-lg shadow-md">
       <div className="flex-shrink-0">

@@ -7,18 +7,28 @@ const Brand = () => {
 
   const toggleSection = (section) => {
     setActiveSection(activeSection === section ? null : section);
-
   };
-  const [color, setColor] = useState("text-black");
-  const [color1, setColor1] = useState("text-black");
-  const [color2, setColor2] = useState("text-black");
 
-  const onChangeColor = (setColorFunc) => {
-    setColorFunc((prevColor) =>
-      prevColor === "text-black" ? "text-blue-500" : "text-black"
-    );
-  };
-  
+  const questions = [
+    {
+      id: "logo",
+      question: "Hoe lang duurt het om een app te ontwikkelen?",
+      answer:
+        "Branding bouwt een sterke band en vertrouwen op met je doelgroep. We helpen bestaande ondernemers met een authentieke merkbeleving en nieuwe ondernemers met een herkenbare identiteit. Zo versterken we je merk voor duurzame groei.",
+    },
+    {
+      id: "apps",
+      question: "Wat voor soort apps ontwikkelen jullie?",
+      answer:
+        "Wij ontwikkelen een breed scala aan apps, van op maat gemaakte mobiele applicaties tot webgebaseerde platforms. We richten ons op het creëren van gebruiksvriendelijke apps voor verschillende sectoren zoals gezondheid, e-commerce en onderwijs.",
+    },
+    {
+      id: "support",
+      question: "Bieden jullie ondersteuning na de lancering?",
+      answer:
+        "Ja, wij bieden volledige ondersteuning na de lancering. Dit omvat het monitoren van de prestaties van de app, het oplossen van eventuele technische problemen, en het aanbieden van updates en onderhoud om ervoor te zorgen dat de app altijd optimaal blijft functioneren.",
+    },
+  ];
 
   return (
     <div className="flex flex-col lg:flex-row gap-8 px-6 lg:px-36 py-8">
@@ -27,91 +37,29 @@ const Brand = () => {
         <img src={img} alt="Branding" className="w-full rounded-lg shadow-md" />
       </div>
 
-      {/* Right Section with Buttons */}
-      
+      {/* Right Section with Questions */}
       <div className="w-full lg:w-1/2 space-y-6">
-          {/* Button 1 */}
-          <div>
+        {questions.map((item) => (
+          <div key={item.id}>
             <button
-              onClick={() => {
-                toggleSection("logo");
-                onChangeColor(setColor);
-              }}
-              className={`w-full drop-shadow-[0_0_10px_rgba(0,0,0,0.4)] bg-[#FFFFFF] text-[#263238] py-2 px-4 text-left rounded-md flex justify-between items-center ${color}`}
+              onClick={() => toggleSection(item.id)}
+              className={`w-full drop-shadow-[0_0_10px_rgba(0,0,0,0.4)] bg-[#FFFFFF] text-[#263238] py-2 px-4 text-left rounded-md flex justify-between items-center ${
+                activeSection === item.id ? "text-blue-500" : "text-black"
+              }`}
             >
-              Hoe lang duurt het om een app te ontwikkelen?
+              {item.question}
               <GoChevronDown
                 className={`transform transition-transform ${
-                  activeSection === "logo" ? "rotate-180" : ""
+                  activeSection === item.id ? "rotate-180" : ""
                 }`}
               />
             </button>
-
-            {activeSection === "logo" && (
-              <p className="mt-2 text-gray-600">
-                Branding bouwt een sterke band en vertrouwen op met je
-                doelgroep. We helpen bestaande ondernemers met een authentieke
-                merkbeleving en nieuwe ondernemers met een herkenbare
-                identiteit. Zo versterken we je merk voor duurzame groei.
-              </p>
+            {activeSection === item.id && (
+              <p className="mt-2 text-gray-600">{item.answer}</p>
             )}
           </div>
-
-          {/* Button 2 */}
-          <div>
-            <button
-              onClick={() => {
-                toggleSection("printMedian");
-                onChangeColor(setColor1);
-              }}
-              className={`w-full drop-shadow-[0_0_10px_rgba(0,0,0,0.4)] bg-[#FFFFFF] text-[#263238] py-2 px-4 text-left rounded-md flex justify-between items-center ${color1}`}
-            >
-              Wat voor soort apps ontwikkelen jullie?
-              <GoChevronDown
-                className={`transform transition-transform ${
-                  activeSection === "printMedia" ? "rotate-180" : ""
-                }`}
-              />
-            </button>
-
-            {activeSection === "printMedian" && (
-              <p className="mt-2 text-gray-600">
-                Wij ontwikkelen een breed scala aan apps, van op maat gemaakte
-                mobiele applicaties tot webgebaseerde platforms. We richten ons
-                op het creëren van gebruiksvriendelijke apps voor verschillende
-                sectoren zoals gezondheid, e-commerce, en onderwijs
-              </p>
-            )}
-          </div>
-
-          {/* Button 3 */}
-          <div>
-            <button
-              onClick={() => {
-                toggleSection("printMedia");
-                onChangeColor(setColor2);
-              }}
-              className={`w-full drop-shadow-[0_0_10px_rgba(0,0,0,0.4)] bg-[#FFFFFF] text-[#263238] py-2 px-4 text-left rounded-md flex justify-between items-center ${color2}`}
-            >
-              Bieden jullie ondersteuning na de lancering?
-              <GoChevronDown
-                className={`transform transition-transform ${
-                  activeSection === "printMedia" ? "rotate-180" : ""
-                }`}
-              />
-            </button>
-
-            {activeSection === "printMedia" && (
-              <p className="mt-2 text-gray-600">
-                Ja, wij bieden volledige ondersteuning na de lancering. Dit
-                omvat het monitoren van de prestaties van de app, het oplossen
-                van eventuele technische problemen, en het aanbieden van updates
-                en onderhoud om ervoor te zorgen dat de app altijd optimaal
-                blijft functioneren.
-              </p>
-            )}
-          </div>
-        </div>
+        ))}
+      </div>
     </div>
   );
 };
