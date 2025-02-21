@@ -20,12 +20,12 @@ const Marketing = () => {
     return (
         <div className=" mx-auto md:px-6 px-6">
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 items-center lg:px-12 ml-10 mt-10 lg:m-20 ">
+        <div className="grid grid-cols-1 lg:grid-cols-2 items-center lg:px-12 mt-10 lg:m-20 ">
 
 
         <div className="mr-5">
           <div className="">
-            <p className=" rounded-3xl bg-[rgba(180,121,217,0.15)] text-[rgba(180,121,217,1)] font-bold p-2  text-center  mb-3 font-plus-jakarta w-4/6  lg:w-2/6">
+            <p className=" rounded-3xl bg-[rgba(180,121,217,0.15)] text-[rgba(180,121,217,1)] font-bold p-2  text-center  mb-3 font-plus-jakarta w-2/5  lg:w-1/4">
             Marketing
             </p>
           </div>
@@ -74,11 +74,11 @@ const Marketing = () => {
 
 {/** second part start from here */}
 
-<div className="flex items-center justify-center "><p className=" rounded-3xl mb-5 font-medium p-2 text-base text-center bg-[rgba(180,121,217,0.15)] text-[rgba(180,121,217,1)]mb-3 font-sans  lg:w-1/5">Snelle en Kwalitatieve Service</p></div>
-<h1  className="md:text-[40px] text-xl text-center font-bold font-plus-jakarta">Een marketingaanpak die eenvoudig werkt</h1>
-<p className="text-base text-slate-400 text-center mt-2">We bieden complete online marketing, van Google tot sociale media, met een doelgerichte en </p>
-<p className="text-base text-slate-400 text-center mt-2">kostenefficiënte aanpak. Geen standaardoplossingen – we begrijpen jouw merk en gebruiken unieke </p>
-<p className="text-base text-slate-400 text-center mt-2">strategieën, zoals straatsteen marketing, om jouw bedrijf creatief en impactvol te laten opvallen! </p>
+<div className="flex items-center justify-center "><p className=" rounded-3xl mb-5 font-medium p-2 text-base text-center bg-[rgba(180,121,217,0.15)] text-[rgba(180,121,217,1)]  font-sans w-5/6  lg:w-1/5">Snelle en Kwalitatieve Service</p></div>
+<h1  className=" text-[30px] lg:text-[40px] text-center font-bold font-plus-jakarta">Een marketingaanpak die eenvoudig werkt</h1>
+<p className=" text-sm lg:text-base text-slate-400 text-center px-2 mt-2">We bieden complete online marketing, van Google tot sociale media, met een doelgerichte en </p>
+<p className=" text-sm lg:text-base text-slate-400 text-center px-2 mt-2">kostenefficiënte aanpak. Geen standaardoplossingen – we begrijpen jouw merk en gebruiken unieke </p>
+<p className=" text-sm lg:text-base text-slate-400 text-center px-2 mt-2">strategieën, zoals straatsteen marketing, om jouw bedrijf creatief en impactvol te laten opvallen! </p>
 
 {/** second part end here */}
 
@@ -89,7 +89,7 @@ const Marketing = () => {
 
 <div className="flex flex-col lg:flex-row gap-8 mt-5 px-6 lg:px-36 py-8">
       {/* Left Section with Image */}
-      <div className="w-full lg:w-1/2">
+      <div className="w-full  lg:w-1/2">
         <img src={img} alt="Branding" className="w-full rounded-lg shadow-md" />
       </div>
 
@@ -99,7 +99,7 @@ const Marketing = () => {
         <div>
           <button
             onClick={() => toggleSection("logo")}
-            className="w-full drop-shadow-[0_0_10px_rgba(0,0,0,0.4)] bg-[#FFFFFF] text-[#263238] text-[20px] font-bold font-plus-jakarta py-2 px-4 text-left rounded-md flex justify-between items-center"
+            className="w-full drop-shadow-[0_0_10px_rgba(0,0,0,0.4)] bg-[#FFFFFF] text-[#263238] lg:text-[20px] font-bold font-plus-jakarta py-2 px-4 text-left rounded-md flex justify-between items-center"
           >
             Strategische Planning
             <GoChevronDown
@@ -119,7 +119,7 @@ const Marketing = () => {
         <div>
           <button
             onClick={() => toggleSection("visualGuidelines")}
-            className="w-full drop-shadow-[0_0_10px_rgba(0,0,0,0.4)] bg-[#FFFFFF] text-[#263238] text-[20px] font-bold font-plus-jakarta py-2 px-4 text-left rounded-md flex justify-between items-center"
+            className="w-full drop-shadow-[0_0_10px_rgba(0,0,0,0.4)] bg-[#FFFFFF] text-[#263238] lg:text-[20px] font-bold font-plus-jakarta py-2 px-4 text-left rounded-md flex justify-between items-center"
           >
             Creatieve Uitvoering
             <GoChevronDown
@@ -139,7 +139,7 @@ const Marketing = () => {
         <div>
           <button
             onClick={() => toggleSection("printMedia")}
-            className="w-full drop-shadow-[0_0_10px_rgba(0,0,0,0.4)] bg-[#FFFFFF] text-[#263238] text-[20px] font-bold font-plus-jakarta py-2 px-4 text-left rounded-md flex justify-between items-center"
+            className="w-full drop-shadow-[0_0_10px_rgba(0,0,0,0.4)] bg-[#FFFFFF] text-[#263238] lg:text-[20px] font-bold font-plus-jakarta py-2 px-4 text-left rounded-md flex justify-between items-center"
           >
            Analyse en Optimalisatie
             <GoChevronDown
@@ -163,13 +163,13 @@ const Marketing = () => {
 
 {/** 4th   part start from here */}
 
-<div className=" relative bg-custom-bg lg:bg-cover bg-center bg-slate-50 w-full md:mt-36 mt-6 h-60  lg:w-auto  ">
-<div className="text-center ml-10 md:ml-[500px] md:mt-12  absolute  ">
+<div className=" relative bg-custom-bg lg:bg-cover bg-center bg-slate-50 w-full mt-36 h-60  lg:w-auto  ">
+<div className="text-center lg:ml-96  absolute mt-9 ">
     
     <h1 className="font-bold text-xl lg:text-2xl ">Word onderdeel van onze groeiende</h1>
     <h1 className="font-bold text-xl lg:text-2xl">gemeenschap van tevreden klanten</h1>
-    <p className="mb-6 mt-4 text-slate-600">U heeft de ideeën, wij hebben de tools</p>
-    <button className="btn   text-slate-100 btn-info">Aan de Slag</button>
+    <p className="mb-7 text-slate-400">U heeft de ideeën, wij hebben de tools</p>
+    <button className=" btn-info relative text-white btn bg-[#468AFF] px-6 py-2 sm:px-8 sm:py-3 rounded-lg shadow-lg transition-all duration-300 ease-in-out hover:bg-[#3570D4] hover:scale-105 active:scale-95 focus:outline-none text-sm sm:text-base ">Aan de Slag</button>
 </div>
 </div>
 
@@ -181,31 +181,31 @@ const Marketing = () => {
 
 
 
-<div className="md:px-36 px-8 py-3 bg-gray-50">
-<div className="bg-[#F8F8F8] md:my-16 my-2 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 md:gap-8 gap-3 text-center">
-        <div className="p-6 text-center ">
-          <div className="flex justify-center items-center"> <img className="flex justify-center items-center" src={i1} alt="" /></div>
+<div className="md:px-36  py-3 bg-gray-50">
+<div className="bg-[#F8F8F8] my-16  grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 text-center">
+        <div className="p-6 text-start ">
+          <div className="lg:px-7"> <img className="flex justify-center items-center" src={i1} alt="" /></div>
           <h1 className="mt-2 text-xl font-bold "> Oprechtheid</h1>
           <p className="mt-2 text-sm ">Eerlijke en transparante <br />bedrijfsvoering staat centraal in alles <br />wat we doen</p>
         </div>
 
-        <div className="p-6 text-center">
-        <div className="flex justify-center items-center"><img src={i2} alt="" /></div>
+        <div className="p-6 text-start">
+        <div className="lg:px-8"><img src={i2} alt="" /></div>
         <h1 className="mt-2 text-xl font-bold ">Maatschappelijke betrokkenheid</h1>
           <p className="mt-2 text-sm">
           We bieden kansen aan werknemers om hun <br />potentieel te benutten, zonder hiermee te <br />koop te lopen
           </p>
         </div>
 
-        <div className="p-6  text-center">
-        <div className="flex justify-center items-center"><img src={i3} alt="" /></div>
+        <div className="p-6  text-start">
+        <div className="lg:px-8"><img src={i3} alt="" /></div>
         <h1 className="mt-2 text-xl font-bold ">Innovativiteit</h1>
           <p className="mt-2 text-sm">
           We denken contrarian en kiezen voor <br />unieke oplossingen in een <br />concurrerende markt.
           </p>
         </div>
-        <div className="p-6 text-center ">
-        <div className="flex justify-center items-center"> <img src={i4} alt="" /></div>
+        <div className="p-6 text-start ">
+        <div className="lg:px-8"> <img src={i4} alt="" /></div>
         <h1 className="mt-2 text-xl font-bold "> Authenticiteit</h1>
           <p className="mt-2 text-sm">
           We blijven trouw aan onze principes en laten ons niet leiden door trends of competitie
@@ -224,57 +224,68 @@ const Marketing = () => {
 
 <div className=" mt-10 mb-10">
   
-        <div className="flex items-center justify-center "><p className=" rounded-3xl bg-fuchsia-100 font-medium p-2 text-base text-center text-fuchsia-500 mb-3 font-sans  lg:w-1/6">Getuigenissen</p></div>
+        <div className="flex items-center justify-center "><p className=" rounded-3xl bg-[rgba(180,121,217,0.15)] text-[rgba(180,121,217,1)] font-medium p-2 text-base text-center  mb-3 font-sans  w-3/6  lg:w-1/6">Getuigenissen</p></div>
         <h1  className="text-3xl text-center font-medium">Wat klanten over ons zeggen</h1>
 
         <div className="w-full lg:mt-10 lg:ml-56 lg:w-2/3 grid grid-cols-1 md:grid-cols-2 gap-6">
           {/* Card 1 */}
           <div className="bg-white shadow-md rounded-lg p-6 space-y-4">
-            <h2 className="text-lg font-semibold text-gray-800">
-              5 manieren om uw website te laten opvallen
-            </h2>
-            <p className="text-gray-600 leading-relaxed">
-              “Younitech gaf mijn merk de professionele uitstraling die het
-              nodig had. Dankzij hun brandingstrategieën zijn we zichtbaar
-              gegroeid.”
-            </p>
-            <div className="flex items-center gap-4">
+
+          <div className="flex items-center gap-4">
               <img
                 src={sophie}
                 alt="Sophie de Vries"
                 className="w-12 h-12 rounded-full"
               />
               <div>
-                <h3 className="font-semibold text-gray-800">Sophie de Vries</h3>
+                <h3 className="font-semibold text-gray-800">Ghislan Ammouz</h3>
                 <p className="text-sm text-gray-500">
-                  Eigenaar van een retailbedrijf
+                Eigenaresse Wedding & Eventplanning
                 </p>
               </div>
             </div>
+
+            <h2 className="text-lg font-semibold text-gray-800">
+            Gerichte Advertenties voor Groei
+            </h2>
+            <p className="text-gray-600 leading-relaxed">
+              “Als klein bedrijf vertrouwde ik vooral op mond-tot-mondreclame, 
+              waardoor het lastig was om nieuwe klanten aan te trekken.
+               Younitech zette gerichte advertenties in nichegroepen op,
+                wat zorgde voor een enorme stijging in boekingen met een
+                 klein budget. De campagne was zo succesvol dat ik hem
+                  zelfs tijdelijk moest stopzetten!”
+            </p>
+            
           </div>
 
           {/* Card 2 */}
           <div className="bg-white shadow-md rounded-lg p-6 space-y-4">
-            <h2 className="text-lg font-semibold text-gray-800">
-              De toekomst van mobiele applicaties
-            </h2>
-            <p className="text-gray-600 leading-relaxed">
-              “Het creatieve team van Younitech heeft onze verwachtingen
-              overtroffen. Van logo tot complete huisstijl – alles klopt!”
-            </p>
-            <div className="flex items-center gap-4">
+          <div className="flex items-center gap-4">
               <img
                 src={mark}
                 alt="Mark Janssen"
                 className="w-12 h-12 rounded-full"
               />
               <div>
-                <h3 className="font-semibold text-gray-800">Mark Janssen</h3>
+                <h3 className="font-semibold text-gray-800">Linda Vernooi</h3>
                 <p className="text-sm text-gray-500">
-                  CEO van een tech-startup
+                Eigenaresse Kledingzaak Venova
                 </p>
               </div>
             </div>
+
+            <h2 className="text-lg font-semibold text-gray-800">
+            Slimme Data voor een Succesvolle Webshop
+            </h2>
+            <p className="text-gray-600 leading-relaxed">
+            Na een dure samenwerking met een groot bedrijf zochten
+             we een efficiëntere manier om onze webshop te laten groeien.
+              Younitech hielp ons data te begrijpen en strategisch te 
+              gebruiken. Dankzij hun aanpak spelen we nu sneller in op
+               trends en blijven we relevant in een concurrerende markt.
+            </p>
+            
           </div>
         </div>
       </div>

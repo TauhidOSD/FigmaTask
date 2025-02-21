@@ -4,10 +4,10 @@ import email from "../assets/Vector.png";
 import instra from "../assets/bx_bxl-instagram-alt.png";
 import twiter from "../assets/Group.png";
 import linkedin from "../assets/Vector 2.png";
-import { useNavigate } from "react-router-dom";
+
 
 const Footer = () => {
-  const navigate = useNavigate();
+  
 
   return (
     <footer className="bg-white py-12 px-8 md:px-36">
@@ -41,7 +41,7 @@ const Footer = () => {
           <ul className="space-y-3 text-gray-900 text-sm">
             <li className="hover:text-blue-600 cursor-pointer">Functies</li>
             <li className="hover:text-blue-600 cursor-pointer">About</li>
-            <li className="hover:text-blue-600 cursor-pointer" onClick={() => navigate("/henna")}>Service</li>
+            <li className="hover:text-blue-600 cursor-pointer" >Service</li>
             <li className="hover:text-blue-600 cursor-pointer">Team</li>
           </ul>
         </div>

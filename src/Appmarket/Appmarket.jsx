@@ -31,7 +31,7 @@ const Appmarket = () => {
 
         <div className="mt-10 mb-10 mr-2 lg:mr-32">
 
-        <div className="ml-5 "><p className=" rounded-3xl bg-[rgba(180,121,217,0.15)] text-[rgba(180,121,217,1)] font-bold font-plus-jakarta p-1 lg:p-2 text-[14px] lg:text-[18px] text-center mb-3  w-2/6  lg:w-2/5">Ontwerp uw eigen</p></div>
+        <div className="ml-5 "><p className=" rounded-3xl bg-[rgba(180,121,217,0.15)] text-[rgba(180,121,217,1)] font-bold font-plus-jakarta p-1 lg:p-2 text-[14px] lg:text-[18px] text-center mb-3  w-5/12  lg:w-2/5">Ontwerp uw eigen</p></div>
             <h1  className="text-[40px] font-bold text-left font-plus-jakarta ml-5">Uw visie, onze </h1>
             <h1  className="text-[40px] font-bold text-left font-plus-jakarta mb-6 ml-5">expertise</h1>
             <p className="text-[18px] text-left text-[rgba(126,126,126,1)] font-medium font-plus-jakarta  ml-5 mr-5">Bij Younitech begrijpen we dat een sterke, goed ontworpen applicatie essentieel is voor succes in de moderne wereld. Of u nu een nieuwe mobiele app wilt lanceren, een webapplicatie wilt bouwen of een bestaande applicatie wilt optimaliseren – wij zorgen voor oplossingen die impact maken.</p>
@@ -47,12 +47,12 @@ const Appmarket = () => {
 
 {/** second  part start lg:mr-20 lg:ml-20 lg:mt-20 lg:mb-20 */}
 
-<div className=" mt-10 lg:px-32 mx-auto  gap-16 grid sm:grid-cols-1 lg:grid-cols-3 items-center justify-center  ">
+<div className=" mt-10 px-5 lg:px-32 mx-auto  gap-8 grid sm:grid-cols-1 lg:grid-cols-3 items-center justify-center  ">
 
 <div className=" ">
     <div className="flex items-center">
     <div className="mr-5"> <img src="/grouppic/Group.png" alt="" /></div>
-    <h1 className="text-center text-[24px] text-[rgba(38,50,56,1)] font-bold">Strategie op maat</h1>
+    <h1 className="text-left text-[20px] text-[rgba(38,50,56,1)] font-bold">Strategie op maat</h1>
     </div>
         <p className="text-left  lg:ml-[78px]  text-[16px] text-[rgba(126,126,126,1)] font-plus-jakarta font-medium">Wij helpen uw visie om te zetten in een werkende oplossing</p>
 </div>
@@ -61,7 +61,7 @@ const Appmarket = () => {
 <div className="">
     <div className="flex  items-center">
     <div className="mr-5"> <img src="/src/assets/hugeicons_corporate.png" alt="" /></div>
-    <div className=""><h1 className="text-center text-[24px] text-[rgba(38,50,56,1)] font-bold">Innovatieve ontwerpen</h1></div>
+    <div className=""><h1 className="text-left text-[20px] text-[rgba(38,50,56,1)] font-bold">Innovatieve ontwerpen</h1></div>
     </div>
         <p className="text-left lg:ml-[73px] text-[16px] text-[rgba(126,126,126,1)] font-plus-jakarta font-medium">Gebruiksvriendelijke interfaces die uw gebruikerservaring verbeteren </p>
 </div>
@@ -70,7 +70,7 @@ const Appmarket = () => {
 <div className="">
     <div className="flex items-center">
     <div className="mr-5"> <img src="/grouppic/Clip path group (1).png" alt="" /></div>
-    <div className=""><h1 className="text-center text-[24px] text-[rgba(38,50,56,1)] font-bold">Schaalbare technologie</h1></div>
+    <div className=""><h1 className="text-left text-[20px] text-[rgba(38,50,56,1)] font-bold">Schaalbare technologie</h1></div>
     </div>
     
         <p className="text-left lg:ml-[75px] text-[16px] text-[rgba(126,126,126,1)] font-plus-jakarta font-medium"> Apps die met uw bedrijf meegroeien en toekomstbestendig zijn. </p>
@@ -93,10 +93,10 @@ const Appmarket = () => {
 
 <div className="grid grid-cols-1 lg:grid-cols-2  gap-5 items-center lg:px-[60px] ">
 
-<div className=" flex justify-between ml-10 gap-20 w-auto">
+<div className=" flex justify-between ml-2 gap-20 w-auto">
     <div className=" ml-2 lg:ml-12">
 
-    <div className="mt-5 mb-5  mr-20 "><p className="rounded-3xl   bg-[rgba(180,121,217,0.15)] text-[rgba(180,121,217,1)]  p-1 lg:p-2 text-[14px] lg:text-[18px] text-center font-bold mb-3 font-plus-jakarta mt-5 w-3/6 lg:w-3/5">Ontwerp uw eigen</p></div>
+    <div className="mt-5 mb-5  mr-20 "><p className="rounded-3xl   bg-[rgba(180,121,217,0.15)] text-[rgba(180,121,217,1)]  p-1 lg:p-2 text-[14px] lg:text-[18px] text-center font-bold mb-3 font-plus-jakarta mt-5 w-3/5 lg:w-3/6">Ontwerp uw eigen</p></div>
     <h1  className="text-[36px] mb-10  text-left font-bold font-plus-jakarta ">Waarom kiezen voor Younitech?</h1>
 
 
@@ -171,7 +171,7 @@ const Appmarket = () => {
 
 <div className="grid grid-cols-1 lg:grid-cols-4 gap-5 m-10 lg:m-24">
 
-<div className="text-center m-7">
+<div className="text-center m-2">
 <div className="items-center justify-center flex"><img className="w-15 h-15" src="/textpic/Text (1).png" alt="" /></div>
 <h1 className="font-bold text-[20px] font-plus-jakarta">Concept <br /> en Strategie</h1>
 
@@ -185,7 +185,7 @@ uw project richting geeft.
 </div>
 
 
-<div className="text-center m-7">
+<div className="text-center m-2">
 <div className="items-center justify-center flex"><img className="w-15 h-15" src="/textpic/Text (2).png" alt="" /></div>
 <h1 className="font-bold text-[20px] font-plus-jakarta">Ontwikkeling en </h1>
 <h1 className="font-bold text-[20px] font-plus-jakarta">Ontwerp</h1>
@@ -202,7 +202,7 @@ met behulp van de nieuwste technologieën en frameworks.
 </div>
 
 
-<div className="text-center m-7">
+<div className="text-center m-2">
 <div className="items-center justify-center flex"><img className="w-15 h-15" src="/textpic/Link (6).png" alt="" /></div>
 <h1 className="font-bold text-[20px] font-plus-jakarta">Testen en </h1>
 <h1 className="font-bold text-[20px] font-plus-jakarta">Optimalisatie</h1>
@@ -217,7 +217,7 @@ perfect functioneert. Onze focus ligt op kwaliteit, snelheid en prestaties.
 </div>
 
 
-<div className="text-center m-7">
+<div className="text-center m-2">
 <div className="items-center justify-center flex"><img className="w-15 h-15" src="/textpic/Link (7).png" alt="" /></div>
 <h1 className="font-bold text-[20px] font-plus-jakarta">Implementatie en </h1>
 <h1 className="font-bold text-[20px] font-plus-jakarta">Ondersteuning</h1>
@@ -244,9 +244,9 @@ zodat uw app altijd up-to-date en operationeel blijft.
 
 
 <div className=" flex flex-col lg:flex-row gap-8 px-6 lg:px-30 py-8 mx-auto" >
-<div className="lg:ml-20 ml-3 lg:mr-16">
+<div className="lg:ml-20 ml-2 lg:mr-16">
             
-            <div className="mr-10"><p className="rounded-3xl bg-[#B479D926] text-[#B479D9] font-medium p-1 lg:p-2 lg:text-[18px] text-center  mb-3 font-plus-jakarta   w-3/6  lg:w-3/5">Ondersteuning</p></div>
+            <div className="mr-10"><p className="rounded-3xl bg-[#B479D926] text-[#B479D9] font-bold p-1 lg:p-2 lg:text-[18px] text-center  mb-3 font-plus-jakarta   w-3/6  lg:w-3/5">Ondersteuning</p></div>
             <h1 className="text-4xl font-sans font-semibold mb-2 text-left ">Veelgestelde</h1>
             <h1 className="text-4xl font-sans font-semibold mb-2 text-left "> Vragen</h1>
             
@@ -331,12 +331,11 @@ zodat uw app altijd up-to-date en operationeel blijft.
 <div className="flex flex-col lg:flex-row gap-8 px-6 md:px-20 lg:px-20 py-10 mx-auto">
   {/* Left Section */}
   <div className="mt-6 ml-3">
-                           <p className="rounded-3xl  p-1 lg:p-2 text-center font-medium text-[18px] bg-[#B479D926] text-[#B479D9] mb-3 font-plus-jakarta  w-2/5 lg:w-3/5">Testimonials</p>
+                           <p className="rounded-3xl  p-1 lg:p-2 text-center font-bold text-[18px] bg-[#B479D926] text-[#B479D9] mb-3 font-plus-jakarta  w-2/5 lg:w-3/5">Testimonials</p>
                             
                             <div className="">
                             <h1 className="text-[40px] font-plus-jakarta font-semibold text-left">Wat onze</h1>
-                            <h1 className="text-[40px] font-plus-jakarta mb-5 font-semibold text-left relative">klanten zeggen</h1>
-                            <img className="-mt-10 w-3/4" src="/article/Heading 2.png" alt=""></img>
+                            <h1 className="text-[40px] font-plus-jakarta mb-5 font-semibold text-left ">klanten zeggen</h1>
                             </div>
                             
                             <p className="font-plus-jakarta mt-3 text-[rgba(126, 126, 126, 1)] text-left">Wij ondersteunen een breed </p>
