@@ -210,76 +210,7 @@ const Appmarket = () => {
         </h1>
       </div>
 
-      {/* <div className="grid grid-cols-1 lg:grid-cols-4 gap-5 m-10 lg:m-24">
-        <div className="text-center m-2">
-          <div className="items-center justify-center flex">
-            <img className="w-15 h-15" src="/textpic/Text (1).png" alt="" />
-          </div>
-          <h1 className="font-bold text-[20px] font-plus-jakarta">
-            Concept <br /> en Strategie
-          </h1>
-
-          <p className="text-[15px] font-medium text-[rgba(126,126,126,1)] font-plus-jakarta  text-center">
-            We beginnen met een uitgebreide analyse van uw behoeften en doelen
-            Samen met u ontwikkelen we een duidelijke strategie en roadmap die
-            uw project richting geeft.
-          </p>
-        </div>
-
-        <div className="text-center m-2">
-          <div className="items-center justify-center flex">
-            <img className="w-15 h-15" src="/textpic/Text (2).png" alt="" />
-          </div>
-          <h1 className="font-bold text-[20px] font-plus-jakarta">
-            Ontwikkeling en{" "}
-          </h1>
-          <h1 className="font-bold text-[20px] font-plus-jakarta">Ontwerp</h1>
-          <div className="text-xs">
-            <p className="text-[15px] font-medium text-[rgba(126,126,126,1)] font-plus-jakarta  text-center">
-              Ons team creëert een visueel aantrekkelijk en functioneel ontwerp
-              dat aansluit bij uw merkidentiteit. Daarna bouwen we de applicatie
-              met behulp van de nieuwste technologieën en frameworks.
-            </p>
-          </div>
-        </div>
-
-        <div className="text-center m-2">
-          <div className="items-center justify-center flex">
-            <img className="w-15 h-15" src="/textpic/Link (6).png" alt="" />
-          </div>
-          <h1 className="font-bold text-[20px] font-plus-jakarta">
-            Testen en{" "}
-          </h1>
-          <h1 className="font-bold text-[20px] font-plus-jakarta">
-            Optimalisatie
-          </h1>
-          <div className="text-xs">
-            <p className="text-[15px] font-medium text-[rgba(126,126,126,1)] font-plus-jakarta  text-center">
-              We voeren rigoureuze tests uit om ervoor te zorgen dat de
-              applicatie perfect functioneert. Onze focus ligt op kwaliteit,
-              snelheid en prestaties.
-            </p>
-          </div>
-        </div>
-
-        <div className="text-center m-2">
-          <div className="items-center justify-center flex">
-            <img className="w-15 h-15" src="/textpic/Link (7).png" alt="" />
-          </div>
-          <h1 className="font-bold text-[20px] font-plus-jakarta">
-            Implementatie en{" "}
-          </h1>
-          <h1 className="font-bold text-[20px] font-plus-jakarta">
-            Ondersteuning
-          </h1>
-          <div className="text-xs">
-            <p className="text-[15px] font-medium text-[rgba(126,126,126,1)] font-plus-jakarta  text-center">
-              Na de lancering bieden wij doorlopende ondersteuning en onderhoud,
-              zodat uw app altijd up-to-date en operationeel blijft.
-            </p>
-          </div>
-        </div>
-      </div> */}
+      
 
       <div className="grid grid-cols-1 lg:grid-cols-4 gap-5 m-10 lg:m-24">
         {[
@@ -328,31 +259,33 @@ const Appmarket = () => {
       {/** fifth part start from here */}
 
       <div className=" flex flex-col lg:flex-row gap-8 px-6 lg:px-30 py-8 mx-auto">
-        <div className="lg:ml-20 ml-2 lg:mr-16">
+        <div className="lg:ml-20  my-6  lg:mr-16">
           <div className="mr-10">
             <p className="rounded-3xl bg-[#B479D926] text-[#B479D9] font-bold p-1 lg:p-2 lg:text-[18px] text-center  mb-3 font-plus-jakarta   w-3/6  lg:w-3/5">
               Ondersteuning
             </p>
           </div>
-          <h1 className="text-4xl font-sans font-semibold mb-2 text-left ">
+          <h1 className="text-[40px]  font-plus-jakarta font-bold mb-2 text-left ">
             Veelgestelde
           </h1>
-          <h1 className="text-4xl font-sans font-semibold mb-2 text-left ">
+          <h1 className="text-[40px] font-plus-jakarta font-bold mb-2 text-left ">
             {" "}
             Vragen
           </h1>
 
-          <p className="font-sans text-left text-[#7E7E7E]">
+        
+          <p className="font-plus-jakarta mt-3  text-left text-[#7E7E7E]">
             Heeft u vragen over onze brandingdiensten?{" "}
           </p>
 
-          <p className="font-plus-jakarta text-left text-[#7E7E7E] mt-4">
+          <p className="font-plus-jakarta mt-2  text-left text-[#7E7E7E]">
             Wij staan klaar om uw vragen te beantwoorden{" "}
           </p>
-          <p className="font-plus-jakarta text-left text-[#7E7E7E]">
+          <p className="font-plus-jakarta  mt-2 text-left text-[#7E7E7E]">
             {" "}
             en u te begeleiden in het brandingproces.
           </p>
+          
         </div>
 
         <div className="w-full lg:w-1/2 space-y-6">
@@ -460,13 +393,13 @@ const Appmarket = () => {
             </h1>
           </div>
 
-          <p className="font-plus-jakarta mt-3 text-[rgba(126, 126, 126, 1)] text-left">
+          <p className="font-plus-jakarta mt-3 text-[#7e7E7E] text-left">
             Wij ondersteunen een breed{" "}
           </p>
-          <p className=" font-plus-jakarta text-[rgba(126, 126, 126, 1)] text-left">
+          <p className=" font-plus-jakarta mt-2 text-[#7e7E7E] text-left">
             scala aan bedrijven. Geef je merk
           </p>
-          <p className="mb-9 font-plus-jakarta text-[rgba(126, 126, 126, 1)] text-left">
+          <p className="mb-9 font-plus-jakarta mt-2 text-[#7e7E7E] text-left">
             de boost die het verdient!
           </p>
 
