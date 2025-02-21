@@ -5,7 +5,7 @@ import { ChevronDownIcon } from "@heroicons/react/24/solid";
 
 // Dropdown Component for Prijzen
 const PrijzenDropdown = () => {
-  const navigate=useNavigate();
+  // const navigate=useNavigate();
   const [isOpen, setIsOpen] = useState(false);
 
   return (
