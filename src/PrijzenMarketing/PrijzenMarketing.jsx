@@ -86,7 +86,7 @@ const PrijzenMarketing = () => {
                           {/* Right Side Input (Moved Up) */}
                           <div className="">
                             <label className="block text-gray-700 font-medium mt-5"></label>
-                            <div className="border w-1/2 border-gray-300 rounded-lg p-3 md:w-full flex items-center justify-around cursor-pointer bg-black hover:bg-gray-800 transition">
+                            <div className="border md:mt-11 md:w-full border-gray-300 rounded-lg p-3 w-full flex items-center justify-around cursor-pointer bg-black hover:bg-gray-800 transition">
                               <label
                                 htmlFor="imageUpload"
                                 className="text-white cursor-pointer"
@@ -264,7 +264,7 @@ const PrijzenMarketing = () => {
                   </div>
                 </div>
                 <div className="flex justify-center items-center md:my-8 my-4 ">
-                  <button className="btn hover:bg-[#468AFFE6] bg-[#468AFF]  md:px-60 px-36 py-2 text-[#FFFFFF] text-lg md:text-md lg:text-xl">
+                  <button className="btn hover:bg-[#468AFFE6] bg-[#468AFF]  md:px-32 px-36 py-2 text-[#FFFFFF] text-lg md:text-md lg:text-xl">
                   Nu Kopen
                   </button>
                 </div>

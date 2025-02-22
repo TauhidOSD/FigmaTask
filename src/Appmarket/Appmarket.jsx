@@ -29,7 +29,7 @@ const Appmarket = () => {
     <div className=" lg:w-[1260px] 2xl:w-[1440px]">
       {/** First part flex justify-center gap-20 items-center m-20 start from here  */}
 
-      <div className="grid  sm:grid-cols-1 lg:grid-cols-2 mx-auto  mt-20 ">
+      <div className="grid md:ml-6 sm:grid-cols-1 lg:grid-cols-2 mx-auto  mt-20 ">
         <div className="mb-5 ml-2 lg:ml-32">
           <img className="w-96" src="/linkImages/amico.png" alt="" />
         </div>
@@ -60,7 +60,7 @@ const Appmarket = () => {
 
       {/** second  part start lg:mr-20 lg:ml-20 lg:mt-20 lg:mb-20 */}
 
-      <div className=" mt-10 px-5 lg:px-32 mx-auto  gap-8 grid sm:grid-cols-1 lg:grid-cols-3 items-center justify-center  ">
+      <div className="md:ml-8 mt-10 px-5 lg:px-32 mx-auto  gap-8 grid sm:grid-cols-1 lg:grid-cols-3 items-center justify-center  ">
         <div className=" ">
           <div className="flex items-center">
             <div className="mr-5">
@@ -117,7 +117,7 @@ const Appmarket = () => {
 
       {/** third   part start from here */}
 
-      <div className="mx-auto pt-20 ">
+      <div className="mx-auto md:ml-10 pt-20 ">
         <div className="grid grid-cols-1 lg:grid-cols-2  gap-5 items-center lg:px-[60px] ">
           <div className=" flex justify-between ml-2 gap-20 w-auto">
             <div className=" ml-2 lg:ml-12">
@@ -210,7 +210,7 @@ const Appmarket = () => {
         </h1>
       </div>
 
-      <div className="grid grid-cols-1 lg:grid-cols-4 gap-5 m-10 lg:m-24">
+      <div className=" md:pl-16 grid grid-cols-1 lg:grid-cols-4 gap-5 m-10 lg:m-24">
         {[
           {
             imgSrc: "/textpic/Text (1).png",
@@ -256,7 +256,7 @@ const Appmarket = () => {
 
       {/** fifth part start from here */}
 
-      <div className=" flex flex-col lg:flex-row gap-8 px-6 lg:px-30 py-8 mx-auto">
+      <div className=" flex flex-col md:ml-12 lg:flex-row gap-8 px-6 lg:px-30 py-8 mx-auto">
         <div className="lg:ml-20  my-6  lg:mr-16">
           <div className="mr-10">
             <p className="rounded-3xl bg-[#B479D926] text-[#B479D9] font-bold p-1 lg:p-2 lg:text-[18px] text-center  mb-3 font-plus-jakarta   w-3/6  lg:w-3/5">
@@ -373,7 +373,7 @@ const Appmarket = () => {
 
       {/** sixth part start here flex justify-between m-24 items-center */}
 
-      <div className="flex flex-col lg:flex-row gap-8 px-6 md:px-20 lg:px-20 py-10 mx-auto">
+      <div className="flex flex-col md:ml-16 lg:flex-row gap-8 px-6 md:px-20 lg:px-20 py-10 mx-auto">
         {/* Left Section */}
         <div className="mt-6 ml-3">
           <p className="rounded-3xl  p-1 lg:p-2 text-center font-bold text-[18px] bg-[#B479D926] text-[#B479D9] mb-3 font-plus-jakarta  w-2/5 lg:w-3/5">
@@ -415,11 +415,11 @@ const Appmarket = () => {
             Efficiënte Routeplanning met Younitech
             </h2>
             <p className="text-gray-600 leading-relaxed">
-              "Voorheen was routeplanning een nachtmerrie – alles ging via Excel
+              Voorheen was routeplanning een nachtmerrie – alles ging via Excel
               en efficiëntie was ver te zoeken. Younitech ontwikkelde een
               planningssysteem dat ritten eerlijk en milieuvriendelijk verdeelt.
               Mijn planner kan eindelijk rustig een kop koffie drinken zonder
-              boze telefoontjes. Beste keuze van het jaar!"
+              boze telefoontjes. Beste keuze van het jaar!
             </p>
             <div className="flex items-center gap-4">
               <img
@@ -442,11 +442,11 @@ const Appmarket = () => {
             Slimmer HR-beheer met Geautomatiseerde Processen
             </h2>
             <p className="text-gray-600 leading-relaxed">
-              "Ons HR-proces was chaotisch, met eindeloze vragen over documenten
-              en startdata. Dankzij Younitech's CRM-systeem is alles
+              Ons HR-proces was chaotisch, met eindeloze vragen over documenten
+              en startdata. Dankzij Younitechs CRM-systeem is alles
               geautomatiseerd, krijgen kandidaten direct updates en werkt ons
               team veel efficiënter. Dit bracht rust én verhoogde de
-              productiviteit enorm!"
+              productiviteit enorm!
             </p>
             <div className="flex items-center gap-4">
               <img
