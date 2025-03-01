@@ -3,9 +3,10 @@ import image from "../assets/Image.png";
 import icon from "../assets/icon.png";
 import icon1 from "../assets/Icon (1).png";
 
+
 const Waaram = () => {
   return (
-    <div className="relative bg-white py-12">
+    <div className="relative bg-white py-16">
       {/* Background Section */}
       {/* <div className="absolute bottom-0 left-0 w-full h-[250px] sm:h-[300px] lg:h-[400px] bg-cover bg-center">
         <img src={bgImg} className="h-[500px] sm:h-[620px] -mt-32 sm:-mt-48 w-full max-w-xs sm:max-w-sm" alt="" />
@@ -71,10 +72,10 @@ const Waaram = () => {
             </div>
           </div>
 
-          <div className="flex justify-center lg:justify-start">
-            <button className="bg-[#263238] text-white py-3 px-5 sm:px-6 rounded-lg shadow-lg hover:bg-[#1e2a30] transition duration-300 ease-in-out">
+          <div className="flex justify-center lg:justify-start ">
+            {/* <button className="bg-[#263238] text-white py-3 px-5 sm:px-6 rounded-lg shadow-lg hover:bg-[#1e2a30] transition duration-300 ease-in-out">
               Ontdek meer over onze aanpak
-            </button>
+            </button> */}
           </div>
         </div>
       </div>
