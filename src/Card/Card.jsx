@@ -2,8 +2,7 @@ import img1 from "../assets/Link → blog-6.jpg.png";
 import img2 from "../assets/Link → blog-6.jpg (1).png";
 
 import img4 from "../assets/Article (5).png";
-import img5 from "../assets/Article (6).png";
-import img6 from "../assets/mehadi.jpg";
+
 import img7 from "../assets/cardImg.png";
 import img8 from "../assets/cardImg1.png";
 import img9 from "../assets/card9.png";
