@@ -1,5 +1,6 @@
 import { useState } from "react";
 import icon from "../assets/Vector (2).png";
+import das from "../assets/das.png";
 import { RiArrowDropDownLine } from "react-icons/ri";
 
 const Veelgestelde = () => {
@@ -55,6 +56,18 @@ const Veelgestelde = () => {
   ];
 
   return (
+   <>
+
+   <div className="bg-[#F5F5F5] w-full flex flex-col items-center py-16">
+           <h1 className="text-xl font-bold text-gray-800">
+           Veelgestelde Vragen
+           </h1>
+           <h1 className="flex items-center gap-2 text-gray-600 text-sm md:text-base">
+             Home
+             <img className="w-5 h-[2px]" src={das} alt="separator" />
+             FAQ
+           </h1>
+         </div>
     <div className="flex flex-col md:px-36 md:flex-row gap-6 p-6 md:py-16">
       {/* Left Section */}
       <div className="w-full md:w-1/2">
@@ -103,6 +116,7 @@ const Veelgestelde = () => {
         ))}
       </div>
     </div>
+   </>
   );
 };
 

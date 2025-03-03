@@ -1,7 +1,9 @@
 import { useState } from "react";
 import img from "../assets/rafiki3.png";
 import icon from "../assets/white.png";
-import blueIcon from "../assets/blue.png"; // Add a fully blue version of the icon
+import blueIcon from "../assets/blue.png";
+import das from "../assets/das.png"
+// Add a fully blue version of the icon
 
 const Startpagina = () => {
   const [selectedCard, setSelectedCard] = useState(null);
@@ -55,6 +57,16 @@ const Startpagina = () => {
   ];
 
   return (
+    <>
+
+     <div className="bg-[#F5F5F5] w-full flex flex-col items-center py-16">
+            <h1 className="text-xl font-bold text-gray-800">Marketing Prijsplannen</h1>
+            <h1 className="flex items-center gap-2 text-gray-600 text-sm md:text-base">
+              Home
+              <img className="w-5 h-[2px]" src={das} alt="separator" />
+              Prijzen
+            </h1>
+          </div>
     <div className="py-8 flex flex-col md:flex-row gap-8 p-6 md:px-36">
       {/* Left Section */}
       <div className="md:w-1/2 flex flex-col items-start gap-4">
@@ -133,6 +145,7 @@ const Startpagina = () => {
         </button>
       </div>
     </div>
+    </>
   );
 };
 

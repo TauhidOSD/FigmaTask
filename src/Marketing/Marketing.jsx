@@ -9,6 +9,7 @@ import i3 from "../assets/Vector13.png";
 import i4 from "../assets/vector14.png";
 import meet from "../assets/meet.jpg";
 import tik from "../assets/tik.png"
+import das from "../assets/das.png"
 import { useNavigate } from "react-router-dom";
 
 const Marketing = () => {
@@ -19,6 +20,15 @@ const Marketing = () => {
     setActiveSection(activeSection === section ? null : section);
   };
   return (
+    <>
+     <div className="bg-[#F5F5F5] w-full flex flex-col items-center py-16">
+         <h1 className="text-xl font-bold text-gray-800">Marketingontwikkeling</h1>
+         <h1 className="flex items-center gap-2 text-gray-600 text-sm md:text-base">
+           Home 
+           <img className="w-5 h-[2px]" src={das} alt="separator" /> 
+           Diensten
+         </h1>
+       </div>
     <div className=" mx-auto md:px-6 px-6">
       <div className="grid grid-cols-1 lg:grid-cols-2 items-center lg:px-12 mt-10 lg:m-20 ">
         <div className="mr-5">
@@ -373,6 +383,7 @@ const Marketing = () => {
         </div>
       </div>
     </div>
+    </>
   );
 };
 

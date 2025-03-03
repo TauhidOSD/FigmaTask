@@ -13,6 +13,7 @@ import man from "../assets/man.jpg"
 import t1 from "../assets/t1.png"
 import t2 from "../assets/t2.png"
 import t3 from "../assets/t3.png"
+import das from "../assets/das.png"
 import "@fontsource/plus-jakarta-sans/700.css";
 import "@fontsource/plus-jakarta-sans/500.css";
 
@@ -34,6 +35,15 @@ const Appmarket = () => {
   };
 
   return (
+    <>
+    <div className="bg-[#F5F5F5] w-full flex flex-col items-center py-16">
+  <h1 className="text-xl font-bold text-gray-800">App Ontwikkeling</h1>
+  <h1 className="flex items-center gap-2 text-gray-600 text-sm md:text-base">
+    Home 
+    <img className="w-5 h-[2px]" src={das} alt="separator" /> 
+    Diensten
+  </h1>
+</div>
     <div className=" lg:w-[1260px] 2xl:w-[1440px]">
       {/** First part flex justify-center gap-20 items-center m-20 start from here  */}
 
@@ -472,7 +482,7 @@ const Appmarket = () => {
           </div>
         </div>
       </div>
-    </div>
+    </div></>
   );
 };
 

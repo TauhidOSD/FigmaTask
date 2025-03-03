@@ -13,13 +13,23 @@ import link4 from "../assets/Link (5).png";
 import link12 from "../assets/Link (12).png";
 import im1 from "../assets/im1.png"
 import im2 from "../assets/im2.png"
+import das from "../assets/das.png"
 import { GoArrowRight } from "react-icons/go";
 import Vragen from "../Vragen/Vragen";
-import img2 from "../assets/avater-testi-2.png.png";
-import img3 from "../assets/avater-testi-3.png.png";
+// import img2 from "../assets/avater-testi-2.png.png";
+// import img3 from "../assets/avater-testi-3.png.png";
 
 const Diensten = () => {
   return (
+   <>
+    <div className="bg-[#F5F5F5] w-full flex flex-col items-center py-16">
+     <h1 className="text-xl font-bold text-gray-800">Brandingdiensten</h1>
+     <h1 className="flex items-center gap-2 text-gray-600 text-sm md:text-base">
+       Home 
+       <img className="w-5 h-[2px]" src={das} alt="separator" /> 
+       Diensten
+     </h1>
+   </div>
     <div>
       {/* first section */}
       <div className="p-6 text-center space-y-4">
@@ -311,6 +321,7 @@ const Diensten = () => {
         </div>
       </div>
     </div>
+   </>
   );
 };
 
