@@ -5,6 +5,14 @@ import span5 from "../shassets/span (5).png";
 import link13 from "../shassets/Link (13).png";
 import img2 from "../assets/avater-testi-2.png.png";
 import img3 from "../assets/avater-testi-3.png.png";
+import miss from "../assets/miss.png";
+import miss1 from "../assets/miss1.png";
+import miss2 from "../assets/miss2.png";
+import computer from "../assets/computer.jpg"
+import man from "../assets/man.jpg"
+import t1 from "../assets/t1.png"
+import t2 from "../assets/t2.png"
+import t3 from "../assets/t3.png"
 import "@fontsource/plus-jakarta-sans/700.css";
 import "@fontsource/plus-jakarta-sans/500.css";
 
@@ -31,7 +39,7 @@ const Appmarket = () => {
 
       <div className="grid md:ml-6 sm:grid-cols-1 lg:grid-cols-2 mx-auto  mt-20 ">
         <div className="mb-5 ml-2 lg:ml-32">
-          <img className="w-96" src="/linkImages/amico.png" alt="" />
+          <img className="w-96" src={computer} alt="" />
         </div>
 
         <div className="mt-10 mb-10 mr-2 lg:mr-32">
@@ -65,7 +73,7 @@ const Appmarket = () => {
           <div className="flex items-center">
             <div className="mr-5">
               {" "}
-              <img src="/grouppic/Group.png" alt="" />
+              <img src={miss} alt="" />
             </div>
             <h1 className="text-left text-[20px] text-[rgba(38,50,56,1)] font-bold">
               Strategie op maat
@@ -80,7 +88,7 @@ const Appmarket = () => {
           <div className="flex  items-center">
             <div className="mr-5">
               {" "}
-              <img src="/src/assets/hugeicons_corporate.png" alt="" />
+              <img src={miss1} alt="" />
             </div>
             <div className="">
               <h1 className="text-left text-[20px] text-[rgba(38,50,56,1)] font-bold">
@@ -97,7 +105,7 @@ const Appmarket = () => {
           <div className="flex items-center">
             <div className="mr-5">
               {" "}
-              <img src="/grouppic/Clip path group (1).png" alt="" />
+              <img src={miss2} alt="" />
             </div>
             <div className="">
               <h1 className="text-left text-[20px] text-[rgba(38,50,56,1)] font-bold">
@@ -188,7 +196,7 @@ const Appmarket = () => {
           </div>
 
           <div className="mr-10">
-            <img className="w-auto" src="/linkImages/rafiki.png" alt="" />
+            <img className="w-auto" src={man} alt="" />
           </div>
         </div>
       </div>
@@ -213,25 +221,25 @@ const Appmarket = () => {
       <div className=" md:pl-16 grid grid-cols-1 lg:grid-cols-4 gap-5 m-10 lg:m-24">
         {[
           {
-            imgSrc: "/textpic/Text (1).png",
+            imgSrc: t1,
             title: "Concept en Strategie",
             description:
               "We beginnen met een uitgebreide analyse van uw behoeften en doelen. Samen met u ontwikkelen we een duidelijke strategie en roadmap die uw project richting geeft.",
           },
           {
-            imgSrc: "/textpic/Text (2).png",
+            imgSrc: t2,
             title: "Ontwikkeling en Ontwerp",
             description:
               "Ons team creëert een visueel aantrekkelijk en functioneel ontwerp dat aansluit bij uw merkidentiteit. Daarna bouwen we de applicatie met behulp van de nieuwste technologieën en frameworks.",
           },
           {
-            imgSrc: "/textpic/Link (6).png",
+            imgSrc: t2,
             title: "Testen en Optimalisatie",
             description:
               "We voeren rigoureuze tests uit om ervoor te zorgen dat de applicatie perfect functioneert. Onze focus ligt op kwaliteit, snelheid en prestaties.",
           },
           {
-            imgSrc: "/textpic/Link (7).png",
+            imgSrc: t3,
             title: "Implementatie en Ondersteuning",
             description:
               "Na de lancering bieden wij doorlopende ondersteuning en onderhoud, zodat uw app altijd up-to-date en operationeel blijft.",

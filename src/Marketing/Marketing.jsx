@@ -7,6 +7,8 @@ import i1 from "../assets/Vector11.png";
 import i2 from "../assets/Vector12.png";
 import i3 from "../assets/Vector13.png";
 import i4 from "../assets/vector14.png";
+import meet from "../assets/meet.jpg";
+import tik from "../assets/tik.png"
 import { useNavigate } from "react-router-dom";
 
 const Marketing = () => {
@@ -44,28 +46,28 @@ const Marketing = () => {
           </p>
 
           <div className="flex gap-5 items-center mt-6">
-            <img src="/textpic/List → Item.png" alt="" />
+            <img src={tik} alt="" />
             <h1 className="text-[rgba(38,50,56,1) text-[18px] font-medium">
               Data-gedreven strategieën
             </h1>
           </div>
 
           <div className="flex gap-5 items-center">
-            <img src="/textpic/List → Item.png" alt="" />
+            <img src={tik} alt="" />
             <h1 className="text-[rgba(38,50,56,1) text-[18px] font-medium">
               Multichannel campagnes
             </h1>
           </div>
 
           <div className="flex gap-5 items-center">
-            <img src="/textpic/List → Item.png" alt="" />
+            <img src={tik} alt="" />
             <h1 className="text-[rgba(38,50,56,1) text-[18px] font-medium">
               Contentcreatie
             </h1>
           </div>
 
           <div className="flex gap-5 items-center">
-            <img src="/textpic/List → Item.png" alt="" />
+            <img src={tik} alt="" />
             <h1 className="text-[rgba(38,50,56,1) text-[18px] font-medium">
               Resultaatgericht
             </h1>
@@ -82,7 +84,7 @@ const Marketing = () => {
         </div>
 
         <div className="mt-10 mb-5 mr-10">
-          <img className="w-full" src="/linkImages/pana.png" alt="" />
+          <img className="w-full" src={meet} alt="" />
         </div>
       </div>
 

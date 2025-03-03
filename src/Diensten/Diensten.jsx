@@ -11,14 +11,14 @@ import link2 from "../assets/Link (2).png";
 import link3 from "../assets/Link (3).png";
 import link4 from "../assets/Link (5).png";
 import link12 from "../assets/Link (12).png";
+import im1 from "../assets/im1.png"
+import im2 from "../assets/im2.png"
 import { GoArrowRight } from "react-icons/go";
 import Vragen from "../Vragen/Vragen";
 import img2 from "../assets/avater-testi-2.png.png";
 import img3 from "../assets/avater-testi-3.png.png";
 
-
 const Diensten = () => {
- 
   return (
     <div>
       {/* first section */}
@@ -255,23 +255,26 @@ const Diensten = () => {
           {/* Card 1 */}
           <div className="bg-white shadow-md rounded-lg p-6 space-y-4">
             <h2 className="text-lg font-semibold text-gray-800">
-              5 manieren om uw website te laten opvallen
+              Luxe Branding voor een Exclusief Parfummerk
             </h2>
             <p className="text-gray-600 leading-relaxed">
-              “Younitech gaf mijn merk de professionele uitstraling die het
-              nodig had. Dankzij hun brandingstrategieën zijn we zichtbaar
-              gegroeid.”
+              Ons parfummerk had kwaliteit en vakmanschap, maar miste de luxe
+              uitstraling die nodig is om zich in het hogere segment te
+              positioneren. Younitech creëerde een verfijnde merkidentiteit, met
+              een elegant logo, premium verpakkingsdesign en een strategie die
+              exclusiviteit uitstraalt. Dankzij hun expertise wordt ons merk nu
+              herkend als high-end, en trekken we precies de juiste klanten aan.
             </p>
             <div className="flex items-center gap-4">
               <img
-                src={img2}
+                src={im1}
                 alt="Sophie de Vries"
                 className="w-12 h-12 rounded-full"
               />
               <div>
-                <h3 className="font-semibold text-gray-800">Sophie de Vries</h3>
+                <h3 className="font-semibold text-gray-800">Imran Khalfoui</h3>
                 <p className="text-sm text-gray-500">
-                  Eigenaar van een retailbedrijf
+                Eigenaar parfumbedrijf
                 </p>
               </div>
             </div>
@@ -280,22 +283,27 @@ const Diensten = () => {
           {/* Card 2 */}
           <div className="bg-white shadow-md rounded-lg p-6 space-y-4">
             <h2 className="text-lg font-semibold text-gray-800">
-              De toekomst van mobiele applicaties
+              Gerichte Branding voor een Sterk Uitzendbureau
             </h2>
             <p className="text-gray-600 leading-relaxed">
-              “Het creatieve team van Younitech heeft onze verwachtingen
-              overtroffen. Van logo tot complete huisstijl – alles klopt!”
+              Ons uitzendbureau had een solide klantenbestand, maar we misten
+              een duidelijke identiteit die onze specialisatie benadrukte.
+              Younitech ontwikkelde een brandingstrategie die onze unieke
+              werkwijze en expertise in de markt positioneerde. Met een
+              vernieuwde huisstijl en gerichte communicatie trokken we precies
+              de juiste klanten en kandidaten aan. Onze branding weerspiegelt nu
+              wie we écht zijn.
             </p>
             <div className="flex items-center gap-4">
               <img
-                src={img3}
+                src={im2}
                 alt="Mark Janssen"
                 className="w-12 h-12 rounded-full"
               />
               <div>
-                <h3 className="font-semibold text-gray-800">Mark Janssen</h3>
+                <h3 className="font-semibold text-gray-800">Ackhie</h3>
                 <p className="text-sm text-gray-500">
-                  CEO van een tech-startup
+                Directeur Uitzendbureau
                 </p>
               </div>
             </div>
