@@ -1,7 +1,8 @@
-import React, { useState, useEffect } from "react";
+import  { useState  } from "react";
 import { useNavigate } from "react-router-dom";
 import img from "../assets/rafiki6.png";
 import img1 from "../assets/Group 1000005744.png";
+import das from "../assets/das.png";
 
 const Prijzen = () => {
   const [cards, setCards] = useState([]); // State to hold fetched data
@@ -22,6 +23,18 @@ const Prijzen = () => {
   };
 
   return (
+    <>
+
+    <div className="bg-[#F5F5F5] w-full flex flex-col items-center py-16">
+            <h1 className="text-xl font-bold text-gray-800">
+            Website Builder
+            </h1>
+            <h1 className="flex items-center gap-2 text-gray-600 text-sm md:text-base">
+              Home
+              <img className="w-5 h-[2px]" src={das} alt="separator" />
+              Diensten
+            </h1>
+          </div>
     <div className="px-6 py-12">
       {/* Heading */}
       <div className="text-center mb-12">
@@ -82,6 +95,7 @@ const Prijzen = () => {
         </div>
       </div>
     </div>
+    </>
   );
 };
 

@@ -1,6 +1,8 @@
 import image1 from "../assets/mobile1.jpg";
 import image2 from "../assets/Device (2).png";
-import image3 from "../assets/rafiki.png";
+
+import replace from "../assets/replace.jpg"
+
 
 const Onze = () => {
 
@@ -48,7 +50,7 @@ const Onze = () => {
         {/* Service Card 3 */}
         <div className=" p-6 text-center w-full sm:w-64 md:w-80">
           <img
-            src={image3}
+            src={replace}
             alt="Hosting & Onderhoud"
             className="mx-auto h-48 w-auto mb-4"
           />

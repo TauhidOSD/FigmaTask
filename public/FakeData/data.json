@@ -3,7 +3,7 @@
 [
     {
       "id": 1,
-      "image": "/src/assets/Article.png",
+      "image": "../assets/Article (1).png",
       "title": "FamiPress - Genealogy & Family Tree WordPress theme",
       "description": "This is a description for card 1.",
       "list": [
@@ -17,7 +17,7 @@
     },
     {
       "id": 2,
-      "image": "/src/assets/Article (1).png",
+      "image": "../assets/Article (2).png",
       "title": "FamiPress - Genealogy & Family Tree WordPress theme",
       "description": "This is a description for card 2.",
       "list": [
@@ -31,7 +31,7 @@
     },
     {
       "id": 3,
-      "image": "/src/assets/Article (2).png",
+      "image": "../assets/Article (3).png",
       "title": "FamiPress - Genealogy & Family Tree WordPress theme",
       "description": "This is a description for card 3.",
       "list": [
@@ -45,7 +45,7 @@
     },
     {
       "id": 4,
-      "image": "/src/assets/Article (3).png",
+      "image": "../assets/Article (4).png",
       "title": "FamiPress - Genealogy & Family Tree WordPress theme",
       "description": "This is a description for card 4.",
       "list": [
@@ -59,7 +59,7 @@
     },
     {
       "id": 5,
-      "image": "/src/assets/Article (4).png",
+      "image": "../assets/Article (5).png",
       "title": "FamiPress - Genealogy & Family Tree WordPress theme",
       "description": "This is a description for card 5.",
       "list": [

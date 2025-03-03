@@ -6,7 +6,7 @@ import mobile from "../assets/mobile.jpg";
 
 const Prest = () => {
   const [selected, setSelected] = useState(null);
-  const [currentImg, setCurrentImg] = useState();
+  const [currentImg, setCurrentImg] = useState(update);
 
   const data = [
     {
@@ -41,7 +41,7 @@ const Prest = () => {
           className="object-cover w-28 h-28 sm:w-40 sm:h-40 lg:w-auto lg:h-auto lg:ml-96"
         />
 
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 ml-24 pt-6 text-start lg:text-left text-[#FFFFFF] w-full px-4 sm:px-4 lg:w-auto">
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 ml-4 md:ml-24 pt-6 text-start lg:text-left text-[#FFFFFF] w-full px-4 sm:px-4 lg:w-auto">
           <h2 className="text-lg sm:text-3xl lg:text-4xl font-bold mb-2">
             Prestaties die resultaten leveren
           </h2>
