@@ -8,7 +8,7 @@ const PrijzenBranding = () => {
           <h2 className="text-xl text-[#407BFF] font-semibold md:mt-8 mt-4 mb-4">
             Basisinformatie:
           </h2>
-          <h2 className="text-xl text-[#407BFF] font-semibold mb-4 md:mt-8 mt-4  hidden sm:block ">
+          <h2 className="text-xl text-[#407BFF] md:-ml-12 font-semibold mb-4 md:mt-8 mt-4  hidden sm:block ">
             Technisch
           </h2>
         </div>

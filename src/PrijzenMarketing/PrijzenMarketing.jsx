@@ -10,7 +10,7 @@ const PrijzenMarketing = () => {
                   <h2 className="text-xl text-[#407BFF] font-semibold md:mt-8 mt-4 mb-4">
                     Basisinformatie:
                   </h2>
-                  <h2 className="text-xl text-[#407BFF] font-semibold mb-4 md:mt-8 mt-4  hidden sm:block ">
+                  <h2 className="text-xl md:-ml-12  text-[#407BFF] font-semibold mb-4 md:mt-8 mt-4  hidden sm:block ">
                   Technische details:
                   </h2>
                 </div>
