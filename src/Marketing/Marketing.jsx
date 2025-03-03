@@ -7,6 +7,9 @@ import i1 from "../assets/Vector11.png";
 import i2 from "../assets/Vector12.png";
 import i3 from "../assets/Vector13.png";
 import i4 from "../assets/vector14.png";
+import meet from "../assets/meet.jpg";
+import tik from "../assets/tik.png"
+import das from "../assets/das.png"
 import { useNavigate } from "react-router-dom";
 
 const Marketing = () => {
@@ -17,6 +20,15 @@ const Marketing = () => {
     setActiveSection(activeSection === section ? null : section);
   };
   return (
+    <>
+     <div className="bg-[#F5F5F5] w-full flex flex-col items-center py-16">
+         <h1 className="text-xl font-bold text-gray-800">Marketingontwikkeling</h1>
+         <h1 className="flex items-center gap-2 text-gray-600 text-sm md:text-base">
+           Home 
+           <img className="w-5 h-[2px]" src={das} alt="separator" /> 
+           Diensten
+         </h1>
+       </div>
     <div className=" mx-auto md:px-6 px-6">
       <div className="grid grid-cols-1 lg:grid-cols-2 items-center lg:px-12 mt-10 lg:m-20 ">
         <div className="mr-5">
@@ -44,28 +56,28 @@ const Marketing = () => {
           </p>
 
           <div className="flex gap-5 items-center mt-6">
-            <img src="/textpic/List → Item.png" alt="" />
+            <img src={tik} alt="" />
             <h1 className="text-[rgba(38,50,56,1) text-[18px] font-medium">
               Data-gedreven strategieën
             </h1>
           </div>
 
           <div className="flex gap-5 items-center">
-            <img src="/textpic/List → Item.png" alt="" />
+            <img src={tik} alt="" />
             <h1 className="text-[rgba(38,50,56,1) text-[18px] font-medium">
               Multichannel campagnes
             </h1>
           </div>
 
           <div className="flex gap-5 items-center">
-            <img src="/textpic/List → Item.png" alt="" />
+            <img src={tik} alt="" />
             <h1 className="text-[rgba(38,50,56,1) text-[18px] font-medium">
               Contentcreatie
             </h1>
           </div>
 
           <div className="flex gap-5 items-center">
-            <img src="/textpic/List → Item.png" alt="" />
+            <img src={tik} alt="" />
             <h1 className="text-[rgba(38,50,56,1) text-[18px] font-medium">
               Resultaatgericht
             </h1>
@@ -82,7 +94,7 @@ const Marketing = () => {
         </div>
 
         <div className="mt-10 mb-5 mr-10">
-          <img className="w-full" src="/linkImages/pana.png" alt="" />
+          <img className="w-full" src={meet} alt="" />
         </div>
       </div>
 
@@ -371,6 +383,7 @@ const Marketing = () => {
         </div>
       </div>
     </div>
+    </>
   );
 };
 

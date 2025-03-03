@@ -3,9 +3,20 @@ import { FiPhone } from "react-icons/fi";
 import { MdOutlineMail } from "react-icons/md";
 import { FaLinkedin, FaFacebook } from "react-icons/fa";
 import { AiFillInstagram } from "react-icons/ai";
+import das from "../assets/das.png"
 
 const Contact = () => {
   return (
+    <>
+
+      <div className="bg-[#F5F5F5] w-full flex flex-col items-center py-16">
+             <h1 className="text-xl font-bold text-gray-800">Contactpagina</h1>
+             <h1 className="flex items-center gap-2 text-gray-600 text-sm md:text-base">
+               Home 
+               <img className="w-5 h-[2px]" src={das} alt="separator" /> 
+               Contactpagina
+             </h1>
+           </div>
     <div className="container mx-auto lg:px-36 py-10">
       <div className="grid lg:grid-cols-2 grid-cols-1 gap-10">
         {/* Left Section - Contact Details & Social Media */}
@@ -145,6 +156,7 @@ const Contact = () => {
         </div>
       </div>
     </div>
+    </>
   );
 };
 
