@@ -63,14 +63,15 @@ const Navbar = () => {
 
         {/* Desktop Menu */}
         <div className="hidden lg:flex space-x-6 items-center">
-          <PrijzenDropdown
-            activeDropdown={activeDropdown}
-            setActiveDropdown={setActiveDropdown}
-          />
           <DienstenDropdown
             activeDropdown={activeDropdown}
             setActiveDropdown={setActiveDropdown}
           />
+          <PrijzenDropdown
+            activeDropdown={activeDropdown}
+            setActiveDropdown={setActiveDropdown}
+          />
+
           <a href="/Overons" className="text-gray-900 hover:text-blue-600">
             Over Ons
           </a>
@@ -92,6 +93,43 @@ const Navbar = () => {
         </a>
       </nav>
     </header>
+  );
+};
+
+// DienstenDropdown Component
+const DienstenDropdown = ({ activeDropdown, setActiveDropdown }) => {
+  const isOpen = activeDropdown === "diensten";
+
+  return (
+    <div className="relative inline-block text-left">
+      <button
+        onClick={() => setActiveDropdown(isOpen ? null : "diensten")}
+        className="flex items-center gap-2 px-4 py-2 text-gray-700 hover:text-black"
+      >
+        Diensten
+        <ChevronDownIcon
+          className="w-5 h-5 text-gray-500 transition-transform duration-200"
+          style={{ transform: isOpen ? "rotate(180deg)" : "rotate(0deg)" }}
+        />
+      </button>
+
+      {isOpen && (
+        <div className="absolute right-0 mt-2 w-48 bg-white border rounded-lg shadow-lg">
+          <a href="/appmarket" className="block px-4 py-2 hover:bg-gray-100">
+            App Ontwikkeling
+          </a>
+          <a href="/Diensten" className="block px-4 py-2 hover:bg-gray-100">
+            Branding
+          </a>
+          <a href="/marketing" className="block px-4 py-2 hover:bg-gray-100">
+            Marketingsdiensten
+          </a>
+          <a href="/prijzen" className="block px-4 py-2 hover:bg-gray-100">
+            Website Builder
+          </a>
+        </div>
+      )}
+    </div>
   );
 };
 
@@ -127,43 +165,6 @@ const PrijzenDropdown = ({ activeDropdown, setActiveDropdown }) => {
             href="/PrijzenMarkeing"
             className="block px-4 py-2 hover:bg-gray-100"
           >
-            Marketingsdiensten
-          </a>
-          <a href="/prijzen" className="block px-4 py-2 hover:bg-gray-100">
-            Website Builder
-          </a>
-        </div>
-      )}
-    </div>
-  );
-};
-
-// DienstenDropdown Component
-const DienstenDropdown = ({ activeDropdown, setActiveDropdown }) => {
-  const isOpen = activeDropdown === "diensten";
-
-  return (
-    <div className="relative inline-block text-left">
-      <button
-        onClick={() => setActiveDropdown(isOpen ? null : "diensten")}
-        className="flex items-center gap-2 px-4 py-2 text-gray-700 hover:text-black"
-      >
-        Diensten
-        <ChevronDownIcon
-          className="w-5 h-5 text-gray-500 transition-transform duration-200"
-          style={{ transform: isOpen ? "rotate(180deg)" : "rotate(0deg)" }}
-        />
-      </button>
-
-      {isOpen && (
-        <div className="absolute right-0 mt-2 w-48 bg-white border rounded-lg shadow-lg">
-          <a href="/appmarket" className="block px-4 py-2 hover:bg-gray-100">
-            App Ontwikkeling
-          </a>
-          <a href="/Diensten" className="block px-4 py-2 hover:bg-gray-100">
-            Branding
-          </a>
-          <a href="/marketing" className="block px-4 py-2 hover:bg-gray-100">
             Marketingsdiensten
           </a>
           <a href="/prijzen" className="block px-4 py-2 hover:bg-gray-100">
