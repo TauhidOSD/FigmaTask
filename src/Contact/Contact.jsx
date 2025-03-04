@@ -3,20 +3,31 @@ import { FiPhone } from "react-icons/fi";
 import { MdOutlineMail } from "react-icons/md";
 import { FaLinkedin, FaFacebook } from "react-icons/fa";
 import { AiFillInstagram } from "react-icons/ai";
+import das from "../assets/das.png"
 
 const Contact = () => {
   return (
-    <div className="container mx-auto lg:px-36  py-10">
+    <>
+
+      <div className="bg-[#F5F5F5] w-full flex flex-col items-center py-16">
+             <h1 className="text-xl font-bold text-gray-800">Contactpagina</h1>
+             <h1 className="flex items-center gap-2 text-gray-600 text-sm md:text-base">
+               Home 
+               <img className="w-5 h-[2px]" src={das} alt="separator" /> 
+               Contactpagina
+             </h1>
+           </div>
+    <div className="container mx-auto lg:px-36 py-10">
       <div className="grid lg:grid-cols-2 grid-cols-1 gap-10">
         {/* Left Section - Contact Details & Social Media */}
-        <div className="bg-slate-100 rounded-md p-8">
+        <div className="bg-[#F5F5F5] rounded-md p-8">
           <h1 className="text-xl font-bold mb-5">Neem contact met ons op</h1>
-          <p className="text-sm text-slate-400 mb-1">
+          <p className="font-plus-jakarta text-[#7E7E7E] mb-1">
             Wij staan klaar om u te helpen bij uw digitale uitdagingen. Samen creëren
           </p>
-          <p className="text-sm text-slate-400 mb-5">
+          {/* <p className="font-plus-jakarta text-[#7E7E7E] mb-5">
             we oplossingen die werken. Neem vandaag nog contact met ons op!
-          </p>
+          </p> */}
 
           <h2 className="font-medium text-base mb-5">Contactgegevens</h2>
           <div className="space-y-4">
@@ -65,9 +76,9 @@ const Contact = () => {
         </div>
 
         {/* Right Section - Contact Form */}
-        <div className="bg-slate-100 rounded-md p-8">
+        <div className="bg-[#F5F5F5] rounded-md p-8">
           <h1 className="text-xl font-bold mb-3">Heeft u een vraag?</h1>
-          <p className="text-sm text-slate-400 mb-6">
+          <p className="font-plus-jakarta text-[#7E7E7E]  mb-6">
             Vul ons contactformulier in op de website en wij nemen zo snel mogelijk
             contact met u op.
           </p>
@@ -81,7 +92,7 @@ const Contact = () => {
                   type="text"
                   id="name"
                   placeholder="Voer uw naam in"
-                  className="input input-bordered w-full bg-slate-100"
+                  className="input input-bordered w-full font-plus-jakarta text-[#7E7E7E]"
                 />
               </div>
               <div className="flex-1">
@@ -92,7 +103,7 @@ const Contact = () => {
                   type="email"
                   id="email"
                   placeholder="Voer uw e-mailadres in"
-                  className="input input-bordered w-full bg-slate-100"
+                  className="input input-bordered w-full font-plus-jakarta text-[#7E7E7E]"
                 />
               </div>
             </div>
@@ -106,7 +117,7 @@ const Contact = () => {
                   type="text"
                   id="subject"
                   placeholder="Geef context"
-                  className="input input-bordered w-full bg-slate-100"
+                  className="input input-bordered w-full font-plus-jakarta text-[#7E7E7E]"
                 />
               </div>
               <div className="flex-1">
@@ -117,7 +128,7 @@ const Contact = () => {
                   type="text"
                   id="topic"
                   placeholder="Selecteer Onderwerp"
-                  className="input input-bordered w-full bg-slate-100"
+                  className="input input-bordered w-full font-plus-jakarta text-[#7E7E7E]"
                 />
               </div>
             </div>
@@ -128,7 +139,7 @@ const Contact = () => {
               </label>
               <textarea
                 id="message"
-                className="textarea textarea-bordered w-full h-36 bg-slate-100"
+                className="textarea textarea-bordered w-full h-36 font-plus-jakarta text-[#7E7E7E]"
                 placeholder="Schrijf hier uw vraag"
               ></textarea>
             </div>
@@ -136,7 +147,7 @@ const Contact = () => {
             <div>
               <button
                 type="submit"
-                className="relative text-white btn bg-[#468AFF] px-4 py-2 sm:px-8 sm:py-3 rounded-lg shadow-lg transition-all duration-300 ease-in-out hover:bg-[#3570D4] hover:scale-105 active:scale-95 focus:outline-none text-xs sm:text-base w-2/4 lg:w-2/4 "
+                className="relative text-white btn bg-[#468AFF] px-4 py-2 sm:px-8 sm:py-3 rounded-lg shadow-lg transition-all hover:bg-blue-500 text-xs sm:text-base w-2/4 lg:w-2/4 "
               >
                 Verstuur Bericht
               </button>
@@ -145,6 +156,7 @@ const Contact = () => {
         </div>
       </div>
     </div>
+    </>
   );
 };
 

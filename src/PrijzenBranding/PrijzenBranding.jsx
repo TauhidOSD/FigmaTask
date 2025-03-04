@@ -1,14 +1,25 @@
 import { FaChevronDown, FaUpload } from "react-icons/fa";
+import das from "../assets/das.png";
 const PrijzenBranding = () => {
   return (
     <>
+      <div className="bg-[#F5F5F5] w-full flex flex-col items-center py-16">
+        <h1 className="text-xl font-bold text-gray-800">
+        Branding Prijsplannen 
+        </h1>
+        <h1 className="flex items-center gap-2 text-gray-600 text-sm md:text-base">
+          Home
+          <img className="w-5 h-[2px]" src={das} alt="separator" />
+          Prijzen
+        </h1>
+      </div>
       {/* First Part */}
       <div className="md:px-36 px-6 mx-auto">
         <div className=" flex md:gap-[496px]">
           <h2 className="text-xl text-[#407BFF] font-semibold md:mt-8 mt-4 mb-4">
             Basisinformatie:
           </h2>
-          <h2 className="text-xl text-[#407BFF] font-semibold mb-4 md:mt-8 mt-4  hidden sm:block ">
+          <h2 className="text-xl text-[#407BFF] md:-ml-12 font-semibold mb-4 md:mt-8 mt-4  hidden sm:block ">
             Technisch
           </h2>
         </div>
@@ -169,7 +180,7 @@ const PrijzenBranding = () => {
 
                   {/* Right Side Input (Moved Up) */}
                   <div className="">
-                    <label className="block text-gray-700 font-medium mt-5"></label>
+                    <label className="block text-gray-700 font-medium mt-11"></label>
                     <div className="border w-1/2 border-gray-300 rounded-lg p-3 md:w-full flex items-center justify-around cursor-pointer bg-black hover:bg-gray-800 transition">
                       <label
                         htmlFor="imageUpload"
@@ -261,8 +272,8 @@ const PrijzenBranding = () => {
           </div>
         </div>
         <div className="flex justify-center items-center md:my-8 my-4 ">
-          <button className="btn hover:bg-[#468AFFE6] bg-[#468AFF]  md:px-60 px-36 py-2 text-[#FFFFFF] text-lg md:text-md lg:text-xl">
-          Nu Kopen
+          <button className="btn hover:bg-[#468AFFE6] bg-[#468AFF]  md:px-32 px-36 py-2 text-[#FFFFFF] text-lg md:text-md lg:text-xl">
+            Nu Kopen
           </button>
         </div>
       </div>

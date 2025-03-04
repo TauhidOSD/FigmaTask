@@ -1,6 +1,7 @@
 import { useState } from "react";
 import icon from "../assets/Vector (2).png";
-import icon1 from "../assets/Vector (3).png";
+import das from "../assets/das.png";
+import { RiArrowDropDownLine } from "react-icons/ri";
 
 const Veelgestelde = () => {
   const [activeIndex, setActiveIndex] = useState(null);
@@ -55,10 +56,22 @@ const Veelgestelde = () => {
   ];
 
   return (
+   <>
+
+   <div className="bg-[#F5F5F5] w-full flex flex-col items-center py-16">
+           <h1 className="text-xl font-bold text-gray-800">
+           Veelgestelde Vragen
+           </h1>
+           <h1 className="flex items-center gap-2 text-gray-600 text-sm md:text-base">
+             Home
+             <img className="w-5 h-[2px]" src={das} alt="separator" />
+             FAQ
+           </h1>
+         </div>
     <div className="flex flex-col md:px-36 md:flex-row gap-6 p-6 md:py-16">
       {/* Left Section */}
       <div className="w-full md:w-1/2">
-        <button className="bg-[#B479d9] rounded-full  text-[#FFFFFF] font-bold py-2 px-4  mb-4">
+        <button className="bg-[#B479d9] rounded-full text-[#FFFFFF] font-bold py-2 px-4 mb-4">
           Support
         </button>
         <h1 className="text-2xl font-bold mb-2">Veelgestelde Vragen</h1>
@@ -80,19 +93,22 @@ const Veelgestelde = () => {
           <div key={index} className="mb-4">
             <button
               onClick={() => toggleContent(index)}
-              className="flex justify-between items-center w-full text-[#FFFFFF] bg-[#468AFF] text-left px-6 py-2 rounded-md shadow-md hover:bg-blue-400"
+              className={`flex justify-between items-center w-full text-left px-6 py-2 rounded-md shadow-md  
+              ${
+                activeIndex === index
+                  ? "text-blue-600 bg-gray-100"
+                  : "text-black "
+              }`}
             >
               {item.question}
-              <img
-                src={icon1}
-                alt="Dropdown Icon"
-                className={`w-2 h-2 translate-x-2 ${
+              <RiArrowDropDownLine
+                className={`w-6 h-6 text-black transition-transform duration-300 ${
                   activeIndex === index ? "rotate-180" : ""
                 }`}
               />
             </button>
             {activeIndex === index && (
-              <div className="bg-gray-50 p-4 rounded shadow-inner mt-2">
+              <div className=" p-4 rounded  mt-2">
                 <p className="text-sm">{item.answer}</p>
               </div>
             )}
@@ -100,6 +116,7 @@ const Veelgestelde = () => {
         ))}
       </div>
     </div>
+   </>
   );
 };
 
