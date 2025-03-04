@@ -34,6 +34,10 @@ import Overons from './Overons/overons.jsx';
 import PrijzenBranding from './PrijzenBranding/PrijzenBranding.jsx';
 import PrijzenMarketing from './PrijzenMarketing/PrijzenMarketing.jsx';
 import ShiftMode from './ShiftMode/ShiftMode.jsx';
+import Finguide from './Finguide/Finguide.jsx';
+import Fluentlee from './Fluentlee/Fluentlee.jsx';
+import Ahoyy from './Ahoyy/Ahoyy.jsx';
+import Sarbuh from './Sarbuh/Sarbuh.jsx';
 
 // Load Stripe
 const stripePromise = loadStripe("your-public-stripe-key");
@@ -102,6 +106,22 @@ const router = createBrowserRouter([
       {
         path: "/shift",
         element: <ShiftMode />,
+      },
+      {
+        path: "/finguide",
+        element: <Finguide/>,
+      },
+      {
+        path: "/fluentlee",
+        element: <Fluentlee />,
+      },
+      {
+        path: "/ahooy",
+        element: <Ahoyy />,
+      },
+      {
+        path: "/sarbuh",
+        element: <Sarbuh/>,
       },
       {
         path: "/overons",
