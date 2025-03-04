@@ -60,7 +60,7 @@ const Card = () => {
 
         {/* Card 2 */}
         <div
-          onClick={() => navigate("/blog")}
+          onClick={() => navigate("/finguide")}
           className="bg-[#F5F5F5] shadow-lg rounded-lg overflow-hidden hover:shadow-xl transition-shadow duration-300"
         >
           <img src={img2} alt="Blog 2" className="w-full h-56 object-cover" />
@@ -96,7 +96,7 @@ const Card = () => {
 
         {/* Card 3 */}
         <div
-          onClick={() => navigate("/blog")}
+          onClick={() => navigate("/fluentlee")}
           className="bg-[#F5F5F5] shadow-lg rounded-lg overflow-hidden hover:shadow-xl transition-shadow duration-300"
         >
           <img src={img7} alt="Blog 3" className="w-full h-56 object-cover" />
@@ -130,7 +130,7 @@ const Card = () => {
         </div>
         {/* Card 4 */}
         <div
-          onClick={() => navigate("/blog")}
+          onClick={() => navigate("/ahooy")}
           className="bg-[#F5F5F5] shadow-lg rounded-lg overflow-hidden hover:shadow-xl transition-shadow duration-300"
         >
           <img src={img4} alt="Blog 3" className="w-full h-56 object-cover" />
@@ -155,7 +155,7 @@ const Card = () => {
         </div>
         {/* Card 5 */}
         <div
-          onClick={() => navigate("/blog")}
+          onClick={() => navigate("/sarbuh")}
           className="bg-[#F5F5F5] shadow-lg rounded-lg overflow-hidden hover:shadow-xl transition-shadow duration-300"
         >
           <img src={img9} alt="Blog 3" className="w-full h-56 object-cover" />

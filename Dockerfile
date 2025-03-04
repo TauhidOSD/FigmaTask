@@ -1,4 +1,4 @@
-FROM node:20.9.0  
+FROM node:20.17.0  
 #  as build
 
 RUN mkdir -p /var/www/frontend
@@ -6,7 +6,7 @@ RUN mkdir -p /var/www/frontend
 # Set working directory
 WORKDIR /var/www/frontend
 
-#RUN apt-get clean
+RUN apt-get clean
 
 COPY . /var/www/frontend
 

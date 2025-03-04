@@ -66,7 +66,7 @@ const Prijzen = () => {
             aan de slag kunt. Vervang eenvoudig foto’s, video’s en tekst om de
             site naar wens aan te passen. Je kunt zelf content aanleveren of
             onze hulp inschakelen. De ideale oplossing voor een snelle,
-            professionele website. mauris lacus varius nunc, dapibus
+            professionele website. 
           </p>
         </div>
 
