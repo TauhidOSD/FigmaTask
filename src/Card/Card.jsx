@@ -51,7 +51,7 @@ const Card = () => {
         </div>
 
         {/* Card 2 */}
-        <div onClick={()=>navigate("/blog")} className="bg-[#F5F5F5] shadow-lg rounded-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+        <div onClick={()=>navigate("/finguide")} className="bg-[#F5F5F5] shadow-lg rounded-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
           <img src={img2} alt="Blog 2" className="w-full h-56 object-cover" />
           <div className="p-6">
             <div className="flex gap-2 mb-4">
@@ -76,7 +76,7 @@ const Card = () => {
         </div>
 
         {/* Card 3 */}
-        <div onClick={()=>navigate("/blog")} className="bg-[#F5F5F5] shadow-lg rounded-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+        <div onClick={()=>navigate("/fluentlee")} className="bg-[#F5F5F5] shadow-lg rounded-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
           <img src={img3} alt="Blog 3" className="w-full h-56 object-cover" />
           <div className="p-6">
             <div className="flex gap-2 mb-4">
@@ -100,7 +100,7 @@ const Card = () => {
           </div>
         </div>
         {/* Card 4 */}
-        <div onClick={()=>navigate("/blog")} className="bg-[#F5F5F5] shadow-lg rounded-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+        <div onClick={()=>navigate("/ahooy")} className="bg-[#F5F5F5] shadow-lg rounded-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
           <img src={img4} alt="Blog 3" className="w-full h-56 object-cover" />
           <div className="p-6">
             <div className="flex gap-2 mb-4">
@@ -124,7 +124,7 @@ const Card = () => {
           </div>
         </div>
         {/* Card 5 */}
-        <div onClick={()=>navigate("/blog")} className="bg-[#F5F5F5] shadow-lg rounded-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+        <div onClick={()=>navigate("/sarbuh")} className="bg-[#F5F5F5] shadow-lg rounded-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
           <img src={img5} alt="Blog 3" className="w-full h-56 object-cover" />
           <div className="p-6">
             <div className="flex gap-2 mb-4">

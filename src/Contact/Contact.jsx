@@ -6,7 +6,7 @@ import { AiFillInstagram } from "react-icons/ai";
 
 const Contact = () => {
   return (
-    <div className="container mx-auto lg:px-36 py-10">
+    <div className="container mx-auto lg:px-36  py-10">
       <div className="grid lg:grid-cols-2 grid-cols-1 gap-10">
         {/* Left Section - Contact Details & Social Media */}
         <div className="bg-slate-100 rounded-md p-8">
