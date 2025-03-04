@@ -11,7 +11,7 @@ const Home = () => {
           <Banner/>
           <Onze/>
           <Waaram/>
-          <Prest/>
+          {/* <Prest/> */}
           <Card/>
 
         </div>
