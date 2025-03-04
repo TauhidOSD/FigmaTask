@@ -1,14 +1,14 @@
 FROM node:20.17.0  
 #  as build
 
-RUN mkdir -p /project
+RUN mkdir -p /var/www/frontend
 
 # Set working directory
-WORKDIR /project
+WORKDIR /var/www/frontend
 
-#RUN apt-get clean
+RUN apt-get clean
 
-COPY . /project
+COPY . /var/www/frontend
 
 
 RUN rm -Rf node_modules
