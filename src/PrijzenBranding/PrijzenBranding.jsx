@@ -1,11 +1,12 @@
 import { FaChevronDown, FaUpload } from "react-icons/fa";
 import das from "../assets/das.png";
+import bg from "../assets/bg.jpeg";
 const PrijzenBranding = () => {
   return (
     <>
       <div className="bg-[#F5F5F5] w-full flex flex-col items-center py-16">
         <h1 className="text-xl font-bold text-gray-800">
-        Branding Prijsplannen 
+          Branding Prijsplannen
         </h1>
         <h1 className="flex items-center gap-2 text-gray-600 text-sm md:text-base">
           Home
@@ -13,6 +14,9 @@ const PrijzenBranding = () => {
           Prijzen
         </h1>
       </div>
+      {/* banner section */}
+      
+
       {/* First Part */}
       <div className="md:px-36 px-6 mx-auto">
         <div className=" flex md:gap-[496px]">
