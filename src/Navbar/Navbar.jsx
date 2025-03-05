@@ -5,6 +5,7 @@ import { ChevronDownIcon } from "@heroicons/react/24/solid";
 
 const Navbar = () => {
   const navigate = useNavigate();
+  const [isMobileDropdownOpen, setIsMobileDropdownOpen] = useState(false);
 
   return (
     <header className="bg-[#FFFFFF] md:px-32 shadow-md sticky top-0 z-50">
@@ -16,7 +17,11 @@ const Navbar = () => {
 
         {/* Mobile Dropdown */}
         <div className="dropdown lg:hidden">
-          <button tabIndex={0} className="btn btn-ghost p-2">
+          <button
+            tabIndex={0}
+            className="btn btn-ghost p-2"
+            onClick={() => setIsMobileDropdownOpen(!isMobileDropdownOpen)}
+          >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               className="h-6 w-6"
@@ -32,6 +37,24 @@ const Navbar = () => {
               />
             </svg>
           </button>
+
+          {/* Mobile Dropdown Menu */}
+          {isMobileDropdownOpen && (
+            <div className="absolute right-0 mt-2 w-48 bg-white border rounded-lg shadow-lg">
+              <a href="/appmarket" className="block px-4 py-2 hover:bg-gray-100">
+                App Ontwikkeling
+              </a>
+              <a href="/Diensten" className="block px-4 py-2 hover:bg-gray-100">
+                Branding
+              </a>
+              <a href="/marketing" className="block px-4 py-2 hover:bg-gray-100">
+                Marketingsdiensten
+              </a>
+              <a href="/prijzen" className="block px-4 py-2 hover:bg-gray-100">
+                Website Builder
+              </a>
+            </div>
+          )}
         </div>
 
         {/* Desktop Menu */}
