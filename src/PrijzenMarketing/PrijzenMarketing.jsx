@@ -17,7 +17,7 @@ const PrijzenMarketing = () => {
       </div>
       {/*Hero section P-M */}
       <div
-        className="hero h-[500px] md:h-[444px] lg:h-[444px]"
+        className="hero h-[520px] md:h-[444px] lg:h-[444px]"
         style={{
           backgroundImage: `url(${bg1})`,
           backgroundSize: "cover",
