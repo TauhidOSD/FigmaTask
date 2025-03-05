@@ -6,6 +6,8 @@ import { ChevronDownIcon } from "@heroicons/react/24/solid";
 const Navbar = () => {
   const navigate = useNavigate();
   const [isMobileDropdownOpen, setIsMobileDropdownOpen] = useState(false);
+  const [isDienstenOpen, setIsDienstenOpen] = useState(false);
+  const [isPrijzenOpen, setIsPrijzenOpen] = useState(false);
 
   return (
     <header className="bg-[#FFFFFF] md:px-32 shadow-md sticky top-0 z-50">
@@ -40,18 +42,65 @@ const Navbar = () => {
 
           {/* Mobile Dropdown Menu */}
           {isMobileDropdownOpen && (
-            <div className="absolute right-0 mt-2 w-48 bg-white border rounded-lg shadow-lg">
-              <a href="/appmarket" className="block px-4 py-2 hover:bg-gray-100">
-                App Ontwikkeling
+            <div className="absolute right-0 mt-2 w-48 bg-white border rounded-lg shadow-lg transition-all duration-200 ease-in-out">
+              <div>
+                <button
+                  className="block px-4 py-2 text-gray-700"
+                  onClick={() => setIsDienstenOpen(!isDienstenOpen)}
+                >
+                  Diensten <ChevronDownIcon className="w-5 h-5 inline" />
+                </button>
+                {isDienstenOpen && (
+                  <div className="bg-white border rounded-lg shadow-lg">
+                    <a href="/appmarket" className="block px-4 py-2 hover:bg-gray-100">
+                      App Ontwikkeling
+                    </a>
+                    <a href="/Diensten" className="block px-4 py-2 hover:bg-gray-100">
+                      Branding
+                    </a>
+                    <a href="/marketing" className="block px-4 py-2 hover:bg-gray-100">
+                      Marketingsdiensten
+                    </a>
+                    <a href="/prijzen" className="block px-4 py-2 hover:bg-gray-100">
+                      Website Builder
+                    </a>
+                  </div>
+                )}
+              </div>
+
+              <div>
+                <button
+                  className="block px-4 py-2 text-gray-700"
+                  onClick={() => setIsPrijzenOpen(!isPrijzenOpen)}
+                >
+                  Prijzen <ChevronDownIcon className="w-5 h-5 inline" />
+                </button>
+                {isPrijzenOpen && (
+                  <div className="bg-white border rounded-lg shadow-lg">
+                    <a href="/startpagina" className="block px-4 py-2 hover:bg-gray-100">
+                      App Ontwikkeling
+                    </a>
+                    <a href="/PrijzenBranding" className="block px-4 py-2 hover:bg-gray-100">
+                      Branding
+                    </a>
+                    <a href="/PrijzenMarkeing" className="block px-4 py-2 hover:bg-gray-100">
+                      Marketingsdiensten
+                    </a>
+                    <a href="/prijzen" className="block px-4 py-2 hover:bg-gray-100">
+                      Website Builder
+                    </a>
+                  </div>
+                )}
+              </div>
+
+              <a href="/Overons" className="block px-4 py-2 hover:bg-gray-100">
+                Over Ons
               </a>
-              <a href="/Diensten" className="block px-4 py-2 hover:bg-gray-100">
-                Branding
+              <a href="/Veelgestelde" className="block px-4 py-2 hover:bg-gray-100">
+                FAQ
               </a>
-              <a href="/marketing" className="block px-4 py-2 hover:bg-gray-100">
-                Marketingsdiensten
-              </a>
-              <a href="/prijzen" className="block px-4 py-2 hover:bg-gray-100">
-                Website Builder
+              <a href="/blog" className="block px-4 py-2 hover:bg-gray-100">
+                Portfolio
               </a>
             </div>
           )}
@@ -61,7 +110,6 @@ const Navbar = () => {
         <div className="hidden lg:flex space-x-6 items-center">
           <DienstenDropdown />
           <PrijzenDropdown />
-
           <a href="/Overons" className="text-gray-900 hover:text-blue-600">
             Over Ons
           </a>
@@ -106,7 +154,7 @@ const DienstenDropdown = () => {
 
       {/* Show dropdown on hover */}
       {isOpen && (
-        <div className="absolute right-0  w-48 bg-white border rounded-lg shadow-lg">
+        <div className="absolute right-0 w-48 bg-white border rounded-lg shadow-lg">
           <a href="/appmarket" className="block px-4 py-2 hover:bg-gray-100">
             App Ontwikkeling
           </a>
@@ -145,7 +193,7 @@ const PrijzenDropdown = () => {
 
       {/* Show dropdown on hover */}
       {isOpen && (
-        <div className="absolute right-0  w-48 bg-white border rounded-lg shadow-lg">
+        <div className="absolute right-0 w-48 bg-white border rounded-lg shadow-lg">
           <a href="/startpagina" className="block px-4 py-2 hover:bg-gray-100">
             App Ontwikkeling
           </a>
