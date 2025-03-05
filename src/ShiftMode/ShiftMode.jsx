@@ -1,6 +1,12 @@
+import { useEffect } from "react";
 
 
 const ShiftMode = () => {
+
+  useEffect(() => {
+    window.scrollTo(0, 0); 
+  }, []);
+
     return (
         <div className="space-y-16 mt-10 mx-auto lg:w-[1260px] 2xl:w-[1440px] ">
         {/* Section 1 */}
