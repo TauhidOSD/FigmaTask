@@ -14,8 +14,42 @@ const PrijzenBranding = () => {
           Prijzen
         </h1>
       </div>
-      {/* banner section */}
-      
+      {/*Hero section p-B */}
+      <div
+        className="hero h-[500px] md:h-[444px] lg:h-[444px]"
+        style={{
+          backgroundImage: `url(${bg})`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+        }}
+      >
+        <div className="hero-overlay"></div>
+        <div className="hero-content text-neutral-content text-center">
+          <div className="px-4 md:px-8 lg:px-12">
+            <h1 className="mb-4 text-3xl md:text-5xl font-bold text-[#FFFFFF] font-plus-jakarta">
+              Branding
+            </h1>
+            <p className="mb-4 text-sm md:text-base text-[#FFFFFF] font-plus-jakarta">
+              Bij Younitech geloven we dat sterke branding essentieel is voor
+              het succes van jouw bedrijf. Onze aanpak combineert creativiteit
+              met strategie om een merkidentiteit te creëren die resoneert en
+              impact maakt. Of het nu gaat om het ontwerpen van een logo, het
+              definiëren van je merkverhaal of het ontwikkelen van een
+              consistente visuele stijl, wij bieden op maat gemaakte oplossingen
+              die jouw merk naar een hoger niveau tillen.
+            </p>
+            <p className="mb-2 pt-4 text-sm md:text-base text-[#FFFFFF] font-plus-jakarta">
+              Vul het onderstaande formulier in om een zo duidelijk mogelijk
+              beeld te schetsen van jouw aanvraag.
+            </p>
+            <p className="mb-4 text-sm md:text-base text-[#FFFFFF] font-plus-jakarta">
+              Kom je er niet uit? Neem gerust contact met ons op via{" "}
+              <span className="text-[#407BFF]">e-mail, telefoon </span> of de{" "}
+              <span className="text-[#407BFF]">contactpagina.</span>
+            </p>
+          </div>
+        </div>
+      </div>
 
       {/* First Part */}
       <div className="md:px-36 px-6 mx-auto">
