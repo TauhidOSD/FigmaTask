@@ -1,10 +1,13 @@
 import logo from "../assets/logo black 1.png";
-import phone from "../assets/Vector1.png";
-import email from "../assets/Vector.png";
+import { MdOutlineMarkEmailUnread } from "react-icons/md";
+
+
 
 import { FaTwitter } from "react-icons/fa";
 import { ImLinkedin } from "react-icons/im";
 import { FaInstagramSquare } from "react-icons/fa";
+import { Link } from "react-router-dom";
+import { MdPhoneInTalk } from "react-icons/md";
 
 const Footer = () => {
   return (
@@ -23,24 +26,28 @@ const Footer = () => {
           </p>
           <div className="mt-6 space-y-4">
             <div className="flex items-center gap-4">
-              <img src={phone} alt="Phone" className="w-5 h-5 sm:w-6 sm:h-6" />
+            <MdPhoneInTalk />
               <span className="text-gray-900 text-sm">085-203 15 20</span>
             </div>
             <div className="flex items-center gap-4">
-              <img src={email} alt="Email" className="w-5 h-5 sm:w-6 sm:h-6" />
+            <MdOutlineMarkEmailUnread />
               <span className="text-gray-900 text-sm">Info@younitech.nl</span>
             </div>
           </div>
           <div className="flex space-x-6 sm:space-x-8 mt-8">
             <a href="#" target="_blank" rel="noopener noreferrer">
-            <FaInstagramSquare />
+              <FaInstagramSquare />
             </a>
             <a href="#" target="_blank" rel="noopener noreferrer">
-            <FaTwitter />
+              <FaTwitter />
             </a>
-            <a className="h-6 w-6" href="#" target="_blank" rel="noopener noreferrer">
-              <ImLinkedin/>
-              
+            <a
+              className="h-6 w-6"
+              href="#"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <ImLinkedin />
             </a>
           </div>
         </div>
@@ -51,16 +58,16 @@ const Footer = () => {
             <h3 className="text-lg font-semibold">Diensten</h3>
             <ul className="space-y-4 text-gray-900 text-sm">
               <li className="hover:text-blue-600 cursor-pointer transition-colors">
-                App ontwikkeling
+                <Link to="/appmarket">App ontwikkeling</Link>
               </li>
               <li className="hover:text-blue-600 cursor-pointer transition-colors">
-                Branding
+                <Link to="/Diensten">Branding</Link>
               </li>
               <li className="hover:text-blue-600 cursor-pointer transition-colors">
-                Marketingsdiensten
+                <Link to="/marketing">Marketingsdiensten</Link>
               </li>
               <li className="hover:text-blue-600 cursor-pointer transition-colors">
-                Website builder
+                <Link to="/prijzen">Website builder</Link>
               </li>
             </ul>
           </div>
@@ -68,17 +75,17 @@ const Footer = () => {
           <div className="space-y-5">
             <h3 className="text-lg font-semibold">Prijzen</h3>
             <ul className="space-y-4 text-gray-900 text-sm">
-              <li className="hover:text-blue-600 cursor-pointer transition-colors">
-                App ontwikkeling
+            <li className="hover:text-blue-600 cursor-pointer transition-colors">
+                <Link to="/startpagina">App ontwikkeling</Link>
               </li>
               <li className="hover:text-blue-600 cursor-pointer transition-colors">
-                Branding
+                <Link to="/PrijzenBranding">Branding</Link>
               </li>
               <li className="hover:text-blue-600 cursor-pointer transition-colors">
-                Marketingsdiensten
+                <Link to="/PrijzenMarkeing">Marketingsdiensten</Link>
               </li>
               <li className="hover:text-blue-600 cursor-pointer transition-colors">
-                Website builder
+                <Link to="/prijzen">Website builder</Link>
               </li>
             </ul>
           </div>
@@ -87,10 +94,12 @@ const Footer = () => {
             <h3 className="text-lg font-semibold">Over ons</h3>
             <ul className="space-y-4 text-gray-900 text-sm">
               <li className="hover:text-blue-600 cursor-pointer transition-colors font-bold">
-                FAQ
+              <Link to="/Veelgestelde"> FAQ</Link>
+               
               </li>
               <li className="hover:text-blue-600 cursor-pointer transition-colors font-bold">
-                Portfolio
+              <Link to="/blog"> Portfolio</Link>
+                
               </li>
             </ul>
           </div>

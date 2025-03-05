@@ -6,7 +6,7 @@ import { GoChevronDown } from "react-icons/go";
 import i1 from "../assets/Vector11.png";
 import i2 from "../assets/Vector12.png";
 import i3 from "../assets/Vector13.png";
-import i4 from "../assets/vector14.png";
+import i4 from "../assets/Vector14.png";
 import meet from "../assets/meet.jpg";
 import tik from "../assets/tik.png"
 import das from "../assets/das.png"
