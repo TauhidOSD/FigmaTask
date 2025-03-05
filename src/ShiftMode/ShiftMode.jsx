@@ -1,5 +1,9 @@
 import { useEffect } from "react";
 
+import shift1 from "/src/shassets/shift_guide.png"
+import shift2 from "/src/shassets/shift_guide1.png"
+import shift3 from "/src/shassets/shift_guide2.png"
+import shift4 from "/src/shassets/shift_guide3.png"
 
 const ShiftMode = () => {
 
@@ -8,7 +12,7 @@ const ShiftMode = () => {
   }, []);
 
     return (
-        <div className="space-y-16 mt-10 mx-auto lg:w-[1260px] 2xl:w-[1440px] ">
+        <div className="space-y-16 mt-10 mx-auto  ">
         {/* Section 1 */}
         <div className="px-4 md:px-10 lg:ml-12">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center lg:ml-10 lg:mr-24">
@@ -16,7 +20,7 @@ const ShiftMode = () => {
             <div className="flex justify-center">
               <img
                 className="w-full max-w-4xl object-contain"
-               src="/src/shassets/shift_guide.png"
+               src={shift1}
                 alt="Henna Ghizlan Website Preview"
               />
             </div>
@@ -90,7 +94,7 @@ const ShiftMode = () => {
           <div className="flex justify-start lg:ml-24">
             <img
               className="w-full max-w-lg object-contain"
-              src="/src/shassets/shift_guide1.png"
+              src={ shift2 }
               alt="Bridal Henna"
             />
           </div>
@@ -113,7 +117,7 @@ const ShiftMode = () => {
         <div className="px-4 md:px-10 flex justify-start lg:ml-24">
           <img
             className="w-full max-w-lg object-contain"
-            src="/src/shassets/shift_guide2.png"
+            src={shift3}
             alt="Event Henna"
           />
         </div>
@@ -154,7 +158,7 @@ const ShiftMode = () => {
         <div className="px-4 md:px-10 flex justify-start lg:ml-24">
           <img
             className="w-full max-w-lg object-contain"
-            src="/src/shassets/shift_guide3.png"
+            src={shift4}
             alt="Event Henna"
           />
         </div>

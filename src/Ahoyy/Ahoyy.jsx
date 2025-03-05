@@ -1,5 +1,8 @@
 import { useEffect } from "react";
 
+import ahoyy1 from "/src/assets/Ohoyy1.png"
+import ahoyy2 from "/src/assets/Ohoyy2.png"
+
 
 const Ahoyy = () => {
 
@@ -7,15 +10,15 @@ const Ahoyy = () => {
       window.scrollTo(0, 0); 
     }, []);
     return (
-        <div className="space-y-16 mt-10 mx-auto lg:w-[1260px] 2xl:w-[1440px] ">
+        <div className="space-y-16 mt-10 mx-auto  ">
         {/* Section 1 */}
-        <div className="px-4 md:px-10">
+        <div className="px-4 md:px-10 lg:ml-12">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center lg:ml-10 lg:mr-24">
             {/* Left Image */}
             <div className="flex justify-center">
               <img
                 className="w-full max-w-lg object-contain"
-                src="/src/assets/Ohoyy1.png"
+                src={ahoyy1}
                 alt="Henna Ghizlan Website Preview"
               />
             </div>
@@ -23,7 +26,7 @@ const Ahoyy = () => {
             {/* Right Details */}
             <div className="space-y-2">
               <h1 className=" text-xl lg:text-lg text-sky-400 font-bold">
-              Shiftguide: De Ultieme Roosterplanning App voor de Uitzendbranche en Multi-Location Bedrijven
+              Onze Marketingstrategie: Slim, Kostenbewust en Effectief
               </h1>
               <p className="text-sm sm:text-base font-serif text-slate-400 leading-relaxed">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
@@ -69,7 +72,7 @@ const Ahoyy = () => {
           </div>
   
           {/* Description */}
-          <div className="mt-10 space-y-4 px-4 sm:px-6 md:px-8 lg:ml-20 lg:mr-20">
+          <div className="mt-10 space-y-4 px-4 sm:px-6 md:px-8 lg:ml-5 lg:mr-20">
             <p className="text-left text-sm text-slate-500 leading-relaxed">
             In een wereld waar marketingbudgetten vaak de doorslag geven, kiezen wij voor een andere aanpak. Wij geloven niet in het blindweg uitgeven van geld aan dure advertenties, maar in het strategisch inzetten van middelen om maximale impact te genereren. Onze marketingstrategie draait om efficiëntie, ROI (Return on Investment) en ROAS (Return on Ad Spend). We stretchen elke euro zo ver mogelijk en richten ons op slimme manieren om zichtbaarheid en groei te realiseren.
             </p>
@@ -82,7 +85,7 @@ const Ahoyy = () => {
           <div className="flex justify-start lg:ml-24">
             <img
               className="w-full max-w-lg object-contain"
-              src="/src/assets/Ohoyy2.png"
+              src={ahoyy2}
               alt="Bridal Henna"
             />
           </div>

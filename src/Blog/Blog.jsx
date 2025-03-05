@@ -5,8 +5,11 @@ import img4 from "../assets/Article (5).png";
 import img5 from "../assets/Article (6).png";
 import img6 from "../assets/mehadi.jpg";
 import das from "../assets/das.png"
+import { useNavigate } from "react-router-dom";
 
 const Blog = () => {
+  const navigate = useNavigate();
+
   return (
     <>
       <div className="bg-[#F5F5F5] w-full flex flex-col items-center py-16">
@@ -22,7 +25,7 @@ const Blog = () => {
         {/* Cards Section */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
           {/* Card 1 */}
-          <div className="bg-[#F5F5F5] shadow-lg rounded-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+          <div  onClick={() => navigate("/shift")} className="bg-[#F5F5F5] shadow-lg rounded-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
             <img src={img1} alt="Blog 1" className="w-full h-56 object-cover" />
             <div className="p-6">
               <div className="flex gap-2 mb-4">
@@ -47,7 +50,8 @@ const Blog = () => {
           </div>
 
           {/* Card 2 */}
-          <div className="bg-[#F5F5F5] shadow-lg rounded-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+          <div onClick={() => navigate("/finguide")} 
+          className="bg-[#F5F5F5] shadow-lg rounded-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
             <img src={img2} alt="Blog 2" className="w-full h-56 object-cover" />
             <div className="p-6">
               <div className="flex gap-2 mb-4">
@@ -72,7 +76,8 @@ const Blog = () => {
           </div>
 
           {/* Card 3 */}
-          <div className="bg-[#F5F5F5] shadow-lg rounded-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+          <div  onClick={() => navigate("/fluentlee")}
+           className="bg-[#F5F5F5] shadow-lg rounded-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
             <img src={img3} alt="Blog 3" className="w-full h-56 object-cover" />
             <div className="p-6">
               <div className="flex gap-2 mb-4">
@@ -96,7 +101,8 @@ const Blog = () => {
             </div>
           </div>
           {/* Card 4 */}
-          <div className="bg-[#F5F5F5] shadow-lg rounded-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+          <div onClick={() => navigate("/ahooy")}
+           className="bg-[#F5F5F5] shadow-lg rounded-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
             <img src={img4} alt="Blog 3" className="w-full h-56 object-cover" />
             <div className="p-6">
               <div className="flex gap-2 mb-4">
@@ -120,7 +126,9 @@ const Blog = () => {
             </div>
           </div>
           {/* Card 5 */}
-          <div className="bg-[#F5F5F5] shadow-lg rounded-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+         
+          <div  onClick={() => navigate("/sarbuh")}
+           className="bg-[#F5F5F5] shadow-lg rounded-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
             <img src={img5} alt="Blog 3" className="w-full h-56 object-cover" />
             <div className="p-6">
               <div className="flex gap-2 mb-4">
@@ -144,7 +152,8 @@ const Blog = () => {
             </div>
           </div>
           {/* Card 6 */}
-          <div className="bg-[#F5F5F5] shadow-lg rounded-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+          <div   onClick={() => navigate("/henna")}
+           className="bg-[#F5F5F5] shadow-lg rounded-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
             <img src={img6} alt="Blog 3" className="w-full h-56 object-cover" />
             <div className="p-6">
               <div className="flex gap-2 mb-4">

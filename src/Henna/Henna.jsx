@@ -1,19 +1,24 @@
+
+import henna1 from "/article/landing (1).png"
+import henna2 from "/article/bridal henna.png"
+import henna3 from "/article/event henna 1.png"
 import { useEffect } from "react";
+
 
 const Henna = () => {
    useEffect(() => {
       window.scrollTo(0, 0); 
     }, []);
     return (
-      <div className="space-y-16 mt-10 mx-auto lg:w-[1260px] 2xl:w-[1440px] ">
+      <div className="space-y-16 mt-10 mx-auto  ">
         {/* Section 1 */}
-        <div className="px-4 md:px-10">
+        <div className="px-4 md:px-10 lg:ml-12">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center lg:ml-10 lg:mr-24">
             {/* Left Image */}
             <div className="flex justify-center">
               <img
                 className="w-full max-w-lg object-contain"
-                src="/article/landing (1).png"
+                src={henna1}
                 alt="Henna Ghizlan Website Preview"
               />
             </div>
@@ -21,7 +26,7 @@ const Henna = () => {
             {/* Right Details */}
             <div className="space-y-2">
               <h1 className=" text-xl lg:text-lg text-sky-400 font-bold">
-              Shiftguide: De Ultieme Roosterplanning App voor de Uitzendbranche en Multi-Location Bedrijven
+              Een Unieke Webshop voor een Henna-Artist: Creativiteit in Digitale Vorm
               </h1>
               <p className="text-sm sm:text-base font-serif text-slate-400 leading-relaxed">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
@@ -67,7 +72,7 @@ const Henna = () => {
           </div>
   
           {/* Description */}
-          <div className="mt-10 space-y-4 px-4 sm:px-6 md:px-8 lg:ml-20 lg:mr-20">
+          <div className="mt-10 space-y-4 px-4 sm:px-6 md:px-8 lg:ml-5 lg:mr-20">
             <p className="text-left text-sm text-slate-500 leading-relaxed">
               It is a long established fact that a reader will be distracted by the
               readable content of a page when looking at its layout. Lorem Ipsum has a
@@ -87,7 +92,7 @@ const Henna = () => {
           <div className="flex justify-start lg:ml-24">
             <img
               className="w-full max-w-lg object-contain"
-              src="/article/bridal henna.png"
+              src={henna2}
               alt="Bridal Henna"
             />
           </div>
@@ -110,7 +115,7 @@ const Henna = () => {
         <div className="px-4 md:px-10 flex justify-start lg:ml-24">
           <img
             className="w-full max-w-lg object-contain"
-            src="/article/event henna 1.png"
+            src={henna3}
             alt="Event Henna"
           />
         </div>

@@ -1,5 +1,9 @@
 import { useEffect } from "react";
 
+import finguide1 from "/src/assets/Finguide1.png"
+import finguide2 from "/src/assets/Finguide2.png"
+import finguide3 from "/src/assets/Finguide3.png"
+
 
 const Finguide = () => {
 
@@ -7,15 +11,15 @@ const Finguide = () => {
       window.scrollTo(0, 0); 
     }, []);
     return (
-        <div className="space-y-16 mt-10 mx-auto lg:w-[1260px] 2xl:w-[1440px] ">
+        <div className="space-y-16 mt-10 mx-auto  ">
         {/* Section 1 */}
-        <div className="px-4 md:px-10">
+        <div className="px-4 md:px-10 lg:ml-12">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center lg:ml-10 lg:mr-24">
             {/* Left Image */}
             <div className="flex justify-center">
               <img
                 className="w-full max-w-lg object-contain"
-                src="/src/assets/Finguide1.png"
+                src={finguide1}
                 alt="Henna Ghizlan Website Preview"
               />
             </div>
@@ -23,7 +27,7 @@ const Finguide = () => {
             {/* Right Details */}
             <div className="space-y-2">
               <h1 className=" text-xl lg:text-lg text-sky-400 font-bold">
-              Shiftguide: De Ultieme Roosterplanning App voor de Uitzendbranche en Multi-Location Bedrijven
+              FINGUIDE: Slimme Boekhouding met een Sterke Identiteit
               </h1>
               <p className="text-sm sm:text-base font-serif text-slate-400 leading-relaxed">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
@@ -69,7 +73,7 @@ const Finguide = () => {
           </div>
   
           {/* Description */}
-          <div className="mt-10 space-y-4 px-4 sm:px-6 md:px-8 lg:ml-20 lg:mr-20">
+          <div className="mt-10 space-y-4 px-4 sm:px-6 md:px-8 lg:ml-5 lg:mr-20">
             <p className="text-left text-sm text-slate-500 leading-relaxed">
             In de wereld van financiële software draait het vaak om cijfers, berekeningen 
             en strakke processen. Maar hoe maak je een boekhoudapplicatie niet alleen 
@@ -89,7 +93,7 @@ const Finguide = () => {
           <div className="flex justify-start lg:ml-24">
             <img
               className="w-full max-w-lg object-contain"
-              src="/src/assets/Finguide2.png"
+              src={finguide2}
               alt="Bridal Henna"
             />
           </div>
@@ -124,7 +128,7 @@ const Finguide = () => {
           <div className="flex justify-start lg:ml-24">
             <img
               className="w-full max-w-lg object-contain"
-              src="/src/assets/Finguide3.png"
+              src={finguide3}
               alt="Bridal Henna"
             />
           </div>
