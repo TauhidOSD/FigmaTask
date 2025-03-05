@@ -96,7 +96,7 @@ const Veelgestelde = () => {
               className={`flex justify-between items-center w-full text-left px-6 py-2 rounded-md shadow-md  
               ${
                 activeIndex === index
-                  ? "text-blue-600 bg-gray-100"
+                  ? "text-[#FFFFFF] bg-[#468AFF]"
                   : "text-black "
               }`}
             >
