@@ -5,7 +5,9 @@ import { ChevronDownIcon } from "@heroicons/react/24/solid";
 
 const Navbar = () => {
   const navigate = useNavigate();
-  const [activeDropdown, setActiveDropdown] = useState(null);
+  const [isMobileDropdownOpen, setIsMobileDropdownOpen] = useState(false);
+  const [isDienstenOpen, setIsDienstenOpen] = useState(false);
+  const [isPrijzenOpen, setIsPrijzenOpen] = useState(false);
 
   return (
     <header className="bg-[#FFFFFF] md:px-32 shadow-md sticky top-0 z-50">
@@ -17,7 +19,11 @@ const Navbar = () => {
 
         {/* Mobile Dropdown */}
         <div className="dropdown lg:hidden">
-          <button tabIndex={0} className="btn btn-ghost p-2">
+          <button
+            tabIndex={0}
+            className="btn btn-ghost p-2"
+            onClick={() => setIsMobileDropdownOpen(!isMobileDropdownOpen)}
+          >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               className="h-6 w-6"
@@ -33,45 +39,77 @@ const Navbar = () => {
               />
             </svg>
           </button>
-          <ul
-            tabIndex={0}
-            className="menu dropdown-content bg-white mt-2 p-2 shadow-lg rounded-box w-42 right-0 z-10"
-          >
-            <li className="z-20 -ml-4">
-              <PrijzenDropdown
-                activeDropdown={activeDropdown}
-                setActiveDropdown={setActiveDropdown}
-              />
-            </li>
-            <li className="z-10 -ml-4">
-              <DienstenDropdown
-                activeDropdown={activeDropdown}
-                setActiveDropdown={setActiveDropdown}
-              />
-            </li>
-            <li>
-              <a href="/Overons">Over Ons</a>
-            </li>
-            <li>
-              <a href="/Veelgestelde">FAQ</a>
-            </li>
-            <li>
-              <a href="/blog">Portfolio</a>
-            </li>
-          </ul>
+
+          {/* Mobile Dropdown Menu */}
+          {isMobileDropdownOpen && (
+            <div className="absolute right-0 mt-2 w-48 bg-white border rounded-lg shadow-lg transition-all duration-200 ease-in-out">
+              <div>
+                <button
+                  className="block px-4 py-2 text-gray-700"
+                  onClick={() => setIsDienstenOpen(!isDienstenOpen)}
+                >
+                  Diensten <ChevronDownIcon className="w-5 h-5 inline" />
+                </button>
+                {isDienstenOpen && (
+                  <div className="bg-white border rounded-lg shadow-lg">
+                    <a href="/appmarket" className="block px-4 py-2 hover:bg-gray-100">
+                      App Ontwikkeling
+                    </a>
+                    <a href="/Diensten" className="block px-4 py-2 hover:bg-gray-100">
+                      Branding
+                    </a>
+                    <a href="/marketing" className="block px-4 py-2 hover:bg-gray-100">
+                      Marketingsdiensten
+                    </a>
+                    <a href="/prijzen" className="block px-4 py-2 hover:bg-gray-100">
+                      Website Builder
+                    </a>
+                  </div>
+                )}
+              </div>
+
+              <div>
+                <button
+                  className="block px-4 py-2 text-gray-700"
+                  onClick={() => setIsPrijzenOpen(!isPrijzenOpen)}
+                >
+                  Prijzen <ChevronDownIcon className="w-5 h-5 inline" />
+                </button>
+                {isPrijzenOpen && (
+                  <div className="bg-white border rounded-lg shadow-lg">
+                    <a href="/startpagina" className="block px-4 py-2 hover:bg-gray-100">
+                      App Ontwikkeling
+                    </a>
+                    <a href="/PrijzenBranding" className="block px-4 py-2 hover:bg-gray-100">
+                      Branding
+                    </a>
+                    <a href="/PrijzenMarkeing" className="block px-4 py-2 hover:bg-gray-100">
+                      Marketingsdiensten
+                    </a>
+                    <a href="/prijzen" className="block px-4 py-2 hover:bg-gray-100">
+                      Website Builder
+                    </a>
+                  </div>
+                )}
+              </div>
+
+              <a href="/Overons" className="block px-4 py-2 hover:bg-gray-100">
+                Over Ons
+              </a>
+              <a href="/Veelgestelde" className="block px-4 py-2 hover:bg-gray-100">
+                FAQ
+              </a>
+              <a href="/blog" className="block px-4 py-2 hover:bg-gray-100">
+                Portfolio
+              </a>
+            </div>
+          )}
         </div>
 
         {/* Desktop Menu */}
         <div className="hidden lg:flex space-x-6 items-center">
-          <DienstenDropdown
-            activeDropdown={activeDropdown}
-            setActiveDropdown={setActiveDropdown}
-          />
-          <PrijzenDropdown
-            activeDropdown={activeDropdown}
-            setActiveDropdown={setActiveDropdown}
-          />
-
+          <DienstenDropdown />
+          <PrijzenDropdown />
           <a href="/Overons" className="text-gray-900 hover:text-blue-600">
             Over Ons
           </a>
@@ -97,15 +135,16 @@ const Navbar = () => {
 };
 
 // DienstenDropdown Component
-const DienstenDropdown = ({ activeDropdown, setActiveDropdown }) => {
-  const isOpen = activeDropdown === "diensten";
+const DienstenDropdown = () => {
+  const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className="relative inline-block text-left">
-      <button
-        onClick={() => setActiveDropdown(isOpen ? null : "diensten")}
-        className="flex items-center gap-2 px-4 py-2 text-gray-700 hover:text-black"
-      >
+    <div
+      className="relative inline-block text-left"
+      onMouseEnter={() => setIsOpen(true)}
+      onMouseLeave={() => setIsOpen(false)}
+    >
+      <button className="flex items-center gap-2 px-4 py-2 text-gray-700 hover:text-black">
         Diensten
         <ChevronDownIcon
           className="w-5 h-5 text-gray-500 transition-transform duration-200"
@@ -113,8 +152,9 @@ const DienstenDropdown = ({ activeDropdown, setActiveDropdown }) => {
         />
       </button>
 
+      {/* Show dropdown on hover */}
       {isOpen && (
-        <div className="absolute right-0 mt-2 w-48 bg-white border rounded-lg shadow-lg">
+        <div className="absolute right-0 w-48 bg-white border rounded-lg shadow-lg">
           <a href="/appmarket" className="block px-4 py-2 hover:bg-gray-100">
             App Ontwikkeling
           </a>
@@ -134,15 +174,16 @@ const DienstenDropdown = ({ activeDropdown, setActiveDropdown }) => {
 };
 
 // PrijzenDropdown Component
-const PrijzenDropdown = ({ activeDropdown, setActiveDropdown }) => {
-  const isOpen = activeDropdown === "prijzen";
+const PrijzenDropdown = () => {
+  const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className="relative inline-block text-left">
-      <button
-        onClick={() => setActiveDropdown(isOpen ? null : "prijzen")}
-        className="flex items-center gap-2 px-4 py-2 text-gray-700 hover:text-black"
-      >
+    <div
+      className="relative inline-block text-left"
+      onMouseEnter={() => setIsOpen(true)}
+      onMouseLeave={() => setIsOpen(false)}
+    >
+      <button className="flex items-center gap-2 px-4 py-2 text-gray-700 hover:text-black">
         Prijzen
         <ChevronDownIcon
           className="w-5 h-5 text-gray-500 transition-transform duration-200"
@@ -150,8 +191,9 @@ const PrijzenDropdown = ({ activeDropdown, setActiveDropdown }) => {
         />
       </button>
 
+      {/* Show dropdown on hover */}
       {isOpen && (
-        <div className="absolute right-0 mt-2 w-48 bg-white border rounded-lg shadow-lg">
+        <div className="absolute right-0 w-48 bg-white border rounded-lg shadow-lg">
           <a href="/startpagina" className="block px-4 py-2 hover:bg-gray-100">
             App Ontwikkeling
           </a>
