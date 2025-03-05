@@ -152,7 +152,7 @@ const Blog = () => {
             </div>
           </div>
           {/* Card 6 */}
-          <div   onClick={() => navigate("/sarbuh")}
+          <div   onClick={() => navigate("/henna")}
            className="bg-[#F5F5F5] shadow-lg rounded-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
             <img src={img6} alt="Blog 3" className="w-full h-56 object-cover" />
             <div className="p-6">
