@@ -1,7 +1,6 @@
 import Banner from "../Banner/Banner";
 import Card from "../Card/Card";
-import Onze from "../Onze/Onze";
-import Prest from "../Prest/Prest";
+import Onze from "../Onze/Onze"
 import Waaram from "../Waarom/Waaram";
 
 

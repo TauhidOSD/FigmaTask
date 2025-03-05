@@ -1,9 +1,14 @@
+import { useEffect } from "react";
 
 import sarburh1 from "/src/assets/Sarbuh1.png"
 import sarburh2 from "/src/assets/Sarbuh2.png"
 
 
 const Sarbuh = () => {
+
+   useEffect(() => {
+      window.scrollTo(0, 0); 
+    }, []);
     return (
         <div className="space-y-16 mt-10 mx-auto ">
         {/* Section 1 */}

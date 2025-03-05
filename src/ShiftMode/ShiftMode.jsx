@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 
 import shift1 from "/src/shassets/shift_guide.png"
 import shift2 from "/src/shassets/shift_guide1.png"
@@ -5,6 +6,11 @@ import shift3 from "/src/shassets/shift_guide2.png"
 import shift4 from "/src/shassets/shift_guide3.png"
 
 const ShiftMode = () => {
+
+  useEffect(() => {
+    window.scrollTo(0, 0); 
+  }, []);
+
     return (
         <div className="space-y-16 mt-10 mx-auto  ">
         {/* Section 1 */}

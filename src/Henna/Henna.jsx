@@ -2,9 +2,13 @@
 import henna1 from "/article/landing (1).png"
 import henna2 from "/article/bridal henna.png"
 import henna3 from "/article/event henna 1.png"
+import { useEffect } from "react";
 
 
 const Henna = () => {
+   useEffect(() => {
+      window.scrollTo(0, 0); 
+    }, []);
     return (
       <div className="space-y-16 mt-10 mx-auto  ">
         {/* Section 1 */}

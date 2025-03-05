@@ -1,9 +1,14 @@
+import { useEffect } from "react";
 
 import ahoyy1 from "/src/assets/Ohoyy1.png"
 import ahoyy2 from "/src/assets/Ohoyy2.png"
 
 
 const Ahoyy = () => {
+
+   useEffect(() => {
+      window.scrollTo(0, 0); 
+    }, []);
     return (
         <div className="space-y-16 mt-10 mx-auto  ">
         {/* Section 1 */}

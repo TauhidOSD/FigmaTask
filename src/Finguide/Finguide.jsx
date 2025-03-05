@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 
 import finguide1 from "/src/assets/Finguide1.png"
 import finguide2 from "/src/assets/Finguide2.png"
@@ -5,6 +6,10 @@ import finguide3 from "/src/assets/Finguide3.png"
 
 
 const Finguide = () => {
+
+   useEffect(() => {
+      window.scrollTo(0, 0); 
+    }, []);
     return (
         <div className="space-y-16 mt-10 mx-auto  ">
         {/* Section 1 */}

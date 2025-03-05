@@ -1,9 +1,13 @@
+import { useEffect } from "react";
 
 import fluentlee1 from "/src/assets/Fluentlee1.png"
 import fluentlee2 from "/src/assets/Fluentlee2.png"
 import fluentlee3 from "/src/assets/Flunetlee3.png"
 
 const Fluentlee = () => {
+   useEffect(() => {
+      window.scrollTo(0, 0); 
+    }, []);
     return (
         <div className="space-y-16 mt-10 mx-auto  ">
         {/* Section 1 */}
