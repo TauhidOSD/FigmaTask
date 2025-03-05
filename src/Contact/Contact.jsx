@@ -107,6 +107,30 @@ const Contact = () => {
                 />
               </div>
             </div>
+            <div className="lg:flex lg:space-x-4 space-y-4 lg:space-y-0">
+              <div className="flex-1">
+                <label className="block mb-2 text-sm font-medium" htmlFor="name">
+                Telefoon nee
+                </label>
+                <input
+                  type="text"
+                  id="name"
+                  placeholder="Voer telefoon nr in"
+                  className="input input-bordered w-full font-plus-jakarta text-[#7E7E7E]"
+                />
+              </div>
+              <div className="flex-1">
+                <label className="block mb-2 text-sm font-medium" htmlFor="email">
+                Bedrijfsnaam
+                </label>
+                <input
+                  type="email"
+                  id="email"
+                  placeholder="Voer de bedrijfsnaam in"
+                  className="input input-bordered w-full font-plus-jakarta text-[#7E7E7E]"
+                />
+              </div>
+            </div>
 
             <div className="lg:flex lg:space-x-4 space-y-4 lg:space-y-0">
               <div className="flex-1">
