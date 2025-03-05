@@ -310,7 +310,7 @@ const Appmarket = () => {
                 toggleSection("logo");
                 onChangeColor(setColor);
               }}
-              className={`w-full drop-shadow-[0_0_10px_rgba(0,0,0,0.4)] bg-[#FFFFFF] text-[#263238] py-2 px-4 text-left rounded-md flex justify-between items-center ${color}`}
+              className={`w-full shadow-md bg-[#FFFFFF] text-[#263238] py-2 px-4 text-left rounded-md flex justify-between items-center ${color}`}
             >
               Hoe lang duurt het om een app te ontwikkelen?
               <GoChevronDown
@@ -337,7 +337,7 @@ const Appmarket = () => {
                 toggleSection("printMedian");
                 onChangeColor(setColor1);
               }}
-              className={`w-full drop-shadow-[0_0_10px_rgba(0,0,0,0.4)] bg-[#FFFFFF] text-[#263238] py-2 px-4 text-left rounded-md flex justify-between items-center ${color1}`}
+              className={`w-full shadow-md bg-[#FFFFFF] text-[#263238] py-2 px-4 text-left rounded-md flex justify-between items-center ${color1}`}
             >
               Wat voor soort apps ontwikkelen jullie?
               <GoChevronDown
@@ -364,7 +364,7 @@ const Appmarket = () => {
                 toggleSection("printMedia");
                 onChangeColor(setColor2);
               }}
-              className={`w-full drop-shadow-[0_0_10px_rgba(0,0,0,0.4)] bg-[#FFFFFF] text-[#263238] py-2 px-4 text-left rounded-md flex justify-between items-center ${color2}`}
+              className={`w-full shadow-md bg-[#FFFFFF] text-[#263238] py-2 px-4 text-left rounded-md flex justify-between items-center ${color2}`}
             >
               Bieden jullie ondersteuning na de lancering?
               <GoChevronDown
