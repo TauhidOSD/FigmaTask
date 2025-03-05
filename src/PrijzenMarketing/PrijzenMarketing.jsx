@@ -1,18 +1,55 @@
 import { FaChevronDown, FaUpload } from "react-icons/fa";
 import das from "../assets/das.png";
+import bg1 from "../assets/bg1.jpeg";
 
 const PrijzenMarketing = () => {
   return (
     <>
       <div className="bg-[#F5F5F5] w-full flex flex-col items-center py-16">
         <h1 className="text-xl font-bold text-gray-800">
-        App ontwikkeling Prijsplannen
+          App ontwikkeling Prijsplannen
         </h1>
         <h1 className="flex items-center gap-2 text-gray-600 text-sm md:text-base">
           Home
           <img className="w-5 h-[2px]" src={das} alt="separator" />
           Prijzen
         </h1>
+      </div>
+      {/*Hero section P-M */}
+      <div
+        className="hero h-[500px] md:h-[444px] lg:h-[444px]"
+        style={{
+          backgroundImage: `url(${bg1})`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+        }}
+      >
+        <div className="hero-overlay"></div>
+        <div className="hero-content text-neutral-content text-center">
+          <div className="px-4 md:px-8 lg:px-12">
+            <h1 className="mb-4 text-3xl md:text-5xl font-bold text-[#FFFFFF] font-plus-jakarta">
+              Applicatie Ontwikkeling
+            </h1>
+            <p className="mb-4 text-sm md:text-base text-[#FFFFFF] font-plus-jakarta">
+              Bij Younitech staan we bekend om onze toewijding aan het leveren
+              van hoogwaardige app-ontwikkelingsdiensten die voldoen aan de
+              unieke behoeften van onze klanten. Of je nu een iOS, Android of
+              cross-platform app nodig hebt, ons ervaren team van ontwikkelaars
+              staat klaar om jouw ideeën tot leven te brengen. Van concept tot
+              lancering en daar voorbij, we zorgen ervoor dat jouw app zowel
+              functioneel als gebruiksvriendelijk is.
+            </p>
+            <p className="mb-2 pt-4 text-sm md:text-base text-[#FFFFFF] font-plus-jakarta">
+            Vul het onderstaande formulier in om jouw aanvraag zo volledig mogelijk te maken.
+            </p>
+            <p className="mb-4 text-sm md:text-base text-[#FFFFFF] font-plus-jakarta">
+           {" "}
+            Hulp nodig? Neem contact met ons op via  of de 
+              <span className="text-[#407BFF]">e-mail, telefoon </span> of de{" "}
+              <span className="text-[#407BFF]">contactpagina.</span>
+            </p>
+          </div>
+        </div>
       </div>
       {/* First Part */}
       <div className="md:px-36 px-6 mx-auto">
