@@ -155,7 +155,7 @@ const Card = () => {
         </div>
         {/* Card 5 */}
         <div
-          onClick={() => navigate("/sarbuh")}
+          onClick={() => navigate("/henna")}
           className="bg-[#F5F5F5] shadow-lg rounded-lg overflow-hidden hover:shadow-xl transition-shadow duration-300"
         >
           <img src={img9} alt="Blog 3" className="w-full h-56 object-cover" />
@@ -183,7 +183,7 @@ const Card = () => {
         </div>
         {/* Card 6 */}
         <div
-          onClick={() => navigate("/henna")}
+          onClick={() => navigate("/sarbuh")}
           className="bg-[#F5F5F5] shadow-lg rounded-lg overflow-hidden hover:shadow-xl transition-shadow duration-300"
         >
           <img src={img8} alt="Blog 3" className="w-full h-56 object-cover" />

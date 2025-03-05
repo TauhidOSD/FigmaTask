@@ -1,16 +1,19 @@
 
+import fluentlee1 from "/src/assets/Fluentlee1.png"
+import fluentlee2 from "/src/assets/Fluentlee2.png"
+import fluentlee3 from "/src/assets/Flunetlee3.png"
 
 const Fluentlee = () => {
     return (
-        <div className="space-y-16 mt-10 mx-auto lg:w-[1260px] 2xl:w-[1440px] ">
+        <div className="space-y-16 mt-10 mx-auto  ">
         {/* Section 1 */}
-        <div className="px-4 md:px-10">
+        <div className="px-4 md:px-10 lg:ml-12">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center lg:ml-10 lg:mr-24">
             {/* Left Image */}
             <div className="flex justify-center">
               <img
                 className="w-full max-w-lg object-contain"
-                src="/src/assets/Fluentlee1.png"
+                src={fluentlee1}
                 alt="Henna Ghizlan Website Preview"
               />
             </div>
@@ -18,7 +21,7 @@ const Fluentlee = () => {
             {/* Right Details */}
             <div className="space-y-2">
               <h1 className=" text-xl lg:text-lg text-sky-400 font-bold">
-              Shiftguide: De Ultieme Roosterplanning App voor de Uitzendbranche en Multi-Location Bedrijven
+              FluentLee: Taal Leren op een Onconventionele en Speelse Manier
               </h1>
               <p className="text-sm sm:text-base font-serif text-slate-400 leading-relaxed">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
@@ -64,7 +67,7 @@ const Fluentlee = () => {
           </div>
   
           {/* Description */}
-          <div className="mt-10 space-y-4 px-4 sm:px-6 md:px-8 lg:ml-20 lg:mr-20">
+          <div className="mt-10 space-y-4 px-4 sm:px-6 md:px-8 lg:ml-5 lg:mr-20">
             <p className="text-left text-sm text-slate-500 leading-relaxed">
             Taal leren hoeft niet saai of eenzijdig te zijn. Met FluentLee introduceren we een geheel nieuwe manier om een taal onder 
             de knie te krijgen: peer-to-peer leerplatform onder toezicht van een docent. Dit innovatieve taalplatform maakt gebruik van speelse methoden, moderne technologieën en bewezen wetenschappelijke leermethoden om taalontwikkeling toegankelijk en leuk te maken.
@@ -78,7 +81,7 @@ const Fluentlee = () => {
           <div className="flex justify-start lg:ml-24">
             <img
               className="w-full max-w-lg object-contain"
-              src="/src/assets/Fluentlee2.png"
+              src={ fluentlee2}
               alt="Bridal Henna"
             />
           </div>
@@ -145,18 +148,12 @@ De combinatie van technologie, psychologie en community-based learning maakt Flu
           <div className="flex justify-start lg:ml-24">
             <img
               className="w-full max-w-lg object-contain"
-              src="/src/assets/Flunetlee3.png"
+              src={fluentlee3}
               alt="Bridal Henna"
             />
           </div>
         </div>
                    
-
-
-
-
-
-
       </div>
     );
 };
