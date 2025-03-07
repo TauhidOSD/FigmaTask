@@ -6,8 +6,13 @@ import img5 from "../assets/Article (6).png";
 import img6 from "../assets/mehadi.jpg";
 import das from "../assets/das.png"
 import { useNavigate } from "react-router-dom";
+import { useEffect } from "react";
 
 const Blog = () => {
+
+  useEffect(() => {
+        window.scrollTo(0, 0); 
+      }, []);
   const navigate = useNavigate();
 
   return (

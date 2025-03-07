@@ -1,9 +1,13 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import icon from "../assets/Vector (2).png";
 import das from "../assets/das.png";
 import { RiArrowDropDownLine } from "react-icons/ri";
 
 const Veelgestelde = () => {
+
+  useEffect(() => {
+        window.scrollTo(0, 0); 
+      }, []);
   const [activeIndex, setActiveIndex] = useState(null);
 
   const toggleContent = (index) => {

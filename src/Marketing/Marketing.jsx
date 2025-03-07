@@ -1,6 +1,6 @@
 import sophie from "../shassets/avater-testi-1.png.png";
 import mark from "../shassets/avater-testi-2.png.png";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import img from "../shassets/consult.png";
 import { GoChevronDown } from "react-icons/go";
 import i1 from "../assets/Vector11.png";
@@ -13,6 +13,11 @@ import das from "../assets/das.png"
 import { useNavigate } from "react-router-dom";
 
 const Marketing = () => {
+
+  useEffect(() => {
+        window.scrollTo(0, 0); 
+      }, []);
+
   const navigate = useNavigate();
   const [activeSection, setActiveSection] = useState(null);
 

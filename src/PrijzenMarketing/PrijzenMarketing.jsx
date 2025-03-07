@@ -1,9 +1,15 @@
 import { FaChevronDown, FaUpload } from "react-icons/fa";
 import das from "../assets/das.png";
 import bg1 from "../assets/bg1.jpeg";
+import { useEffect } from "react";
 
 const PrijzenMarketing = () => {
+
+  useEffect(() => {
+        window.scrollTo(0, 0); 
+      }, []);
   return (
+
     <>
       <div className="bg-[#F5F5F5] w-full flex flex-col items-center py-16">
         <h1 className="text-xl font-bold text-gray-800">

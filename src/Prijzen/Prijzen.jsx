@@ -1,10 +1,15 @@
-import  { useState  } from "react";
+import  { useEffect, useState  } from "react";
 import { useNavigate } from "react-router-dom";
 import img from "../assets/rafiki6.png";
 import img1 from "../assets/Group 1000005744.png";
 import das from "../assets/das.png";
 
 const Prijzen = () => {
+
+  useEffect(() => {
+        window.scrollTo(0, 0); 
+      }, []);
+      
   const [cards, setCards] = useState([]); // State to hold fetched data
   const [selectedCard, setSelectedCard] = useState(null); // Track selected card
   const navigate = useNavigate(); // Navigate to another route
