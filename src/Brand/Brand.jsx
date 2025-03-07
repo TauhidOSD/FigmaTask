@@ -63,31 +63,27 @@ const Brand = () => {
 
       {/* Right Section with Questions */}
       <div className="w-full lg:w-1/2 space-y-6">
-        {questions.map((item, index) => (
-                  <div key={index} className="mb-4">
-                    <button
-                      onClick={() => toggleContent(index)}
-                      className={`flex justify-between items-center w-full text-left px-6 py-2 rounded-md shadow-md  
-                      ${
-                        activeIndex === index
-                          ? "text-[#FFFFFF] bg-[#468AFF]"
-                          : "text-black "
-                      }`}
-                    >
-                      {item.question}
-                      <RiArrowDropDownLine
-                        className={`w-6 h-6 text-black transition-transform duration-300 ${
-                          activeIndex === index ? "rotate-180" : ""
-                        }`}
-                      />
-                    </button>
-                    {activeIndex === index && (
-                      <div className=" p-4 rounded  mt-2">
-                        <p className="text-sm">{item.answer}</p>
-                      </div>
-                    )}
-                  </div>
-                ))}
+      {questions.map((item, index) => (
+            <div key={index} className="mb-4">
+              <button
+                onClick={() => toggleContent(index)}
+                className={`flex justify-between items-center w-full text-left px-6 py-2 rounded-md shadow-md  
+              ${activeIndex === index ? "text-[#FFFFFF] bg-[#468AFF]" : "text-black"}`}
+              >
+                {item.question}
+                <RiArrowDropDownLine
+                  className={`w-6 h-6 transition-transform duration-300 ${
+                    activeIndex === index ? "rotate-180 text-[#FFFFFF]" : "text-black"
+                  }`}
+                />
+              </button>
+              {activeIndex === index && (
+                <div className="p-4 rounded mt-2">
+                  <p className="text-sm">{item.answer}</p>
+                </div>
+              )}
+            </div>
+          ))}
       </div>
     </div>
   );
