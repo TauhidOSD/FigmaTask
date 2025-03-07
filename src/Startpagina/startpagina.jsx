@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import img from "../assets/rafiki3.png";
 import icon from "../assets/white.png";
 import blueIcon from "../assets/blue.png";
@@ -6,6 +6,10 @@ import das from "../assets/das.png"
 // Add a fully blue version of the icon
 
 const Startpagina = () => {
+
+  useEffect(() => {
+        window.scrollTo(0, 0); 
+      }, []);
   const [selectedCard, setSelectedCard] = useState(null);
 
   // Data for cards

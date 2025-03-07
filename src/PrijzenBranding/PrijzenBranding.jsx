@@ -1,7 +1,14 @@
 import { FaChevronDown, FaUpload } from "react-icons/fa";
 import das from "../assets/das.png";
 import bg from "../assets/bg.jpeg";
+import { useEffect } from "react";
 const PrijzenBranding = () => {
+
+
+  useEffect(() => {
+        window.scrollTo(0, 0); 
+      }, []);
+
   return (
     <>
       <div className="bg-[#F5F5F5] w-full flex flex-col items-center py-16">

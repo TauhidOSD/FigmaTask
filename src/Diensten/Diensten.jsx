@@ -16,10 +16,15 @@ import im2 from "../assets/im2.png"
 import das from "../assets/das.png"
 import { GoArrowRight } from "react-icons/go";
 import Vragen from "../Vragen/Vragen";
+import { useEffect } from "react";
 // import img2 from "../assets/avater-testi-2.png.png";
 // import img3 from "../assets/avater-testi-3.png.png";
 
 const Diensten = () => {
+
+  useEffect(() => {
+        window.scrollTo(0, 0); 
+      }, []);
   return (
    <>
     <div className="bg-[#F5F5F5] w-full flex flex-col items-center py-16">

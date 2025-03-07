@@ -1,6 +1,12 @@
+import { useEffect } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 
 const CardsComponent = () => {
+
+  useEffect(() => {
+        window.scrollTo(0, 0); 
+      }, []);
+
   const location = useLocation();
   const navigate = useNavigate();
 

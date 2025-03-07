@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { GoChevronDown } from "react-icons/go";
 import span4 from "../shassets/span (4).png";
 import span5 from "../shassets/span (5).png";
@@ -18,6 +18,12 @@ import "@fontsource/plus-jakarta-sans/700.css";
 import "@fontsource/plus-jakarta-sans/500.css";
 
 const Appmarket = () => {
+
+
+ useEffect(() => {
+       window.scrollTo(0, 0); 
+     }, []);
+  
   const [activeSection, setActiveSection] = useState(null);
 
   const toggleSection = (section) => {
