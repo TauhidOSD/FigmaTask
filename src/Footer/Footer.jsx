@@ -76,13 +76,13 @@ const Footer = () => {
             <h3 className="text-lg font-semibold">Prijzen</h3>
             <ul className="space-y-4 text-gray-900 text-sm">
             <li className="hover:text-blue-600 cursor-pointer transition-colors">
-                <Link to="/startpagina">App ontwikkeling</Link>
+                <Link to="/PrijzenMarkeing ">App ontwikkeling</Link>
               </li>
               <li className="hover:text-blue-600 cursor-pointer transition-colors">
                 <Link to="/PrijzenBranding">Branding</Link>
               </li>
               <li className="hover:text-blue-600 cursor-pointer transition-colors">
-                <Link to="/PrijzenMarkeing">Marketingsdiensten</Link>
+                <Link to="/startpagina">Marketingsdiensten</Link>
               </li>
               <li className="hover:text-blue-600 cursor-pointer transition-colors">
                 <Link to="/prijzen">Website builder</Link>
@@ -93,11 +93,11 @@ const Footer = () => {
           <div className="space-y-5 ">
             <h3 className="text-lg font-semibold"><Link to="/Overons">Over ons</Link> </h3>
             <ul className="space-y-4 text-gray-900 text-sm">
-              <li className="hover:text-blue-600 cursor-pointer transition-colors font-bold">
+              <li className="hover:text-blue-600 cursor-pointer transition-colors">
               <Link to="/Veelgestelde"> FAQ</Link>
                
               </li>
-              <li className="hover:text-blue-600 cursor-pointer transition-colors font-bold">
+              <li className="hover:text-blue-600 cursor-pointer transition-colors ">
               <Link to="/blog"> Portfolio</Link>
                 
               </li>

@@ -2,9 +2,10 @@ import bgImg from "../assets/Background (5).png";
 import image from "../assets/Image.png";
 import icon from "../assets/icon.png";
 import icon1 from "../assets/Icon (1).png";
-
+import { useNavigate } from "react-router-dom";
 
 const Waaram = () => {
+  const navigate = useNavigate();
   return (
     <div className="relative bg-white py-16">
       {/* Background Section */}
@@ -73,7 +74,7 @@ const Waaram = () => {
           </div>
 
           <div className="flex justify-center lg:justify-start ">
-            <button className="bg-[#263238] text-white py-3 px-5 sm:px-6 rounded-lg shadow-lg hover:bg-[#1e2a30] transition duration-300 ease-in-out">
+            <button onClick={() => navigate("/overons")} className="bg-[#263238] text-white py-3 px-5 sm:px-6 rounded-lg shadow-lg hover:bg-[#1e2a30] transition duration-300 ease-in-out">
               Ontdek meer over onze aanpak
             </button>
           </div>

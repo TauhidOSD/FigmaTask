@@ -52,7 +52,7 @@ const PrijzenBranding = () => {
             <p className="mb-4 text-sm md:text-base text-[#FFFFFF] font-plus-jakarta">
               Kom je er niet uit? Neem gerust contact met ons op via{" "}
               <span className="text-[#407BFF]">e-mail, telefoon </span> of de{" "}
-              <span className="text-[#407BFF]">contactpagina.</span>
+              <a href="/Contact"><span className="text-[#407BFF]">contactpagina.</span></a>
             </p>
           </div>
         </div>
@@ -318,7 +318,7 @@ const PrijzenBranding = () => {
         </div>
         <div className="flex justify-center items-center md:my-8 my-4 ">
           <button className="btn hover:bg-[#468AFFE6] bg-[#468AFF]  md:px-32 px-36 py-2 text-[#FFFFFF] text-lg md:text-md lg:text-xl">
-            Nu Kopen
+          Boek een offerte
           </button>
         </div>
       </div>
