@@ -44,10 +44,10 @@ const Marketing = () => {
           </div>
           <div className="mb-6">
             <h1 className=" text-3xl lg:text-[40px] font-plus-jakarta font-bold text-left ">
-              Marketingont
+              Marketing
             </h1>
             <h1 className="text-3xl lg:text-4xl font-bold text-left mb-3 relative ">
-              wikkeling
+            Ontwikkeling
             </h1>
             {/* <img className="-mt-6 w-40 lg:w-64" src="/article/Heading 2.png" alt=""></img>*/}
           </div>
@@ -90,8 +90,8 @@ const Marketing = () => {
 
           <div className="mt-5 mr-6">
             <button
-              onClick={() => navigate("/Contact")}
-              className="btn btn-sm btn-info text-slate-100 w-40"
+              onClick={() => navigate("/startpagina")}
+              className="btn btn-sm hover:bg-[#468AFFE6] bg-[rgba(70,138,255,1)] text-slate-100 w-40"
             >
               Bereik jouw klant
             </button>
@@ -241,10 +241,10 @@ const Marketing = () => {
           <h1 className="font-bold text-xl lg:text-2xl">
             gemeenschap van tevreden klanten
           </h1>
-          <p className="mb-7 font-serif text-slate-600">
+          <p className="mb-7 font-plus-jakarta font-medium text-[20px] text-slate-600">
             U heeft de ideeën, wij hebben de tools
           </p>
-          <button className=" btn-info relative text-white btn bg-[#468AFF] px-6 py-2 sm:px-8 sm:py-3 rounded-lg shadow-lg transition-all duration-300 ease-in-out hover:bg-[#3570D4] hover:scale-105 active:scale-95 focus:outline-none text-sm sm:text-base ">
+          <button  onClick={() => navigate("/startpagina")} className=" btn-info relative text-white btn bg-[#468AFF] px-6 py-2 sm:px-8 sm:py-3 rounded-lg shadow-lg transition-all duration-300 ease-in-out hover:bg-[#3570D4] hover:scale-105 active:scale-95 focus:outline-none text-sm sm:text-base ">
             Aan de Slag
           </button>
         </div>

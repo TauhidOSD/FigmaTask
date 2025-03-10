@@ -52,16 +52,16 @@ const Navbar = () => {
                 </button>
                 {isDienstenOpen && (
                   <div className="bg-white border rounded-lg shadow-lg">
-                    <a href="/appmarket" className="block px-4 py-2 hover:bg-gray-100">
+                    <a href="/appmarket" className="block  px-4  py-2 hover:bg-gray-100">
                       App Ontwikkeling
                     </a>
-                    <a href="/Diensten" className="block px-4 py-2 hover:bg-gray-100">
+                    <a href="/Diensten" className="block  px-4 py-2 hover:bg-gray-100">
                       Branding
                     </a>
-                    <a href="/marketing" className="block px-4 py-2 hover:bg-gray-100">
+                    <a href="/marketing" className="block  px-4 py-2 hover:bg-gray-100">
                       Marketingsdiensten
                     </a>
-                    <a href="/prijzen" className="block px-4 py-2 hover:bg-gray-100">
+                    <a href="/prijzen" className="block  px-4 py-2 hover:bg-gray-100">
                       Website Builder
                     </a>
                   </div>
@@ -147,7 +147,7 @@ const DienstenDropdown = () => {
       <button className="flex items-center gap-2 px-4 py-2 text-gray-700 hover:text-black">
         Diensten
         <ChevronDownIcon
-          className="w-5 h-5 text-gray-500 transition-transform duration-200"
+          className="w-5 h-5 text-black transition-transform duration-200"
           style={{ transform: isOpen ? "rotate(180deg)" : "rotate(0deg)" }}
         />
       </button>
@@ -186,7 +186,7 @@ const PrijzenDropdown = () => {
       <button className="flex items-center gap-2 px-4 py-2 text-gray-700 hover:text-black">
         Prijzen
         <ChevronDownIcon
-          className="w-5 h-5 text-gray-500 transition-transform duration-200"
+          className="w-5 h-5 text-black transition-transform duration-200"
           style={{ transform: isOpen ? "rotate(180deg)" : "rotate(0deg)" }}
         />
       </button>
@@ -194,7 +194,7 @@ const PrijzenDropdown = () => {
       {/* Show dropdown on hover */}
       {isOpen && (
         <div className="absolute right-0 w-48 bg-white border rounded-lg shadow-lg">
-          <a href="/startpagina" className="block px-4 py-2 hover:bg-gray-100">
+          <a href="/PrijzenMarkeing" className="block px-4 py-2 hover:bg-gray-100">
             App Ontwikkeling
           </a>
           <a
@@ -204,7 +204,7 @@ const PrijzenDropdown = () => {
             Branding
           </a>
           <a
-            href="/PrijzenMarkeing"
+            href="/startpagina "
             className="block px-4 py-2 hover:bg-gray-100"
           >
             Marketingsdiensten

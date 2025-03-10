@@ -20,7 +20,10 @@ import { useEffect } from "react";
 // import img2 from "../assets/avater-testi-2.png.png";
 // import img3 from "../assets/avater-testi-3.png.png";
 
+import { useNavigate } from "react-router-dom";
+
 const Diensten = () => {
+  const navigate = useNavigate();
 
   useEffect(() => {
         window.scrollTo(0, 0); 
@@ -137,8 +140,8 @@ const Diensten = () => {
               Onze brandingoplossingen
             </h1>
             <div className="flex items-center gap-4">
-              <button className="px-4 py-2 flex justify-center items-center gap-2 bg-blue-500 text-white font-semibold rounded-lg shadow-md hover:bg-blue-600">
-                Nu Kopen{" "}
+              <button onClick={() => navigate("/PrijzenBranding")} className="px-4 py-2 flex justify-center items-center gap-2 bg-blue-500 text-white font-semibold rounded-lg shadow-md hover:bg-blue-600">
+              Boek een offerte{" "}
                 <span className="text-xl">
                   <GoArrowRight />
                 </span>
@@ -165,7 +168,7 @@ const Diensten = () => {
                 />
               </div>
               <h1 className="text-lg font-semibold text-gray-800">
-                strategie en conceptontwerp
+                Strategie en conceptontwerp
               </h1>
               <h2 className="text-gray-600 mt-2">
                 Zet uw ideeën om in een doordachte strategie.

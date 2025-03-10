@@ -50,9 +50,9 @@ const PrijzenMarketing = () => {
             </p>
             <p className="mb-4 text-sm md:text-base text-[#FFFFFF] font-plus-jakarta">
            {" "}
-            Hulp nodig? Neem contact met ons op via  of de 
-              <span className="text-[#407BFF]">e-mail, telefoon </span> of de{" "}
-              <span className="text-[#407BFF]">contactpagina.</span>
+            Hulp nodig? Neem contact met ons op via of de 
+              <span className="text-[#407BFF]"> e-mail, telefoon </span> of de{" "}
+              <a href="/Contact"> <span className="text-[#407BFF]">contactpagina.</span></a>
             </p>
           </div>
         </div>
@@ -307,7 +307,7 @@ const PrijzenMarketing = () => {
                 </h2>
 
                 <textarea
-                  placeholder="Verzoeken en vragenBio"
+                  placeholder="Verzoeken en vragen"
                   className="textarea  textarea-bordered textarea-lg w-full max-w-full"
                 ></textarea>
               </div>
@@ -316,7 +316,7 @@ const PrijzenMarketing = () => {
         </div>
         <div className="flex justify-center items-center md:my-8 my-4 ">
           <button className="btn hover:bg-[#468AFFE6] bg-[#468AFF]  md:px-32 px-36 py-2 text-[#FFFFFF] text-lg md:text-md lg:text-xl">
-            Nu Kopen
+          Boek een offerte
           </button>
         </div>
       </div>

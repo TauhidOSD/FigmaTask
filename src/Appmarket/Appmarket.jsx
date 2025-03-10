@@ -17,10 +17,10 @@ import das from "../assets/das.png"
 import "@fontsource/plus-jakarta-sans/700.css";
 import "@fontsource/plus-jakarta-sans/500.css";
 import { RiArrowDropDownLine } from "react-icons/ri";
-
+import { useNavigate } from "react-router-dom";
 const Appmarket = () => {
 
-
+  const navigate = useNavigate();
  useEffect(() => {
        window.scrollTo(0, 0); 
      }, []);
@@ -408,7 +408,7 @@ const Appmarket = () => {
 
           <div className=" flex justify-start">
             {" "}
-            <button className="px-4 py-2 rounded-lg bg-[rgba(70,138,255,1)] text-[16px] text-[rgba(255,255,255,1)] font-plus-jakarta">
+            <button onClick={() => navigate("/PrijzenMarkeing")} className="px-4 py-2 rounded-lg bg-[rgba(70,138,255,1)] text-[16px] text-[rgba(255,255,255,1)] font-plus-jakarta">
               Boek nu je offerte!
             </button>
           </div>
