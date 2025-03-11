@@ -38,6 +38,7 @@ import Finguide from './Finguide/Finguide.jsx';
 import Fluentlee from './Fluentlee/Fluentlee.jsx';
 import Ahoyy from './Ahoyy/Ahoyy.jsx';
 import Sarbuh from './Sarbuh/Sarbuh.jsx';
+import SecondCardInputField from './SecondCardInputField/SecondCardInputField.jsx';
 
 // Load Stripe
 const stripePromise = loadStripe("your-public-stripe-key");
@@ -146,6 +147,10 @@ const router = createBrowserRouter([
       {
         path: "/InputField",
         element: <InputField />,
+      },
+      {
+          path: "/SecondCardInputField",
+          element:<SecondCardInputField/>
       },
 
       {
