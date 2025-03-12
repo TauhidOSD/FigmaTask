@@ -1,6 +1,4 @@
-import das from "../assets/das.png";
-import bg from "../assets/bg.jpeg";
-import { FaChevronDown, FaUpload } from "react-icons/fa";
+import { FaChevronDown } from "react-icons/fa";
 import { useEffect } from "react";
 
 const SecondCardInputField = () => {
