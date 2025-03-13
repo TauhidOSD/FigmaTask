@@ -5,14 +5,24 @@ import pay3 from "../assets/credit-card (2).png";
 import pay4 from "../assets/credit-card (3).png";
 import pay5 from "../assets/credit-card (4).png";
 import pay6 from "../assets/credit-card (5).png";
+import card from "../assets/card1.png";
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
+import { useEffect } from "react";
 
 const Payment = () => {
+
+
+  useEffect(() => {
+        window.scrollTo(0, 0); 
+      }, []);useEffect(() => {
+        window.scrollTo(0, 0); 
+      }, []);
+
   return (
-    <div className="py-10 px-6 sm:px-10 md:px-16 lg:px-36">
+    <div className="py-10 px-6 sm:px-10 md:px-16 lg:px-36 flex flex-col-reverse  sm:flex-row   gap-4 ">
       {/* left */}
-      <div className="w-[744px]">
-        <div className="flex  gap-6 ">
+      <div className="md:w-[744px]">
+        <div className="md:flex grid grid-cols-3  md:gap-6 gap-4 ">
           {/* payment img */}
           <div>
             <img className="h-[48px] w-[86px]" src={pay} alt="" />
@@ -36,7 +46,7 @@ const Payment = () => {
             <img className="h-[48px] w-[86px]" src={pay6} alt="" />
           </div>
         </div>
-        <div>
+        <div className="md:my-6 my-2">
           <h2>of</h2>
           <h2>
             <hr />
@@ -45,7 +55,7 @@ const Payment = () => {
         <h2 className="text-[#1D2026] font-plus-jakarta font-semibold text-xl my-6">
           Verzendadres
         </h2>
-        <div className="w-[668px] flex flex-col gap-4 ">
+        <div className="md:w-[668px] flex flex-col gap-4 ">
           <div>
             <label className="block text-gray-700 font-medium mb-1">
               District
@@ -131,7 +141,46 @@ const Payment = () => {
         </div>
       </div>
       {/* right */}
-      <div></div>
+      <div className="border">
+       <div className="bg-sky-50 p-4">
+       <div>
+          <div>
+            <img  src={card} alt="" />
+          </div>
+        </div>
+        <h2 className="text-[#263238 font-plus-jakarta font-semibold text-xl]">FamiPress - Genealogy & Family Tree WordPress theme</h2>
+      <div>
+      <ul className="list-disc pl-5">
+          <li>One Click Demo Installation</li>
+          <li>Responsive Design</li>
+          <li>SEO Optimized</li>
+          <li>Fast Performance</li>
+          <li>Cross Browser Compatibility</li>
+          <li>Easy Customization</li>
+          <li>24/7 Support</li>
+        </ul>
+      </div>
+       </div>
+       <h2 className="py-6"><hr /></h2>
+       <h2 className="mb-5 text-[#263238] font-plus-jakarta text-xl px-4">Order Summery</h2>
+       <div className="flex flex-col gap-4 px-4">
+       <div className="flex justify-between">
+        <h2>Subtotal</h2>
+        <h2>$61.97 USD</h2>
+       </div>
+       <div className="flex justify-between">
+        <h2>Coupon Discount</h2>
+        <h2>8%</h2>
+       </div>
+       <h2><hr /></h2>
+       <div className="flex justify-between">
+        <h2>Total:</h2>
+        <h2 className="text-[#263238] font-plus-jakarta text-xl">$75.00 USD</h2>
+       </div>
+       </div>
+
+      </div>
+      
     </div>
   );
 };
