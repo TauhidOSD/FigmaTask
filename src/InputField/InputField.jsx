@@ -1,8 +1,11 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { FaArrowLeft, FaArrowRight, FaUpload } from "react-icons/fa"; // Import React Icons
 
 const InputField = () => {
+  useEffect(() => {
+          window.scrollTo(0, 0); 
+        }, []);
   const navigate = useNavigate(); // Hook to navigate between routes
   const [title, setTitle] = useState("");
   const [name, setName] = useState("");
@@ -27,7 +30,7 @@ const InputField = () => {
   };
 
   return (
-    <div className="max-w-4xl mx-auto p-6 sm:px-10 lg:px-16">
+    <div className="md:max-w-4xl mx-auto md:p-6 sm:px-10 lg:px-16">
       <h2 className="text-2xl font-bold text-gray-800 mb-6 flex justify-between items-center">
         <span> Geef uw inhoud</span>
         <span className="text-sm text-gray-600">{name}</span>
@@ -35,8 +38,8 @@ const InputField = () => {
 
       <form onSubmit={handleSubmit}>
         {/* Title and Name Inputs */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-6">
-          <div className="mb-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:gap-6 md:mb-6">
+          <div className="md:mb-4">
             <label
               htmlFor="title"
               className="block text-sm font-medium text-gray-700"
@@ -49,7 +52,7 @@ const InputField = () => {
               value={title}
               onChange={(e) => setTitle(e.target.value)}
               placeholder=" Tittle"
-              className="mt-2 px-4 py-2 w-full border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="md:mt-2 px-4 py-2 w-full border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
             />
           </div>
 
@@ -100,8 +103,8 @@ const InputField = () => {
                         />
                     </div> */}
           <div className=" md:-mt-11 md:w-1/2">
-            <label className="block text-gray-700 font-medium mt-11"></label>
-            <div className="border w-1/2 border-gray-300 rounded-lg p-3 md:w-full flex items-center justify-around cursor-pointer bg-black hover:bg-gray-800 transition">
+            <label className="block text-gray-700 font-medium md:mt-11"></label>
+            <div className="border w-full border-gray-300 rounded-lg p-3 md:w-full flex items-center justify-around cursor-pointer bg-black hover:bg-gray-800 transition">
               <label
                 htmlFor="imageUpload"
                 className="text-white cursor-pointer"
