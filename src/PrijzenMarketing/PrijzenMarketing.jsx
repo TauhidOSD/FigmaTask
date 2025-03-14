@@ -2,8 +2,39 @@ import { FaChevronDown, FaUpload } from "react-icons/fa";
 import das from "../assets/das.png";
 import bg1 from "../assets/bg1.jpeg";
 import { useEffect } from "react";
+import { useRef } from 'react';
+import emailjs from '@emailjs/browser';
+import Swal from 'sweetalert2'
 
 const PrijzenMarketing = () => {
+
+  const showAlert=()=>{
+    Swal.fire({
+      title: "Bedankt voor je aanvraag!",
+      text: "We hebben je gegevens ontvangen en sturen je binnenkort een offerte. Mocht je vragen hebben, neem gerust contact met ons op.",
+      icon: "success"
+    });
+  }
+
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm('service_adb605b','template_31qworp', form.current, {
+        publicKey: 'zVpdm4YG_4bymkiyw',
+      })
+      .then(
+        () => {
+          console.log('SUCCESS!');
+        },
+        (error) => {
+          console.log('FAILED...', error.text);
+        },
+      );
+  };
+
 
   useEffect(() => {
         window.scrollTo(0, 0); 
@@ -57,7 +88,9 @@ const PrijzenMarketing = () => {
           </div>
         </div>
       </div>
-      {/* First Part */}
+
+      <form ref={form} onSubmit={sendEmail} >
+            {/* First Part */}
       <div className="md:px-36 px-6 mx-auto">
         <div className=" flex md:gap-[496px]">
           <h2 className="text-xl text-[#407BFF] font-semibold md:mt-8 mt-4 mb-4">
@@ -76,6 +109,7 @@ const PrijzenMarketing = () => {
               </label>
               <input
                 type="text"
+                name="name"
                 placeholder="Naam"
                 className="border border-gray-300 rounded-lg p-2 w-full focus:outline-none focus:ring-2 focus:ring-blue-500"
               />
@@ -86,6 +120,7 @@ const PrijzenMarketing = () => {
               </label>
               <input
                 type="text"
+                name="cname"
                 placeholder="Naam"
                 className="border border-gray-300 rounded-lg p-2 w-full focus:outline-none focus:ring-2 focus:ring-blue-500"
               />
@@ -97,6 +132,7 @@ const PrijzenMarketing = () => {
                 </label>
                 <input
                   type="email"
+                  name="email"
                   placeholder="E -mail"
                   className="border border-gray-300 rounded-lg p-2 w-full focus:outline-none focus:ring-2 focus:ring-blue-500"
                 />
@@ -107,6 +143,7 @@ const PrijzenMarketing = () => {
                 </label>
                 <input
                   type="email"
+                  name="telephone"
                   placeholder="E -mail"
                   className="border border-gray-300 rounded-lg p-2 w-full focus:outline-none focus:ring-2 focus:ring-blue-500"
                 />
@@ -130,6 +167,7 @@ const PrijzenMarketing = () => {
                 <div className="relative">
                   <input
                     type="text"
+                    name="Huidige"
                     placeholder="Geef details op"
                     className="border border-gray-300 rounded-lg p-2 w-full pr-10 focus:outline-none focus:ring-2 focus:ring-blue-500"
                   />
@@ -147,7 +185,7 @@ const PrijzenMarketing = () => {
                     Upload afbeelding
                   </label>
                   <FaUpload className="text-white text-lg" />
-                  <input type="file" className="hidden" id="imageUpload" />
+                  <input type="file" name="file" className="hidden" id="imageUpload" />
                 </div>
               </div>
 
@@ -159,6 +197,7 @@ const PrijzenMarketing = () => {
               </label>
               <input
                 type="text"
+                name=" Integrat"
                 placeholder="Voorbeelden van merken die u bewondert of concurrenten"
                 className="border border-gray-300 rounded-lg p-2 w-full focus:outline-none focus:ring-2 focus:ring-blue-500"
               />
@@ -169,6 +208,7 @@ const PrijzenMarketing = () => {
               </label>
               <input
                 type="text"
+                name="Backend"
                 placeholder="bijv. Logo, visitekaartjes, brochures, website -ontwerp"
                 className="border border-gray-300 rounded-lg p-2 w-full focus:outline-none focus:ring-2 focus:ring-blue-500"
               />
@@ -179,6 +219,7 @@ const PrijzenMarketing = () => {
               </label>
               <input
                 type="text"
+                name="Preferred"
                 placeholder="bijv. Logo, visitekaartjes, brochures, website -ontwerp"
                 className="border border-gray-300 rounded-lg p-2 w-full focus:outline-none focus:ring-2 focus:ring-blue-500"
               />
@@ -205,6 +246,7 @@ const PrijzenMarketing = () => {
                 <div className="relative">
                   <input
                     type="text"
+                    name="apptype"
                     placeholder="Uitkiezen"
                     className="border border-gray-300 rounded-lg p-2 w-full pr-10 focus:outline-none focus:ring-2 focus:ring-blue-500"
                   />
@@ -218,6 +260,7 @@ const PrijzenMarketing = () => {
                 <div className="relative">
                   <input
                     type="text"
+                    name="Platform"
                     placeholder="Korte beschrijving"
                     className="border border-gray-300 rounded-lg p-2 w-full pr-10 focus:outline-none focus:ring-2 focus:ring-blue-500"
                   />
@@ -230,6 +273,7 @@ const PrijzenMarketing = () => {
                 <div className="relative">
                   <input
                     type="text"
+                    name="App -functies"
                     placeholder="Uitkiezen"
                     className="border border-gray-300 rounded-lg p-2 w-full pr-10 focus:outline-none focus:ring-2 focus:ring-blue-500"
                   />
@@ -246,6 +290,7 @@ const PrijzenMarketing = () => {
                   <div className="relative">
                     <input
                       type="text"
+                      name="Doelgroep"
                       placeholder="Uitkiezen"
                       className="border border-gray-300 rounded-lg p-2 w-full pr-10 focus:outline-none focus:ring-2 focus:ring-blue-500"
                     />
@@ -259,6 +304,7 @@ const PrijzenMarketing = () => {
                   <div className="relative">
                     <input
                       type="text"
+                      name="Ontwerpvoorkeuren"
                       placeholder="Wat wil je dat je merk met je publiek communiceert?"
                       className="border border-gray-300 rounded-lg p-2 w-full pr-10 focus:outline-none focus:ring-2 focus:ring-blue-500"
                     />
@@ -279,6 +325,7 @@ const PrijzenMarketing = () => {
                 <div className="relative">
                   <input
                     type="text"
+                    name="budgetbereik"
                     placeholder="Naam"
                     className="border border-gray-300 rounded-lg p-2 w-full pr-10 focus:outline-none focus:ring-2 focus:ring-blue-500"
                   />
@@ -292,6 +339,7 @@ const PrijzenMarketing = () => {
                 <div className="relative">
                   <input
                     type="text"
+                    name="Gewenste"
                     placeholder="Naam"
                     className="border border-gray-300 rounded-lg p-2 w-full pr-10 focus:outline-none focus:ring-2 focus:ring-blue-500"
                   />
@@ -307,6 +355,7 @@ const PrijzenMarketing = () => {
                 </h2>
 
                 <textarea
+                  name="message"
                   placeholder="Verzoeken en vragen"
                   className="textarea  textarea-bordered textarea-lg w-full max-w-full"
                 ></textarea>
@@ -315,11 +364,12 @@ const PrijzenMarketing = () => {
           </div>
         </div>
         <div className="flex justify-center items-center md:my-8 my-4 ">
-          <button className="btn hover:bg-[#468AFFE6] bg-[#468AFF]  md:px-32 px-36 py-2 text-[#FFFFFF] text-lg md:text-md lg:text-xl">
+          <button onClick={showAlert} className="btn hover:bg-[#468AFFE6] bg-[#468AFF]  md:px-32 px-36 py-2 text-[#FFFFFF] text-lg md:text-md lg:text-xl">
           Boek een offerte
           </button>
         </div>
       </div>
+      </form>
     </>
   );
 };
