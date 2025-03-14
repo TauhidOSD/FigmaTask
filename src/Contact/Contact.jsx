@@ -4,8 +4,41 @@ import { MdOutlineMail } from "react-icons/md";
 import { FaLinkedin, FaFacebook } from "react-icons/fa";
 import { AiFillInstagram } from "react-icons/ai";
 import das from "../assets/das.png"
+import { useRef } from 'react';
+import emailjs from '@emailjs/browser';
+import Swal from 'sweetalert2'
 
 const Contact = () => {
+
+  const showAlert=()=>{
+    Swal.fire({
+      title: "Bedankt voor je aanvraag!",
+      text: "We hebben je gegevens ontvangen en sturen je binnenkort een offerte. Mocht je vragen hebben, neem gerust contact met ons op.",
+      icon: "success"
+    });
+  }
+
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm('service_adb605b','template_sks4f0o', form.current, {
+        publicKey: 'zVpdm4YG_4bymkiyw',
+      })
+      .then(
+        () => {
+          console.log('SUCCESS!');
+        },
+        (error) => {
+          console.log('FAILED...', error.text);
+        },
+      );
+  };
+
+
+
   return (
     <>
 
@@ -82,7 +115,10 @@ const Contact = () => {
             Vul ons contactformulier in op de website en wij nemen zo snel mogelijk
             contact met u op.
           </p>
-          <form className="space-y-6">
+
+
+
+          <form ref={form} onSubmit={sendEmail} className="space-y-6">
             <div className="lg:flex lg:space-x-4 space-y-4 lg:space-y-0">
               <div className="flex-1">
                 <label className="block mb-2 text-sm font-medium" htmlFor="name">
@@ -90,9 +126,10 @@ const Contact = () => {
                 </label>
                 <input
                   type="text"
-                  id="name"
+                  name="from_name"
                   placeholder="Voer uw naam in"
                   className="input input-bordered w-full font-plus-jakarta text-[#7E7E7E]"
+                  required
                 />
               </div>
               <div className="flex-1">
@@ -101,31 +138,32 @@ const Contact = () => {
                 </label>
                 <input
                   type="email"
-                  id="email"
+                  name="from_email"
                   placeholder="Voer uw e-mailadres in"
                   className="input input-bordered w-full font-plus-jakarta text-[#7E7E7E]"
+                  required
                 />
               </div>
             </div>
             <div className="lg:flex lg:space-x-4 space-y-4 lg:space-y-0">
               <div className="flex-1">
-                <label className="block mb-2 text-sm font-medium" htmlFor="name">
+                <label className="block mb-2 text-sm font-medium" htmlFor="telephone">
                 Telefoon nee
                 </label>
                 <input
-                  type="text"
-                  id="name"
+                  type="tel"
+                  name="telephone"
                   placeholder="Voer telefoon nr in"
                   className="input input-bordered w-full font-plus-jakarta text-[#7E7E7E]"
                 />
               </div>
               <div className="flex-1">
-                <label className="block mb-2 text-sm font-medium" htmlFor="email">
+                <label className="block mb-2 text-sm font-medium" htmlFor="name">
                 Bedrijfsnaam
                 </label>
                 <input
-                  type="email"
-                  id="email"
+                  type="text"
+                  name="name"
                   placeholder="Voer de bedrijfsnaam in"
                   className="input input-bordered w-full font-plus-jakarta text-[#7E7E7E]"
                 />
@@ -139,7 +177,7 @@ const Contact = () => {
                 </label>
                 <input
                   type="text"
-                  id="subject"
+                  name="subject"
                   placeholder="Geef context"
                   className="input input-bordered w-full font-plus-jakarta text-[#7E7E7E]"
                 />
@@ -150,7 +188,7 @@ const Contact = () => {
                 </label>
                 <input
                   type="text"
-                  id="topic"
+                  name="topic"
                   placeholder="Selecteer Onderwerp"
                   className="input input-bordered w-full font-plus-jakarta text-[#7E7E7E]"
                 />
@@ -162,7 +200,7 @@ const Contact = () => {
                 Bericht
               </label>
               <textarea
-                id="message"
+                name="message"
                 className="textarea textarea-bordered w-full h-36 font-plus-jakarta text-[#7E7E7E]"
                 placeholder="Schrijf hier uw vraag"
               ></textarea>
@@ -170,6 +208,7 @@ const Contact = () => {
 
             <div>
               <button
+              onClick={showAlert}
                 type="submit"
                 className="relative text-white btn bg-[#468AFF] px-4 py-2 sm:px-8 sm:py-3 rounded-lg shadow-lg transition-all hover:bg-blue-500 text-xs sm:text-base w-2/4 lg:w-2/4 "
               >
@@ -177,6 +216,8 @@ const Contact = () => {
               </button>
             </div>
           </form>
+
+
         </div>
       </div>
     </div>

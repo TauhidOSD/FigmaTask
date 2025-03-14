@@ -77,6 +77,7 @@ const PrijzenBranding = () => {
               </label>
               <input
                 type="text"
+                name="name"
                 placeholder="Naam"
                 className="border border-gray-300 rounded-lg p-2 w-full focus:outline-none focus:ring-2 focus:ring-blue-500"
               />
@@ -87,6 +88,7 @@ const PrijzenBranding = () => {
               </label>
               <input
                 type="text"
+                name="cname"
                 placeholder="Naam"
                 className="border border-gray-300 rounded-lg p-2 w-full focus:outline-none focus:ring-2 focus:ring-blue-500"
               />
@@ -98,6 +100,7 @@ const PrijzenBranding = () => {
                 </label>
                 <input
                   type="email"
+                  name="email"
                   placeholder="E -mail"
                   className="border border-gray-300 rounded-lg p-2 w-full focus:outline-none focus:ring-2 focus:ring-blue-500"
                 />
@@ -107,8 +110,9 @@ const PrijzenBranding = () => {
                   Telefoonnummer
                 </label>
                 <input
-                  type="email"
-                  placeholder="E -mail"
+                  type="tel"
+                  name="telephone"
+                  placeholder="Telefoonnummer"
                   className="border border-gray-300 rounded-lg p-2 w-full focus:outline-none focus:ring-2 focus:ring-blue-500"
                 />
               </div>
@@ -128,6 +132,7 @@ const PrijzenBranding = () => {
               </label>
               <input
                 type="text"
+                name="theams"
                 placeholder="Eventuele specifieke kleurenschema's of visuele thema's"
                 className="border border-gray-300 rounded-lg p-2 w-full focus:outline-none focus:ring-2 focus:ring-blue-500"
               />
@@ -138,6 +143,7 @@ const PrijzenBranding = () => {
               </label>
               <input
                 type="text"
+                name="Inspiratie"
                 placeholder="Voorbeelden van merken die u bewondert of concurrenten"
                 className="border border-gray-300 rounded-lg p-2 w-full focus:outline-none focus:ring-2 focus:ring-blue-500"
               />
@@ -148,6 +154,7 @@ const PrijzenBranding = () => {
               </label>
               <input
                 type="text"
+                name="Eventuele"
                 placeholder="bijv. Logo, visitekaartjes, brochures, website -ontwerp"
                 className="border border-gray-300 rounded-lg p-2 w-full focus:outline-none focus:ring-2 focus:ring-blue-500"
               />

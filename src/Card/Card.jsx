@@ -52,8 +52,8 @@ const Card = () => {
               visitekaartje. Leer hoe u met design, snelheid en content uw
               conversies....
             </p>
-            <button className="relative hover:bg-[#468AFFE6] bg-[#468AFF] text-white px-8 py-3 rounded-md shadow-md ">
-              Lees meer
+            <button className=" relative hover:bg-[#468AFFE6] bg-[#468AFF] text-white px-8 py-3 rounded-md shadow-md ">
+              Lees meer 
             </button>
           </div>
         </div>
