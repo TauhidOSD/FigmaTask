@@ -28,9 +28,7 @@ const Sarbuh = () => {
               <h1 className=" text-xl lg:text-lg text-sky-400 font-bold">
               Van Offline naar Online: De Digitale Transformatie van een Fruithandelaar
               </h1>
-              <p className="text-sm sm:text-base font-serif text-slate-400 leading-relaxed">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-              </p>
+              
   
               {/* Details List */}
               <div className="space-y-3 border-b border-slate-200 py-2">
@@ -73,7 +71,7 @@ const Sarbuh = () => {
   
           {/* Description */}
           <div className="mt-10 space-y-4 px-4 sm:px-6 md:px-8 lg:ml-5 lg:mr-20">
-            <p className="text-left text-sm text-slate-500 leading-relaxed">
+            <p className="text-left text-sm text-[rgba(121,121,121,1)] font-plus-jakarta font-normal leading-relaxed">
             In een wereld waar digitalisering de norm is, kan het voor traditionele bedrijven een uitdaging zijn om de overstap naar de online markt te maken. Bij Younitech hebben we recentelijk een fruithandelaar geholpen met deze transitie door middel van een fullservice-oplossing op het gebied van branding, marketing en webdesign. Van een volledig geoptimaliseerde webshop tot een doordachte marketingstrategie, we hebben elk aspect aangepakt om zijn business klaar te maken voor de toekomst.
             </p>
             
@@ -90,11 +88,11 @@ const Sarbuh = () => {
             />
           </div>
           <div className="space-y-4 px-4 sm:px-6 md:px-8 lg:ml-20 lg:mr-20">
-            <h1>De Kracht van Branding: Meer dan Alleen een Logo</h1>
-            <p className="text-left text-sm text-slate-500 leading-relaxed">
+            <h1 className="text-lg font-semibold text-[rgba(38,50,56,1)] font-plus-jakarta">De Kracht van Branding: Meer dan Alleen een Logo</h1>
+            <p className="text-left text-sm text-[rgba(121,121,121,1)] font-plus-jakarta font-normal leading-relaxed">
             Branding is de ziel van een bedrijf. Het bepaalt hoe klanten een merk ervaren en hoe het zich onderscheidt van de concurrentie. Voor deze fruithandelaar hebben we niet zomaar een logo en huisstijl ontworpen, maar een complete merkidentiteit gecreëerd die vertrouwen en kwaliteit uitstraalt. We hebben diepgaand onderzocht welke visuele en emotionele triggers klanten aanspreken en hebben deze geïntegreerd in het design en de tone-of-voice van het merk.
             </p>
-            <p className="text-left text-sm font-sans text-slate-500 leading-relaxed">
+            <p className="text-left text-sm text-[rgba(121,121,121,1)] font-plus-jakarta font-normal leading-relaxed">
             Een essentieel onderdeel van de branding was de positionering van het merk. In de fruithandel is transparantie en versheid cruciaal. Daarom hebben we storytelling ingezet om klanten een kijkje achter de schermen te geven: van de oorsprong van de producten tot de passie van de handelaar. Dit creëerde een authentieke connectie met de doelgroep en verhoogde de klantloyaliteit.
             </p>
           </div>
@@ -108,12 +106,12 @@ const Sarbuh = () => {
         <div className="px-4 md:px-10 space-y-6">
         
           <div className="space-y-4 px-4 sm:px-6 md:px-8 lg:ml-20 lg:mr-20">
-            <h1 className="text-lg font-medium">Marketing: De Balans tussen Gevoel en Data</h1>
-            <p className="text-left text-sm text-slate-500 leading-relaxed">
+            <h1 className="text-lg font-semibold text-[rgba(38,50,56,1)] font-plus-jakarta">Marketing: De Balans tussen Gevoel en Data</h1>
+            <p className="text-left text-sm text-[rgba(121,121,121,1)] font-plus-jakarta font-normal leading-relaxed">
             Bij Younitech geloven we dat marketing een samenspel is tussen emotie en logische redenering. Wanneer een klant een luxeproduct koopt, draait het niet alleen om de eigenschappen van het product, maar ook om de beleving. Hetzelfde geldt voor versproducten zoals fruit: klanten
              willen niet alleen weten dat het vers is, ze willen het bijna kunnen ruiken en proeven via het scherm.
             </p>
-            <p className="text-left text-sm text-slate-500 leading-relaxed">
+            <p className="text-left text-sm text-[rgba(121,121,121,1)] font-plus-jakarta font-normal leading-relaxed">
             Om deze beleving online over te brengen, hebben we gebruikgemaakt van:
             </p>
             
@@ -124,7 +122,7 @@ const Sarbuh = () => {
                  <li> <span className="text-[rgba(121,121,121,1)]">E-mailmarketing en retargeting: Om klanten betrokken te houden en herhaalaankopen te stimuleren.</span></li>
             </ul>
            
-            <p className="text-left text-sm text-slate-500 leading-relaxed">Wat onze aanpak onderscheidt, is dat we data-gedreven beslissingen nemen. We analyseren klantgedrag en optimaliseren voortdurend de campagnes op basis van concrete cijfers. Dit stelt ons in staat om marketingbudgetten efficiënt in te zetten en een maximale ROI (Return on Investment) te realiseren.</p>
+            <p className="text-left text-sm text-[rgba(121,121,121,1)] font-plus-jakarta font-normal leading-relaxed">Wat onze aanpak onderscheidt, is dat we data-gedreven beslissingen nemen. We analyseren klantgedrag en optimaliseren voortdurend de campagnes op basis van concrete cijfers. Dit stelt ons in staat om marketingbudgetten efficiënt in te zetten en een maximale ROI (Return on Investment) te realiseren.</p>
           </div>
         </div>
 
@@ -135,12 +133,12 @@ const Sarbuh = () => {
         <div className="px-4 md:px-10 space-y-6">
         
           <div className="space-y-4 px-4 sm:px-6 md:px-8 lg:ml-20 lg:mr-20">
-            <h1 className="text-lg font-medium">Website Design: Een Perfecte Gebruikerservaring</h1>
-            <p className="text-left text-sm text-slate-500 leading-relaxed">
+            <h1 className="text-lg font-semibold text-[rgba(38,50,56,1)] font-plus-jakarta">Website Design: Een Perfecte Gebruikerservaring</h1>
+            <p className="text-left text-sm text-[rgba(121,121,121,1)] font-plus-jakarta font-normal leading-relaxed">
             Een webshop moet niet alleen visueel aantrekkelijk zijn, maar ook functioneel en gebruiksvriendelijk. Voor deze fruithandelaar 
             hebben we een volledig op maat gemaakte website ontwikkeld, die niet gebaseerd is op een standaard template maar volledig is afgestemd op de klantbeleving.
             </p>
-            <p className="text-left text-sm text-slate-500 leading-relaxed">
+            <p className="text-left text-sm text-[rgba(121,121,121,1)] font-plus-jakarta font-normal leading-relaxed">
             De belangrijkste aspecten van het webdesign waren:
             </p>
             
@@ -151,10 +149,10 @@ const Sarbuh = () => {
                  <li> <span className="text-[rgba(121,121,121,1)]">Geavanceerde productfilters, zodat klanten eenvoudig het juiste fruit kunnen vinden op basis van categorie, seizoen of herkomst.</span></li>
             </ul>
            
-            <p className="text-left text-sm text-slate-500 leading-relaxed">Daarnaast hebben we de webshop geïntegreerd met logistieke en betalingssystemen, zodat de volledige bestel- en leveringsflow soepel verloopt.</p>
-            <p className="text-left text-sm text-slate-500 leading-relaxed">Innovatie Gedreven Door IT, Bedrijfskunde en Wetenschap</p>
-            <p className="text-left text-sm text-slate-500 leading-relaxed">Wat Younitech uniek maakt, is onze multidisciplinaire aanpak. We combineren expertise uit IT, bedrijfskunde en wetenschap om innovatieve oplossingen te ontwikkelen die niet alleen visueel aantrekkelijk zijn, maar ook commercieel en operationeel effectief.</p>
-            <p className="text-left text-sm text-slate-500 leading-relaxed">We maken gebruik van de nieuwste technologieën en zijn niet bang om onconventionele methoden te testen. Door samen te werken met onze klanten en hun specifieke behoeften te begrijpen, zorgen we ervoor dat elke
+            <p className="text-left text-sm text-[rgba(121,121,121,1)] font-plus-jakarta font-normal leading-relaxed">Daarnaast hebben we de webshop geïntegreerd met logistieke en betalingssystemen, zodat de volledige bestel- en leveringsflow soepel verloopt.</p>
+            <p className="text-left text-sm text-[rgba(121,121,121,1)] font-plus-jakarta font-normal leading-relaxed">Innovatie Gedreven Door IT, Bedrijfskunde en Wetenschap</p>
+            <p className="text-left text-sm text-[rgba(121,121,121,1)] font-plus-jakarta font-normal leading-relaxed">Wat Younitech uniek maakt, is onze multidisciplinaire aanpak. We combineren expertise uit IT, bedrijfskunde en wetenschap om innovatieve oplossingen te ontwikkelen die niet alleen visueel aantrekkelijk zijn, maar ook commercieel en operationeel effectief.</p>
+            <p className="text-left text-sm text-[rgba(121,121,121,1)] font-plus-jakarta font-normal leading-relaxed">We maken gebruik van de nieuwste technologieën en zijn niet bang om onconventionele methoden te testen. Door samen te werken met onze klanten en hun specifieke behoeften te begrijpen, zorgen we ervoor dat elke
                  digitale transformatie niet alleen succesvol is, maar ook duurzaam en toekomstbestendig.</p>
           </div>
         </div>

@@ -29,9 +29,6 @@ const Finguide = () => {
               <h1 className=" text-xl lg:text-lg text-sky-400 font-bold">
               FINGUIDE: Slimme Boekhouding met een Sterke Identiteit
               </h1>
-              <p className="text-sm sm:text-base font-serif text-slate-400 leading-relaxed">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-              </p>
   
               {/* Details List */}
               <div className="space-y-3 border-b border-slate-200 py-2">
@@ -74,7 +71,7 @@ const Finguide = () => {
   
           {/* Description */}
           <div className="mt-10 space-y-4 px-4 sm:px-6 md:px-8 lg:ml-5 lg:mr-20">
-            <p className="text-left text-sm text-slate-500 leading-relaxed">
+            <p className="text-left text-sm text-[rgba(121,121,121,1)] font-plus-jakarta font-normal leading-relaxed">
             In de wereld van financiële software draait het vaak om cijfers, berekeningen 
             en strakke processen. Maar hoe maak je een boekhoudapplicatie niet alleen 
             functioneel, maar ook aantrekkelijk voor ondernemers? Met FINGUIDE hebben 
@@ -98,21 +95,21 @@ const Finguide = () => {
             />
           </div>
           <div className="space-y-4 px-4 sm:px-6 md:px-8 lg:ml-20 lg:mr-20">
-            <h1 className="text-lg font-medium">Waarom FINGUIDE?</h1>
-            <p className="text-left text-sm text-slate-500 leading-relaxed">
+            <h1 className="text-[22px] font-plus-jakarta text-[rgba(38,50,56,1)] font-semibold ">Waarom FINGUIDE?</h1>
+            <p className="text-left text-sm text-[rgba(121,121,121,1)] font-plus-jakarta font-normal leading-relaxed">
             Met het groeiende aantal zzp’ers en mkb-bedrijven in Nederland is er een dringende 
             behoefte aan toegankelijke en efficiënte boekhoudsoftware. Grote corporates hebben belastingadviseurs 
             en accountantskantoren tot hun beschikking, maar de kleine ondernemer heeft vaak noch de tijd, noch
              de financiële middelen om zich hierin te verdiepen. En dat terwijl een goed inzicht in financiën cruciaal
               is voor duurzame groei.
             </p>
-            <p className="text-left text-sm font-sans text-slate-500 leading-relaxed">
+            <p className="text-left text-sm text-[rgba(121,121,121,1)] font-plus-jakarta font-normal leading-relaxed">
             FINGUIDE is ontwikkeld met deze visie: een intuïtieve en betaalbare oplossing die ondernemers helpt bij het automatiseren van 
             hun administratie, hen voorziet van slimme adviezen en hen helpt om sterke financiële gewoontes op te bouwen. Dit is geen 
             boekhoudprogramma dat puur op functionaliteit leunt; het is een totaalconcept waarin branding, gebruiksvriendelijkheid en 
             strategische begeleiding samenkomen.
             </p>
-            <p className="text-left text-sm font-sans text-slate-500 leading-relaxed">
+            <p className="text-left text-sm text-[rgba(121,121,121,1)] font-plus-jakarta font-normal leading-relaxed">
             De website fungeert niet alleen als een portfolio, waarin eerdere werken en projecten schitterend worden weergegeven,
              maar ook als een webshop waar klanten direct henna-producten en 
              gepersonaliseerde diensten kunnen bestellen. Dit maakt het voor 
@@ -133,8 +130,8 @@ const Finguide = () => {
             />
           </div>
           <div className="space-y-4 px-4 sm:px-6 md:px-8 lg:ml-20 lg:mr-20">
-            <h1 className="text-lg font-medium">Branding: Vertrouwen, Simpelheid en Toegankelijkheid</h1>
-            <p className="text-left text-sm text-slate-500 leading-relaxed">
+            <h1 className="text-[22px] font-plus-jakarta text-[rgba(38,50,56,1)] font-semibold">Branding: Vertrouwen, Simpelheid en Toegankelijkheid</h1>
+            <p className="text-left text-sm text-[rgba(121,121,121,1)] font-plus-jakarta font-normal leading-relaxed">
             Boekhouding is voor veel ondernemers een verplichting, geen passie. Daarom moest de branding van FINGUIDE 
             anders zijn dan de traditionele, vaak droge uitstraling van boekhoudsoftware. Younitech heeft een 
             merk gecreëerd dat vertrouwen uitstraalt, maar tegelijkertijd vriendelijk en toegankelijk 
@@ -154,7 +151,7 @@ const Finguide = () => {
           </div>
 
           <div className="space-y-4 px-4 sm:px-6 md:px-8 lg:ml-20 lg:mr-20">
-            <h1 className="text-lg font-medium">Functionaliteiten die Ondernemers Echt Helpen</h1>
+            <h1 className="text-[22px] font-plus-jakarta text-[rgba(38,50,56,1)] font-semibold">Functionaliteiten die Ondernemers Echt Helpen</h1>
             <p className="text-left text-sm text-slate-500 leading-relaxed">
             
                 Los van de branding biedt FINGUIDE alles wat een moderne ondernemer nodig heeft:
@@ -173,7 +170,7 @@ const Finguide = () => {
           </div>
 
           <div className="space-y-4 px-4 sm:px-6 md:px-8 lg:ml-20 lg:mr-20">
-            <h1 className="text-lg font-medium">Een Merk dat Groeit met de Ondernemer Mee</h1>
+            <h1 className="text-[22px] font-plus-jakarta text-[rgba(38,50,56,1)] font-semibold">Een Merk dat Groeit met de Ondernemer Mee</h1>
             <p className="text-left text-sm text-slate-500 leading-relaxed">
             De kracht van FINGUIDE ligt in de combinatie van branding en functionaliteit. De applicatie is niet alleen een tool, maar ook een partner voor ondernemers. Het biedt niet alleen cijfers, maar helpt ook bij het maken van strategische beslissingen.
             Door in te zetten op een sterke merkidentiteit, blijft FINGUIDE niet alleen relevant in een concurrerende markt, maar weet het ook een gemeenschap van gebruikers op te bouwen die zich herkennen in de missie van het merk: financiële helderheid en succes voor iedereen, ongeacht de grootte van hun bedrijf.
@@ -182,6 +179,7 @@ const Finguide = () => {
             <p className="text-left text-sm text-slate-500 leading-relaxed">
             Met een website en marketingstrategie die dezelfde kernwaarden uitstralen, wordt FINGUIDE een herkenbaar en vertrouwd merk binnen de fintech-sector. Want een applicatie mag dan nog zo goed werken, zonder de juiste branding blijft het slechts een van de velen. Bij Younitech begrijpen we dat, en met FINGUIDE zetten we een nieuw standaard neer voor fintech-applicaties.
             </p>
+            
 
           </div>
         </div>

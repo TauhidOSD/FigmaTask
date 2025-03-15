@@ -28,10 +28,7 @@ const Ahoyy = () => {
               <h1 className=" text-xl lg:text-lg text-sky-400 font-bold">
               Onze Marketingstrategie: Slim, Kostenbewust en Effectief
               </h1>
-              <p className="text-sm sm:text-base font-serif text-slate-400 leading-relaxed">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-              </p>
-  
+              
               {/* Details List */}
               <div className="space-y-3 border-b border-slate-200 py-2">
                 <div className="flex justify-between items-center px-2">
