@@ -63,7 +63,7 @@ const Ahoyy = () => {
   
               <div className="mt-5">
                 <button className="relative text-white btn bg-[#468AFF] px-6 py-2 sm:px-8 sm:py-3 rounded-lg shadow-lg transition-all duration-300 ease-in-out hover:bg-[#3570D4] hover:scale-105 active:scale-95 focus:outline-none text-sm sm:text-base">
-                  View Live Site
+                Bekijk Live site
                 </button>
               </div>
             </div>
