@@ -142,9 +142,9 @@ const PrijzenMarketing = () => {
                   Telefoonnummer
                 </label>
                 <input
-                  type="email"
+                  type="number"
                   name="telephone"
-                  placeholder="E -mail"
+                  placeholder="Telephone"
                   className="border border-gray-300 rounded-lg p-2 w-full focus:outline-none focus:ring-2 focus:ring-blue-500"
                 />
               </div>
@@ -167,7 +167,7 @@ const PrijzenMarketing = () => {
                 <div className="relative">
                   <input
                     type="text"
-                    name="Huidige"
+                    name="huidige"
                     placeholder="Geef details op"
                     className="border border-gray-300 rounded-lg p-2 w-full pr-10 focus:outline-none focus:ring-2 focus:ring-blue-500"
                   />
@@ -197,7 +197,7 @@ const PrijzenMarketing = () => {
               </label>
               <input
                 type="text"
-                name=" Integrat"
+                name="integrat"
                 placeholder="Voorbeelden van merken die u bewondert of concurrenten"
                 className="border border-gray-300 rounded-lg p-2 w-full focus:outline-none focus:ring-2 focus:ring-blue-500"
               />
@@ -208,7 +208,7 @@ const PrijzenMarketing = () => {
               </label>
               <input
                 type="text"
-                name="Backend"
+                name="backend"
                 placeholder="bijv. Logo, visitekaartjes, brochures, website -ontwerp"
                 className="border border-gray-300 rounded-lg p-2 w-full focus:outline-none focus:ring-2 focus:ring-blue-500"
               />
@@ -219,7 +219,7 @@ const PrijzenMarketing = () => {
               </label>
               <input
                 type="text"
-                name="Preferred"
+                name="preferred"
                 placeholder="bijv. Logo, visitekaartjes, brochures, website -ontwerp"
                 className="border border-gray-300 rounded-lg p-2 w-full focus:outline-none focus:ring-2 focus:ring-blue-500"
               />
@@ -260,7 +260,7 @@ const PrijzenMarketing = () => {
                 <div className="relative">
                   <input
                     type="text"
-                    name="Platform"
+                    name="platform"
                     placeholder="Korte beschrijving"
                     className="border border-gray-300 rounded-lg p-2 w-full pr-10 focus:outline-none focus:ring-2 focus:ring-blue-500"
                   />
@@ -273,7 +273,7 @@ const PrijzenMarketing = () => {
                 <div className="relative">
                   <input
                     type="text"
-                    name="App -functies"
+                    name="functies"
                     placeholder="Uitkiezen"
                     className="border border-gray-300 rounded-lg p-2 w-full pr-10 focus:outline-none focus:ring-2 focus:ring-blue-500"
                   />
@@ -290,7 +290,7 @@ const PrijzenMarketing = () => {
                   <div className="relative">
                     <input
                       type="text"
-                      name="Doelgroep"
+                      name="doelgroep"
                       placeholder="Uitkiezen"
                       className="border border-gray-300 rounded-lg p-2 w-full pr-10 focus:outline-none focus:ring-2 focus:ring-blue-500"
                     />
@@ -339,7 +339,7 @@ const PrijzenMarketing = () => {
                 <div className="relative">
                   <input
                     type="text"
-                    name="Gewenste"
+                    name="gewenste"
                     placeholder="Naam"
                     className="border border-gray-300 rounded-lg p-2 w-full pr-10 focus:outline-none focus:ring-2 focus:ring-blue-500"
                   />
