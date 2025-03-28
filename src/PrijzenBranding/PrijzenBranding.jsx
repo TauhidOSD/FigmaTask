@@ -2,7 +2,38 @@ import { FaChevronDown, FaUpload } from "react-icons/fa";
 import das from "../assets/das.png";
 import bg from "../assets/bg.jpeg";
 import { useEffect } from "react";
+import { useRef } from 'react';
+import emailjs from '@emailjs/browser';
+import Swal from 'sweetalert2'
+
 const PrijzenBranding = () => {
+
+const showAlert=()=>{
+    Swal.fire({
+      title: "Bedankt voor je aanvraag!",
+      text: "We hebben je gegevens ontvangen en sturen je binnenkort een offerte. Mocht je vragen hebben, neem gerust contact met ons op.",
+      icon: "success"
+    });
+  }
+
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm('service_hxxv27j','template_a2312ql', form.current, {
+        publicKey: 'Z3HTMkKpJIM22rfNm',
+      })
+      .then(
+        () => {
+          console.log('SUCCESS!');
+        },
+        (error) => {
+          console.log('FAILED...', error.text);
+        },
+      );
+  };
 
 
   useEffect(() => {
@@ -58,7 +89,8 @@ const PrijzenBranding = () => {
         </div>
       </div>
 
-      {/* First Part */}
+      <form  ref={form} onSubmit={sendEmail}>
+          {/* First Part */}
       <div className="md:px-36 px-6 mx-auto">
         <div className=" flex md:gap-[496px]">
           <h2 className="text-xl text-[#407BFF] font-semibold md:mt-8 mt-4 mb-4">
@@ -110,7 +142,7 @@ const PrijzenBranding = () => {
                   Telefoonnummer
                 </label>
                 <input
-                  type="tel"
+                  type="number"
                   name="telephone"
                   placeholder="Telefoonnummer"
                   className="border border-gray-300 rounded-lg p-2 w-full focus:outline-none focus:ring-2 focus:ring-blue-500"
@@ -143,7 +175,7 @@ const PrijzenBranding = () => {
               </label>
               <input
                 type="text"
-                name="Inspiratie"
+                name="inspiratie"
                 placeholder="Voorbeelden van merken die u bewondert of concurrenten"
                 className="border border-gray-300 rounded-lg p-2 w-full focus:outline-none focus:ring-2 focus:ring-blue-500"
               />
@@ -154,7 +186,7 @@ const PrijzenBranding = () => {
               </label>
               <input
                 type="text"
-                name="Eventuele"
+                name="eventuele"
                 placeholder="bijv. Logo, visitekaartjes, brochures, website -ontwerp"
                 className="border border-gray-300 rounded-lg p-2 w-full focus:outline-none focus:ring-2 focus:ring-blue-500"
               />
@@ -181,7 +213,8 @@ const PrijzenBranding = () => {
                 <div className="relative">
                   <input
                     type="text"
-                    placeholder="Uitkiezen"
+                    placeholder="uitkiezen"
+                    name="branding"
                     className="border border-gray-300 rounded-lg p-2 w-full pr-10 focus:outline-none focus:ring-2 focus:ring-blue-500"
                   />
                   <FaChevronDown className="absolute right-3 top-3 text-gray-500" />
@@ -194,6 +227,7 @@ const PrijzenBranding = () => {
                 <div className="relative">
                   <input
                     type="text"
+                    name="korte"
                     placeholder="Korte beschrijving"
                     className="border border-gray-300 rounded-lg p-2 w-full pr-10 focus:outline-none focus:ring-2 focus:ring-blue-500"
                   />
@@ -206,6 +240,7 @@ const PrijzenBranding = () => {
                 <div className="relative">
                   <input
                     type="text"
+                    name="doelgroep"
                     placeholder="Uitkiezen"
                     className="border border-gray-300 rounded-lg p-2 w-full pr-10 focus:outline-none focus:ring-2 focus:ring-blue-500"
                   />
@@ -224,6 +259,7 @@ const PrijzenBranding = () => {
                     <div className="relative">
                       <input
                         type="text"
+                        name="huidige"
                         placeholder="Geef details op"
                         className="border border-gray-300 rounded-lg p-2 w-full pr-10 focus:outline-none focus:ring-2 focus:ring-blue-500"
                       />
@@ -255,6 +291,7 @@ const PrijzenBranding = () => {
                   <div className="relative">
                     <input
                       type="text"
+                      name="gewenste"
                       placeholder="Uitkiezen"
                       className="border border-gray-300 rounded-lg p-2 w-full pr-10 focus:outline-none focus:ring-2 focus:ring-blue-500"
                     />
@@ -268,6 +305,7 @@ const PrijzenBranding = () => {
                   <div className="relative">
                     <input
                       type="text"
+                      name="merkbericht"
                       placeholder="Wat wil je dat je merk met je publiek communiceert?"
                       className="border border-gray-300 rounded-lg p-2 w-full pr-10 focus:outline-none focus:ring-2 focus:ring-blue-500"
                     />
@@ -288,6 +326,7 @@ const PrijzenBranding = () => {
                 <div className="relative">
                   <input
                     type="text"
+                    name="budgetbereik"
                     placeholder="Naam"
                     className="border border-gray-300 rounded-lg p-2 w-full pr-10 focus:outline-none focus:ring-2 focus:ring-blue-500"
                   />
@@ -301,6 +340,7 @@ const PrijzenBranding = () => {
                 <div className="relative">
                   <input
                     type="text"
+                    name="voltoo"
                     placeholder="Naam"
                     className="border border-gray-300 rounded-lg p-2 w-full pr-10 focus:outline-none focus:ring-2 focus:ring-blue-500"
                   />
@@ -316,6 +356,7 @@ const PrijzenBranding = () => {
                 </h2>
 
                 <textarea
+                  name="message"
                   placeholder="Verzoeken en vragenBio"
                   className="textarea  textarea-bordered textarea-lg w-full max-w-full"
                 ></textarea>
@@ -324,11 +365,13 @@ const PrijzenBranding = () => {
           </div>
         </div>
         <div className="flex justify-center items-center md:my-8 my-4 ">
-          <button className="btn hover:bg-[#468AFFE6] bg-[#468AFF]  md:px-32 px-36 py-2 text-[#FFFFFF] text-lg md:text-md lg:text-xl">
+          <button onClick={showAlert} className="btn hover:bg-[#468AFFE6] bg-[#468AFF]  md:px-32 px-36 py-2 text-[#FFFFFF] text-lg md:text-md lg:text-xl">
           Boek een offerte
           </button>
         </div>
       </div>
+      </form>
+
     </>
   );
 };
