@@ -8,6 +8,7 @@ import pay6 from "../assets/credit-card (5).png";
 import card from "../assets/card1.png";
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 import { useEffect } from "react";
+import toast from "react-hot-toast";
 
 const Payment = () => {
   useEffect(() => {
@@ -39,6 +40,12 @@ const Payment = () => {
     .then(res => res.json())
     .then(data => {
       console.log(data);
+
+      if(data.insertedId){
+        toast.success('User Info Successfully added!')
+        
+       
+      }
       
     })
 
