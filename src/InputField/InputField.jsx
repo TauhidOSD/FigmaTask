@@ -2,6 +2,8 @@ import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { FaArrowLeft, FaArrowRight, FaUpload } from "react-icons/fa"; // Import React Icons
 
+
+
 const InputField = () => {
   useEffect(() => {
           window.scrollTo(0, 0); 
@@ -30,7 +32,11 @@ const InputField = () => {
   };
 
   return (
-    <div className="md:max-w-4xl mx-auto md:p-6 sm:px-10 lg:px-16">
+<>
+
+
+
+<div className="md:max-w-4xl mx-auto md:p-6 sm:px-10 lg:px-16">
       <h2 className="text-2xl font-bold text-gray-800 mb-6 flex justify-between items-center">
         <span> Geef uw inhoud</span>
         <span className="text-sm text-gray-600">{name}</span>
@@ -156,6 +162,8 @@ const InputField = () => {
         </div>
       </form>
     </div>
+</>
+    
   );
 };
 

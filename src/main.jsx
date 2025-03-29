@@ -149,11 +149,6 @@ const router = createBrowserRouter([
         element: <InputField />,
       },
       {
-          path: "/SecondCardInputField",
-          element:<SecondCardInputField/>
-      },
-
-      {
         path: "/payment",
         element: (
           <Elements stripe={stripePromise}>
@@ -161,6 +156,12 @@ const router = createBrowserRouter([
           </Elements>
         ),
       },
+      {
+          path: "/SecondCardInputField",
+          element:<SecondCardInputField/>
+      },
+
+     
       {
         path:"/PrijzenBranding",
         element: <PrijzenBranding/>
