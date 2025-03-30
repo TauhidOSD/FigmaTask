@@ -430,14 +430,14 @@ const Appmarket = () => {
             </p>
             <div className="flex items-center gap-4">
               <img
-                src={img2}
+                src={img3}
                 alt="Sophie de Vries"
                 className="w-12 h-12 rounded-full"
               />
               <div>
-                <h3 className="font-semibold text-gray-800">Sophie de Vries</h3>
+                <h3 className="font-semibold text-gray-800">Mohammed Munzur</h3>
                 <p className="text-sm text-gray-500">
-                  Eigenaar van een retailbedrijf
+                ABC Autotransport
                 </p>
               </div>
             </div>
@@ -457,14 +457,14 @@ const Appmarket = () => {
             </p>
             <div className="flex items-center gap-4">
               <img
-                src={img3}
+                src={img2}
                 alt="Mark Janssen"
                 className="w-12 h-12 rounded-full"
               />
               <div>
-                <h3 className="font-semibold text-gray-800">Mark Janssen</h3>
+                <h3 className="font-semibold text-gray-800">Wesley Groenbeek</h3>
                 <p className="text-sm text-gray-500">
-                  CEO van een tech-startup
+                Allround Uitzendbureau
                 </p>
               </div>
             </div>

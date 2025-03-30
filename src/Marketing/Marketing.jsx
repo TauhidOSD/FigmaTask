@@ -1,5 +1,6 @@
-import sophie from "../shassets/avater-testi-1.png.png";
-import mark from "../shassets/avater-testi-2.png.png";
+
+import Linda from "../assets/Linda.png";
+import ghislan from "../assets/Ghislan.png";
 import { useEffect, useState } from "react";
 import img from "../shassets/consult.png";
 import { GoChevronDown } from "react-icons/go";
@@ -333,14 +334,14 @@ const Marketing = () => {
           <div className="bg-white shadow-md rounded-lg p-6 space-y-4">
             <div className="flex items-center gap-4">
               <img
-                src={sophie}
+                src={ghislan}
                 alt="Sophie de Vries"
                 className="w-12 h-12 rounded-full"
               />
               <div>
                 <h3 className="font-semibold text-gray-800">Ghislan Ammouz</h3>
                 <p className="text-sm text-gray-500">
-                  Eigenaresse Wedding & Eventplanning
+                Eigenaresse Wedding & Eventplanning
                 </p>
               </div>
             </div>
@@ -362,14 +363,14 @@ const Marketing = () => {
           <div className="bg-white shadow-md rounded-lg p-6 space-y-4">
             <div className="flex items-center gap-4">
               <img
-                src={mark}
+                src={Linda}
                 alt="Mark Janssen"
                 className="w-12 h-12 rounded-full"
               />
               <div>
                 <h3 className="font-semibold text-gray-800">Linda Vernooi</h3>
                 <p className="text-sm text-gray-500">
-                  Eigenaresse Kledingzaak Venova
+                Eigenaresse Kledingzaak Venova
                 </p>
               </div>
             </div>
