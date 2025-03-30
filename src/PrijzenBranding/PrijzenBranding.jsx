@@ -110,7 +110,7 @@ const showAlert=()=>{
               <input
                 type="text"
                 name="name"
-                placeholder="Naam"
+                placeholder="Achternaam (TYPO)"
                 className="border border-gray-300 rounded-lg p-2 w-full focus:outline-none focus:ring-2 focus:ring-blue-500"
               />
             </div>
@@ -144,7 +144,7 @@ const showAlert=()=>{
                 <input
                   type="number"
                   name="telephone"
-                  placeholder="Telefoonnummer"
+                  placeholder="Bijv. +31 6 12345678"
                   className="border border-gray-300 rounded-lg p-2 w-full focus:outline-none focus:ring-2 focus:ring-blue-500"
                 />
               </div>
@@ -366,7 +366,7 @@ const showAlert=()=>{
         </div>
         <div className="flex justify-center items-center md:my-8 my-4 ">
           <button onClick={showAlert} className="btn hover:bg-[#468AFFE6] bg-[#468AFF]  md:px-32 px-36 py-2 text-[#FFFFFF] text-lg md:text-md lg:text-xl">
-          Boek een offerte
+          Start Nu!
           </button>
         </div>
       </div>

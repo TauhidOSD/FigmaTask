@@ -68,16 +68,16 @@ const Contact = () => {
               <div className="flex items-center">
                 <GrLocation className="mr-2" />
                 <span className="font-medium">Address:</span>{" "}
-                <span className="text-slate-500 ml-1">Younitech Hoofdkantoor</span>
-              </div>
-              <p className="ml-6 text-slate-500 text-sm">
-                De Entree 201, 1101HG Amsterdam
+                <p className="ml-2 text-slate-500 text-sm">
+                De Entree 201, 1101 HG, Amsterdam
               </p>
+              </div>
+             
             </div>
             <div className="flex items-center">
               <FiPhone className="mr-2" />
               <span className="font-medium">Telefoon:</span>{" "}
-              <span className="text-slate-500 ml-1">+31 (0)20 123 4567</span>
+              <span className="text-slate-500 ml-1">085-203 15 20</span>
             </div>
             <div className="flex items-center">
               <MdOutlineMail className="mr-2" />
@@ -148,7 +148,7 @@ const Contact = () => {
             <div className="lg:flex lg:space-x-4 space-y-4 lg:space-y-0">
               <div className="flex-1">
                 <label className="block mb-2 text-sm font-medium" htmlFor="telephone">
-                Telefoon nee
+                Telefoonnummer
                 </label>
                 <input
                   type="tel"
@@ -159,7 +159,7 @@ const Contact = () => {
               </div>
               <div className="flex-1">
                 <label className="block mb-2 text-sm font-medium" htmlFor="name">
-                Bedrijfsnaam
+                Bedrijfsnaam (optioneel)
                 </label>
                 <input
                   type="text"
@@ -173,7 +173,7 @@ const Contact = () => {
             <div className="lg:flex lg:space-x-4 space-y-4 lg:space-y-0">
               <div className="flex-1">
                 <label className="block mb-2 text-sm font-medium" htmlFor="subject">
-                  Onderwerp
+                Producttype
                 </label>
                 <input
                   type="text"
