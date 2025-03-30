@@ -35,14 +35,14 @@ const Prijzen = () => {
         <h1 className="flex items-center gap-2 text-gray-600 text-sm md:text-base">
           Home
           <img className="w-5 h-[2px]" src={das} alt="separator" />
-          Diensten
+          Web Shop
         </h1>
       </div>
 
       <div className="px-6 py-12">
         <div className="text-center mb-12">
           <h1 className="text-3xl font-bold text-gray-800">
-            Build Your Own Website
+          Bouw je eigen website
           </h1>
         </div>
 

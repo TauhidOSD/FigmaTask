@@ -105,7 +105,7 @@ const PrijzenMarketing = () => {
           <div className="flex flex-col gap-4">
             <div>
               <label className="block text-gray-700 font-medium mb-1">
-                Naam (Eerste en Aarthternaam)
+              Naam (Voornaam en achternaam)
               </label>
               <input
                 type="text"
@@ -144,7 +144,7 @@ const PrijzenMarketing = () => {
                 <input
                   type="number"
                   name="telephone"
-                  placeholder="Telephone"
+                  placeholder="Bijv. +31 6 12345678"
                   className="border border-gray-300 rounded-lg p-2 w-full focus:outline-none focus:ring-2 focus:ring-blue-500"
                 />
               </div>
@@ -299,7 +299,7 @@ const PrijzenMarketing = () => {
                 </div>
                 <div>
                   <label className="block text-gray-700 font-medium mb-1">
-                    Ontwerpvoorkeuren
+                  Leeftijdscategorie
                   </label>
                   <div className="relative">
                     <input

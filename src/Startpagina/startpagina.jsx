@@ -145,7 +145,7 @@ const Startpagina = () => {
         ))}
 
         <button className="btn hover:bg-[#468AFFE6] bg-[#468AFF] text-white text-lg md:text-md lg:text-xl">
-          Nu Kopen
+        Boek offerte
         </button>
       </div>
     </div>
