@@ -49,6 +49,8 @@ const Payment = () => {
     .then(res => res.json())
     .then(data => {
       if (data.insertedId) {
+        console.log(data);
+        
         toast.success('User Info Successfully added!');
         navigate("/stripePayment");
       }
