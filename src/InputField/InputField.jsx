@@ -4,6 +4,8 @@ import { FaChevronDown} from "react-icons/fa";
 import { ChevronDown } from 'lucide-react';
 import { FaArrowLeft, FaArrowRight} from "react-icons/fa"; // Import React Icons
 
+
+
 const InputField = () => {
   useEffect(() => {
           window.scrollTo(0, 0); 
@@ -95,127 +97,26 @@ const InputField = () => {
   };
 
   return (
+<<<<<<< HEAD
     <div className="md:px-28  mx-auto">
       <h2 className="text-2xl font-bold text-gray-800 mb-2 flex justify-between items-center">
         <span> Template Webbuilder Formulier</span>
         {/** <span className="text-sm text-gray-600">{name}</span> */}
+=======
+<>
+
+
+
+<div className="px-2 sm:px-4 md:px-8 lg:px-32 ">
+      <h2 className="text-2xl font-bold text-gray-800 mb-6 flex justify-between items-center">
+        <span> Geef uw inhoud</span>
+        <span className="text-sm text-gray-600">{name}</span>
+>>>>>>> 1593c4d7949cc7fa9196d021729b3b34835ef147
       </h2>
 
       <form onSubmit={handleSubmit}>
         
-        {/* Title and Name Inputs 
-      
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:gap-6 md:mb-6">
-          <div className="md:mb-4">
-            <label
-              htmlFor="title"
-              className="block text-sm font-medium text-gray-700"
-            >
-             
-            </label>
-            <input
-              type="text"
-              id="title"
-              value={title}
-              onChange={(e) => setTitle(e.target.value)}
-              placeholder=" Tittle"
-              className="md:mt-2 px-4 py-2 w-full border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
-            />
-          </div>
-
-          <div className="mb-4">
-            <label
-              htmlFor="name"
-              className="block text-sm font-medium text-gray-700"
-            >
-              
-            </label>
-            <input
-              type="text"
-              id="name"
-              value={name}
-              onChange={(e) => setName(e.target.value)}
-              placeholder="Naam"
-              className="mt-2 px-4 py-2 w-full border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
-            />
-          </div>
-        </div>
-
-        {/* Email and Image Upload Inputs
-        
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-6">
-          <div className="mb-4">
-            <label
-              htmlFor="email"
-              className="block text-sm font-medium text-gray-700"
-            >
-             
-            </label>
-            <input
-              type="email"
-              id="email"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              placeholder=" E-mail"
-              className="mt-2 px-4 py-2 w-full border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
-            />
-          </div>
-        
-        */}
-        
-
-          {/* <div className="mb-4">
-                        <label htmlFor="upload" className="block text-sm font-medium text-gray-700">Upload Image</label>
-                        <input
-                            type="file"
-                            id="upload"
-                            onChange={handleFileChange}
-                            className="mt-2 px-4 py-2 w-full border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
-                        />
-                    </div> 
-                    
-
-                    <div className=" md:-mt-11 md:w-1/2">
-            <label className="block text-gray-700 font-medium md:mt-11"></label>
-            <div className="border w-full border-gray-300 rounded-lg p-3 md:w-full flex items-center justify-around cursor-pointer bg-black hover:bg-gray-800 transition">
-              <label
-                htmlFor="imageUpload"
-                className="text-white cursor-pointer"
-              >
-                Upload afbeelding
-              </label>
-              <FaUpload className="text-white text-lg" />
-              <input type="file" className="hidden" id="imageUpload" />
-            </div>
-          </div>
-        </div>
-                    
-                    
-                    */}
-          
-
-        {/* Description Input
-        
-        <div className="mb-6">
-          <label
-            htmlFor="description"
-            className="block text-sm font-medium text-gray-700"
-          >
-            
-          </label>
-          <textarea
-            id="description"
-            value={description}
-            onChange={(e) => setDescription(e.target.value)}
-            placeholder="Beschrijving van de service"
-            className="mt-2 px-4 py-2 w-full border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
-          />
-        </div>
-        
-        */}
-        
-
-  
+     
         
       
       <div className="">
@@ -318,7 +219,7 @@ const InputField = () => {
 
                 
                   <div>
-                      <h2 className="text-xl mt-8  text-[#407BFF] font-semibold mb-4">
+                      <h2 className="text-xl md:mt-4  text-[#407BFF] font-semibold mb-4">
                       Techniek & Hosting
                     </h2>
                     <label className="block text-gray-700 font-medium mb-1">
@@ -422,7 +323,7 @@ const InputField = () => {
                     Wat is het hoofddoel van je website?*
                     </label>
                     
-                    <div className="flex gap-2">
+                    <div className="grid grid-cols-2 md:grid md:grid-cols-3">
                     <label className="flex items-center space-x-2">
                     <input
                       type="checkbox"
@@ -515,7 +416,7 @@ const InputField = () => {
 
 
                   <div>
-                      <h2 className="text-xl mt-8  text-[#407BFF] font-semibold mb-4">
+                      <h2 className="text-xl  md:mt-4  text-[#407BFF] font-semibold mb-4">
                       Logo
                     </h2>
                     <label className="block text-gray-700 font-medium mb-1">
@@ -533,14 +434,14 @@ const InputField = () => {
 
 
                   <div>
-                  <h2 className="text-xl mt-8  text-[#407BFF] font-semibold mb-4">
+                  <h2 className="text-xl md:mt-4  text-[#407BFF] font-semibold mb-4">
                   Inhoud & Pagina’s
                     </h2>
                     <label className="block text-gray-700 font-medium mb-1">
                     Welke pagina’s wil je?*
                     </label>
 
-                    <div className="flex gap-2">
+                    <div className="grid grid-cols-3 md:grid md:grid-cols-5">
                     <label className="flex items-center space-x-2">
                     <input
                       type="checkbox"
@@ -632,7 +533,7 @@ const InputField = () => {
 
 
                     <div>
-                      <h2 className="text-xl mt-8  text-[#407BFF] font-semibold mb-4">
+                      <h2 className="text-xl md:mt-4  text-[#407BFF] font-semibold mb-4">
                       Extra Wensen
                     </h2>
                     <label className="block text-gray-700 font-medium mb-1">
@@ -655,19 +556,19 @@ const InputField = () => {
             </div>
       
 
-              <div className="flex justify-center items-center md:my-8 my-4 ">
-                <button  className="btn hover:bg-[#468AFFE6] bg-[#468AFF]  md:px-32 px-36 py-2 text-[#FFFFFF] text-lg md:text-md lg:text-xl">
+              <div className="flex max-w-2xl mx-auto justify-center items-center md:my-8 my-4 ">
+                <button  className="btn hover:bg-[#468AFFE6] bg-[#468AFF]  md:px-32 px-24 py-2 text-[#FFFFFF] text-lg md:text-md lg:text-xl">
                 Start Nu!
                 </button>
               </div>
           
 
         {/* Submit, Next, and Back Buttons */}
-        <div className="flex flex-col sm:flex-row justify-center gap-4">
+        <div className="grid  grid-cols-2 mx-auto gap-6 md:max-w-[280px]  md:grid md:grid-cols-2 ">
           <button
             type="button"
             onClick={() => navigate(-1)} // Back button: go to the previous page
-            className="flex items-center gap-2 px-6 py-2 bg-[#F5F5F5] text-[#263238] font-semibold rounded-lg focus:outline-none hover:bg-gray-200"
+            className=" flex  items-center gap-2 px-6 py-2 bg-[#F5F5F5] text-[#263238] font-semibold rounded-lg focus:outline-none hover:bg-gray-200"
           >
             <FaArrowLeft /> {/* Left arrow icon */}
             Rug
@@ -676,14 +577,16 @@ const InputField = () => {
           <button
             type="button"
             onClick={() => navigate("/payment")} // Next button: navigate to the payment route
-            className="flex items-center gap-2 px-6 py-2 bg-[#468AFF] text-white font-semibold rounded-lg focus:outline-none hover:bg-blue-500"
+            className="flex  items-center gap-2 px-6 py-2 bg-[#468AFF] text-white font-semibold rounded-lg focus:outline-none hover:bg-blue-500"
           >
             Volgende
-            <FaArrowRight /> {/* Right arrow icon */}
+            {/* < FaArrowRight /> Right arrow icon */}
           </button>
         </div>
       </form>
     </div>
+</>
+    
   );
 };
 

@@ -39,6 +39,7 @@ import Fluentlee from './Fluentlee/Fluentlee.jsx';
 import Ahoyy from './Ahoyy/Ahoyy.jsx';
 import Sarbuh from './Sarbuh/Sarbuh.jsx';
 import SecondCardInputField from './SecondCardInputField/SecondCardInputField.jsx';
+import StripePayment from './StripePayment/StripePayment.jsx';
 
 // Load Stripe
 const stripePromise = loadStripe("your-public-stripe-key");
@@ -149,11 +150,6 @@ const router = createBrowserRouter([
         element: <InputField />,
       },
       {
-          path: "/SecondCardInputField",
-          element:<SecondCardInputField/>
-      },
-
-      {
         path: "/payment",
         element: (
           <Elements stripe={stripePromise}>
@@ -162,12 +158,22 @@ const router = createBrowserRouter([
         ),
       },
       {
+          path: "/SecondCardInputField",
+          element:<SecondCardInputField/>
+      },
+
+     
+      {
         path:"/PrijzenBranding",
         element: <PrijzenBranding/>
       },
       {
         path:"/PrijzenMarkeing",
         element: <PrijzenMarketing/>
+      },
+      {
+        path:"/stripePayment",
+        element:<StripePayment/>
       },
     ],
   },
