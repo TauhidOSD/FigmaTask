@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { FaChevronDown} from "react-icons/fa";
+import { ChevronDown } from 'lucide-react';
 import { FaArrowLeft, FaArrowRight} from "react-icons/fa"; // Import React Icons
 
 
@@ -10,8 +11,34 @@ const InputField = () => {
           window.scrollTo(0, 0); 
         }, []);
 
-        
-        const [selectedOption, setSelectedOption] = useState('');
+
+        // Right side 1st dropdown input box
+        const [selectedOption, setSelectedOption] = useState('')
+        const [isOpen, setIsOpen] = useState(false);
+
+        const options = ['Studenten', 'Scholen', 'Bedrijven', 'Ouders', 'Overige (met invulveld)'];
+
+        const handleOptionClick = (option) => {
+          setSelectedOption(option);
+          setIsOpen(false);
+
+        };
+
+
+
+
+         // Right side 2nd dropdown input box
+        const [activeOption, setActiveOption] = useState('');
+        const [dropdownOpen, setDropdownOpen] = useState(false);
+
+        const choices = ['Al aanwezig', 'Moeten gemaakt worden'];
+
+        const selectOption = (choice) => {
+          setActiveOption(choice);
+          setDropdownOpen(false);
+        };
+
+
 
         const handleRadioChange = (event) => {
           setSelectedOption(event.target.value);
@@ -70,6 +97,12 @@ const InputField = () => {
   };
 
   return (
+<<<<<<< HEAD
+    <div className="md:px-28  mx-auto">
+      <h2 className="text-2xl font-bold text-gray-800 mb-2 flex justify-between items-center">
+        <span> Template Webbuilder Formulier</span>
+        {/** <span className="text-sm text-gray-600">{name}</span> */}
+=======
 <>
 
 
@@ -78,6 +111,7 @@ const InputField = () => {
       <h2 className="text-2xl font-bold text-gray-800 mb-6 flex justify-between items-center">
         <span> Geef uw inhoud</span>
         <span className="text-sm text-gray-600">{name}</span>
+>>>>>>> 1593c4d7949cc7fa9196d021729b3b34835ef147
       </h2>
 
       <form onSubmit={handleSubmit}>
@@ -333,8 +367,8 @@ const InputField = () => {
                     </div>
 
 
-                    <div className="mt-4">
-                      <label className="block text-gray-700 font-medium mb-1">
+                    <div className="mt-4 ">
+                      {/*<label className="block text-gray-700 font-medium mb-1">
                       Wie is je doelgroep?*
                       </label>
                       <div className="relative">
@@ -345,12 +379,40 @@ const InputField = () => {
                           className="border border-gray-300 rounded-lg p-2 w-full pr-10 focus:outline-none focus:ring-2 focus:ring-blue-500"
                         />
                         <FaChevronDown className="absolute right-3 top-3 text-gray-500" />
+                      </div>*/}
+
+
+              <label className="block mb-2 font-semibold">Wie is je doelgroep? *</label>
+                    <div
+                      className={`border rounded-lg p-2 flex justify-between items-center cursor-pointer 
+                      ${isOpen ? 'border-blue-500 ring-2 ring-blue-500' : 'border-gray-300'}`}
+                      onClick={() => setIsOpen(!isOpen)}
+                    >
+                      <span className={`${selectedOption ? '' : 'text-gray-400'}`}>
+                        {selectedOption || '(Dropdown, eventueel met mogelijkheid tot meerdere selecties)'}
+                      </span>
+                      <ChevronDown size={20} />
+                    </div>
+                    
+                    {isOpen && (
+                      <div className="absolute border rounded-2xl mt-1 shadow-md bg-white z-10">
+                        {options.map((option) => (
+                          <div
+                            key={option}
+                            className="p-3  w-[330px] md:w-[200px] lg:w-[320px]  xl:w-[530px]    hover:bg-gray-100 cursor-pointer"
+                            onClick={() => handleOptionClick(option)}
+                          >
+                            {option}
+                          </div>
+                        ))}
                       </div>
+                    )}
+
+
                     </div>
 
 
                   </div>
-
 
 
                   <div>
@@ -436,19 +498,39 @@ const InputField = () => {
                   </div>
 
                   <div className="mt-4">
-                      <label className="block text-gray-700 font-medium mb-1">
-                      Heb je de teksten en afbeeldingen al of moeten die gemaakt worden?*
-                      </label>
-                      <div className="relative">
-                        <input
-                          type="text"
-                          placeholder="Select"
-                          name="branding"
-                          className="border border-gray-300 rounded-lg p-2 w-full pr-10 focus:outline-none focus:ring-2 focus:ring-blue-500"
-                        />
-                        <FaChevronDown className="absolute right-3 top-3 text-gray-500" />
-                      </div>
+
+                  <label className="block mb-2 font-semibold">Heb je de teksten en afbeeldingen al of moeten die gemaakt worden?*</label>
+      
+                    <div 
+                      className={`border rounded-lg p-2 flex justify-between items-center cursor-pointer transition-all 
+                        ${dropdownOpen ? 'border-blue-500 ring-2 ring-blue-500' : 'border-gray-300'}`}
+                      onClick={() => setDropdownOpen(!dropdownOpen)}
+                    >
+                      <span className={`${activeOption ? '' : 'text-gray-400'}`}>
+                        {activeOption || 'Select'}
+                      </span>
+                      <ChevronDown size={20} />
                     </div>
+                    
+                    {dropdownOpen && (
+                      <div className="absolute  border rounded-2xl mt-1 shadow-md bg-white z-10 overflow-hidden transition-all">
+                        {choices.map((choice) => (
+                          <div
+                            key={choice}
+                            className="p-3  hover:bg-gray-100 cursor-pointer"
+                            onClick={() => selectOption(choice)}
+                          >
+                            {choice}
+                          </div>
+                        ))}
+                      </div>
+                    )}
+
+                    
+                    </div>
+
+
+
 
                     <div>
                       <h2 className="text-xl md:mt-4  text-[#407BFF] font-semibold mb-4">
