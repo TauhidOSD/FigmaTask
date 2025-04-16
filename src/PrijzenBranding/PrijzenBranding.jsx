@@ -1,6 +1,6 @@
 import { FaChevronDown, FaUpload } from "react-icons/fa";
 import das from "../assets/das.png";
-import bg from "../assets/bg.jpeg";
+import bg from "../assets/BrandPrice.jpg";
 import { useEffect } from "react";
 import { useRef } from 'react';
 import emailjs from '@emailjs/browser';
@@ -64,10 +64,10 @@ const showAlert=()=>{
         <div className="hero-overlay"></div>
         <div className="hero-content text-neutral-content text-center">
           <div className="px-4 md:px-8 lg:px-12">
-            <h1 className="mb-4 text-3xl md:text-5xl font-bold text-[#FFFFFF] font-plus-jakarta">
+            <h1 className="mb-4 text-4xl md:text-5xl font-bold text-[#FFFFFF] font-plus-jakarta">
               Branding
             </h1>
-            <p className="mb-4 text-sm md:text-base text-[#FFFFFF] font-plus-jakarta">
+            <p className="mb-4 ml-24 mr-24 text-sm md:text-base text-[#FFFFFF] font-plus-jakarta">
               Bij Younitech geloven we dat sterke branding essentieel is voor
               het succes van jouw bedrijf. Onze aanpak combineert creativiteit
               met strategie om een merkidentiteit te creëren die resoneert en
@@ -77,13 +77,11 @@ const showAlert=()=>{
               die jouw merk naar een hoger niveau tillen.
             </p>
             <p className="mb-2 pt-4 text-sm md:text-base text-[#FFFFFF] font-plus-jakarta">
-              Vul het onderstaande formulier in om een zo duidelijk mogelijk
-              beeld te schetsen van jouw aanvraag.
+            Vul het onderstaande formulier in om een zo duidelijk mogelijk beeld te schetsen van jouw aanvraag.
             </p>
             <p className="mb-4 text-sm md:text-base text-[#FFFFFF] font-plus-jakarta">
-              Kom je er niet uit? Neem gerust contact met ons op via{" "}
-              <span className="text-[#407BFF]">e-mail, telefoon </span> of de{" "}
-              <a href="/Contact"><span className="text-[#407BFF]">contactpagina.</span></a>
+            Kom je er niet uit? Neem gerust contact met ons op via
+              <a href="/Contact"><span className="text-[#407BFF]"> contactpagina.</span></a>
             </p>
           </div>
         </div>

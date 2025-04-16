@@ -1,6 +1,6 @@
 import { FaChevronDown, FaUpload } from "react-icons/fa";
 import das from "../assets/das.png";
-import bg1 from "../assets/bg1.jpeg";
+import bg1 from "../assets/Appnet.jpeg";
 import { useEffect } from "react";
 import { useRef } from 'react';
 import emailjs from '@emailjs/browser';
@@ -76,13 +76,11 @@ const PrijzenMarketing = () => {
               lancering en daar voorbij, we zorgen ervoor dat jouw app zowel
               functioneel als gebruiksvriendelijk is.
             </p>
-            <p className="mb-2 pt-4 text-sm md:text-base text-[#FFFFFF] font-plus-jakarta">
+            <p className="mb-2 pt-4 text-sm md:text-base font-semibold text-[#FFFFFF] font-plus-jakarta">
             Vul het onderstaande formulier in om jouw aanvraag zo volledig mogelijk te maken.
             </p>
             <p className="mb-4 text-sm md:text-base text-[#FFFFFF] font-plus-jakarta">
-           {" "}
-            Hulp nodig? Neem contact met ons op via of de 
-              <span className="text-[#407BFF]"> e-mail, telefoon </span> of de{" "}
+            Hulp nodig? Neem contact met ons op via
               <a href="/Contact"> <span className="text-[#407BFF]">contactpagina.</span></a>
             </p>
           </div>
