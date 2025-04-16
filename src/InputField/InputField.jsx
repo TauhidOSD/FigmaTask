@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { FaChevronDown} from "react-icons/fa";
 import { ChevronDown } from 'lucide-react';
-import { FaArrowLeft, FaArrowRight} from "react-icons/fa"; // Import React Icons
+import { FaArrowLeft} from "react-icons/fa"; // Import React Icons //FaArrowRight
 
 
 
@@ -97,12 +97,6 @@ const InputField = () => {
   };
 
   return (
-<<<<<<< HEAD
-    <div className="md:px-28  mx-auto">
-      <h2 className="text-2xl font-bold text-gray-800 mb-2 flex justify-between items-center">
-        <span> Template Webbuilder Formulier</span>
-        {/** <span className="text-sm text-gray-600">{name}</span> */}
-=======
 <>
 
 
@@ -111,7 +105,6 @@ const InputField = () => {
       <h2 className="text-2xl font-bold text-gray-800 mb-6 flex justify-between items-center">
         <span> Geef uw inhoud</span>
         <span className="text-sm text-gray-600">{name}</span>
->>>>>>> 1593c4d7949cc7fa9196d021729b3b34835ef147
       </h2>
 
       <form onSubmit={handleSubmit}>
