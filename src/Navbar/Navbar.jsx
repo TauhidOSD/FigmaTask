@@ -52,16 +52,16 @@ const Navbar = () => {
                 </button>
                 {isDienstenOpen && (
                   <div className="bg-white border rounded-lg shadow-lg">
-                    <a href="/appmarket" className="block  px-4  py-2 hover:bg-gray-100">
+                    <a href="/appontwikkeling" className="block  px-4  py-2 hover:bg-gray-100">
                       App Ontwikkeling
                     </a>
-                    <a href="/Diensten" className="block  px-4 py-2 hover:bg-gray-100">
+                    <a href="/brandingdiensten" className="block  px-4 py-2 hover:bg-gray-100">
                       Branding
                     </a>
-                    <a href="/marketing" className="block  px-4 py-2 hover:bg-gray-100">
+                    <a href="/marketingontwikkeling" className="block  px-4 py-2 hover:bg-gray-100">
                       Marketingsdiensten
                     </a>
-                    <a href="/prijzen" className="block  px-4 py-2 hover:bg-gray-100">
+                    <a href="/websitebuilder" className="block  px-4 py-2 hover:bg-gray-100">
                       Website Builder
                     </a>
                   </div>
@@ -77,29 +77,29 @@ const Navbar = () => {
                 </button>
                 {isPrijzenOpen && (
                   <div className="bg-white border rounded-lg shadow-lg">
-                    <a href="/startpagina" className="block px-4 py-2 hover:bg-gray-100">
+                    <a href="/appontwikkelingprijsplannen" className="block px-4 py-2 hover:bg-gray-100">
                       App Ontwikkeling
                     </a>
-                    <a href="/PrijzenBranding" className="block px-4 py-2 hover:bg-gray-100">
+                    <a href="/brandingprijsplannen" className="block px-4 py-2 hover:bg-gray-100">
                       Branding
                     </a>
-                    <a href="/PrijzenMarkeing" className="block px-4 py-2 hover:bg-gray-100">
+                    <a href="/marketingprijsplannen" className="block px-4 py-2 hover:bg-gray-100">
                       Marketingsdiensten
                     </a>
-                    <a href="/prijzen" className="block px-4 py-2 hover:bg-gray-100">
+                    <a href="/websitebuilder" className="block px-4 py-2 hover:bg-gray-100">
                       Website Builder
                     </a>
                   </div>
                 )}
               </div>
 
-              <a href="/Overons" className="block px-4 py-2 hover:bg-gray-100">
+              <a href="/overons" className="block px-4 py-2 hover:bg-gray-100">
                 Over Ons
               </a>
-              <a href="/Veelgestelde" className="block px-4 py-2 hover:bg-gray-100">
+              <a href="/veelgesteldevragen" className="block px-4 py-2 hover:bg-gray-100">
                 FAQ
               </a>
-              <a href="/blog" className="block px-4 py-2 hover:bg-gray-100">
+              <a href="/portfolio" className="block px-4 py-2 hover:bg-gray-100">
                 Portfolio
               </a>
             </div>
@@ -110,20 +110,20 @@ const Navbar = () => {
         <div className="hidden lg:flex space-x-6 items-center">
           <DienstenDropdown />
           <PrijzenDropdown />
-          <a href="/Overons" className="text-gray-900 hover:text-blue-600">
+          <a href="/overons" className="text-gray-900 hover:text-blue-600">
             Over Ons
           </a>
-          <a href="/Veelgestelde" className="text-gray-900 hover:text-blue-600">
+          <a href="/veelgesteldevragen" className="text-gray-900 hover:text-blue-600">
             FAQ
           </a>
-          <a href="/blog" className="text-gray-900 hover:text-blue-600">
+          <a href="/portfolio" className="text-gray-900 hover:text-blue-600">
             Portfolio
           </a>
         </div>
 
         {/* Contact Button */}
         <a
-          onClick={() => navigate("/Contact")}
+          onClick={() => navigate("/contactpagina")}
           href="#contact"
           className="hidden lg:block hover:bg-[#468AFFE6] bg-[#468AFF] text-white px-8 py-3 rounded-md shadow-md"
         >
@@ -155,16 +155,16 @@ const DienstenDropdown = () => {
       {/* Show dropdown on hover */}
       {isOpen && (
         <div className="absolute right-0 w-48 bg-white border rounded-lg shadow-lg">
-          <a href="/appmarket" className="block px-4 py-2 hover:bg-gray-100">
+          <a href="/appontwikkeling" className="block px-4 py-2 hover:bg-gray-100">
             App Ontwikkeling
           </a>
-          <a href="/Diensten" className="block px-4 py-2 hover:bg-gray-100">
+          <a href="/brandingdiensten" className="block px-4 py-2 hover:bg-gray-100">
             Branding
           </a>
-          <a href="/marketing" className="block px-4 py-2 hover:bg-gray-100">
+          <a href="/marketingontwikkeling" className="block px-4 py-2 hover:bg-gray-100">
             Marketingsdiensten
           </a>
-          <a href="/prijzen" className="block px-4 py-2 hover:bg-gray-100">
+          <a href="/websitebuilder" className="block px-4 py-2 hover:bg-gray-100">
             Website Builder
           </a>
         </div>
@@ -194,22 +194,22 @@ const PrijzenDropdown = () => {
       {/* Show dropdown on hover */}
       {isOpen && (
         <div className="absolute right-0 w-48 bg-white border rounded-lg shadow-lg">
-          <a href="/PrijzenMarkeing" className="block px-4 py-2 hover:bg-gray-100">
+          <a href="/marketingprijsplannen" className="block px-4 py-2 hover:bg-gray-100">
             App Ontwikkeling
           </a>
           <a
-            href="/PrijzenBranding"
+            href="/brandingprijsplannen"
             className="block px-4 py-2 hover:bg-gray-100"
           >
             Branding
           </a>
           <a
-            href="/startpagina "
+            href="/appontwikkelingprijsplannen"
             className="block px-4 py-2 hover:bg-gray-100"
           >
             Marketingsdiensten
           </a>
-          <a href="/prijzen" className="block px-4 py-2 hover:bg-gray-100">
+          <a href="/websitebuilder" className="block px-4 py-2 hover:bg-gray-100">
             Website Builder
           </a>
         </div>
