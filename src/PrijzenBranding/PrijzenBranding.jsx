@@ -81,7 +81,7 @@ const showAlert=()=>{
             </p>
             <p className="mb-4 text-sm md:text-base text-[#FFFFFF] font-plus-jakarta">
             Kom je er niet uit? Neem gerust contact met ons op via
-              <a href="/Contact"><span className="text-[#407BFF]"> contactpagina.</span></a>
+              <a href="/contactpagina"><span className="text-[#407BFF]"> contactpagina.</span></a>
             </p>
           </div>
         </div>

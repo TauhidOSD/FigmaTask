@@ -58,7 +58,7 @@ const router = createBrowserRouter([
         element: <Banner />,
       },
       {
-        path: "/Contact",
+        path: "/contactpagina",//
         element: < Contact />,
       },
       {
@@ -86,19 +86,19 @@ const router = createBrowserRouter([
         element: <Card />,
       },
       {
-        path: "/startpagina",
+        path: "/marketingprijsplannen",//
         element: <Startpagina />,
       },
       {
-        path: "/appmarket",
+        path: "/appontwikkeling",//
         element: <Appmarket/>,
       },
       {
-        path: "/marketing",
+        path: "/marketingontwikkeling",//
         element: <Marketing />,
       },
       {
-        path: "/blog",
+        path: "/portfolio",
         element: <Blog />,
       },
       {
@@ -126,19 +126,19 @@ const router = createBrowserRouter([
         element: <Sarbuh/>,
       },
       {
-        path: "/overons",
+        path: "/overons",//
         element: <Overons/>,
       },
       {
-        path: "/Veelgestelde",
+        path: "/veelgesteldevragen",//
         element: <Veelgestelde />,
       },
       {
-        path: "/Diensten",
+        path: "/brandingdiensten",//
         element: <Diensten />,
       },
       {
-        path: "/prijzen",
+        path: "/websitebuilder",//
         element: <Prijzen />,
       },
       {
@@ -164,11 +164,11 @@ const router = createBrowserRouter([
 
      
       {
-        path:"/PrijzenBranding",
+        path:"/brandingprijsplannen",//
         element: <PrijzenBranding/>
       },
       {
-        path:"/PrijzenMarkeing",
+        path:"/appontwikkelingprijsplannen",//
         element: <PrijzenMarketing/>
       },
       {
