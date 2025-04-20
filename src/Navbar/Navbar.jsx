@@ -194,7 +194,7 @@ const PrijzenDropdown = () => {
       {/* Show dropdown on hover */}
       {isOpen && (
         <div className="absolute right-0 w-48 bg-white border rounded-lg shadow-lg">
-          <a href="/marketingprijsplannen" className="block px-4 py-2 hover:bg-gray-100">
+          <a href="/appontwikkelingprijsplannen" className="block px-4 py-2 hover:bg-gray-100">
             App Ontwikkeling
           </a>
           <a
@@ -204,7 +204,7 @@ const PrijzenDropdown = () => {
             Branding
           </a>
           <a
-            href="/appontwikkelingprijsplannen"
+            href="/marketingprijsplannen"
             className="block px-4 py-2 hover:bg-gray-100"
           >
             Marketingsdiensten
