@@ -1,12 +1,109 @@
-import { FaChevronDown, FaUpload } from "react-icons/fa";
+import {  FaUpload } from "react-icons/fa";
 import das from "../assets/das.png";
-import bg1 from "../assets/bg1.jpeg";
-import { useEffect } from "react";
+import bg1 from "../assets/Appnet.jpeg";
+import { useEffect,useState } from "react";
 import { useRef } from 'react';
 import emailjs from '@emailjs/browser';
 import Swal from 'sweetalert2'
 
 const PrijzenMarketing = () => {
+
+
+  // Dropdown 1 of app 
+
+  const [selectedOption, setSelectedOption] = useState('');
+
+  const options = [
+    'Mobiele App',
+    'Webapplicatie',
+    'Hybride App (Web & Mobiel)',
+    'SaaS-platform',
+    'E-commerce / Webshop App',
+    'CRM / Bedrijfssoftware',
+    'IoT & Smart Device App',
+    'Gaming App',
+    'Overige (met invulveld)'
+  ];
+
+
+  // Dropdown of platform versist  selectedDoelgroep
+
+  const [selectedPlatform, setSelectedPlatform] = useState('');
+
+  const platforms = [
+    'iOS',
+    'Android',
+    'Webbrowser',
+    'Windows',
+    'macOS',
+    'Cross-platform (React Native / Flutter)',
+    'Nog niet zeker',
+  ];
+
+
+  // Dropdown of Doelgroep
+
+  const [selectedDoelgroep, setSelectedDoelgroep] = useState('');
+
+  const odelgroeps = [
+    'Bedrijven (B2B)',
+    'Consumenten (B2C)',
+    'Overheid & Non-Profit',
+    'Startups',
+   ' E-commerce & Retail',
+    'Educatie & Training',
+    'Fintech & Banking',
+    'Zorg & Gezondheid'
+  ];
+
+
+  // Dropdown of Leefts
+
+  const [selectedLeeft, setSelectedLeeft] = useState('');
+
+  const leefts = [
+    'Jongeren (13-18 jaar)',
+    'Jongvolwassenen (18-30 jaar)',
+    'Volwassenen (30-50 jaar)',
+   ' Senioren (50+)',
+    'Mannen',
+   ' Vrouwen',
+    'Beide'
+  ];
+
+
+  // Dropdown of 
+  const [selectedBudget, setSelectedBudget] = useState('');
+
+  const budgetOptions = [
+    '€5.000 - €10.000 (Basisfunctionaliteiten, MVP)',
+    '€10.000 – €25.000 (Middelgrote app, extra functies)',
+    '€25.000 – €50.000 (Complexe applicatie, maatwerk)',
+    '€50.000+ (Grote projecten, schaalbare oplossingen)',
+    'Nog niet zeker',
+  ];
+
+  
+
+
+
+  // check box 
+
+  const [selectedGender, setSelectedGender] = useState({
+    man: false,
+    vrouw: false,
+  });
+
+  const handleChange = (e) => {
+    const { name, checked } = e.target;
+    setSelectedGender((prev) => ({
+      ...prev,
+      [name]: checked,
+    }));
+  };
+
+
+
 
   const showAlert=()=>{
     Swal.fire({
@@ -67,7 +164,7 @@ const PrijzenMarketing = () => {
             <h1 className="mb-4 text-3xl md:text-5xl font-bold text-[#FFFFFF] font-plus-jakarta">
               Applicatie Ontwikkeling
             </h1>
-            <p className="mb-4 text-sm md:text-base text-[#FFFFFF] font-plus-jakarta">
+            <p className="mb-4 lg:ml-20 lg:mr-20 text-sm md:text-base text-[#FFFFFF] font-plus-jakarta">
               Bij Younitech staan we bekend om onze toewijding aan het leveren
               van hoogwaardige app-ontwikkelingsdiensten die voldoen aan de
               unieke behoeften van onze klanten. Of je nu een iOS, Android of
@@ -76,14 +173,12 @@ const PrijzenMarketing = () => {
               lancering en daar voorbij, we zorgen ervoor dat jouw app zowel
               functioneel als gebruiksvriendelijk is.
             </p>
-            <p className="mb-2 pt-4 text-sm md:text-base text-[#FFFFFF] font-plus-jakarta">
+            <p className="mb-2 pt-4 text-sm md:text-base font-semibold text-[#FFFFFF] font-plus-jakarta">
             Vul het onderstaande formulier in om jouw aanvraag zo volledig mogelijk te maken.
             </p>
             <p className="mb-4 text-sm md:text-base text-[#FFFFFF] font-plus-jakarta">
-           {" "}
-            Hulp nodig? Neem contact met ons op via of de 
-              <span className="text-[#407BFF]"> e-mail, telefoon </span> of de{" "}
-              <a href="/Contact"> <span className="text-[#407BFF]">contactpagina.</span></a>
+            Hulp nodig? Neem contact met ons op via
+              <a href="/contactpagina"> <span className="text-[#407BFF]">contactpagina.</span></a>
             </p>
           </div>
         </div>
@@ -240,32 +335,51 @@ const PrijzenMarketing = () => {
             {/* Left Side Inputs */}
             <div className="flex flex-col gap-4">
               <div>
-                <label className="block text-gray-700 font-medium mb-1">
+
+              <label className="block text-sm font-medium text-gray-700 mb-1">
                   Type app
                 </label>
-                <div className="relative">
-                  <input
-                    type="text"
-                    name="apptype"
-                    placeholder="Uitkiezen"
-                    className="border border-gray-300 rounded-lg p-2 w-full pr-10 focus:outline-none focus:ring-2 focus:ring-blue-500"
-                  />
-                  <FaChevronDown className="absolute right-3 top-3 text-gray-500" />
-                </div>
+                <select
+                  value={selectedOption}
+                  onChange={(e) => setSelectedOption(e.target.value)}
+                  className={`block w-full px-3 py-2 border border-gray-300 bg-white rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500
+                    ${selectedOption === '' ? 'text-gray-400 ' : 'text-gray-700'}`}
+                >
+                  
+                  <option value="" disabled hidden>
+                  Welk type applicatie wil je laten ontwikkelen?
+                  </option>
+                  {options.map((option, index) => (
+                    <option key={index} value={option} className="text-gray-700">
+                      {option}
+                    </option>
+                  ))}
+                </select>
               </div>
+
               <div>
-                <label className="block text-gray-700 font-medium mb-1">
-                  Platform (s) vereist
-                </label>
-                <div className="relative">
-                  <input
-                    type="text"
-                    name="platform"
-                    placeholder="Korte beschrijving"
-                    className="border border-gray-300 rounded-lg p-2 w-full pr-10 focus:outline-none focus:ring-2 focus:ring-blue-500"
-                  />
-                </div>
+              <label className="block text-sm font-medium text-gray-700 mb-1">
+                Platform(s) vereist
+              </label>
+              <select
+                value={selectedPlatform}
+                onChange={(e) => setSelectedPlatform(e.target.value)}
+                className={`block w-full px-3 py-2 border border-gray-300 bg-white rounded-lg  focus:outline-none focus:ring-2 focus:ring-blue-500
+                  ${selectedPlatform === '' ? 'text-gray-400 ' : 'text-gray-700'}`}
+              >
+                
+                <option  value="" disabled hidden>
+                Op welke platforms moet de app beschikbaar zijn?
+                </option>
+                {platforms.map((platform, index) => (
+                  <option key={index} value={platform} className="text-gray-700">
+                    {platform}
+                  </option>
+                ))}
+              </select>
+
               </div>
+
               <div>
                 <label className="block text-gray-700 font-medium mb-1">
                   App -functies
@@ -277,39 +391,99 @@ const PrijzenMarketing = () => {
                     placeholder="Uitkiezen"
                     className="border border-gray-300 rounded-lg p-2 w-full pr-10 focus:outline-none focus:ring-2 focus:ring-blue-500"
                   />
-                  <FaChevronDown className="absolute right-3 top-3 text-gray-500" />
+                  
                 </div>
               </div>
 
               {/* upload image option */}
               <div className="">
                 <div className="my-4">
-                  <label className="block text-gray-700 font-medium mb-1">
-                    Doelgroep
-                  </label>
-                  <div className="relative">
-                    <input
-                      type="text"
-                      name="doelgroep"
-                      placeholder="Uitkiezen"
-                      className="border border-gray-300 rounded-lg p-2 w-full pr-10 focus:outline-none focus:ring-2 focus:ring-blue-500"
-                    />
-                    <FaChevronDown className="absolute right-3 top-3 text-gray-500" />
-                  </div>
+
+                <label className="block text-sm font-medium text-gray-700 mb-1">
+                Doelgroep
+              </label>
+              <select
+                value={selectedDoelgroep}
+                onChange={(e) => setSelectedDoelgroep(e.target.value)}
+                className={`block w-full px-3 py-2 border border-gray-300 bg-white rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500
+                  ${selectedDoelgroep === '' ? 'text-gray-400 ' : 'text-gray-700'}`}
+              >
+               
+                <option value="" disabled hidden>
+                Demografie, gebruikersbehoeften, enz
+                </option>
+                {odelgroeps.map((odelgroep, index) => (
+                  <option key={index} value={odelgroep} className="text-gray-700">
+                    {odelgroep}
+                  </option>
+                ))}
+              </select>
+                  
                 </div>
+
                 <div>
-                  <label className="block text-gray-700 font-medium mb-1">
-                  Leeftijdscategorie
-                  </label>
-                  <div className="relative">
-                    <input
-                      type="text"
-                      name="Ontwerpvoorkeuren"
-                      placeholder="Wat wil je dat je merk met je publiek communiceert?"
-                      className="border border-gray-300 rounded-lg p-2 w-full pr-10 focus:outline-none focus:ring-2 focus:ring-blue-500"
-                    />
-                  </div>
+                <label className="block text-sm font-medium text-gray-700 mb-1">
+                Leeftijdscategorie
+              </label>
+              <select
+                value={selectedLeeft}
+                onChange={(e) => setSelectedLeeft(e.target.value)}
+                className={`block w-full px-3 py-2 border border-gray-300 bg-white rounded-lg  focus:outline-none focus:ring-2 focus:ring-blue-500
+                  ${selectedLeeft === '' ? 'text-gray-400 ' : 'text-gray-700'}`}
+              >
+                <option value="" disabled hidden>
+                Uitkiezen
+                </option>
+                {leefts.map((leeft, index) => (
+                  <option key={index} value={leeft} className="text-gray-700 ">
+                    {leeft}
+                  </option>
+                ))}
+              </select>
                 </div>
+
+                  <div className="font-plus-jakarta text-gray-700 mt-5">
+              <h3 className="text-base font-normal mb-4">Op basis van demografie & geslacht</h3>
+              <div className="flex space-x-6">
+                <label className="inline-flex items-center text-gray-400">
+                  <input
+                    type="checkbox"
+                    name="man"
+                    checked={selectedGender.man}
+                    onChange={handleChange}
+                    className="w-4 h-4 mr-2 border-gray-400 rounded focus:ring-0"
+                  />
+                  Man
+                </label>
+                <label className="inline-flex items-center text-gray-400">
+                  <input
+                    type="checkbox"
+                    name="vrouw"
+                    checked={selectedGender.vrouw}
+                    onChange={handleChange}
+                    className="w-4 h-4 mr-2 border-gray-400 rounded focus:ring-0"
+                  />
+                  Vrouw
+                </label>
+              </div>
+            </div>
+
+            <div>
+                <label className="block text-gray-700 text-base font-medium mt-4 mb-1">
+                Ontwerpvoorkeuren
+                </label>
+                <div className="relative">
+                  <input
+                    type="text"
+                    name="functies"
+                    placeholder="Eenvoudig, verfijnd, kleurrijk, modern, etc."
+                    className="border border-gray-300 rounded-lg p-2 w-full pr-10 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  />
+                  
+                </div>
+              </div>
+
+
               </div>
             </div>
 
@@ -319,19 +493,27 @@ const PrijzenMarketing = () => {
                 Begroting
               </h2>
               <div>
-                <label className="block text-gray-700 font-medium mb-1">
-                  Budgetbereik
-                </label>
-                <div className="relative">
-                  <input
-                    type="text"
-                    name="budgetbereik"
-                    placeholder="Naam"
-                    className="border border-gray-300 rounded-lg p-2 w-full pr-10 focus:outline-none focus:ring-2 focus:ring-blue-500"
-                  />
-                  <FaChevronDown className="absolute right-3 top-3 text-gray-500" />
-                </div>
+              <label className="block text-sm font-medium text-gray-700 mb-1">
+              Budgetbereik
+            </label>
+            <select
+              value={selectedBudget}
+              onChange={(e) => setSelectedBudget(e.target.value)}
+              className={`block w-full px-3 py-2 border border-gray-300 rounded-md  focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white ${
+                selectedBudget === '' ? 'text-gray-400 ' : 'text-gray-700'
+              }`}
+            >
+              <option value="" disabled hidden>
+                Wat is het beschikbare budget voor de ontwikkeling?
+              </option>
+              {budgetOptions.map((budget, index) => (
+                <option key={index} value={budget} className="text-gray-700">
+                  {budget}
+                </option>
+              ))}
+            </select>
               </div>
+
               <div>
                 <label className="block text-gray-700 font-medium mb-1">
                   Gewenste voltooiingsdatum
