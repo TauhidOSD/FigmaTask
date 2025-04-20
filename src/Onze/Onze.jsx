@@ -12,7 +12,7 @@ const Onze = () => {
     <div className="bg-[#FFFFFF] py-12">
       {/* Header Section */}
       <div className="text-center mb-8">
-        <h2 className="text-3xl lg:text-[35px] font-plus-jakarta font-semibold text-[#263238]">
+        <h2 className="text-2xl sm:text-3xl lg:text-[35px] font-plus-jakarta font-bold mb-4 sm:mb-6 text-[#263238]">
           Onze diensten, op maat voor uw succes
         </h2>
       </div>
