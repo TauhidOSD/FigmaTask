@@ -21,7 +21,7 @@ const Navbar = () => {
   };
 
   return (
-    <header className="bg-[#FFFFFF] md:px-32 shadow-md sticky top-0 z-50">
+    <header className="bg-[#FFFFFF] md:px-32 shadow-sm sticky top-0 z-50">
       <nav className="container mx-auto flex items-center justify-between px-4 py-3 lg:py-5">
         {/* Logo */}
         <a href="/" className="flex items-center space-x-2">
@@ -126,13 +126,13 @@ const Navbar = () => {
         <div className="hidden lg:flex space-x-6 items-center">
           <DienstenDropdown />
           <PrijzenDropdown />
-          <a href="/overons" className="text-gray-900 hover:text-blue-600">
+          <a href="/overons" className="text-[#263238] hover:text-blue-600 font-plus-jakarta text-[16px]">
             Over Ons
           </a>
-          <a href="/veelgesteldevragen" className="text-gray-900 hover:text-blue-600">
+          <a href="/veelgesteldevragen" className="text-[#263238] hover:text-blue-600 font-plus-jakarta text-[16px]">
             FAQ
           </a>
-          <a href="/portfolio" className="text-gray-900 hover:text-blue-600">
+          <a href="/portfolio" className="text-[#263238] hover:text-blue-600 font-plus-jakarta text-[16px]">
             Portfolio
           </a>
         </div>
@@ -141,7 +141,7 @@ const Navbar = () => {
         <a
           onClick={() => navigate("/contactpagina")}
           href="#contact"
-          className="hidden lg:block hover:bg-[#468AFFE6] bg-[#468AFF] text-white px-8 py-3 rounded-md shadow-md"
+          className="hidden lg:block hover:bg-[#468AFFE6] bg-[#468AFF] font-plus-jakarta text-white px-6 py-2 rounded-md shadow-md"
         >
           Contact
         </a>
@@ -160,7 +160,7 @@ const DienstenDropdown = () => {
       onMouseEnter={() => setIsOpen(true)}
       onMouseLeave={() => setIsOpen(false)}
     >
-      <button className="flex items-center gap-2 px-4 py-2 text-gray-700 hover:text-black">
+      <button className="flex items-center gap-2 px-4 py-2 text-[#263238] hover:text-blue-600 font-plus-jakarta text-[16px]">
         Diensten
         <ChevronDownIcon
           className="w-5 h-5 text-black transition-transform duration-200"
@@ -197,7 +197,7 @@ const PrijzenDropdown = () => {
       onMouseEnter={() => setIsOpen(true)}
       onMouseLeave={() => setIsOpen(false)}
     >
-      <button className="flex items-center gap-2 px-4 py-2 text-gray-700 hover:text-black">
+      <button className="flex items-center gap-2 px-4 py-2 text-[#263238] hover:text-blue-600 font-plus-jakarta text-[16px]">
         Prijzen
         <ChevronDownIcon
           className="w-5 h-5 text-black transition-transform duration-200"
