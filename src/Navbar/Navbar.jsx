@@ -9,6 +9,17 @@ const Navbar = () => {
   const [isDienstenOpen, setIsDienstenOpen] = useState(false);
   const [isPrijzenOpen, setIsPrijzenOpen] = useState(false);
 
+  // Handle toggling dropdowns to ensure only one is open at a time
+  const toggleDiensten = () => {
+    setIsDienstenOpen((prev) => !prev);
+    setIsPrijzenOpen(false);
+  };
+
+  const togglePrijzen = () => {
+    setIsPrijzenOpen((prev) => !prev);
+    setIsDienstenOpen(false);
+  };
+
   return (
     <header className="bg-[#FFFFFF] md:px-32 shadow-md sticky top-0 z-50">
       <nav className="container mx-auto flex items-center justify-between px-4 py-3 lg:py-5">
@@ -22,7 +33,12 @@ const Navbar = () => {
           <button
             tabIndex={0}
             className="btn btn-ghost p-2"
-            onClick={() => setIsMobileDropdownOpen(!isMobileDropdownOpen)}
+            onClick={() => {
+              setIsMobileDropdownOpen(!isMobileDropdownOpen);
+              // Close submenus when main mobile menu is toggled
+              setIsDienstenOpen(false);
+              setIsPrijzenOpen(false);
+            }}
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -42,26 +58,26 @@ const Navbar = () => {
 
           {/* Mobile Dropdown Menu */}
           {isMobileDropdownOpen && (
-            <div className="absolute right-0 mt-2 w-48 bg-white border rounded-lg shadow-lg transition-all duration-200 ease-in-out">
+            <div className="absolute right-0 mt-2 w-48 bg-white border rounded-lg shadow-lg transition-all duration-200 ease-in-out z-50">
               <div>
                 <button
-                  className="block px-4 py-2 text-gray-700"
-                  onClick={() => setIsDienstenOpen(!isDienstenOpen)}
+                  className="block w-full text-left px-4 py-2 text-gray-700"
+                  onClick={toggleDiensten}
                 >
                   Diensten <ChevronDownIcon className="w-5 h-5 inline" />
                 </button>
                 {isDienstenOpen && (
                   <div className="bg-white border rounded-lg shadow-lg">
-                    <a href="/appontwikkeling" className="block  px-4  py-2 hover:bg-gray-100">
+                    <a href="/appontwikkeling" className="block px-4 py-2 hover:bg-gray-100">
                       App Ontwikkeling
                     </a>
-                    <a href="/brandingdiensten" className="block  px-4 py-2 hover:bg-gray-100">
+                    <a href="/brandingdiensten" className="block px-4 py-2 hover:bg-gray-100">
                       Branding
                     </a>
-                    <a href="/marketingontwikkeling" className="block  px-4 py-2 hover:bg-gray-100">
+                    <a href="/marketingontwikkeling" className="block px-4 py-2 hover:bg-gray-100">
                       Marketingsdiensten
                     </a>
-                    <a href="/websitebuilder" className="block  px-4 py-2 hover:bg-gray-100">
+                    <a href="/websitebuilder" className="block px-4 py-2 hover:bg-gray-100">
                       Website Builder
                     </a>
                   </div>
@@ -70,8 +86,8 @@ const Navbar = () => {
 
               <div>
                 <button
-                  className="block px-4 py-2 text-gray-700"
-                  onClick={() => setIsPrijzenOpen(!isPrijzenOpen)}
+                  className="block w-full text-left px-4 py-2 text-gray-700"
+                  onClick={togglePrijzen}
                 >
                   Prijzen <ChevronDownIcon className="w-5 h-5 inline" />
                 </button>
@@ -134,7 +150,7 @@ const Navbar = () => {
   );
 };
 
-// DienstenDropdown Component
+// Desktop DienstenDropdown
 const DienstenDropdown = () => {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -151,8 +167,6 @@ const DienstenDropdown = () => {
           style={{ transform: isOpen ? "rotate(180deg)" : "rotate(0deg)" }}
         />
       </button>
-
-      {/* Show dropdown on hover */}
       {isOpen && (
         <div className="absolute right-0 w-48 bg-white border rounded-lg shadow-lg">
           <a href="/appontwikkeling" className="block px-4 py-2 hover:bg-gray-100">
@@ -173,7 +187,7 @@ const DienstenDropdown = () => {
   );
 };
 
-// PrijzenDropdown Component
+// Desktop PrijzenDropdown
 const PrijzenDropdown = () => {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -190,23 +204,15 @@ const PrijzenDropdown = () => {
           style={{ transform: isOpen ? "rotate(180deg)" : "rotate(0deg)" }}
         />
       </button>
-
-      {/* Show dropdown on hover */}
       {isOpen && (
         <div className="absolute right-0 w-48 bg-white border rounded-lg shadow-lg">
           <a href="/appontwikkelingprijsplannen" className="block px-4 py-2 hover:bg-gray-100">
             App Ontwikkeling
           </a>
-          <a
-            href="/brandingprijsplannen"
-            className="block px-4 py-2 hover:bg-gray-100"
-          >
+          <a href="/brandingprijsplannen" className="block px-4 py-2 hover:bg-gray-100">
             Branding
           </a>
-          <a
-            href="/marketingprijsplannen"
-            className="block px-4 py-2 hover:bg-gray-100"
-          >
+          <a href="/marketingprijsplannen" className="block px-4 py-2 hover:bg-gray-100">
             Marketingsdiensten
           </a>
           <a href="/websitebuilder" className="block px-4 py-2 hover:bg-gray-100">
