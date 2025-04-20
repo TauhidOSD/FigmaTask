@@ -342,7 +342,7 @@ const PrijzenMarketing = () => {
                 <select
                   value={selectedOption}
                   onChange={(e) => setSelectedOption(e.target.value)}
-                  className={`block w-full px-3 py-2 border border-gray-300 bg-white rounded-lg focus:outline-none focus:ring-2 focus:border-blue-700
+                  className={`block w-full px-3 py-2 border border-gray-300 bg-white rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500
                     ${selectedOption === '' ? 'text-gray-400 ' : 'text-gray-700'}`}
                 >
                   
@@ -364,7 +364,7 @@ const PrijzenMarketing = () => {
               <select
                 value={selectedPlatform}
                 onChange={(e) => setSelectedPlatform(e.target.value)}
-                className={`block w-full px-3 py-2 border border-gray-300 bg-white rounded-lg  focus:outline-none focus:ring-2 focus:border-blue-600
+                className={`block w-full px-3 py-2 border border-gray-300 bg-white rounded-lg  focus:outline-none focus:ring-2 focus:ring-blue-500
                   ${selectedPlatform === '' ? 'text-gray-400 ' : 'text-gray-700'}`}
               >
                 
@@ -405,7 +405,7 @@ const PrijzenMarketing = () => {
               <select
                 value={selectedDoelgroep}
                 onChange={(e) => setSelectedDoelgroep(e.target.value)}
-                className={`block w-full px-3 py-2 border border-gray-300 bg-white rounded-lg focus:outline-none focus:ring-2 focus:border-blue-500
+                className={`block w-full px-3 py-2 border border-gray-300 bg-white rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500
                   ${selectedDoelgroep === '' ? 'text-gray-400 ' : 'text-gray-700'}`}
               >
                
@@ -428,7 +428,7 @@ const PrijzenMarketing = () => {
               <select
                 value={selectedLeeft}
                 onChange={(e) => setSelectedLeeft(e.target.value)}
-                className={`block w-full px-3 py-2 border border-gray-300 bg-white rounded-lg  focus:outline-none focus:ring-2 focus:border-blue-500
+                className={`block w-full px-3 py-2 border border-gray-300 bg-white rounded-lg  focus:outline-none focus:ring-2 focus:ring-blue-500
                   ${selectedLeeft === '' ? 'text-gray-400 ' : 'text-gray-700'}`}
               >
                 <option value="" disabled hidden>
@@ -499,7 +499,7 @@ const PrijzenMarketing = () => {
             <select
               value={selectedBudget}
               onChange={(e) => setSelectedBudget(e.target.value)}
-              className={`block w-full px-3 py-2 border border-gray-300 rounded-md  focus:outline-none focus:ring-2 focus:border-blue-500 bg-white ${
+              className={`block w-full px-3 py-2 border border-gray-300 rounded-md  focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white ${
                 selectedBudget === '' ? 'text-gray-400 ' : 'text-gray-700'
               }`}
             >

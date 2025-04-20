@@ -1,10 +1,11 @@
-import { FaChevronDown, FaUpload } from "react-icons/fa";
+//import { FaChevronDown} from "react-icons/fa";
 import das from "../assets/das.png";
 import bg from "../assets/BrandPrice.jpg";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { useRef } from 'react';
 import emailjs from '@emailjs/browser';
 import Swal from 'sweetalert2'
+import { Upload } from "lucide-react";
 
 const PrijzenBranding = () => {
 
@@ -39,6 +40,97 @@ const showAlert=()=>{
   useEffect(() => {
         window.scrollTo(0, 0); 
       }, []);
+
+
+
+
+      // Left side checkbox 
+
+      const [selectedGender, setSelectedGender] = useState({
+        men: false,
+        women: false,
+        both: false
+      });
+    
+      const handleChange = (e) => {
+        const { name, checked } = e.target;
+        setSelectedGender((prev) => ({
+          ...prev,
+          [name]: checked,
+        }));
+      };
+
+
+      // left side file select
+
+      const fileInputRef = useRef(null);
+
+  const handleClick = () => {
+    fileInputRef.current.click();
+  };
+
+  const handleFileChange = (e) => {
+    const file = e.target.files[0];
+    if (file) {
+      console.log('Bestand gekozen:', file.name);
+      // Handle upload logic here
+    }
+  };
+
+
+  // Dropdown 1
+
+  const [brand, setSubjectBrand] = useState('');
+  
+  const brands = [
+    " Visuele Identiteit (logo, kleuren, typografie, huisstijl)",
+    "Digitale Branding (website/webshop design, social media visuals)",
+    "Corporate Branding (merkstrategie, positionering, storytelling)",
+    " Product Branding (verpakking, campagne visuals, promotiemateriaal)",
+    "Employer Branding (werkgeversimago, recruitment branding)",
+  
+  ];
+
+  // Dropdown 2
+
+  const [doel, setSubjectDoel] = useState('');
+  
+  const doels = [
+    " B2B (Bedrijven & Ondernemers)",
+    "B2C (Consumenten & Retail)",
+    "E-commerce & Webshops",
+    " Startups & Scale-ups",
+    "Lokale & Dienstverlenende bedrijven",
+    "High-end & Luxe merken"
+  
+  ];
+
+  // Dropdown 3
+
+  const [age, setSubjectAge] = useState('');
+  
+  const ages = [
+    " 0-16 jaar",
+    "16-21 jaar",
+    "21-35 Jaar",
+    " 35-50 jaar",
+    "50-65 jaar",
+    "65+"
+  
+  ];
+
+  // Dropdown 4
+
+  const [begroting, setSubjectBegroting] = useState('');
+  
+  const begrotings = [
+    "€1.000 - €5.000 (Basisbranding & logo-ontwerp)",
+    "€5.000 - €10.000 (Uitgebreide branding & strategie)",
+    " €10.000+ (Complete merkstrategie + digitale branding)",
+  
+  ];
+
+
 
   return (
     <>
@@ -103,18 +195,18 @@ const showAlert=()=>{
           <div className="flex flex-col gap-4">
             <div>
               <label className="block text-gray-700 font-medium mb-1">
-                Naam (Eerste en Aarthternaam)
+              Naam (Voor en Achternaam)
               </label>
               <input
                 type="text"
                 name="name"
-                placeholder="Achternaam (TYPO)"
+                placeholder="Naam"
                 className="border border-gray-300 rounded-lg p-2 w-full focus:outline-none focus:ring-2 focus:ring-blue-500"
               />
             </div>
             <div>
               <label className="block text-gray-700 font-medium mb-1">
-                Bedrijfsnaam (indien van toepassing)
+              Bedrijfsnaam (indien van toepassing)
               </label>
               <input
                 type="text"
@@ -131,7 +223,7 @@ const showAlert=()=>{
                 <input
                   type="email"
                   name="email"
-                  placeholder="E -mail"
+                  placeholder="E-mail"
                   className="border border-gray-300 rounded-lg p-2 w-full focus:outline-none focus:ring-2 focus:ring-blue-500"
                 />
               </div>
@@ -156,6 +248,7 @@ const showAlert=()=>{
               Technisch
             </h2>
 
+            <div className="grid grid-cols-2 items-center">
             <div>
               <label className="block text-gray-700 font-medium mb-1">
                 Voorkeurskleuren of theams
@@ -167,6 +260,29 @@ const showAlert=()=>{
                 className="border border-gray-300 rounded-lg p-2 w-full focus:outline-none focus:ring-2 focus:ring-blue-500"
               />
             </div>
+
+              <div className="mt-6 ml-10">
+              <button
+                      type="button"
+                      onClick={handleClick}
+                      className="bg-gray-800 hover:bg-gray-700 text-white font-medium py-2 px-2 rounded-lg flex items-center gap-2"
+                    >
+                      Upload afbeelding
+                      <Upload size={16} />
+                    </button>
+                    <input
+                      type="file"
+                      accept="image/*"
+                      className="hidden"
+                      ref={fileInputRef}
+                      onChange={handleFileChange}
+                    />
+              </div>
+
+            </div>
+
+ 
+            <div className="grid grid-cols-2 ">
             <div>
               <label className="block text-gray-700 font-medium mb-1">
                 Inspiratie of concurrenten
@@ -178,6 +294,28 @@ const showAlert=()=>{
                 className="border border-gray-300 rounded-lg p-2 w-full focus:outline-none focus:ring-2 focus:ring-blue-500"
               />
             </div>
+
+            <div className="mt-6 ml-10">
+              <button
+                      type="button"
+                      onClick={handleClick}
+                      className="bg-gray-800 hover:bg-gray-700 text-white font-medium py-2 px-2 rounded-lg flex items-center gap-2"
+                    >
+                      Upload afbeelding
+                      <Upload size={16} />
+                    </button>
+                    <input
+                      type="file"
+                      accept="image/*"
+                      className="hidden"
+                      ref={fileInputRef}
+                      onChange={handleFileChange}
+                    />
+              </div>
+            </div>
+
+
+
             <div>
               <label className="block text-gray-700 font-medium mb-1">
                 Eventuele specifieke merkelementen die nodig zijn
@@ -205,19 +343,28 @@ const showAlert=()=>{
             {/* Left Side Inputs */}
             <div className="flex flex-col gap-4">
               <div>
-                <label className="block text-gray-700 font-medium mb-1">
-                  Type branding
-                </label>
                 <div className="relative">
-                  <input
-                    type="text"
-                    placeholder="uitkiezen"
-                    name="branding"
-                    className="border border-gray-300 rounded-lg p-2 w-full pr-10 focus:outline-none focus:ring-2 focus:ring-blue-500"
-                  />
-                  <FaChevronDown className="absolute right-3 top-3 text-gray-500" />
+                <label className="block text-base font-medium text-gray-700 mb-1">
+                Type branding
+                </label>
+                <select
+                  value={brand}
+                  onChange={(e) => setSubjectBrand(e.target.value)}
+                  className={`block w-full  px-3 py-2 border border-gray-300 bg-white rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500
+                    ${brand === '' ? 'text-gray-400 ' : 'text-gray-700'}`}
+                    >
+                  <option value="" disabled hidden>
+                  Uitkiezen
+                  </option>
+                  {brands .map((Uitki, index) => (
+                    <option key={index} value={Uitki} className="text-gray-700  ">
+                      {Uitki}
+                    </option>
+                  ))}
+                </select>
                 </div>
               </div>
+
               <div>
                 <label className="block text-gray-700 font-medium mb-1">
                   De kernwaarden en missie van het merk
@@ -231,24 +378,90 @@ const showAlert=()=>{
                   />
                 </div>
               </div>
+
               <div>
                 <label className="block text-gray-700 font-medium mb-1">
                   Doelgroep
                 </label>
-                <div className="relative">
+                <select
+                  value={doel}
+                  onChange={(e) => setSubjectDoel(e.target.value)}
+                  className={`block w-full  px-3 py-2 border border-gray-300 bg-white rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500
+                    ${brand === '' ? 'text-gray-400 ' : 'text-gray-700'}`}
+                    >
+                
+                  <option value="" disabled hidden>
+                  Uitkiezen
+                  </option>
+                  {doels .map((option, index) => (
+                    <option key={index} value={option} className="text-gray-700  ">
+                      {option}
+                    </option>
+                  ))}
+                </select>
+              </div>
+
+              <div>
+                <label className="block text-gray-700 font-medium mb-1">
+                  Ages
+                </label>
+                <select
+                  value={age}
+                  onChange={(e) => setSubjectAge(e.target.value)}
+                  className={`block w-full  px-3 py-2 border border-gray-300 bg-white rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500
+                    ${brand === '' ? 'text-gray-400 ' : 'text-gray-700'}`}
+                    >
+                
+                  <option value="" disabled hidden>
+                  Uitkiezen
+                  </option>
+                  {ages.map((option, index) => (
+                    <option key={index} value={option} className="text-gray-700  ">
+                      {option}
+                    </option>
+                  ))}
+                </select>
+              </div>
+
+              <div className="">
+              <h3 style={{ fontWeight: '500' }}>Op basis van demografie & geslacht</h3>
+              <div style={{ display: 'flex', gap: '1.5rem', marginTop: '1rem' }}>
+                <label style={{ display: 'flex', alignItems: 'center', color: '#999' }}>
                   <input
-                    type="text"
-                    name="doelgroep"
-                    placeholder="Uitkiezen"
-                    className="border border-gray-300 rounded-lg p-2 w-full pr-10 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    type="checkbox"
+                    name="men"
+                    checked={selectedGender.man}
+                    onChange={handleChange}
+                    style={{ marginRight: '0.5rem' }}
                   />
-                  <FaChevronDown className="absolute right-3 top-3 text-gray-500" />
-                </div>
+                  Men
+                </label>
+                <label style={{ display: 'flex', alignItems: 'center', color: '#999' }}>
+                  <input
+                    type="checkbox"
+                    name="women"
+                    checked={selectedGender.man}
+                    onChange={handleChange}
+                    style={{ marginRight: '0.5rem' }}
+                  />
+                  Women
+                </label>
+                <label style={{ display: 'flex', alignItems: 'center', color: '#999' }}>
+                  <input
+                    type="checkbox"
+                    name="both"
+                    checked={selectedGender.vrouw}
+                    onChange={handleChange}
+                    style={{ marginRight: '0.5rem' }}
+                  />
+                  Both
+                </label>
+              </div>
               </div>
 
               {/* upload image option */}
               <div className="">
-                <div className="md:grid md:grid-cols-2 gap-6">
+                <div className="md:grid md:grid-cols-2 items-center gap-6">
                   {/* Left Side Input */}
                   <div>
                     <label className="block text-gray-700 font-medium mb-1">
@@ -266,17 +479,22 @@ const showAlert=()=>{
 
                   {/* Right Side Input (Moved Up) */}
                   <div className="">
-                    <label className="block text-gray-700 font-medium mt-11"></label>
-                    <div className="border w-1/2 border-gray-300 rounded-lg p-3 md:w-full flex items-center justify-around cursor-pointer bg-black hover:bg-gray-800 transition">
-                      <label
-                        htmlFor="imageUpload"
-                        className="text-white cursor-pointer"
-                      >
-                        Upload afbeelding
-                      </label>
-                      <FaUpload className="text-white text-lg" />
-                      <input type="file" className="hidden" id="imageUpload" />
-                    </div>
+                    <label className="block text-gray-700 font-medium mt-[50px]"></label>
+                    <button
+                      type="button"
+                      onClick={handleClick}
+                      className="bg-gray-800 hover:bg-gray-700 text-white font-medium py-2 px-4 rounded-lg flex items-center gap-2"
+                    >
+                      Upload afbeelding
+                      <Upload size={16} />
+                    </button>
+                    <input
+                      type="file"
+                      accept="image/*"
+                      className="hidden"
+                      ref={fileInputRef}
+                      onChange={handleFileChange}
+                    />
                   </div>
 
                   {/* Image Upload Option */}
@@ -293,9 +511,10 @@ const showAlert=()=>{
                       placeholder="Uitkiezen"
                       className="border border-gray-300 rounded-lg p-2 w-full pr-10 focus:outline-none focus:ring-2 focus:ring-blue-500"
                     />
-                    <FaChevronDown className="absolute right-3 top-3 text-gray-500" />
+                  
                   </div>
                 </div>
+
                 <div>
                   <label className="block text-gray-700 font-medium mb-1">
                     Merkbericht/positionering
@@ -321,19 +540,27 @@ const showAlert=()=>{
                 <label className="block text-gray-700 font-medium mb-1">
                   Budgetbereik
                 </label>
-                <div className="relative">
-                  <input
-                    type="text"
-                    name="budgetbereik"
-                    placeholder="Naam"
-                    className="border border-gray-300 rounded-lg p-2 w-full pr-10 focus:outline-none focus:ring-2 focus:ring-blue-500"
-                  />
-                  <FaChevronDown className="absolute right-3 top-3 text-gray-500" />
-                </div>
+                <select
+                  value={begroting}
+                  onChange={(e) => setSubjectBegroting(e.target.value)}
+                  className={`block w-full  px-3 py-2 border border-gray-300 bg-white rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500
+                    ${brand === '' ? 'text-gray-400 ' : 'text-gray-700'}`}
+                    >
+                
+                  <option value="" disabled hidden>
+                  Uitkiezen
+                  </option>
+                  {begrotings .map((begrot, index) => (
+                    <option key={index} value={begrot} className="text-gray-700  ">
+                      {begrot}
+                    </option>
+                  ))}
+                </select>
               </div>
+
               <div>
                 <label className="block text-gray-700 font-medium mb-1">
-                  Gewenste voltooiingsdatum
+                Gewenste voltooiingsdatum
                 </label>
                 <div className="relative">
                   <input
@@ -350,13 +577,13 @@ const showAlert=()=>{
                   Aanvullende opmerkingen:
                 </h2>
                 <h2 className="block text-gray-700 font-medium mb-1">
-                  Aanvullende opmerkingen:
+                Verzoek en vragen
                 </h2>
 
                 <textarea
                   name="message"
-                  placeholder="Verzoeken en vragenBio"
-                  className="textarea  textarea-bordered textarea-lg w-full max-w-full"
+                  placeholder="Verzoeken en/of vragen"
+                  className="  focus:outline-none focus:ring-2 focus:ring-blue-600 textarea  textarea-bordered textarea-lg w-full h-52 max-w-full"
                 ></textarea>
               </div>
             </div>
