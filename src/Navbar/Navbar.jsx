@@ -1,7 +1,9 @@
 import NavLogo from "../assets/logo black 1.png";
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
-import { ChevronDownIcon } from "@heroicons/react/24/solid";
+
+import { AnimatePresence, motion } from "framer-motion";
+import { ChevronDownIcon, XIcon } from "lucide-react";
 
 const Navbar = () => {
   const navigate = useNavigate();
@@ -9,7 +11,6 @@ const Navbar = () => {
   const [isDienstenOpen, setIsDienstenOpen] = useState(false);
   const [isPrijzenOpen, setIsPrijzenOpen] = useState(false);
 
-  // Handle toggling dropdowns to ensure only one is open at a time
   const toggleDiensten = () => {
     setIsDienstenOpen((prev) => !prev);
     setIsPrijzenOpen(false);
@@ -20,10 +21,15 @@ const Navbar = () => {
     setIsDienstenOpen(false);
   };
 
+  const toggleMobileDropdown = () => {
+    setIsMobileDropdownOpen((prev) => !prev);
+    setIsDienstenOpen(false);
+    setIsPrijzenOpen(false);
+  };
+
   return (
     <header className="bg-[#FFFFFF] md:px-32 shadow-sm sticky top-0 z-50">
       <nav className="container mx-auto flex items-center justify-between px-4 py-3 lg:py-5">
-        {/* Logo */}
         <a href="/" className="flex items-center space-x-2">
           <img src={NavLogo} alt="Logo" className="h-8 lg:h-10 w-auto" />
         </a>
@@ -33,12 +39,7 @@ const Navbar = () => {
           <button
             tabIndex={0}
             className="btn btn-ghost p-2"
-            onClick={() => {
-              setIsMobileDropdownOpen(!isMobileDropdownOpen);
-              // Close submenus when main mobile menu is toggled
-              setIsDienstenOpen(false);
-              setIsPrijzenOpen(false);
-            }}
+            onClick={toggleMobileDropdown}
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -56,142 +57,133 @@ const Navbar = () => {
             </svg>
           </button>
 
-          {/* Mobile Dropdown Menu */}
-          {isMobileDropdownOpen && (
-            <div className="absolute right-0 mt-2 w-48 bg-white border rounded-lg shadow-lg transition-all duration-200 ease-in-out z-50">
-              <div>
+          <AnimatePresence>
+            {isMobileDropdownOpen && (
+              <motion.div
+                initial={{ x: "100%" }}
+                animate={{ x: 0 }}
+                exit={{ x: "100%" }}
+                transition={{ duration: 0.3 }}
+                className="absolute right-0 mt-2 w-56 py-6 bg-white border rounded-lg shadow-lg z-50"
+              >
+                {/* Close Button */}
                 <button
-                  className=" block w-full text-left px-4 py-2 text-gray-700"
-                  onClick={toggleDiensten}
+                  onClick={toggleMobileDropdown}
+                  className="absolute top-2  right-2 text-gray-600"
                 >
-                  Diensten <ChevronDownIcon className="w-4 h-4 inline ml-16" />
+                  <XIcon className="h-6 w-6 cursor-pointer" />
                 </button>
-                <hr className="ml-4 mr-4 " />
-                {isDienstenOpen && (
-                  <div className="bg-white border rounded-lg shadow-lg">
-                    <a
-                      href="/appontwikkeling"
-                      className="block px-4 py-2 hover:bg-gray-100"
-                    >
-                      App Ontwikkeling
-                    </a>
-                    <a
-                      href="/brandingdiensten"
-                      className="block px-4 py-2 hover:bg-gray-100"
-                    >
-                      Branding
-                    </a>
-                    <a
-                      href="/marketingontwikkeling"
-                      className="block px-4 py-2 hover:bg-gray-100"
-                    >
-                      Marketingsdiensten
-                    </a>
-                    <a
-                      href="/websitebuilder"
-                      className="block px-4 py-2 hover:bg-gray-100"
-                    >
-                      Website Builder
-                    </a>
-                  </div>
-                )}
-              </div>
 
-              <div>
-                <button
-                  className="block w-full text-left px-4 py-2 text-gray-700"
-                  onClick={togglePrijzen}
-                >
-                  Prijzen <ChevronDownIcon className="w-4 h-4 inline ml-20" />
-                </button>
-                <hr className="ml-4 mr-4 " />
-                {isPrijzenOpen && (
-                  <div className="bg-white border rounded-lg shadow-lg">
-                    <a
-                      href="/appontwikkelingprijsplannen"
-                      className="block px-4 py-2 hover:bg-gray-100"
-                    >
-                      App Ontwikkeling
-                    </a>
-                    <a
-                      href="/brandingprijsplannen"
-                      className="block px-4 py-2 hover:bg-gray-100"
-                    >
-                      Branding
-                    </a>
-                    <a
-                      href="/marketingprijsplannen"
-                      className="block px-4 py-2 hover:bg-gray-100"
-                    >
-                      Marketingsdiensten
-                    </a>
-                    <a
-                      href="/websitebuilder"
-                      className="block px-4 py-2 hover:bg-gray-100"
-                    >
-                      Website Builder
-                    </a>
-                  </div>
-                )}
-              </div>
+                <div>
+                  <button
+                    className="block w-full text-left px-4 py-2 text-gray-700"
+                    onClick={toggleDiensten}
+                  >
+                    Diensten <ChevronDownIcon className="w-4 h-4 inline ml-16" />
+                  </button>
+                  <hr className="ml-4 mr-4 " />
+                  <AnimatePresence>
+                    {isDienstenOpen && (
+                      <motion.div
+                        initial={{ opacity: 0, height: 0 }}
+                        animate={{ opacity: 1, height: "auto" }}
+                        exit={{ opacity: 0, height: 0 }}
+                        transition={{ duration: 0.3 }}
+                        className="bg-white border rounded-lg shadow-lg"
+                      >
+                        <a href="/appontwikkeling" className="block px-4 py-2 hover:bg-gray-100">
+                          App Ontwikkeling
+                        </a>
+                        <a href="/brandingdiensten" className="block px-4 py-2 hover:bg-gray-100">
+                          Branding
+                        </a>
+                        <a href="/marketingontwikkeling" className="block px-4 py-2 hover:bg-gray-100">
+                          Marketingsdiensten
+                        </a>
+                        <a href="/websitebuilder" className="block px-4 py-2 hover:bg-gray-100">
+                          Website Builder
+                        </a>
+                      </motion.div>
+                    )}
+                  </AnimatePresence>
+                </div>
 
-              <a href="/overons" className="block px-4 py-2 hover:bg-gray-100">
-                Over Ons
-              </a>
-              <hr className="ml-4 mr-4 " />
-              <a
-                href="/veelgesteldevragen"
-                className="block px-4 py-2 hover:bg-gray-100"
-              >
-                FAQ
-              </a>
-              <hr className="ml-4 mr-4 " />
-              <a
-                href="/portfolio"
-                className="block px-4 py-2 hover:bg-gray-100"
-              >
-                Portfolio
-              </a>
-              <hr className="ml-4 mr-4 " />
-              {/* Contact Button */}
-             <div className="my-6 ml-4">
-             <a
-                onClick={() => navigate("/contactpagina")}
-                href="#contact"
-                className=" lg:block hover:bg-[#468AFFE6] bg-[#468AFF] font-plus-jakarta text-white px-6 py-2  rounded-md shadow-md"
-              >
-                Contact
-              </a>
-             </div>
-            </div>
-          )}
+                <div>
+                  <button
+                    className="block w-full text-left px-4 py-2 text-gray-700"
+                    onClick={togglePrijzen}
+                  >
+                    Prijzen <ChevronDownIcon className="w-4 h-4 inline ml-20" />
+                  </button>
+                  <hr className="ml-4 mr-4 " />
+                  <AnimatePresence>
+                    {isPrijzenOpen && (
+                      <motion.div
+                        initial={{ opacity: 0, height: 0 }}
+                        animate={{ opacity: 1, height: "auto" }}
+                        exit={{ opacity: 0, height: 0 }}
+                        transition={{ duration: 0.3 }}
+                        className="bg-white border rounded-lg shadow-lg"
+                      >
+                        <a href="/appontwikkelingprijsplannen" className="block px-4 py-2 hover:bg-gray-100">
+                          App Ontwikkeling
+                        </a>
+                        <a href="/brandingprijsplannen" className="block px-4 py-2 hover:bg-gray-100">
+                          Branding
+                        </a>
+                        <a href="/marketingprijsplannen" className="block px-4 py-2 hover:bg-gray-100">
+                          Marketingsdiensten
+                        </a>
+                        <a href="/websitebuilder" className="block px-4 py-2 hover:bg-gray-100">
+                          Website Builder
+                        </a>
+                      </motion.div>
+                    )}
+                  </AnimatePresence>
+                </div>
+
+                <a href="/overons" className="block px-4 py-2 hover:bg-gray-100">
+                  Over Ons
+                </a>
+                <hr className="ml-4 mr-4 " />
+                <a href="/veelgesteldevragen" className="block px-4 py-2 hover:bg-gray-100">
+                  FAQ
+                </a>
+                <hr className="ml-4 mr-4 " />
+                <a href="/portfolio" className="block px-4 py-2 hover:bg-gray-100">
+                  Portfolio
+                </a>
+                <hr className="ml-4 mr-4 " />
+                <div className="my-6 ml-4">
+                  <a
+                    onClick={() => navigate("/contactpagina")}
+                    href="#contact"
+                    className="lg:block hover:bg-[#468AFFE6] bg-[#468AFF] font-plus-jakarta text-white px-6 py-2 rounded-md shadow-md"
+                  >
+                    Contact
+                  </a>
+                </div>
+              </motion.div>
+            )}
+          </AnimatePresence>
         </div>
 
         {/* Desktop Menu */}
         <div className="hidden lg:flex space-x-6 items-center">
           <DienstenDropdown />
           <PrijzenDropdown />
-          <a
-            href="/overons"
-            className="text-[#263238] hover:text-blue-600 font-plus-jakarta text-[16px]"
-          >
+          <a href="/overons" className="text-[#263238] hover:text-blue-600 font-plus-jakarta text-[16px]">
             Over Ons
           </a>
-          <a
-            href="/veelgesteldevragen"
-            className="text-[#263238] hover:text-blue-600 font-plus-jakarta text-[16px]"
-          >
+          <a href="/veelgesteldevragen" className="text-[#263238] hover:text-blue-600 font-plus-jakarta text-[16px]">
             FAQ
           </a>
-          <a
-            href="/portfolio"
-            className="text-[#263238] hover:text-blue-600 font-plus-jakarta text-[16px]"
-          >
+          <a href="/portfolio" className="text-[#263238] hover:text-blue-600 font-plus-jakarta text-[16px]">
             Portfolio
           </a>
         </div>
 
-        {/* Contact Button */}
+        {/* Desktop Contact Button */}
         <a
           onClick={() => navigate("/contactpagina")}
           href="#contact"
@@ -223,30 +215,10 @@ const DienstenDropdown = () => {
       </button>
       {isOpen && (
         <div className="absolute right-0 w-48 bg-white border rounded-lg shadow-lg">
-          <a
-            href="/appontwikkeling"
-            className="block px-4 py-2 hover:bg-gray-100"
-          >
-            App Ontwikkeling
-          </a>
-          <a
-            href="/brandingdiensten"
-            className="block px-4 py-2 hover:bg-gray-100"
-          >
-            Branding
-          </a>
-          <a
-            href="/marketingontwikkeling"
-            className="block px-4 py-2 hover:bg-gray-100"
-          >
-            Marketingsdiensten
-          </a>
-          <a
-            href="/websitebuilder"
-            className="block px-4 py-2 hover:bg-gray-100"
-          >
-            Website Builder
-          </a>
+          <a href="/appontwikkeling" className="block px-4 py-2 hover:bg-gray-100">App Ontwikkeling</a>
+          <a href="/brandingdiensten" className="block px-4 py-2 hover:bg-gray-100">Branding</a>
+          <a href="/marketingontwikkeling" className="block px-4 py-2 hover:bg-gray-100">Marketingsdiensten</a>
+          <a href="/websitebuilder" className="block px-4 py-2 hover:bg-gray-100">Website Builder</a>
         </div>
       )}
     </div>
@@ -272,30 +244,10 @@ const PrijzenDropdown = () => {
       </button>
       {isOpen && (
         <div className="absolute right-0 w-48 bg-white border rounded-lg shadow-lg">
-          <a
-            href="/appontwikkelingprijsplannen"
-            className="block px-4 py-2 hover:bg-gray-100"
-          >
-            App Ontwikkeling
-          </a>
-          <a
-            href="/brandingprijsplannen"
-            className="block px-4 py-2 hover:bg-gray-100"
-          >
-            Branding
-          </a>
-          <a
-            href="/marketingprijsplannen"
-            className="block px-4 py-2 hover:bg-gray-100"
-          >
-            Marketingsdiensten
-          </a>
-          <a
-            href="/websitebuilder"
-            className="block px-4 py-2 hover:bg-gray-100"
-          >
-            Website Builder
-          </a>
+          <a href="/appontwikkelingprijsplannen" className="block px-4 py-2 hover:bg-gray-100">App Ontwikkeling</a>
+          <a href="/brandingprijsplannen" className="block px-4 py-2 hover:bg-gray-100">Branding</a>
+          <a href="/marketingprijsplannen" className="block px-4 py-2 hover:bg-gray-100">Marketingsdiensten</a>
+          <a href="/websitebuilder" className="block px-4 py-2 hover:bg-gray-100">Website Builder</a>
         </div>
       )}
     </div>
