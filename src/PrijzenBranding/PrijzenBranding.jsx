@@ -183,10 +183,10 @@ const showAlert=()=>{
           {/* First Part */}
       <div className="md:px-36 px-6 mx-auto">
         <div className=" flex md:gap-[496px]">
-          <h2 className="text-xl text-[#407BFF] font-semibold md:mt-8 mt-4 mb-4">
+          <h2 className="text-[28px] text-[rgba(64,123,255,1)] font-plus-jakarta font-semibold md:mt-8 mt-4 mb-4">
             Basisinformatie:
           </h2>
-          <h2 className="text-xl text-[#407BFF] md:-ml-12 font-semibold mb-4 md:mt-8 mt-4  hidden sm:block ">
+          <h2 className="text-[28px] text-[rgba(64,123,255,1)] font-plus-jakarta font-semibold md:-ml-56 mb-4 md:mt-8 mt-4  hidden sm:block ">
             Technisch
           </h2>
         </div>
@@ -194,7 +194,7 @@ const showAlert=()=>{
           {/* Left Side Inputs */}
           <div className="flex flex-col gap-4">
             <div>
-              <label className="block text-gray-700 font-medium mb-1">
+              <label className="block text-[rgba(38,50,56,1)] font-semibold font-plus-jakarta text-[16px] mb-1">
               Naam (Voor en Achternaam)
               </label>
               <input
@@ -205,7 +205,7 @@ const showAlert=()=>{
               />
             </div>
             <div>
-              <label className="block text-gray-700 font-medium mb-1">
+              <label className="block text-[rgba(38,50,56,1)] font-semibold font-plus-jakarta text-[16px] mb-1">
               Bedrijfsnaam (indien van toepassing)
               </label>
               <input
@@ -217,7 +217,7 @@ const showAlert=()=>{
             </div>
             <div className="grid grid-cols-2 gap-4">
               <div>
-                <label className="block text-gray-700 font-medium mb-1">
+                <label className="block text-[rgba(38,50,56,1)] font-semibold font-plus-jakarta text-[16px] mb-1">
                   E -mailadres
                 </label>
                 <input
@@ -228,7 +228,7 @@ const showAlert=()=>{
                 />
               </div>
               <div>
-                <label className="block text-gray-700 font-medium mb-1">
+                <label className="block text-[rgba(38,50,56,1)] font-semibold font-plus-jakarta text-[16px] mb-1">
                   Telefoonnummer
                 </label>
                 <input
@@ -244,14 +244,11 @@ const showAlert=()=>{
           {/* Right Side Inputs */}
 
           <div className="flex flex-col gap-4">
-            <h2 className="text-xl text-[#407BFF] font-semibold md:mb-4 md:hidden block mt-12 ">
-              Technisch
-            </h2>
-
+            
             <div className="grid grid-cols-2 items-center">
             <div>
-              <label className="block text-gray-700 font-medium mb-1">
-                Voorkeurskleuren of theams
+              <label className="block text-[rgba(38,50,56,1)] font-semibold font-plus-jakarta text-[16px] mb-1">
+              Voorkeurskleuren of themas
               </label>
               <input
                 type="text"
@@ -284,7 +281,7 @@ const showAlert=()=>{
  
             <div className="grid grid-cols-2 ">
             <div>
-              <label className="block text-gray-700 font-medium mb-1">
+              <label className="block text-[rgba(38,50,56,1)] font-semibold font-plus-jakarta text-[16px] mb-1">
                 Inspiratie of concurrenten
               </label>
               <input
@@ -317,7 +314,7 @@ const showAlert=()=>{
 
 
             <div>
-              <label className="block text-gray-700 font-medium mb-1">
+              <label className="block text-[rgba(38,50,56,1)] font-semibold font-plus-jakarta text-[16px] mb-1">
                 Eventuele specifieke merkelementen die nodig zijn
               </label>
               <input
@@ -335,7 +332,7 @@ const showAlert=()=>{
 
       <div className="md:px-0 px-6">
         <div className="md:px-36 mx-auto">
-          <h2 className="text-xl mt-8  text-[#407BFF] font-semibold mb-4">
+          <h2 className="text-[28px] text-[rgba(64,123,255,1)] font-plus-jakarta font-semibold mt-8   mb-4">
             Informatie over brandingsproject:
           </h2>
 
@@ -344,7 +341,7 @@ const showAlert=()=>{
             <div className="flex flex-col gap-4">
               <div>
                 <div className="relative">
-                <label className="block text-base font-medium text-gray-700 mb-1">
+                <label className="block text-[rgba(38,50,56,1)] font-semibold font-plus-jakarta text-[16px] mb-1">
                 Type branding
                 </label>
                 <select
@@ -366,7 +363,7 @@ const showAlert=()=>{
               </div>
 
               <div>
-                <label className="block text-gray-700 font-medium mb-1">
+                <label className="block text-[rgba(38,50,56,1)] font-semibold font-plus-jakarta text-[16px] mb-1">
                   De kernwaarden en missie van het merk
                 </label>
                 <div className="relative">
@@ -380,7 +377,7 @@ const showAlert=()=>{
               </div>
 
               <div>
-                <label className="block text-gray-700 font-medium mb-1">
+                <label className="block text-[rgba(38,50,56,1)] font-semibold font-plus-jakarta text-[16px] mb-1">
                   Doelgroep
                 </label>
                 <select
@@ -402,7 +399,7 @@ const showAlert=()=>{
               </div>
 
               <div>
-                <label className="block text-gray-700 font-medium mb-1">
+                <label className="block text-[rgba(38,50,56,1)] font-semibold font-plus-jakarta text-[16px] mb-1">
                   Ages
                 </label>
                 <select
@@ -424,7 +421,7 @@ const showAlert=()=>{
               </div>
 
               <div className="">
-              <h3 style={{ fontWeight: '500' }}>Op basis van demografie & geslacht</h3>
+              <h3  style={{ fontWeight: '600', text:'16px',color: 'rgba(38, 50, 56, 1)', fontFamily: 'Plus Jakarta Sans, sans-serif'  }}>Op basis van demografie & geslacht</h3>
               <div style={{ display: 'flex', gap: '1.5rem', marginTop: '1rem' }}>
                 <label style={{ display: 'flex', alignItems: 'center', color: '#999' }}>
                   <input
@@ -464,7 +461,7 @@ const showAlert=()=>{
                 <div className="md:grid md:grid-cols-2 items-center gap-6">
                   {/* Left Side Input */}
                   <div>
-                    <label className="block text-gray-700 font-medium mb-1">
+                    <label className="block text-[rgba(38,50,56,1)] font-semibold font-plus-jakarta text-[16px] mb-1">
                       Huidige branding (indien aanwezig)
                     </label>
                     <div className="relative">
@@ -501,7 +498,7 @@ const showAlert=()=>{
                 </div>
 
                 <div className="my-4">
-                  <label className="block text-gray-700 font-medium mb-1">
+                  <label className="block text-[rgba(38,50,56,1)] font-semibold font-plus-jakarta text-[16px] mb-1">
                     Gewenste look en feel
                   </label>
                   <div className="relative">
@@ -516,7 +513,7 @@ const showAlert=()=>{
                 </div>
 
                 <div>
-                  <label className="block text-gray-700 font-medium mb-1">
+                  <label className="block text-[rgba(38,50,56,1)] font-semibold font-plus-jakarta text-[16px] mb-1">
                     Merkbericht/positionering
                   </label>
                   <div className="relative">
@@ -533,11 +530,11 @@ const showAlert=()=>{
 
             {/* Right Side Inputs */}
             <div className="flex flex-col gap-4">
-              <h2 className="text-xl text-[#407BFF] font-semibold mb-4">
+              <h2 className="text-[28px] text-[rgba(64,123,255,1)] font-plus-jakarta font-semibold mb-4">
                 Begroting
               </h2>
               <div>
-                <label className="block text-gray-700 font-medium mb-1">
+                <label className="block text-[rgba(38,50,56,1)] font-semibold font-plus-jakarta text-[16px] mb-1">
                   Budgetbereik
                 </label>
                 <select
@@ -548,7 +545,7 @@ const showAlert=()=>{
                     >
                 
                   <option value="" disabled hidden>
-                  Uitkiezen
+                  Naam
                   </option>
                   {begrotings .map((begrot, index) => (
                     <option key={index} value={begrot} className="text-gray-700  ">
@@ -559,24 +556,25 @@ const showAlert=()=>{
               </div>
 
               <div>
-                <label className="block text-gray-700 font-medium mb-1">
+                <label className="block text-[rgba(38,50,56,1)] font-semibold font-plus-jakarta text-[16px] mb-1">
                 Gewenste voltooiingsdatum
                 </label>
                 <div className="relative">
+                  
                   <input
-                    type="text"
+                    type="date"
                     name="voltoo"
-                    placeholder="Naam"
+                    placeholder="Date dd-mm-yyy"
                     className="border border-gray-300 rounded-lg p-2 w-full pr-10 focus:outline-none focus:ring-2 focus:ring-blue-500"
                   />
                 </div>
               </div>
               {/* comment box */}
               <div>
-                <h2 className="text-xl text-[#407BFF] font-semibold mb-4">
+                <h2 className="text-[28px] text-[rgba(64,123,255,1)] font-plus-jakarta font-semibold mb-4">
                   Aanvullende opmerkingen:
                 </h2>
-                <h2 className="block text-gray-700 font-medium mb-1">
+                <h2 className="block text-[rgba(38,50,56,1)] font-semibold font-plus-jakarta text-[16px] mb-1">
                 Verzoek en vragen
                 </h2>
 
