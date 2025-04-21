@@ -61,23 +61,36 @@ const Navbar = () => {
             <div className="absolute right-0 mt-2 w-48 bg-white border rounded-lg shadow-lg transition-all duration-200 ease-in-out z-50">
               <div>
                 <button
-                  className="block w-full text-left px-4 py-2 text-gray-700"
+                  className=" block w-full text-left px-4 py-2 text-gray-700"
                   onClick={toggleDiensten}
                 >
-                  Diensten <ChevronDownIcon className="w-5 h-5 inline" />
+                  Diensten <ChevronDownIcon className="w-4 h-4 inline ml-16" />
                 </button>
+                <hr className="ml-4 mr-4 " />
                 {isDienstenOpen && (
                   <div className="bg-white border rounded-lg shadow-lg">
-                    <a href="/appontwikkeling" className="block px-4 py-2 hover:bg-gray-100">
+                    <a
+                      href="/appontwikkeling"
+                      className="block px-4 py-2 hover:bg-gray-100"
+                    >
                       App Ontwikkeling
                     </a>
-                    <a href="/brandingdiensten" className="block px-4 py-2 hover:bg-gray-100">
+                    <a
+                      href="/brandingdiensten"
+                      className="block px-4 py-2 hover:bg-gray-100"
+                    >
                       Branding
                     </a>
-                    <a href="/marketingontwikkeling" className="block px-4 py-2 hover:bg-gray-100">
+                    <a
+                      href="/marketingontwikkeling"
+                      className="block px-4 py-2 hover:bg-gray-100"
+                    >
                       Marketingsdiensten
                     </a>
-                    <a href="/websitebuilder" className="block px-4 py-2 hover:bg-gray-100">
+                    <a
+                      href="/websitebuilder"
+                      className="block px-4 py-2 hover:bg-gray-100"
+                    >
                       Website Builder
                     </a>
                   </div>
@@ -89,20 +102,33 @@ const Navbar = () => {
                   className="block w-full text-left px-4 py-2 text-gray-700"
                   onClick={togglePrijzen}
                 >
-                  Prijzen <ChevronDownIcon className="w-5 h-5 inline" />
+                  Prijzen <ChevronDownIcon className="w-4 h-4 inline ml-20" />
                 </button>
+                <hr className="ml-4 mr-4 " />
                 {isPrijzenOpen && (
                   <div className="bg-white border rounded-lg shadow-lg">
-                    <a href="/appontwikkelingprijsplannen" className="block px-4 py-2 hover:bg-gray-100">
+                    <a
+                      href="/appontwikkelingprijsplannen"
+                      className="block px-4 py-2 hover:bg-gray-100"
+                    >
                       App Ontwikkeling
                     </a>
-                    <a href="/brandingprijsplannen" className="block px-4 py-2 hover:bg-gray-100">
+                    <a
+                      href="/brandingprijsplannen"
+                      className="block px-4 py-2 hover:bg-gray-100"
+                    >
                       Branding
                     </a>
-                    <a href="/marketingprijsplannen" className="block px-4 py-2 hover:bg-gray-100">
+                    <a
+                      href="/marketingprijsplannen"
+                      className="block px-4 py-2 hover:bg-gray-100"
+                    >
                       Marketingsdiensten
                     </a>
-                    <a href="/websitebuilder" className="block px-4 py-2 hover:bg-gray-100">
+                    <a
+                      href="/websitebuilder"
+                      className="block px-4 py-2 hover:bg-gray-100"
+                    >
                       Website Builder
                     </a>
                   </div>
@@ -112,12 +138,31 @@ const Navbar = () => {
               <a href="/overons" className="block px-4 py-2 hover:bg-gray-100">
                 Over Ons
               </a>
-              <a href="/veelgesteldevragen" className="block px-4 py-2 hover:bg-gray-100">
+              <hr className="ml-4 mr-4 " />
+              <a
+                href="/veelgesteldevragen"
+                className="block px-4 py-2 hover:bg-gray-100"
+              >
                 FAQ
               </a>
-              <a href="/portfolio" className="block px-4 py-2 hover:bg-gray-100">
+              <hr className="ml-4 mr-4 " />
+              <a
+                href="/portfolio"
+                className="block px-4 py-2 hover:bg-gray-100"
+              >
                 Portfolio
               </a>
+              <hr className="ml-4 mr-4 " />
+              {/* Contact Button */}
+             <div className="my-6 ml-4">
+             <a
+                onClick={() => navigate("/contactpagina")}
+                href="#contact"
+                className=" lg:block hover:bg-[#468AFFE6] bg-[#468AFF] font-plus-jakarta text-white px-6 py-2  rounded-md shadow-md"
+              >
+                Contact
+              </a>
+             </div>
             </div>
           )}
         </div>
@@ -126,13 +171,22 @@ const Navbar = () => {
         <div className="hidden lg:flex space-x-6 items-center">
           <DienstenDropdown />
           <PrijzenDropdown />
-          <a href="/overons" className="text-[#263238] hover:text-blue-600 font-plus-jakarta text-[16px]">
+          <a
+            href="/overons"
+            className="text-[#263238] hover:text-blue-600 font-plus-jakarta text-[16px]"
+          >
             Over Ons
           </a>
-          <a href="/veelgesteldevragen" className="text-[#263238] hover:text-blue-600 font-plus-jakarta text-[16px]">
+          <a
+            href="/veelgesteldevragen"
+            className="text-[#263238] hover:text-blue-600 font-plus-jakarta text-[16px]"
+          >
             FAQ
           </a>
-          <a href="/portfolio" className="text-[#263238] hover:text-blue-600 font-plus-jakarta text-[16px]">
+          <a
+            href="/portfolio"
+            className="text-[#263238] hover:text-blue-600 font-plus-jakarta text-[16px]"
+          >
             Portfolio
           </a>
         </div>
@@ -169,16 +223,28 @@ const DienstenDropdown = () => {
       </button>
       {isOpen && (
         <div className="absolute right-0 w-48 bg-white border rounded-lg shadow-lg">
-          <a href="/appontwikkeling" className="block px-4 py-2 hover:bg-gray-100">
+          <a
+            href="/appontwikkeling"
+            className="block px-4 py-2 hover:bg-gray-100"
+          >
             App Ontwikkeling
           </a>
-          <a href="/brandingdiensten" className="block px-4 py-2 hover:bg-gray-100">
+          <a
+            href="/brandingdiensten"
+            className="block px-4 py-2 hover:bg-gray-100"
+          >
             Branding
           </a>
-          <a href="/marketingontwikkeling" className="block px-4 py-2 hover:bg-gray-100">
+          <a
+            href="/marketingontwikkeling"
+            className="block px-4 py-2 hover:bg-gray-100"
+          >
             Marketingsdiensten
           </a>
-          <a href="/websitebuilder" className="block px-4 py-2 hover:bg-gray-100">
+          <a
+            href="/websitebuilder"
+            className="block px-4 py-2 hover:bg-gray-100"
+          >
             Website Builder
           </a>
         </div>
@@ -206,16 +272,28 @@ const PrijzenDropdown = () => {
       </button>
       {isOpen && (
         <div className="absolute right-0 w-48 bg-white border rounded-lg shadow-lg">
-          <a href="/appontwikkelingprijsplannen" className="block px-4 py-2 hover:bg-gray-100">
+          <a
+            href="/appontwikkelingprijsplannen"
+            className="block px-4 py-2 hover:bg-gray-100"
+          >
             App Ontwikkeling
           </a>
-          <a href="/brandingprijsplannen" className="block px-4 py-2 hover:bg-gray-100">
+          <a
+            href="/brandingprijsplannen"
+            className="block px-4 py-2 hover:bg-gray-100"
+          >
             Branding
           </a>
-          <a href="/marketingprijsplannen" className="block px-4 py-2 hover:bg-gray-100">
+          <a
+            href="/marketingprijsplannen"
+            className="block px-4 py-2 hover:bg-gray-100"
+          >
             Marketingsdiensten
           </a>
-          <a href="/websitebuilder" className="block px-4 py-2 hover:bg-gray-100">
+          <a
+            href="/websitebuilder"
+            className="block px-4 py-2 hover:bg-gray-100"
+          >
             Website Builder
           </a>
         </div>
