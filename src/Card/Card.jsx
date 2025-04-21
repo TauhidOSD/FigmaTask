@@ -31,7 +31,9 @@ const Card = () => {
           onClick={() => navigate("/shift")}
           className="bg-[#F5F5F5] shadow-lg rounded-lg overflow-hidden hover:shadow-xl transition-shadow duration-300"
         >
-          <img src={img1} alt="Blog 1" className="w-full h-56 object-cover" />
+          {/*  */}
+         <div className=" md:min-h-[456px]">
+         <img src={img1} alt="Blog 1" className="w-full h-56 object-cover" />
           <div className="p-3">
             <div className="flex gap-2 mb-4">
               <button className="bg-[#FFFFFF] text-[#468AFF] text-sm px-4 py-1 rounded-full  transition duration-300">
@@ -52,10 +54,13 @@ const Card = () => {
               visitekaartje. Leer hoe u met design, snelheid en content uw
               conversies....
             </p>
-            <button className=" relative hover:bg-[#468AFFE6] bg-[#468AFF] text-white px-8 py-3 rounded-md shadow-md ">
+          
+          </div>
+         </div>
+          <button className="ml-3 mb-4 relative hover:bg-[#468AFFE6] bg-[#468AFF] text-white px-8 py-3 rounded-md shadow-md ">
               Lees meer 
             </button>
-          </div>
+          
         </div>
 
         {/* Card 2 */}
@@ -63,6 +68,8 @@ const Card = () => {
           onClick={() => navigate("/finguide")}
           className="bg-[#F5F5F5] shadow-lg rounded-lg overflow-hidden hover:shadow-xl transition-shadow duration-300"
         >
+          {/*  */}
+          <div className="md:min-h-[456px]">
           <img src={img2} alt="Blog 2" className="w-full h-56 object-cover" />
           <div className="p-3 ">
             <div className="flex flex-wrap gap-2 justify-center sm:justify-start">
@@ -88,10 +95,12 @@ const Card = () => {
               merkidentiteit geen luxe, maar een noodzaak. Ontdek hoe
               strategische branding jouw merk herkenbaar en onvergetelijk maakt.
             </p>
-            <button className="relative hover:bg-[#468AFFE6] bg-[#468AFF] text-white px-8 py-3 rounded-md shadow-md">
+            
+          </div>
+          </div>
+          <button className=" ml-3 mb-4 relative hover:bg-[#468AFFE6] bg-[#468AFF] text-white px-8 py-3 rounded-md shadow-md">
               Lees meer
             </button>
-          </div>
         </div>
 
         {/* Card 3 */}
@@ -99,7 +108,9 @@ const Card = () => {
           onClick={() => navigate("/fluentlee")}
           className="bg-[#F5F5F5] shadow-lg rounded-lg overflow-hidden hover:shadow-xl transition-shadow duration-300"
         >
-          <img src={img7} alt="Blog 3" className="w-full h-56 object-cover" />
+         {/*  */}
+         <div className="md:min-h-[456px]">
+         <img src={img7} alt="Blog 3" className="w-full h-56 object-cover" />
           <div className="p-3">
             <div className="flex flex-wrap gap-2 justify-center sm:justify-start">
               <button className="bg-white text-blue-500 text-sm px-4 py-1 rounded-full transition duration-300">
@@ -123,17 +134,21 @@ const Card = () => {
               cruciaal om als bedrijf relevant te blijven? Wij delen inzichten
               en strategieën om mee te groeien met de markt.
             </p>
-            <button className="relative hover:bg-[#468AFFE6] bg-[#468AFF] text-white px-8 py-3 rounded-md shadow-md ">
+            
+          </div>
+         </div>
+          <button className="ml-3 mb-4 relative hover:bg-[#468AFFE6] bg-[#468AFF] text-white px-8 py-3 rounded-md shadow-md ">
               Lees meer
             </button>
-          </div>
         </div>
         {/* Card 4 */}
         <div
           onClick={() => navigate("/ahooy")}
           className="bg-[#F5F5F5] shadow-lg rounded-lg overflow-hidden hover:shadow-xl transition-shadow duration-300"
         >
-          <img src={img4} alt="Blog 3" className="w-full h-56 object-cover" />
+         {/*  */}
+         <div className="md:min-h-[456px]">
+         <img src={img4} alt="Blog 3" className="w-full h-56 object-cover" />
           <div className="p-3">
             <div className="flex flex-wrap gap-2 justify-center sm:justify-start">
               <button className="bg-[#FFFFFF] text-[#468AFF] text-sm px-4 py-1 rounded-full  transition duration-300">
@@ -148,17 +163,21 @@ const Card = () => {
               een doordachte marketingstrategie. Wij combineren SEO, SMMA en
               offline marketing om jouw app écht impact te laten maken.
             </p>
-            <button className="relative hover:bg-[#468AFFE6] bg-[#468AFF] text-white px-8 py-3 rounded-md shadow-md">
+           
+          </div>
+         </div>
+          <button className="ml-3 mb-4 relative hover:bg-[#468AFFE6] bg-[#468AFF] text-white px-8 py-3 rounded-md shadow-md">
               Lees meer
             </button>
-          </div>
         </div>
         {/* Card 5 */}
         <div
           onClick={() => navigate("/henna")}
           className="bg-[#F5F5F5] shadow-lg rounded-lg overflow-hidden hover:shadow-xl transition-shadow duration-300"
         >
-          <img src={img9} alt="Blog 3" className="w-full h-56 object-cover" />
+         {/*  */}
+         <div className="md:min-h-[456px]">
+         <img src={img9} alt="Blog 3" className="w-full h-56 object-cover" />
           <div className="p-3 ">
             <div className="flex gap-2 mb-4">
               <button className="bg-[#FFFFFF] text-[#468AFF] text-sm px-4 py-1 rounded-full  transition duration-300">
@@ -176,17 +195,21 @@ const Card = () => {
               wordt of verdwijnt in de massa. Leer hoe effectieve SEO-technieken
               jouw online aanwezigheid versterken.
             </p>
-            <button className="relative  hover:bg-[#468AFFE6] bg-[#468AFF] text-white px-8 py-3 rounded-md shadow-md">
+            
+          </div>
+         </div>
+          <button className="ml-3 mb-4 relative  hover:bg-[#468AFFE6] bg-[#468AFF] text-white px-8 py-3 rounded-md shadow-md">
               Lees meer
             </button>
-          </div>
         </div>
         {/* Card 6 */}
         <div
           onClick={() => navigate("/sarbuh")}
           className="bg-[#F5F5F5] shadow-lg rounded-lg overflow-hidden hover:shadow-xl transition-shadow duration-300"
         >
-          <img src={img8} alt="Blog 3" className="w-full h-56 object-cover" />
+         {/*  */}
+         <div className="md:min-h-[456px]">
+         <img src={img8} alt="Blog 3" className="w-full h-56 object-cover" />
           <div className="p-3">
             <div className="flex flex-wrap gap-2 justify-center sm:justify-start">
               <button className="bg-[#FFFFFF] text-[#468AFF] text-sm px-4 py-1 rounded-full  transition duration-300">
@@ -209,10 +232,12 @@ const Card = () => {
               – van een naadloze webshop tot verfijnde marketing. Succes zit in
               de perfectie van elk aspect.
             </p>
-            <button className="relative hover:bg-[#468AFFE6] bg-[#468AFF] text-white px-8 py-3 rounded-md shadow-md">
+            
+          </div>
+         </div>
+          <button className="ml-3 mb-4 relative hover:bg-[#468AFFE6] bg-[#468AFF] text-white px-8 py-3 rounded-md shadow-md">
               Lees meer
             </button>
-          </div>
         </div>
       </div>
     </div>
