@@ -62,7 +62,7 @@ const Waaram = () => {
             {/* Right Section */}
             <div className="flex flex-col items-start lg:items-start text-start mt-8 lg:text-left  sm:mt-0">
               <div className="mb-3 sm:mb-4">
-                <img src={icon1} alt="Projects Icon" className="w-12 sm:w-16" />
+                <img src={icon1} alt="Projects Icon" className="w-8 sm:w-10" />
               </div>
               <h2 className="text-lg sm:text-2xl lg:text-[22px] font-plus-jakarta font-bold text-[#263238]">
                 Ruime ervaring met <br /> het bereiken van <br /> jouw doelgroep
