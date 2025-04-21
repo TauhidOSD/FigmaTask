@@ -188,10 +188,10 @@ const PrijzenMarketing = () => {
             {/* First Part */}
       <div className="md:px-36 px-6 mx-auto">
         <div className=" flex md:gap-[496px]">
-          <h2 className="text-xl text-[#407BFF] font-semibold md:mt-8 mt-4 mb-4">
+          <h2 className="text-[28px] text-[rgba(64,123,255,1)] font-plus-jakarta font-semibold md:mt-8 mt-4 mb-4">
             Basisinformatie:
           </h2>
-          <h2 className="text-xl md:-ml-12  text-[#407BFF] font-semibold mb-4 md:mt-8 mt-4  hidden sm:block ">
+          <h2 className=" md:-ml-56  text-[28px] text-[rgba(64,123,255,1)] font-plus-jakarta font-semibold mb-4 md:mt-8 mt-4  hidden sm:block ">
             Technische details:
           </h2>
         </div>
@@ -199,7 +199,7 @@ const PrijzenMarketing = () => {
           {/* Left Side Inputs */}
           <div className="flex flex-col gap-4">
             <div>
-              <label className="block text-gray-700 font-medium mb-1">
+              <label className="block text-[rgba(38,50,56,1)] font-semibold font-plus-jakarta text-[16px] mb-1">
               Naam (Voornaam en achternaam)
               </label>
               <input
@@ -210,7 +210,7 @@ const PrijzenMarketing = () => {
               />
             </div>
             <div>
-              <label className="block text-gray-700 font-medium mb-1">
+              <label className="block text-[rgba(38,50,56,1)] font-semibold font-plus-jakarta text-[16px] mb-1">
                 Bedrijfsnaam (indien van toepassing)
               </label>
               <input
@@ -222,7 +222,7 @@ const PrijzenMarketing = () => {
             </div>
             <div className="grid grid-cols-2 gap-4">
               <div>
-                <label className="block text-gray-700 font-medium mb-1">
+                <label className="block text-[rgba(38,50,56,1)] font-semibold font-plus-jakarta text-[16px] mb-1">
                   E -mailadres
                 </label>
                 <input
@@ -233,11 +233,12 @@ const PrijzenMarketing = () => {
                 />
               </div>
               <div>
-                <label className="block text-gray-700 font-medium mb-1">
+                <label className="block text-[rgba(38,50,56,1)] font-semibold font-plus-jakarta text-[16px] mb-1">
                   Telefoonnummer
                 </label>
+        
                 <input
-                  type="number"
+                  type="tel"
                   name="telephone"
                   placeholder="Bijv. +31 6 12345678"
                   className="border border-gray-300 rounded-lg p-2 w-full focus:outline-none focus:ring-2 focus:ring-blue-500"
@@ -249,21 +250,21 @@ const PrijzenMarketing = () => {
           {/* Right Side Inputs */}
 
           <div className="flex flex-col gap-4">
-            <h2 className="text-xl text-[#407BFF] font-semibold md:mb-4 md:hidden block mt-12 ">
+            <h2 className="text-[28px] text-[rgba(64,123,255,1)] font-plus-jakarta font-semibold md:mb-4 md:hidden block mt-12 ">
               Technische details:
             </h2>
 
             <div className="md:grid md:grid-cols-2 gap-6">
               {/* Left Side Input */}
               <div>
-                <label className="block text-gray-700 font-medium mb-1">
-                  Huidige branding (indien aanwezig)
+                <label className="block text-[rgba(38,50,56,1)] font-semibold font-plus-jakarta text-[16px] mb-1">
+                Heeft u een huidige app of een prototype?
                 </label>
                 <div className="relative">
                   <input
                     type="text"
                     name="huidige"
-                    placeholder="Geef details op"
+                    placeholder="Ja/nee, zo ja: geef details of upload"
                     className="border border-gray-300 rounded-lg p-2 w-full pr-10 focus:outline-none focus:ring-2 focus:ring-blue-500"
                   />
                 </div>
@@ -287,35 +288,35 @@ const PrijzenMarketing = () => {
               {/* Image Upload Option */}
             </div>
             <div>
-              <label className="block text-gray-700 font-medium mb-1">
+              <label className="block text-[rgba(38,50,56,1)] font-semibold font-plus-jakarta text-[16px] mb-1">
                 Integratievereisten
               </label>
               <input
                 type="text"
                 name="integrat"
-                placeholder="Voorbeelden van merken die u bewondert of concurrenten"
+                placeholder="bijv. API's, betalingsgateways, services van derden"
                 className="border border-gray-300 rounded-lg p-2 w-full focus:outline-none focus:ring-2 focus:ring-blue-500"
               />
             </div>
             <div>
-              <label className="block text-gray-700 font-medium mb-1">
+              <label className="block text-[rgba(38,50,56,1)] font-semibold font-plus-jakarta text-[16px] mb-1">
                 Backend -behoeften
               </label>
               <input
                 type="text"
                 name="backend"
-                placeholder="bijv. Logo, visitekaartjes, brochures, website -ontwerp"
+                placeholder="bijv. Database, serverhosting, cloudservices"
                 className="border border-gray-300 rounded-lg p-2 w-full focus:outline-none focus:ring-2 focus:ring-blue-500"
               />
             </div>
             <div>
-              <label className="block text-gray-700 font-medium mb-1">
+              <label className="block text-[rgba(38,50,56,1)] font-semibold font-plus-jakarta text-[16px] mb-1">
                 Preferred Technology Stack
               </label>
               <input
                 type="text"
                 name="preferred"
-                placeholder="bijv. Logo, visitekaartjes, brochures, website -ontwerp"
+                placeholder="Eventuele specifieke programmeertalen of kaders"
                 className="border border-gray-300 rounded-lg p-2 w-full focus:outline-none focus:ring-2 focus:ring-blue-500"
               />
             </div>
@@ -327,7 +328,7 @@ const PrijzenMarketing = () => {
 
       <div className="md:px-0 px-6">
         <div className="md:px-36 mx-auto">
-          <h2 className="text-xl mt-2 text-[#407BFF] font-semibold mb-4">
+          <h2 className="text-[28px] text-[rgba(64,123,255,1)] font-plus-jakarta font-semibold mb-4">
             App -projectinformatie:
           </h2>
 
@@ -336,7 +337,7 @@ const PrijzenMarketing = () => {
             <div className="flex flex-col gap-4">
               <div>
 
-              <label className="block text-sm font-medium text-gray-700 mb-1">
+              <label className="block text-[rgba(38,50,56,1)] font-semibold font-plus-jakarta text-[16px] mb-1">
                   Type app
                 </label>
                 <select
@@ -358,7 +359,7 @@ const PrijzenMarketing = () => {
               </div>
 
               <div>
-              <label className="block text-sm font-medium text-gray-700 mb-1">
+              <label className="block text-[rgba(38,50,56,1)] font-semibold font-plus-jakarta text-[16px] mb-1">
                 Platform(s) vereist
               </label>
               <select
@@ -381,14 +382,14 @@ const PrijzenMarketing = () => {
               </div>
 
               <div>
-                <label className="block text-gray-700 font-medium mb-1">
+                <label className="block text-[rgba(38,50,56,1)] font-semibold font-plus-jakarta text-[16px] mb-1">
                   App -functies
                 </label>
                 <div className="relative">
                   <input
                     type="text"
                     name="functies"
-                    placeholder="Uitkiezen"
+                    placeholder="Korte beschrijving van functies, bijv. Gebruikersaanmelding, etc"
                     className="border border-gray-300 rounded-lg p-2 w-full pr-10 focus:outline-none focus:ring-2 focus:ring-blue-500"
                   />
                   
@@ -399,7 +400,7 @@ const PrijzenMarketing = () => {
               <div className="">
                 <div className="my-4">
 
-                <label className="block text-sm font-medium text-gray-700 mb-1">
+                <label className="block text-[rgba(38,50,56,1)] font-semibold font-plus-jakarta text-[16px] mb-1">
                 Doelgroep
               </label>
               <select
@@ -422,7 +423,7 @@ const PrijzenMarketing = () => {
                 </div>
 
                 <div>
-                <label className="block text-sm font-medium text-gray-700 mb-1">
+                <label className="block text-[rgba(38,50,56,1)] font-semibold font-plus-jakarta text-[16px] mb-1">
                 Leeftijdscategorie
               </label>
               <select
@@ -443,7 +444,7 @@ const PrijzenMarketing = () => {
                 </div>
 
                   <div className="font-plus-jakarta text-gray-700 mt-5">
-              <h3 className="text-base font-normal mb-4">Op basis van demografie & geslacht</h3>
+              <h3 className="text-[rgba(38,50,56,1)] font-semibold font-plus-jakarta text-[16px] mb-4">Op basis van demografie & geslacht</h3>
               <div className="flex space-x-6">
                 <label className="inline-flex items-center text-gray-400">
                   <input
@@ -469,7 +470,7 @@ const PrijzenMarketing = () => {
             </div>
 
             <div>
-                <label className="block text-gray-700 text-base font-medium mt-4 mb-1">
+                <label className="block text-[rgba(38,50,56,1)] font-semibold font-plus-jakarta text-[16px] mt-4 mb-1">
                 Ontwerpvoorkeuren
                 </label>
                 <div className="relative">
@@ -489,11 +490,11 @@ const PrijzenMarketing = () => {
 
             {/* Right Side Inputs */}
             <div className="flex flex-col gap-4">
-              <h2 className="text-xl text-[#407BFF] font-semibold mb-4">
+              <h2 className="text-[28px] text-[rgba(64,123,255,1)] font-plus-jakarta font-semibold mb-4">
                 Begroting
               </h2>
               <div>
-              <label className="block text-sm font-medium text-gray-700 mb-1">
+              <label className="block text-[rgba(38,50,56,1)] font-semibold font-plus-jakarta text-[16px] mb-1">
               Budgetbereik
             </label>
             <select
@@ -515,7 +516,7 @@ const PrijzenMarketing = () => {
               </div>
 
               <div>
-                <label className="block text-gray-700 font-medium mb-1">
+                <label className="block text-[rgba(38,50,56,1)] font-semibold font-plus-jakarta text-[16px] mb-1">
                   Gewenste voltooiingsdatum
                 </label>
                 <div className="relative">
@@ -529,17 +530,17 @@ const PrijzenMarketing = () => {
               </div>
               {/* comment box */}
               <div>
-                <h2 className="text-xl text-[#407BFF] font-semibold mb-4">
+                <h2 className="text-[28px] text-[rgba(64,123,255,1)] font-plus-jakarta font-semibold mb-4">
                   Aanvullende opmerkingen:
                 </h2>
-                <h2 className="block text-gray-700 font-medium mb-1">
+                <h2 className="block text-[rgba(38,50,56,1)] font-semibold font-plus-jakarta text-[16px] mb-1">
                   Verzoek en vragen
                 </h2>
 
                 <textarea
                   name="message"
                   placeholder="Verzoeken en vragen"
-                  className="textarea  textarea-bordered textarea-lg w-full max-w-full"
+                  className="textarea  textarea-bordered textarea-lg w-full max-w-full h-48"
                 ></textarea>
               </div>
             </div>
@@ -547,7 +548,7 @@ const PrijzenMarketing = () => {
         </div>
         <div className="flex justify-center items-center md:my-8 my-4 ">
           <button onClick={showAlert} className="btn hover:bg-[#468AFFE6] bg-[#468AFF]  md:px-32 px-36 py-2 text-[#FFFFFF] text-lg md:text-md lg:text-xl">
-          Boek een offerte
+          Start Nu!
           </button>
         </div>
       </div>
