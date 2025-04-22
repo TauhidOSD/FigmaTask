@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import { useNavigate } from "react-router-dom";
 //import { FaChevronDown} from "react-icons/fa";
 //import { ChevronDown } from 'lucide-react';
-import { FaArrowLeft} from "react-icons/fa"; // Import React Icons //FaArrowRight
+import { FaArrowLeft, FaArrowRight} from "react-icons/fa"; // Import React Icons //FaArrowRight
 import { Upload } from "lucide-react";
 
 
@@ -74,17 +74,6 @@ const InputField = () => {
               }
             }
           };
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -697,10 +686,10 @@ const InputField = () => {
           <button
             type="button"
             onClick={() => navigate("/payment")} // Next button: navigate to the payment route
-            className="flex  items-center gap-2 px-6 py-2 bg-[#468AFF] text-white font-semibold rounded-lg focus:outline-none hover:bg-blue-500"
+            className="flex  items-center gap-2 px-4 py-2 bg-[#468AFF] text-white font-semibold rounded-lg focus:outline-none hover:bg-blue-500"
           >
             Volgende
-            {/* < FaArrowRight /> Right arrow icon */}
+            < FaArrowRight /> 
           </button>
         </div>
       </form>
