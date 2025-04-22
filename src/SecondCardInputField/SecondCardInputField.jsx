@@ -182,7 +182,7 @@ const fileInputRef = useRef(null);
 
   return (
     <>
-      <h1 className="md:px-36 font-plus-jakarta font-semibold text-2xl text-[#1D2026]">
+      <h1 className="md:px-36 font-plus-jakarta font-semibold text-4xl text-[rgba(29,32,38,1)]">
         {" "}
         Custom Code Webbuilder Formulier
       </h1>
@@ -191,20 +191,20 @@ const fileInputRef = useRef(null);
 
         {/* First Part */}
       <div className="md:px-36 px-6 mx-auto">
-        <div className=" flex md:gap-[496px]">
-          <h2 className="text-xl text-[#407BFF] font-semibold md:mt-8 mt-4 mb-4">
+        <div className=" flex  md:gap-[496px]">
+          <h2 className="text-3xl text-[rgba(64,123,255,1)] font-semibold font-plus-jakarta md:mt-8 mt-4 mb-4">
           Algemene Informatie
           </h2>
-          <h2 className="text-xl text-[#407BFF] md:-ml-12 font-semibold mb-4 md:mt-8 mt-4  hidden sm:block ">
+          <h2 className="text-3xl text-[rgba(64,123,255,1)] font-semibold font-plus-jakarta  lg:-ml-[420px] xl:-ml-[210px]  mb-4 md:mt-8 mt-4  hidden sm:block ">
           Doel van de Website
           
           </h2>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 md:gap-16">
+        <div className="grid md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-2  lg:gap-16">
           {/* Left Side Inputs */}
           <div className="flex flex-col gap-4">
             <div>
-              <label className="block text-gray-700 font-medium mb-1">
+              <label className="block text-base font-plus-jakarta text-[rgba(38,50,56,1)] font-semibold mb-1">
               Voornaam & Achternaam*
               </label>
               <input
@@ -214,7 +214,7 @@ const fileInputRef = useRef(null);
               />
             </div>
             <div>
-              <label className="block text-gray-700 font-medium mb-1">
+              <label className="block text-base font-plus-jakarta text-[rgba(38,50,56,1)] font-semibold mb-1">
               Adres*
               </label>
               <input
@@ -225,7 +225,7 @@ const fileInputRef = useRef(null);
             </div>
             
               <div>
-              <label className="block text-sm font-medium text-gray-700 mb-1">
+              <label className="block text-base font-plus-jakarta text-[rgba(38,50,56,1)] font-semibold mb-1">
                   Type app
                 </label>
                 <select
@@ -248,7 +248,7 @@ const fileInputRef = useRef(null);
               
             
             <div>
-              <label className="block text-gray-700 font-medium mb-1">
+              <label className="block text-base font-plus-jakarta text-[rgba(38,50,56,1)] font-semibold mb-1">
               Heb je al een bestaande website? Zo ja, wat is de URL?
               </label>
               <input
@@ -260,11 +260,11 @@ const fileInputRef = useRef(null);
 
 
             <div>
-              <h2 className="text-xl text-[#407BFF] font-semibold md:mt-8 mt-4 mb-4">
+              <h2 className="text-3xl text-[rgba(64,123,255,1)] font-semibold font-plus-jakarta md:mt-8 mt-4 mb-4">
               Techniek & Hosting
               </h2>
               
-              <label className="block text-sm font-medium text-gray-700 mb-1">
+              <label className="block text-base font-plus-jakarta text-[rgba(38,50,56,1)] font-semibold mb-1">
               Wil je een eigen domeinnaam?*
                 </label>
                 <div>
@@ -305,8 +305,8 @@ const fileInputRef = useRef(null);
               </div>
 
               <div className="mb-4">
-              <label className="block text-sm font-medium text-gray-700 mb-1">
-              Heb je al hosting of wil je hulp bij het kiezen van een provider?*
+              <label className="block text-base font-plus-jakarta text-[rgba(38,50,56,1)] font-semibold mb-1">
+              Vakgebied en specialisatie*
                 </label>
                 <select
                   value={selectedProvide}
@@ -329,7 +329,7 @@ const fileInputRef = useRef(null);
 
               <div>
 
-              <label className="block text-sm font-medium text-gray-700 mb-1">
+              <label className="block text-base font-plus-jakarta text-[rgba(38,50,56,1)] font-semibold mb-1">
               Wil je zelf makkelijk nieuwe content kunnen toevoegen?
                 </label>
   
@@ -373,7 +373,7 @@ const fileInputRef = useRef(null);
             
 
             <div>
-            <h3 className="block text-sm font-medium text-gray-700 mb-1">Wat is het hoofddoel van je website?*</h3>
+            <h3 className="block text-base font-plus-jakarta text-[rgba(38,50,56,1)] font-semibold mb-1">Wat is het hoofddoel van je website?*</h3>
       <div className="flex flex-wrap gap-4 text-gray-400">
         <label className="inline-flex items-center">
           <input
@@ -429,7 +429,7 @@ const fileInputRef = useRef(null);
             </div>
 
             <div>
-            <label className="block text-sm font-medium text-gray-700 mb-1">
+            <label className="block text-base font-plus-jakarta text-[rgba(38,50,56,1)] font-semibold mb-1">
             Wie is je doelgroep?*
                 </label>
                 <select
@@ -451,7 +451,7 @@ const fileInputRef = useRef(null);
                 </div>
 
                 <div>
-                      <h3 className="text-sm font-medium mb-4">
+                      <h3 className="text-base font-plus-jakarta text-[rgba(38,50,56,1)] font-semibold mb-4">
               Welke specifieke functionaliteiten of maatwerk elementen heb je nodig?*
             </h3>
             <div className="flex flex-wrap gap-6 text-gray-400">
@@ -489,7 +489,7 @@ const fileInputRef = useRef(null);
                 </div>
 
                 <div >
-                <label className="block text-sm font-medium text-gray-700 mb-1">
+                <label className="block text-base font-plus-jakarta text-[rgba(38,50,56,1)] font-semibold mb-1">
                 Heb je specifieke wensen voor UI/UX design?
                 </label>
                 <select
@@ -512,10 +512,10 @@ const fileInputRef = useRef(null);
 
 
                 <div >
-                <h2 className="text-xl text-[#407BFF] font-semibold md:mt-8 mt-4 mb-4">
+                <h2 className="text-3xl text-[rgba(64,123,255,1)] font-semibold font-plus-jakarta md:mt-8 mt-4 mb-4">
                 Inhoud & Pagina’s
                 </h2>
-                <h3 className="text-sm font-medium mb-4">Welke pagina’s wil je?*</h3>
+                <h3 className="text-base font-plus-jakarta text-[rgba(38,50,56,1)] font-semibold mb-4">Welke pagina’s wil je?*</h3>
                 <div className="flex flex-wrap gap-6 text-gray-400">
                   {[
                     { name: 'home', label: 'Home' },
@@ -540,7 +540,7 @@ const fileInputRef = useRef(null);
                 </div>
 
                 <div>
-            <label className="block text-sm font-medium text-gray-700 mb-1">
+            <label className="block text-base font-plus-jakarta text-[rgba(38,50,56,1)] font-semibold mb-1">
             Heb je de teksten en afbeeldingen al of moeten die gemaakt worden?*
                 </label>
                 <select
@@ -564,10 +564,10 @@ const fileInputRef = useRef(null);
 
                 <div>
 
-                <h2 className="text-xl text-[#407BFF] font-semibold md:mt-4 mt-2 mb-4">
+                <h2 className="text-3xl text-[rgba(64,123,255,1)] font-semibold font-plus-jakarta md:mt-4 mt-2 mb-4">
                 Extra Wensen
                 </h2>
-              <label className="block text-gray-700 font-medium mb-1">
+              <label className="block text-base font-plus-jakarta text-[rgba(38,50,56,1)] font-semibold mb-1">
               Opmerkingen & Specifieke verzoeken
               </label>
               <input
@@ -578,7 +578,7 @@ const fileInputRef = useRef(null);
             </div>
 
             <div >
-            <h2 className="text-[16px] text-[rgba(38,50,56,1)] font-semibold md:mt-4 mt-2 mb-4">
+            <h2 className="text-base font-plus-jakarta text-[rgba(38,50,56,1)] font-semibold  md:mt-4 mt-2 mb-4">
             Voeg hier bestanden toe die je aanvraag verduidelijken, zoals screenshots, documenten of voorbeelden. Max. 10MB per bestand.
             </h2>
             <button
@@ -619,7 +619,7 @@ const fileInputRef = useRef(null);
 
         <div className="flex justify-center items-center md:my-8 my-4 ">
           <button className="btn hover:bg-[#468AFFE6] bg-[#468AFF]  md:px-32 px-36 py-2 text-[#FFFFFF] text-lg md:text-md lg:text-xl">
-            Request Quote
+          Vraag offerte aan
           </button>
         </div>
       </div>
