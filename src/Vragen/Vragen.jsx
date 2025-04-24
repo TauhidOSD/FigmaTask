@@ -68,7 +68,7 @@ const Vragen = () => {
             Ondersteuning
           </button>
         </div>
-        <h2 className="text-xl font-semibold">Veelgestelde Vragen</h2>
+        <h2 className="text-[40px] text-[rgba(38,50,56,1)] font-bold font-plus-jakarta">Veelgestelde <br /> Vragen</h2>
         <h3 className="text-lg text-gray-700">
           Heeft u vragen over onze brandingdiensten?
         </h3>

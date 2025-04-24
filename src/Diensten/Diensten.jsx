@@ -11,7 +11,7 @@ import link2 from "../assets/Link (2).png";
 import link3 from "../assets/Link (3).png";
 import link4 from "../assets/Link (5).png";
 import link12 from "../assets/Link (12).png";
-import im1 from "../assets/im1.png"
+import im1 from "../assets/Achikie.png"
 import im2 from "../assets/im2.png"
 import das from "../assets/das.png"
 import { GoArrowRight } from "react-icons/go";
@@ -21,6 +21,8 @@ import { useEffect } from "react";
 // import img3 from "../assets/avater-testi-3.png.png";
 
 import { useNavigate } from "react-router-dom";
+
+
 
 const Diensten = () => {
   const navigate = useNavigate();
@@ -251,27 +253,29 @@ const Diensten = () => {
 
       {/* Final Section */}
 
-      <div className="flex flex-col lg:flex-row gap-8 px-6 md:px-20 lg:px-44 py-10">
+      <div className="flex flex-col lg:flex-row gap-12 px-6 md:px-20 lg:px-44 py-10">
         {/* Left Section */}
         <div className="w-full lg:w-1/3 space-y-6 text-center lg:text-left">
           <button className="bg-[rgba(180,121,217,0.15)] font-bold text-[18px] text-[rgba(180,121,217,1)] py-2 px-6 rounded-full">
             Getuigenissen
           </button>
-          <h2 className="text-2xl font-bold text-gray-800">
+          <h2 className="text-[40px] text-[rgba(38,50,56,1)] font-bold font-plus-jakarta">
             Wat klanten zeggen over ons
           </h2>
           <p className="text-gray-600 text-base leading-relaxed">
-            Wij bieden ondersteuning aan meer dan 15.000 bedrijven.
+          Wij ondersteunen een breed scala aan bedrijven. Geef je merk de boost die het verdient!
           </p>
-          <button className="bg-[#468AFF] text-white py-2 px-6 rounded-md hover:bg-blue-600 transition duration-300">
-            Meer Getuigenissen
+          <button 
+          onClick={() => navigate("/portfolio")}
+          className="bg-[#468AFF] text-white py-2 px-6 rounded-md hover:bg-blue-600 transition duration-300">
+          Boek nu je offerte!
           </button>
         </div>
 
         {/* Right Section (Cards) */}
-        <div className="w-full lg:w-2/3 grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div className="w-full lg:w-2/3 grid grid-cols-1 md:grid-cols-2 gap-8">
           {/* Card 1 */}
-          <div className="bg-white shadow-md rounded-lg p-6 space-y-4">
+          <div className="bg-white shadow-md rounded-lg w-72 p-6 space-y-4">
             <h2 className="text-lg font-semibold text-gray-800">
               Luxe Branding voor een Exclusief Parfummerk
             </h2>
@@ -285,7 +289,7 @@ const Diensten = () => {
             </p>
             <div className="flex items-center gap-4">
               <img
-                src={im1}
+                src={im2}
                 alt="Sophie de Vries"
                 className="w-12 h-12 rounded-full"
               />
@@ -299,7 +303,7 @@ const Diensten = () => {
           </div>
 
           {/* Card 2 */}
-          <div className="bg-white shadow-md rounded-lg p-6 space-y-4">
+          <div className="bg-white shadow-md rounded-lg w-72 p-6 space-y-4">
             <h2 className="text-lg font-semibold text-gray-800">
               Gerichte Branding voor een Sterk Uitzendbureau
             </h2>
@@ -314,7 +318,7 @@ const Diensten = () => {
             </p>
             <div className="flex items-center gap-4">
               <img
-                src={im2}
+                src={im1}
                 alt="Mark Janssen"
                 className="w-12 h-12 rounded-full"
               />
