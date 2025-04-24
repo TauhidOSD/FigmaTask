@@ -83,7 +83,7 @@ const SecondCardInputField = () => {
   
 
 
-  const [contentAccess, setContentAccess] = useState('');
+  //const [contentAccess, setContentAccess] = useState('');
   const [seoControl, setSeoControl] = useState('');
   
 
@@ -97,6 +97,8 @@ const SecondCardInputField = () => {
       courses: false,
       other: false,
     });
+
+    const [customGender, setCustomGender] = useState('');
   
     const handleChange = (e) => {
       const { name, checked } = e.target;
@@ -126,22 +128,29 @@ const SecondCardInputField = () => {
 
  // Checkbox 3
 
-    const [pages, setPages] = useState({
-      home: false,
-      about: false,
-      portfolio: false,
-      blog: false,
-      contact: false,
-      anders: false,
-    });
+  const [pages, setPages] = useState({
+    home: false,
+    about: false,
+    portfolio: false,
+    blog: false,
+    contact: false,
+    anders: false,
+  });
+
+  const [customPage, setCustomPage] = useState('');
+  // const [errorr, setErrorr] = useState(false);
+
+  const handlePagina = (e) => {
+    const { name, checked } = e.target;
+    setPages((prev) => ({
+      ...prev,
+      [name]: checked,
+    }));
+  };
+
   
-    const handlePagina = (e) => {
-      const { name, checked } = e.target;
-      setPages((prev) => ({
-        ...prev,
-        [name]: checked,
-      }));
-    };
+
+  
   
 
 // File upload max 10 MB
@@ -178,6 +187,70 @@ const fileInputRef = useRef(null);
     }
   };
 
+  const [wantsDomain, setWantsDomain] = useState(null);
+
+
+
+  {/**Form validation Start */}
+
+  const [formData, setFormData] = useState({
+      name: '',
+      adres: ''
+    });
+    
+    
+    const [errors, setErrors] = useState({});
+      const [isFormValid, setIsFormValid] = useState(false);
+    
+      useEffect(() => {
+        const noErrors = Object.keys(errors).length === 0;
+        const allFilled = Object.values(formData).every(field => field.trim() !== '');
+        setIsFormValid(noErrors && allFilled);
+      }, [errors, formData]);
+
+
+      const handleCardChange = (e) => {
+        const { name, value } = e.target;
+        setFormData({ ...formData, [name]: value });
+        validateField(name, value);
+      };
+
+
+      const validateField = (name, value) => {
+        let fieldErrors = { ...errors };
+    
+    
+        if (name === 'name') {
+          if (!value.trim()) {
+            fieldErrors.name = 'Name is required';
+          } else {
+            delete fieldErrors.name;
+          }
+        }
+
+        if (name === 'adres') {
+          if (!value.trim()) {
+            fieldErrors.adres = 'Address is required';
+          } else {
+            delete fieldErrors.adres;
+          }
+        }
+
+
+        setErrors(fieldErrors);
+    };
+
+
+
+
+
+  {/**Form validation End */}
+
+
+
+
+
+
 
 
   return (
@@ -209,9 +282,13 @@ const fileInputRef = useRef(null);
               </label>
               <input
                 type="text"
+                name="name"
+                value={formData.name}
+                onChange={handleCardChange}
                 placeholder="Invul veld"
                 className="border border-gray-300 rounded-lg p-2 w-full focus:outline-none focus:ring-2 focus:ring-blue-500"
               />
+               {errors.name && <p className="text-red-500 text-sm">{errors.name}</p>}
             </div>
             <div>
               <label className="block text-base font-plus-jakarta text-[rgba(38,50,56,1)] font-semibold mb-1">
@@ -219,9 +296,13 @@ const fileInputRef = useRef(null);
               </label>
               <input
                 type="text"
+                name="adres"
+                value={formData.adres}
+                onChange={handleCardChange}
                 placeholder="(Invulveld)"
                 className="border border-gray-300 rounded-lg p-2 w-full focus:outline-none focus:ring-2 focus:ring-blue-500"
               />
+              {errors.adres && <p className="text-red-500 text-sm">{errors.adres}</p>}
             </div>
             
               <div>
@@ -230,6 +311,7 @@ const fileInputRef = useRef(null);
                 </label>
                 <select
                   value={selectedOption}
+                  name="apptype"
                   onChange={(e) => setSelectedOption(e.target.value)}
                   className={`block w-full px-3 py-2 border border-gray-300 bg-white rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500
                     ${selectedOption === '' ? 'text-gray-400 ' : 'text-gray-700'}`}
@@ -253,6 +335,7 @@ const fileInputRef = useRef(null);
               </label>
               <input
                 type="text"
+                name="bestaande"
                 placeholder="Invul veld"
                 className="border border-gray-300 rounded-lg p-2 w-full focus:outline-none focus:ring-2 focus:ring-blue-500"
               />
@@ -269,40 +352,39 @@ const fileInputRef = useRef(null);
                 </label>
                 <div>
        
-        <div className="flex gap-6 text-gray-400">
-          <label className="inline-flex items-center">
-            <input
-              type="radio"
-              name="contentAccess"
-              value="ja"
-              checked={contentAccess === 'ja'}
-              onChange={(e) => setContentAccess(e.target.value)}
-              className="w-4 h-4 mr-2 border-gray-400 text-black focus:ring-0"
-            />
-            Ja
-          </label>
-          <label className="inline-flex items-center">
-            <input
-              type="radio"
-              name="contentAccess"
-              value="nee"
-              checked={contentAccess === 'nee'}
-              onChange={(e) => setContentAccess(e.target.value)}
-              className="w-4 h-4 mr-2 border-gray-400 text-black focus:ring-0"
-            />
-            Nee
-          </label>
-        </div>
-      </div>
+                <div className="flex items-center gap-4">
+                <label className="flex items-center gap-1">
+                  <input
+                    type="radio"
+                    name="domain"
+                    value="ja"
+                    onChange={() => setWantsDomain(true)}
+                  />
+                  Ja
+                </label>
 
-
-              <div className="mt-4 mb-4">
-              <input
-                type="text"
-                placeholder="Invul veld"
-                className="border border-gray-300 rounded-lg p-2 w-full focus:outline-none focus:ring-2 focus:ring-blue-500"
-              />
+                <label className="flex items-center gap-1">
+                  <input
+                    type="radio"
+                    name="domain"
+                    value="nee"
+                    onChange={() => setWantsDomain(false)}
+                  />
+                  Nee
+                </label>
               </div>
+
+              {wantsDomain && (
+                <div className="mt-4 mb-4">
+                  <input
+                    type="text"
+                    placeholder="Invul veld"
+                    className="border border-gray-300 rounded-lg p-2 w-full focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  />
+                </div>
+              )}
+              </div>
+
 
               <div className="mb-4">
               <label className="block text-base font-plus-jakarta text-[rgba(38,50,56,1)] font-semibold mb-1">
@@ -310,6 +392,7 @@ const fileInputRef = useRef(null);
                 </label>
                 <select
                   value={selectedProvide}
+                  name="vakgebied"
                   onChange={(e) => setSelectedProvide(e.target.value)}
                   className={`block w-full px-3 py-2 border border-gray-300 bg-white rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500
                     ${selectedProvide === '' ? 'text-gray-400 ' : 'text-gray-700'}`}
@@ -425,6 +508,15 @@ const fileInputRef = useRef(null);
           />
           Anders
         </label>
+        {selectedGoals.other && (
+                <input
+                  type="text"
+                  placeholder="Schrijf je doel op..."
+                  className="ml-2 p-1 border border-gray-300 rounded"
+                  value={customGender}
+                  onChange={(e) => setCustomGender(e.target.value)}
+                />
+              )}
       </div>
             </div>
 
@@ -511,33 +603,50 @@ const fileInputRef = useRef(null);
                 </div>
 
 
-                <div >
-                <h2 className="text-3xl text-[rgba(64,123,255,1)] font-semibold font-plus-jakarta md:mt-8 mt-4 mb-4">
-                Inhoud & Pagina’s
-                </h2>
-                <h3 className="text-base font-plus-jakarta text-[rgba(38,50,56,1)] font-semibold mb-4">Welke pagina’s wil je?*</h3>
-                <div className="flex flex-wrap gap-6 text-gray-400">
-                  {[
-                    { name: 'home', label: 'Home' },
-                    { name: 'about', label: 'About' },
-                    { name: 'portfolio', label: 'Portfolio' },
-                    { name: 'blog', label: 'Blog' },
-                    { name: 'contact', label: 'Contact' },
-                    { name: 'anders', label: 'Anders' },
-                  ].map((item) => (
-                    <label key={item.name} className="inline-flex items-center">
-                      <input
-                        type="checkbox"
-                        name={item.name}
-                        checked={pages[item.name]}
-                        onChange={handlePagina}
-                        className="w-4 h-4 mr-2 border-gray-400 rounded focus:ring-0"
-                      />
-                      {item.label}
-                    </label>
-                  ))}
-                </div>
-                </div>
+                <div>
+        <h2 className="text-3xl text-[rgba(64,123,255,1)] font-semibold font-plus-jakarta md:mt-8 mt-4 mb-4">
+          Inhoud & Pagina’s
+        </h2>
+        <h3 className="text-base font-plus-jakarta text-[rgba(38,50,56,1)] font-semibold mb-4">
+          Welke pagina’s wil je?*
+        </h3>
+        <div className="flex flex-wrap gap-6 text-gray-400">
+          {[
+            { name: 'home', label: 'Home' },
+            { name: 'about', label: 'About' },
+            { name: 'portfolio', label: 'Portfolio' },
+            { name: 'blog', label: 'Blog' },
+            { name: 'contact', label: 'Contact' },
+            { name: 'anders', label: 'Anders' },
+          ].map((item) => (
+            <label key={item.name} className="inline-flex items-center">
+              <input
+                type="checkbox"
+                name={item.name}
+                checked={pages[item.name]}
+                onChange={handlePagina}
+                className="w-4 h-4 mr-2 border-gray-400 rounded focus:ring-0"
+              />
+              {item.label}
+            </label>
+          ))}
+
+          {pages.anders && (
+            <input
+              type="text"
+              placeholder="Welke pagina’s wil je?*"
+              className="ml-2 p-1 border border-gray-300 rounded"
+              value={customPage}
+              onChange={(e) => setCustomPage(e.target.value)}
+            />
+          )}
+        </div>
+        {/* {errorr && (
+          <p className="text-red-500 text-sm mt-2">
+            Selecteer minstens één pagina a.u.b.
+          </p>
+        )} */}
+      </div>
 
                 <div>
             <label className="block text-base font-plus-jakarta text-[rgba(38,50,56,1)] font-semibold mb-1">
@@ -618,7 +727,8 @@ const fileInputRef = useRef(null);
         
 
         <div className="flex justify-center items-center md:my-8 my-4 ">
-          <button className="btn hover:bg-[#468AFFE6] bg-[#468AFF]  md:px-32 px-36 py-2 text-[#FFFFFF] text-lg md:text-md lg:text-xl">
+          <button disabled={!isFormValid} 
+          className="btn hover:bg-[#468AFFE6] bg-[#468AFF]  md:px-32 px-36 py-2 text-[#FFFFFF] text-lg md:text-md lg:text-xl">
           Vraag offerte aan
           </button>
         </div>
