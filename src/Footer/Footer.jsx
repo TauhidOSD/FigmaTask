@@ -16,7 +16,7 @@ const Footer = () => {
         {/* Company Info */}
         <div className="space-y-5 w-full md:w-1/2">
           <img src={logo} alt="Logo" className="mb-6 w-32 sm:w-40" />
-          <p className="text-gray-900 text-sm leading-relaxed">
+          <p className="font-plus-jakarta text-[#263238] text-[16px]  leading-relaxed">
             Younitech is een softwarebedrijf gespecialiseerd in
             app-ontwikkeling, marketing en branding. Het bedrijf onderscheidt
             zich door oprechte en eerlijke bedrijfsvoering, met aandacht voor
@@ -55,49 +55,49 @@ const Footer = () => {
         {/* Useful Links */}
         <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 gap-10 sm:gap-16 mt-10 md:mt-0">
           <div className="space-y-5">
-            <h3 className="text-lg font-semibold">Diensten</h3>
+            <h3 className="font-bold font-plus-jakarta text-[16px] text-[#263238] ">Diensten</h3>
             <ul className="space-y-4 text-gray-900 text-sm">
-              <li className="hover:text-blue-600 cursor-pointer transition-colors">
+              <li className="hover:text-blue-600 cursor-pointer transition-colors font-plus-jakarta text-[#263238] ">
                 <Link to="/appmarket">App ontwikkeling</Link>
               </li>
-              <li className="hover:text-blue-600 cursor-pointer transition-colors">
+              <li className="hover:text-blue-600 cursor-pointer transition-colors font-plus-jakarta text-[#263238] ">
                 <Link to="/Diensten">Branding</Link>
               </li>
-              <li className="hover:text-blue-600 cursor-pointer transition-colors">
+              <li className="hover:text-blue-600 cursor-pointer transition-colors font-plus-jakarta text-[#263238] ">
                 <Link to="/marketing">Marketingsdiensten</Link>
               </li>
-              <li className="hover:text-blue-600 cursor-pointer transition-colors">
+              <li className="hover:text-blue-600 cursor-pointer transition-colors font-plus-jakarta text-[#263238] ">
                 <Link to="/prijzen">Website builder</Link>
               </li>
             </ul>
           </div>
 
           <div className="space-y-5">
-            <h3 className="text-lg font-semibold">Prijzen</h3>
+            <h3 className="font-bold font-plus-jakarta text-[16px] text-[#263238] ">Prijzen</h3>
             <ul className="space-y-4 text-gray-900 text-sm">
-            <li className="hover:text-blue-600 cursor-pointer transition-colors">
+            <li className="hover:text-blue-600 cursor-pointer transition-colors font-plus-jakarta text-[#263238]  ">
                 <Link to="/PrijzenMarkeing ">App ontwikkeling</Link>
               </li>
-              <li className="hover:text-blue-600 cursor-pointer transition-colors">
+              <li className="hover:text-blue-600 cursor-pointer transition-colors font-plus-jakarta text-[#263238] ">
                 <Link to="/PrijzenBranding">Branding</Link>
               </li>
-              <li className="hover:text-blue-600 cursor-pointer transition-colors">
+              <li className="hover:text-blue-600 cursor-pointer transition-colors font-plus-jakarta text-[#263238] ">
                 <Link to="/startpagina">Marketingsdiensten</Link>
               </li>
-              <li className="hover:text-blue-600 cursor-pointer transition-colors">
+              <li className="hover:text-blue-600 cursor-pointer transition-colors font-plus-jakarta text-[#263238] ">
                 <Link to="/prijzen">Website builder</Link>
               </li>
             </ul>
           </div>
 
           <div className="space-y-5 ">
-            <h3 className="text-lg font-semibold"><Link to="/Overons">Over ons</Link> </h3>
+            <h3 className=" hover:text-blue-600 cursor-pointer transition-colors font-bold font-plus-jakarta text-[16px] text-[#263238]"><Link to="/Overons">Over ons</Link> </h3>
             <ul className="space-y-4 text-gray-900 text-sm">
-              <li className="hover:text-blue-600 cursor-pointer transition-colors">
+              <li className="hover:text-blue-600 cursor-pointer transition-colors font-bold font-plus-jakarta text-[16px] text-[#263238]">
               <Link to="/Veelgestelde"> FAQ</Link>
                
               </li>
-              <li className="hover:text-blue-600 cursor-pointer transition-colors ">
+              <li className="hover:text-blue-600 cursor-pointer transition-colors font-bold font-plus-jakarta text-[16px] text-[#263238] ">
               <Link to="/blog"> Portfolio</Link>
                 
               </li>

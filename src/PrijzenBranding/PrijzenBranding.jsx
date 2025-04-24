@@ -1,44 +1,285 @@
-import { FaChevronDown, FaUpload } from "react-icons/fa";
+//import { FaChevronDown} from "react-icons/fa";
 import das from "../assets/das.png";
 import bg from "../assets/BrandPrice.jpg";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { useRef } from 'react';
-import emailjs from '@emailjs/browser';
-import Swal from 'sweetalert2'
+//import emailjs from '@emailjs/browser';
+//import Swal from 'sweetalert2'
+import { Upload } from "lucide-react";
 
 const PrijzenBranding = () => {
 
-const showAlert=()=>{
-    Swal.fire({
-      title: "Bedankt voor je aanvraag!",
-      text: "We hebben je gegevens ontvangen en sturen je binnenkort een offerte. Mocht je vragen hebben, neem gerust contact met ons op.",
-      icon: "success"
-    });
-  }
+// const showAlert=()=>{
+//     Swal.fire({
+//       title: "Bedankt voor je aanvraag!",
+//       text: "We hebben je gegevens ontvangen en sturen je binnenkort een offerte. Mocht je vragen hebben, neem gerust contact met ons op.",
+//       icon: "success"
+//     });
+//   }
 
   const form = useRef();
 
-  const sendEmail = (e) => {
-    e.preventDefault();
+  // const sendEmail = (e) => {
+  //   e.preventDefault();
 
-    emailjs
-      .sendForm('service_hxxv27j','template_a2312ql', form.current, {
-        publicKey: 'Z3HTMkKpJIM22rfNm',
-      })
-      .then(
-        () => {
-          console.log('SUCCESS!');
-        },
-        (error) => {
-          console.log('FAILED...', error.text);
-        },
-      );
-  };
+  //   emailjs
+  //     .sendForm('service_hxxv27j','template_a2312ql', form.current, {
+  //       publicKey: 'Z3HTMkKpJIM22rfNm',
+  //     })
+  //     .then(
+  //       () => {
+  //         console.log('SUCCESS!');
+  //       },
+  //       (error) => {
+  //         console.log('FAILED...', error.text);
+  //       },
+  //     );
+  // };
 
 
   useEffect(() => {
         window.scrollTo(0, 0); 
       }, []);
+
+
+
+
+      // Left side checkbox 
+
+      const [selectedGender, setSelectedGender] = useState({
+        men: false,
+        women: false,
+        both: false
+      });
+    
+      const handleChangee = (e) => {
+        const { name, checked } = e.target;
+        setSelectedGender((prev) => ({
+          ...prev,
+          [name]: checked,
+        }));
+      };
+
+
+      // left side file select
+
+      const fileInputRef = useRef(null);
+
+      const handleClick = () => {
+        fileInputRef.current.click();
+      };
+
+      const handleFileChange = (e) => {
+        const file = e.target.files[0];
+        if (file) {
+          console.log('Bestand gekozen:', file.name);
+          // Handle upload logic here
+        }
+  };
+
+
+  // Dropdown 1
+
+  const [brand, setSubjectBrand] = useState('');
+  
+  const brands = [
+    " Visuele Identiteit (logo, kleuren, typografie, huisstijl)",
+    "Digitale Branding (website/webshop design, social media visuals)",
+    "Corporate Branding (merkstrategie, positionering, storytelling)",
+    " Product Branding (verpakking, campagne visuals, promotiemateriaal)",
+    "Employer Branding (werkgeversimago, recruitment branding)",
+  
+  ];
+
+  // Dropdown 2
+
+  const [doel, setSubjectDoel] = useState('');
+  
+  const doels = [
+    " B2B (Bedrijven & Ondernemers)",
+    "B2C (Consumenten & Retail)",
+    "E-commerce & Webshops",
+    " Startups & Scale-ups",
+    "Lokale & Dienstverlenende bedrijven",
+    "High-end & Luxe merken"
+  
+  ];
+
+  // Dropdown 3
+
+  const [age, setSubjectAge] = useState('');
+  
+  const ages = [
+    " 0-16 jaar",
+    "16-21 jaar",
+    "21-35 Jaar",
+    " 35-50 jaar",
+    "50-65 jaar",
+    "65+"
+  
+  ];
+
+  // Dropdown 4
+
+  const [begroting, setSubjectBegroting] = useState('');
+  
+  const begrotings = [
+    "€1.000 - €5.000 (Basisbranding & logo-ontwerp)",
+    "€5.000 - €10.000 (Uitgebreide branding & strategie)",
+    " €10.000+ (Complete merkstrategie + digitale branding)",
+  
+  ];
+
+
+
+
+  {/* Form validation start*/}
+
+
+
+  const [formData, setFormData] = useState({
+    name: '',
+    email: ''
+  });
+  
+  
+  const [errors, setErrors] = useState({});
+    const [isFormValid, setIsFormValid] = useState(false);
+  
+    useEffect(() => {
+      const noErrors = Object.keys(errors).length === 0;
+      const allFilled = Object.values(formData).every(field => field.trim() !== '');
+      setIsFormValid(noErrors && allFilled);
+    }, [errors, formData]);
+  
+  
+    const handleChange = (e) => {
+      const { name, value } = e.target;
+      setFormData({ ...formData, [name]: value });
+      validateField(name, value);
+    };
+  
+  
+    const validateField = (name, value) => {
+      let fieldErrors = { ...errors };
+  
+  
+      if (name === 'name') {
+        if (!value.trim()) {
+          fieldErrors.name = 'Name is required';
+        } else {
+          delete fieldErrors.name;
+        }
+      }
+  
+      if (name === 'email') {
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!value.trim()) {
+          fieldErrors.email = 'Email is required';
+        } else if (!emailRegex.test(value)) {
+          fieldErrors.email = 'Invalid email format';
+        } else {
+          delete fieldErrors.email;
+        }
+      }
+  
+      setErrors(fieldErrors);
+    };
+
+
+
+    const handleSubmit = (e) => {
+      e.preventDefault();
+      if (isFormValid) {
+        alert('Form submitted successfully!');
+    
+        const form = e.target;
+    
+        const name = form.name.value;
+        const cname = form.cname.value;
+        const email = form.email.value;
+        const telephone = form.telephone.value;   
+        const theams = form.theams.value;
+        const file = form.file.value;
+        const inspiratie = form.inspiratie.value;
+        const filet = form.filet.value;
+        const eventuele = form.eventuele.value;
+        const branding = form.branding.value;
+        const korte= form.korte.value;
+        const doelgroep = form.doelgroep.value;
+        const ages = form.ages.value;     
+
+        const huidige = form.huidige.value;
+        const fileth = form.fileth.value;
+        const message = form.message.value;
+        const gewenste = form.gewenste.value;
+        const merkbericht = form.merkbericht.value;
+        const bereik  = form.bereik.value;
+        const voltoo = form.voltoo.value;
+
+        const gender = Object.keys(selectedGender).filter(g => selectedGender[g]);
+
+        const formValue = {
+        name,
+        cname,
+        email,
+        telephone,
+        theams,
+        file,
+        inspiratie,
+        filet,
+        eventuele,
+        branding,
+        korte,
+        ages,
+        huidige,
+        gewenste,
+        message,
+        fileth,
+        doelgroep,
+        merkbericht,
+        bereik ,
+        voltoo,
+        gender // Add gender array here
+      };
+
+
+
+      console.log(formValue);
+
+      form.reset();
+
+      
+      }
+    }
+
+
+
+
+
+
+
+
+
+  {/* Form validation end*/}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
   return (
     <>
@@ -87,14 +328,14 @@ const showAlert=()=>{
         </div>
       </div>
 
-      <form  ref={form} onSubmit={sendEmail}>
+      <form  ref={form} onSubmit={handleSubmit} >
           {/* First Part */}
       <div className="md:px-36 px-6 mx-auto">
         <div className=" flex md:gap-[496px]">
-          <h2 className="text-xl text-[#407BFF] font-semibold md:mt-8 mt-4 mb-4">
+          <h2 className="text-[28px] text-[rgba(64,123,255,1)] font-plus-jakarta font-semibold md:mt-8 mt-4 mb-4">
             Basisinformatie:
           </h2>
-          <h2 className="text-xl text-[#407BFF] md:-ml-12 font-semibold mb-4 md:mt-8 mt-4  hidden sm:block ">
+          <h2 className="text-[28px] text-[rgba(64,123,255,1)] font-plus-jakarta font-semibold md:-ml-56 mb-4 md:mt-8 mt-4  hidden sm:block ">
             Technisch
           </h2>
         </div>
@@ -102,19 +343,22 @@ const showAlert=()=>{
           {/* Left Side Inputs */}
           <div className="flex flex-col gap-4">
             <div>
-              <label className="block text-gray-700 font-medium mb-1">
-                Naam (Eerste en Aarthternaam)
+              <label className="block text-[rgba(38,50,56,1)] font-semibold font-plus-jakarta text-[16px] mb-1">
+              Naam (Voor en Achternaam)
               </label>
               <input
                 type="text"
                 name="name"
-                placeholder="Achternaam (TYPO)"
+                value={formData.name}
+                onChange={handleChange}
+                placeholder="Naam"
                 className="border border-gray-300 rounded-lg p-2 w-full focus:outline-none focus:ring-2 focus:ring-blue-500"
               />
+              {errors.name && <p className="text-red-500 text-sm">{errors.name}</p>}
             </div>
             <div>
-              <label className="block text-gray-700 font-medium mb-1">
-                Bedrijfsnaam (indien van toepassing)
+              <label className="block text-[rgba(38,50,56,1)] font-semibold font-plus-jakarta text-[16px] mb-1">
+              Bedrijfsnaam (indien van toepassing)
               </label>
               <input
                 type="text"
@@ -125,22 +369,25 @@ const showAlert=()=>{
             </div>
             <div className="grid grid-cols-2 gap-4">
               <div>
-                <label className="block text-gray-700 font-medium mb-1">
+                <label className="block text-[rgba(38,50,56,1)] font-semibold font-plus-jakarta text-[16px] mb-1">
                   E -mailadres
                 </label>
                 <input
                   type="email"
                   name="email"
-                  placeholder="E -mail"
+                  value={formData.email}
+                  onChange={handleChange}
+                  placeholder="E-mail"
                   className="border border-gray-300 rounded-lg p-2 w-full focus:outline-none focus:ring-2 focus:ring-blue-500"
                 />
+                {errors.email && <p className="text-red-500 text-sm">{errors.email}</p>}
               </div>
               <div>
-                <label className="block text-gray-700 font-medium mb-1">
+                <label className="block text-[rgba(38,50,56,1)] font-semibold font-plus-jakarta text-[16px] mb-1">
                   Telefoonnummer
                 </label>
                 <input
-                  type="number"
+                  type="tel"
                   name="telephone"
                   placeholder="Bijv. +31 6 12345678"
                   className="border border-gray-300 rounded-lg p-2 w-full focus:outline-none focus:ring-2 focus:ring-blue-500"
@@ -152,13 +399,11 @@ const showAlert=()=>{
           {/* Right Side Inputs */}
 
           <div className="flex flex-col gap-4">
-            <h2 className="text-xl text-[#407BFF] font-semibold md:mb-4 md:hidden block mt-12 ">
-              Technisch
-            </h2>
-
+            
+            <div className="grid grid-cols-2 items-center">
             <div>
-              <label className="block text-gray-700 font-medium mb-1">
-                Voorkeurskleuren of theams
+              <label className="block text-[rgba(38,50,56,1)] font-semibold font-plus-jakarta text-[16px] mb-1">
+              Voorkeurskleuren of themas
               </label>
               <input
                 type="text"
@@ -167,8 +412,32 @@ const showAlert=()=>{
                 className="border border-gray-300 rounded-lg p-2 w-full focus:outline-none focus:ring-2 focus:ring-blue-500"
               />
             </div>
+
+              <div className="mt-6 ml-10">
+              <button
+                      type="button"
+                      onClick={handleClick}
+                      className="bg-gray-800 hover:bg-gray-700 text-white font-medium py-2 px-2 rounded-lg flex items-center gap-2"
+                    >
+                      Upload afbeelding
+                      <Upload size={16} />
+                    </button>
+                    <input
+                      type="file"
+                      name="file"
+                      accept="image/*"
+                      className="hidden"
+                      ref={fileInputRef}
+                      onChange={handleFileChange}
+                    />
+              </div>
+
+            </div>               
+
+ 
+            <div className="grid grid-cols-2 ">
             <div>
-              <label className="block text-gray-700 font-medium mb-1">
+              <label className="block text-[rgba(38,50,56,1)] font-semibold font-plus-jakarta text-[16px] mb-1">
                 Inspiratie of concurrenten
               </label>
               <input
@@ -178,8 +447,31 @@ const showAlert=()=>{
                 className="border border-gray-300 rounded-lg p-2 w-full focus:outline-none focus:ring-2 focus:ring-blue-500"
               />
             </div>
+
+            <div className="mt-6 ml-10">
+              <button
+                      type="button"
+                      onClick={handleClick}
+                      className="bg-gray-800 hover:bg-gray-700 text-white font-medium py-2 px-2 rounded-lg flex items-center gap-2"
+                    >
+                      Upload afbeelding
+                      <Upload size={16} />
+                    </button>
+                    <input
+                      type="file"
+                      name="filet"
+                      accept="image/*"
+                      className="hidden"
+                      ref={fileInputRef}
+                      onChange={handleFileChange}
+                    />
+              </div>
+            </div>
+
+
+
             <div>
-              <label className="block text-gray-700 font-medium mb-1">
+              <label className="block text-[rgba(38,50,56,1)] font-semibold font-plus-jakarta text-[16px] mb-1">
                 Eventuele specifieke merkelementen die nodig zijn
               </label>
               <input
@@ -197,7 +489,7 @@ const showAlert=()=>{
 
       <div className="md:px-0 px-6">
         <div className="md:px-36 mx-auto">
-          <h2 className="text-xl mt-8  text-[#407BFF] font-semibold mb-4">
+          <h2 className="text-[28px] text-[rgba(64,123,255,1)] font-plus-jakarta font-semibold mt-8   mb-4">
             Informatie over brandingsproject:
           </h2>
 
@@ -205,21 +497,31 @@ const showAlert=()=>{
             {/* Left Side Inputs */}
             <div className="flex flex-col gap-4">
               <div>
-                <label className="block text-gray-700 font-medium mb-1">
-                  Type branding
-                </label>
                 <div className="relative">
-                  <input
-                    type="text"
-                    placeholder="uitkiezen"
-                    name="branding"
-                    className="border border-gray-300 rounded-lg p-2 w-full pr-10 focus:outline-none focus:ring-2 focus:ring-blue-500"
-                  />
-                  <FaChevronDown className="absolute right-3 top-3 text-gray-500" />
+                <label className="block text-[rgba(38,50,56,1)] font-semibold font-plus-jakarta text-[16px] mb-1">
+                Type branding
+                </label>
+                <select               
+                  value={brand}
+                  name="branding"
+                  onChange={(e) => setSubjectBrand(e.target.value)}
+                  className={`block w-full  px-3 py-2 border border-gray-300 bg-white rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500
+                    ${brand === '' ? 'text-gray-400 ' : 'text-gray-700'}`}
+                    >
+                  <option value="" disabled hidden>
+                  Uitkiezen
+                  </option>
+                  {brands .map((Uitki, index) => (
+                    <option key={index} value={Uitki} className="text-gray-700  ">
+                      {Uitki}
+                    </option>
+                  ))}
+                </select>
                 </div>
               </div>
+
               <div>
-                <label className="block text-gray-700 font-medium mb-1">
+                <label className="block text-[rgba(38,50,56,1)] font-semibold font-plus-jakarta text-[16px] mb-1">
                   De kernwaarden en missie van het merk
                 </label>
                 <div className="relative">
@@ -231,27 +533,95 @@ const showAlert=()=>{
                   />
                 </div>
               </div>
+
               <div>
-                <label className="block text-gray-700 font-medium mb-1">
+                <label className="block text-[rgba(38,50,56,1)] font-semibold font-plus-jakarta text-[16px] mb-1">
                   Doelgroep
                 </label>
-                <div className="relative">
+                <select
+                  value={doel}
+                  name="doelgroep"
+                  onChange={(e) => setSubjectDoel(e.target.value)}
+                  className={`block w-full  px-3 py-2 border border-gray-300 bg-white rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500
+                    ${brand === '' ? 'text-gray-400 ' : 'text-gray-700'}`}
+                    >
+                
+                  <option value="" disabled hidden>
+                  Uitkiezen
+                  </option>
+                  {doels .map((option, index) => (
+                    <option key={index} value={option} className="text-gray-700  ">
+                      {option}
+                    </option>
+                  ))}
+                </select>
+              </div>
+
+              <div>
+                <label className="block text-[rgba(38,50,56,1)] font-semibold font-plus-jakarta text-[16px] mb-1">
+                  Ages
+                </label>
+                <select
+                  value={age}
+                  name="ages"
+                  onChange={(e) => setSubjectAge(e.target.value)}
+                  className={`block w-full  px-3 py-2 border border-gray-300 bg-white rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500
+                    ${brand === '' ? 'text-gray-400 ' : 'text-gray-700'}`}
+                    >
+                
+                  <option value="" disabled hidden>
+                  Uitkiezen
+                  </option>
+                  {ages.map((option, index) => (
+                    <option key={index} value={option} className="text-gray-700  ">
+                      {option}
+                    </option>
+                  ))}
+                </select>
+              </div>
+
+              <div className="">
+              <h3  style={{ fontWeight: '600', text:'16px',color: 'rgba(38, 50, 56, 1)', fontFamily: 'Plus Jakarta Sans, sans-serif'  }}>Op basis van demografie & geslacht</h3>
+              <div style={{ display: 'flex', gap: '1.5rem', marginTop: '1rem' }}>
+                <label style={{ display: 'flex', alignItems: 'center', color: '#999' }}>
                   <input
-                    type="text"
-                    name="doelgroep"
-                    placeholder="Uitkiezen"
-                    className="border border-gray-300 rounded-lg p-2 w-full pr-10 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    type="checkbox"
+                    name="men"
+                    checked={selectedGender.man}
+                    onChange={handleChangee}
+                    style={{ marginRight: '0.5rem' }}
                   />
-                  <FaChevronDown className="absolute right-3 top-3 text-gray-500" />
-                </div>
+                  Men
+                </label>
+                <label style={{ display: 'flex', alignItems: 'center', color: '#999' }}>
+                  <input
+                    type="checkbox"
+                    name="women"
+                    checked={selectedGender.man}
+                    onChange={handleChangee}
+                    style={{ marginRight: '0.5rem' }}
+                  />
+                  Women
+                </label>
+                <label style={{ display: 'flex', alignItems: 'center', color: '#999' }}>
+                  <input
+                    type="checkbox"
+                    name="both"
+                    checked={selectedGender.vrouw}
+                    onChange={handleChangee}
+                    style={{ marginRight: '0.5rem' }}
+                  />
+                  Both
+                </label>
+              </div>
               </div>
 
               {/* upload image option */}
               <div className="">
-                <div className="md:grid md:grid-cols-2 gap-6">
+                <div className="md:grid md:grid-cols-2 items-center gap-6">
                   {/* Left Side Input */}
                   <div>
-                    <label className="block text-gray-700 font-medium mb-1">
+                    <label className="block text-[rgba(38,50,56,1)] font-semibold font-plus-jakarta text-[16px] mb-1">
                       Huidige branding (indien aanwezig)
                     </label>
                     <div className="relative">
@@ -266,24 +636,30 @@ const showAlert=()=>{
 
                   {/* Right Side Input (Moved Up) */}
                   <div className="">
-                    <label className="block text-gray-700 font-medium mt-11"></label>
-                    <div className="border w-1/2 border-gray-300 rounded-lg p-3 md:w-full flex items-center justify-around cursor-pointer bg-black hover:bg-gray-800 transition">
-                      <label
-                        htmlFor="imageUpload"
-                        className="text-white cursor-pointer"
-                      >
-                        Upload afbeelding
-                      </label>
-                      <FaUpload className="text-white text-lg" />
-                      <input type="file" className="hidden" id="imageUpload" />
-                    </div>
+                    <label className="block text-gray-700 font-medium mt-[50px]"></label>
+                    <button
+                      type="button"
+                      onClick={handleClick}
+                      className="bg-gray-800 hover:bg-gray-700 text-white font-medium py-2 px-4 rounded-lg flex items-center gap-2"
+                    >
+                      Upload afbeelding
+                      <Upload size={16} />
+                    </button>
+                    <input
+                      type="file"
+                      name="fileth"    
+                      accept="image/*"
+                      className="hidden"
+                      ref={fileInputRef}
+                      onChange={handleFileChange}
+                    />
                   </div>
 
                   {/* Image Upload Option */}
                 </div>
 
                 <div className="my-4">
-                  <label className="block text-gray-700 font-medium mb-1">
+                  <label className="block text-[rgba(38,50,56,1)] font-semibold font-plus-jakarta text-[16px] mb-1">
                     Gewenste look en feel
                   </label>
                   <div className="relative">
@@ -293,11 +669,12 @@ const showAlert=()=>{
                       placeholder="Uitkiezen"
                       className="border border-gray-300 rounded-lg p-2 w-full pr-10 focus:outline-none focus:ring-2 focus:ring-blue-500"
                     />
-                    <FaChevronDown className="absolute right-3 top-3 text-gray-500" />
+                  
                   </div>
                 </div>
+
                 <div>
-                  <label className="block text-gray-700 font-medium mb-1">
+                  <label className="block text-[rgba(38,50,56,1)] font-semibold font-plus-jakarta text-[16px] mb-1">
                     Merkbericht/positionering
                   </label>
                   <div className="relative">
@@ -314,56 +691,67 @@ const showAlert=()=>{
 
             {/* Right Side Inputs */}
             <div className="flex flex-col gap-4">
-              <h2 className="text-xl text-[#407BFF] font-semibold mb-4">
+              <h2 className="text-[28px] text-[rgba(64,123,255,1)] font-plus-jakarta font-semibold mb-4">
                 Begroting
               </h2>
               <div>
-                <label className="block text-gray-700 font-medium mb-1">
+                <label className="block text-[rgba(38,50,56,1)] font-semibold font-plus-jakarta text-[16px] mb-1">
                   Budgetbereik
                 </label>
-                <div className="relative">
-                  <input
-                    type="text"
-                    name="budgetbereik"
-                    placeholder="Naam"
-                    className="border border-gray-300 rounded-lg p-2 w-full pr-10 focus:outline-none focus:ring-2 focus:ring-blue-500"
-                  />
-                  <FaChevronDown className="absolute right-3 top-3 text-gray-500" />
-                </div>
+                <select
+                  value={begroting}
+                  name="bereik"
+                  onChange={(e) => setSubjectBegroting(e.target.value)}
+                  className={`block w-full  px-3 py-2 border border-gray-300 bg-white rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500
+                    ${brand === '' ? 'text-gray-400 ' : 'text-gray-700'}`}
+                    >
+                
+                  <option value="" disabled hidden>
+                  Naam
+                  </option>
+                  {begrotings .map((begrot, index) => (
+                    <option key={index} value={begrot} className="text-gray-700  ">
+                      {begrot}
+                    </option>
+                  ))}
+                </select>
               </div>
+
               <div>
-                <label className="block text-gray-700 font-medium mb-1">
-                  Gewenste voltooiingsdatum
+                <label className="block text-[rgba(38,50,56,1)] font-semibold font-plus-jakarta text-[16px] mb-1">
+                Gewenste voltooiingsdatum
                 </label>
                 <div className="relative">
                   <input
-                    type="text"
+                    type="date"
                     name="voltoo"
-                    placeholder="Naam"
+                    placeholder="Date dd-mm-yyy"
                     className="border border-gray-300 rounded-lg p-2 w-full pr-10 focus:outline-none focus:ring-2 focus:ring-blue-500"
                   />
                 </div>
               </div>
               {/* comment box */}
               <div>
-                <h2 className="text-xl text-[#407BFF] font-semibold mb-4">
+                <h2 className="text-[28px] text-[rgba(64,123,255,1)] font-plus-jakarta font-semibold mb-4">
                   Aanvullende opmerkingen:
                 </h2>
-                <h2 className="block text-gray-700 font-medium mb-1">
-                  Aanvullende opmerkingen:
+                <h2 className="block text-[rgba(38,50,56,1)] font-semibold font-plus-jakarta text-[16px] mb-1">
+                Verzoek en vragen
                 </h2>
 
                 <textarea
                   name="message"
-                  placeholder="Verzoeken en vragenBio"
-                  className="textarea  textarea-bordered textarea-lg w-full max-w-full"
+                  placeholder="Verzoeken en/of vragen"
+                  className="  focus:outline-none focus:ring-2 focus:ring-blue-600 textarea  textarea-bordered textarea-lg w-full h-52 max-w-full"
                 ></textarea>
               </div>
             </div>
           </div>
         </div>
         <div className="flex justify-center items-center md:my-8 my-4 ">
-          <button onClick={showAlert} className="btn hover:bg-[#468AFFE6] bg-[#468AFF]  md:px-32 px-36 py-2 text-[#FFFFFF] text-lg md:text-md lg:text-xl">
+          <button
+          disabled={!isFormValid}  
+          className="btn hover:bg-[#468AFFE6] bg-[#468AFF]  md:px-32 px-36 py-2 text-[#FFFFFF] text-lg md:text-md lg:text-xl">
           Start Nu!
           </button>
         </div>

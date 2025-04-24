@@ -3,10 +3,165 @@ import das from "../assets/das.png";
 import bg1 from "../assets/Appnet.jpeg";
 import { useEffect,useState } from "react";
 import { useRef } from 'react';
-import emailjs from '@emailjs/browser';
-import Swal from 'sweetalert2'
+//import emailjs from '@emailjs/browser';
+//import Swal from 'sweetalert2'
 
 const PrijzenMarketing = () => {
+
+
+{/**Form validation start */}
+
+const [formData, setFormData] = useState({
+  name: '',
+  email: ''
+});
+
+
+const [errors, setErrors] = useState({});
+  const [isFormValid, setIsFormValid] = useState(false);
+
+  useEffect(() => {
+    const noErrors = Object.keys(errors).length === 0;
+    const allFilled = Object.values(formData).every(field => field.trim() !== '');
+    setIsFormValid(noErrors && allFilled);
+  }, [errors, formData]);
+
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({ ...formData, [name]: value });
+    validateField(name, value);
+  };
+
+
+  const validateField = (name, value) => {
+    let fieldErrors = { ...errors };
+
+
+    if (name === 'name') {
+      if (!value.trim()) {
+        fieldErrors.name = 'Name is required';
+      } else {
+        delete fieldErrors.name;
+      }
+    }
+
+    if (name === 'email') {
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!value.trim()) {
+        fieldErrors.email = 'Email is required';
+      } else if (!emailRegex.test(value)) {
+        fieldErrors.email = 'Invalid email format';
+      } else {
+        delete fieldErrors.email;
+      }
+    }
+
+    setErrors(fieldErrors);
+  };
+
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    if (isFormValid) {
+      alert('Form submitted successfully!');
+  
+      const form = e.target;
+  
+      const name = form.name.value;
+      const cname = form.cname.value;
+      const email = form.email.value;
+      const telephone = form.telephone.value;
+      const huidige = form.huidige.value;
+      const file = form.file.value;
+      const integrat = form.integrat.value;
+      const backend = form.backend.value;
+      const preferred = form.preferred.value;
+      const typeapp = form.typeapp.value;
+      const platform = form.platform.value;
+      const ontwer = form.ontwer.value;
+      const budget = form.budget.value;
+      const gewenste = form.gewenste.value;
+      const message = form.message.value;
+      const functies = form.functies.value;
+      const doelgroep = form.doelgroep.value;
+      const leeft = form.leeft.value;
+  
+      // ✅ Collect selected genders
+      let gender = Object.keys(selectedGender).filter(g => selectedGender[g]);
+      if (selectedGender.other && customGender.trim()) {
+        // Replace "other" with custom input
+        gender = gender.filter(g => g !== 'other');
+        gender.push(customGender.trim());
+      }
+  
+      const formValue = {
+        name,
+        cname,
+        email,
+        telephone,
+        huidige,
+        file,
+        integrat,
+        backend,
+        preferred,
+        typeapp,
+        platform,
+        ontwer,
+        budget,
+        gewenste,
+        message,
+        functies,
+        doelgroep,
+        leeft,
+        gender
+      };
+  
+      console.log(formValue);
+
+    // Send to backend
+    /*
+    fetch("http://localhost:5000/api/submit-form", {
+  method: "POST",
+  headers: {
+    "Content-Type": "application/json"
+  },
+  body: JSON.stringify(formValue)
+})
+  .then(response => response.json())
+  .then(data => {
+    console.log("Response from backend:", data);
+    alert("Data successfully sent to the server!");
+  })
+  .catch(error => {
+    console.error("Error submitting form:", error);
+    alert("Failed to submit form. Try again.");
+  });
+
+    */
+
+  form.reset();
+  setSelectedGender({ man: false, vrouw: false, other: false });
+  setCustomGender('');
+  }
+  };
+
+
+{/**Form validation End */}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
   // Dropdown 1 of app 
@@ -92,45 +247,54 @@ const PrijzenMarketing = () => {
   const [selectedGender, setSelectedGender] = useState({
     man: false,
     vrouw: false,
+    other: false
   });
+  const [customGender, setCustomGender] = useState('');
 
-  const handleChange = (e) => {
+
+  const handleChangee = (e) => {
     const { name, checked } = e.target;
-    setSelectedGender((prev) => ({
+    setSelectedGender(prev => ({
       ...prev,
-      [name]: checked,
+      [name]: checked
     }));
+  
+    // Reset custom gender input if "other" is unchecked
+    if (name === 'other' && !checked) {
+      setCustomGender('');
+    }
   };
+  
 
 
 
 
-  const showAlert=()=>{
-    Swal.fire({
-      title: "Bedankt voor je aanvraag!",
-      text: "We hebben je gegevens ontvangen en sturen je binnenkort een offerte. Mocht je vragen hebben, neem gerust contact met ons op.",
-      icon: "success"
-    });
-  }
+  // const showAlert=()=>{
+  //   Swal.fire({
+  //     title: "Bedankt voor je aanvraag!",
+  //     text: "We hebben je gegevens ontvangen en sturen je binnenkort een offerte. Mocht je vragen hebben, neem gerust contact met ons op.",
+  //     icon: "success"
+  //   });
+  // }
 
   const form = useRef();
 
-  const sendEmail = (e) => {
-    e.preventDefault();
+  // const sendEmail = (e) => {
+  //   e.preventDefault();
 
-    emailjs
-      .sendForm('service_adb605b','template_31qworp', form.current, {
-        publicKey: 'zVpdm4YG_4bymkiyw',
-      })
-      .then(
-        () => {
-          console.log('SUCCESS!');
-        },
-        (error) => {
-          console.log('FAILED...', error.text);
-        },
-      );
-  };
+  //   emailjs
+  //     .sendForm('service_adb605b','template_31qworp', form.current, {
+  //       publicKey: 'zVpdm4YG_4bymkiyw',
+  //     })
+  //     .then(
+  //       () => {
+  //         console.log('SUCCESS!');
+  //       },
+  //       (error) => {
+  //         console.log('FAILED...', error.text);
+  //       },
+  //     );
+  // };
 
 
   useEffect(() => {
@@ -184,14 +348,14 @@ const PrijzenMarketing = () => {
         </div>
       </div>
 
-      <form ref={form} onSubmit={sendEmail} >
+      <form ref={form} onSubmit={handleSubmit} >
             {/* First Part */}
       <div className="md:px-36 px-6 mx-auto">
         <div className=" flex md:gap-[496px]">
-          <h2 className="text-xl text-[#407BFF] font-semibold md:mt-8 mt-4 mb-4">
+          <h2 className="text-[28px] text-[rgba(64,123,255,1)] font-plus-jakarta font-semibold md:mt-8 mt-4 mb-4">
             Basisinformatie:
           </h2>
-          <h2 className="text-xl md:-ml-12  text-[#407BFF] font-semibold mb-4 md:mt-8 mt-4  hidden sm:block ">
+          <h2 className=" md:-ml-56  text-[28px] text-[rgba(64,123,255,1)] font-plus-jakarta font-semibold mb-4 md:mt-8 mt-4  hidden sm:block ">
             Technische details:
           </h2>
         </div>
@@ -199,18 +363,23 @@ const PrijzenMarketing = () => {
           {/* Left Side Inputs */}
           <div className="flex flex-col gap-4">
             <div>
-              <label className="block text-gray-700 font-medium mb-1">
+              <label className="block text-[rgba(38,50,56,1)] font-semibold font-plus-jakarta text-[16px] mb-1">
               Naam (Voornaam en achternaam)
               </label>
               <input
                 type="text"
                 name="name"
+                value={formData.name}
+                onChange={handleChange}
                 placeholder="Naam"
+                
                 className="border border-gray-300 rounded-lg p-2 w-full focus:outline-none focus:ring-2 focus:ring-blue-500"
               />
+              {errors.name && <p className="text-red-500 text-sm">{errors.name}</p>}
             </div>
+
             <div>
-              <label className="block text-gray-700 font-medium mb-1">
+              <label className="block text-[rgba(38,50,56,1)] font-semibold font-plus-jakarta text-[16px] mb-1">
                 Bedrijfsnaam (indien van toepassing)
               </label>
               <input
@@ -222,22 +391,26 @@ const PrijzenMarketing = () => {
             </div>
             <div className="grid grid-cols-2 gap-4">
               <div>
-                <label className="block text-gray-700 font-medium mb-1">
-                  E -mailadres
+                <label className="block text-[rgba(38,50,56,1)] font-semibold font-plus-jakarta text-[16px] mb-1">
+                  E-mailadres
                 </label>
                 <input
                   type="email"
                   name="email"
+                  value={formData.email}
+                  onChange={handleChange}
                   placeholder="E -mail"
                   className="border border-gray-300 rounded-lg p-2 w-full focus:outline-none focus:ring-2 focus:ring-blue-500"
                 />
+                {errors.email && <p className="text-red-500 text-sm">{errors.email}</p>}
               </div>
               <div>
-                <label className="block text-gray-700 font-medium mb-1">
+                <label className="block text-[rgba(38,50,56,1)] font-semibold font-plus-jakarta text-[16px] mb-1">
                   Telefoonnummer
                 </label>
+        
                 <input
-                  type="number"
+                  type="tel"
                   name="telephone"
                   placeholder="Bijv. +31 6 12345678"
                   className="border border-gray-300 rounded-lg p-2 w-full focus:outline-none focus:ring-2 focus:ring-blue-500"
@@ -249,21 +422,21 @@ const PrijzenMarketing = () => {
           {/* Right Side Inputs */}
 
           <div className="flex flex-col gap-4">
-            <h2 className="text-xl text-[#407BFF] font-semibold md:mb-4 md:hidden block mt-12 ">
+            <h2 className="text-[28px] text-[rgba(64,123,255,1)] font-plus-jakarta font-semibold md:mb-4 md:hidden block mt-12 ">
               Technische details:
             </h2>
 
             <div className="md:grid md:grid-cols-2 gap-6">
               {/* Left Side Input */}
               <div>
-                <label className="block text-gray-700 font-medium mb-1">
-                  Huidige branding (indien aanwezig)
+                <label className="block text-[rgba(38,50,56,1)] font-semibold font-plus-jakarta text-[16px] mb-1">
+                Heeft u een huidige app of een prototype?
                 </label>
                 <div className="relative">
                   <input
                     type="text"
                     name="huidige"
-                    placeholder="Geef details op"
+                    placeholder="Ja/nee, zo ja: geef details of upload"
                     className="border border-gray-300 rounded-lg p-2 w-full pr-10 focus:outline-none focus:ring-2 focus:ring-blue-500"
                   />
                 </div>
@@ -282,40 +455,40 @@ const PrijzenMarketing = () => {
                   <FaUpload className="text-white text-lg" />
                   <input type="file" name="file" className="hidden" id="imageUpload" />
                 </div>
-              </div>
+              </div> 
 
               {/* Image Upload Option */}
             </div>
             <div>
-              <label className="block text-gray-700 font-medium mb-1">
+              <label className="block text-[rgba(38,50,56,1)] font-semibold font-plus-jakarta text-[16px] mb-1">
                 Integratievereisten
               </label>
               <input
                 type="text"
                 name="integrat"
-                placeholder="Voorbeelden van merken die u bewondert of concurrenten"
+                placeholder="bijv. API's, betalingsgateways, services van derden"
                 className="border border-gray-300 rounded-lg p-2 w-full focus:outline-none focus:ring-2 focus:ring-blue-500"
               />
             </div>
             <div>
-              <label className="block text-gray-700 font-medium mb-1">
+              <label className="block text-[rgba(38,50,56,1)] font-semibold font-plus-jakarta text-[16px] mb-1">
                 Backend -behoeften
               </label>
               <input
                 type="text"
                 name="backend"
-                placeholder="bijv. Logo, visitekaartjes, brochures, website -ontwerp"
+                placeholder="bijv. Database, serverhosting, cloudservices"
                 className="border border-gray-300 rounded-lg p-2 w-full focus:outline-none focus:ring-2 focus:ring-blue-500"
               />
             </div>
             <div>
-              <label className="block text-gray-700 font-medium mb-1">
+              <label className="block text-[rgba(38,50,56,1)] font-semibold font-plus-jakarta text-[16px] mb-1">
                 Preferred Technology Stack
               </label>
               <input
                 type="text"
                 name="preferred"
-                placeholder="bijv. Logo, visitekaartjes, brochures, website -ontwerp"
+                placeholder="Eventuele specifieke programmeertalen of kaders"
                 className="border border-gray-300 rounded-lg p-2 w-full focus:outline-none focus:ring-2 focus:ring-blue-500"
               />
             </div>
@@ -327,7 +500,7 @@ const PrijzenMarketing = () => {
 
       <div className="md:px-0 px-6">
         <div className="md:px-36 mx-auto">
-          <h2 className="text-xl mt-2 text-[#407BFF] font-semibold mb-4">
+          <h2 className="text-[28px] text-[rgba(64,123,255,1)] font-plus-jakarta font-semibold mb-4">
             App -projectinformatie:
           </h2>
 
@@ -336,13 +509,14 @@ const PrijzenMarketing = () => {
             <div className="flex flex-col gap-4">
               <div>
 
-              <label className="block text-sm font-medium text-gray-700 mb-1">
+              <label className="block text-[rgba(38,50,56,1)] font-semibold font-plus-jakarta text-[16px] mb-1">
                   Type app
                 </label>
                 <select
                   value={selectedOption}
+                  name="typeapp"
                   onChange={(e) => setSelectedOption(e.target.value)}
-                  className={`block w-full px-3 py-2 border border-gray-300 bg-white rounded-lg focus:outline-none focus:ring-2 focus:border-blue-700
+                  className={`block w-full px-3 py-2 border border-gray-300 bg-white rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500
                     ${selectedOption === '' ? 'text-gray-400 ' : 'text-gray-700'}`}
                 >
                   
@@ -358,13 +532,14 @@ const PrijzenMarketing = () => {
               </div>
 
               <div>
-              <label className="block text-sm font-medium text-gray-700 mb-1">
+              <label className="block text-[rgba(38,50,56,1)] font-semibold font-plus-jakarta text-[16px] mb-1">
                 Platform(s) vereist
               </label>
               <select
                 value={selectedPlatform}
+                name="platform"
                 onChange={(e) => setSelectedPlatform(e.target.value)}
-                className={`block w-full px-3 py-2 border border-gray-300 bg-white rounded-lg  focus:outline-none focus:ring-2 focus:border-blue-600
+                className={`block w-full px-3 py-2 border border-gray-300 bg-white rounded-lg  focus:outline-none focus:ring-2 focus:ring-blue-500
                   ${selectedPlatform === '' ? 'text-gray-400 ' : 'text-gray-700'}`}
               >
                 
@@ -381,14 +556,14 @@ const PrijzenMarketing = () => {
               </div>
 
               <div>
-                <label className="block text-gray-700 font-medium mb-1">
+                <label className="block text-[rgba(38,50,56,1)] font-semibold font-plus-jakarta text-[16px] mb-1">
                   App -functies
                 </label>
                 <div className="relative">
                   <input
                     type="text"
                     name="functies"
-                    placeholder="Uitkiezen"
+                    placeholder="Korte beschrijving van functies, bijv. Gebruikersaanmelding, etc"
                     className="border border-gray-300 rounded-lg p-2 w-full pr-10 focus:outline-none focus:ring-2 focus:ring-blue-500"
                   />
                   
@@ -399,13 +574,14 @@ const PrijzenMarketing = () => {
               <div className="">
                 <div className="my-4">
 
-                <label className="block text-sm font-medium text-gray-700 mb-1">
+                <label className="block text-[rgba(38,50,56,1)] font-semibold font-plus-jakarta text-[16px] mb-1">
                 Doelgroep
               </label>
               <select
                 value={selectedDoelgroep}
+                name="doelgroep"
                 onChange={(e) => setSelectedDoelgroep(e.target.value)}
-                className={`block w-full px-3 py-2 border border-gray-300 bg-white rounded-lg focus:outline-none focus:ring-2 focus:border-blue-500
+                className={`block w-full px-3 py-2 border border-gray-300 bg-white rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500
                   ${selectedDoelgroep === '' ? 'text-gray-400 ' : 'text-gray-700'}`}
               >
                
@@ -422,13 +598,14 @@ const PrijzenMarketing = () => {
                 </div>
 
                 <div>
-                <label className="block text-sm font-medium text-gray-700 mb-1">
+                <label className="block text-[rgba(38,50,56,1)] font-semibold font-plus-jakarta text-[16px] mb-1">
                 Leeftijdscategorie
               </label>
               <select
                 value={selectedLeeft}
+                name="leeft"
                 onChange={(e) => setSelectedLeeft(e.target.value)}
-                className={`block w-full px-3 py-2 border border-gray-300 bg-white rounded-lg  focus:outline-none focus:ring-2 focus:border-blue-500
+                className={`block w-full px-3 py-2 border border-gray-300 bg-white rounded-lg  focus:outline-none focus:ring-2 focus:ring-blue-500
                   ${selectedLeeft === '' ? 'text-gray-400 ' : 'text-gray-700'}`}
               >
                 <option value="" disabled hidden>
@@ -442,40 +619,63 @@ const PrijzenMarketing = () => {
               </select>
                 </div>
 
-                  <div className="font-plus-jakarta text-gray-700 mt-5">
-              <h3 className="text-base font-normal mb-4">Op basis van demografie & geslacht</h3>
-              <div className="flex space-x-6">
-                <label className="inline-flex items-center text-gray-400">
-                  <input
-                    type="checkbox"
-                    name="man"
-                    checked={selectedGender.man}
-                    onChange={handleChange}
-                    className="w-4 h-4 mr-2 border-gray-400 rounded focus:ring-0"
-                  />
-                  Man
-                </label>
-                <label className="inline-flex items-center text-gray-400">
-                  <input
-                    type="checkbox"
-                    name="vrouw"
-                    checked={selectedGender.vrouw}
-                    onChange={handleChange}
-                    className="w-4 h-4 mr-2 border-gray-400 rounded focus:ring-0"
-                  />
-                  Vrouw
-                </label>
-              </div>
+                <div className="font-plus-jakarta text-gray-700 mt-5">
+            <h3 className="text-[rgba(38,50,56,1)] font-semibold text-[16px] mb-4">
+              Op basis van demografie & geslacht
+            </h3>
+            <div className="flex space-x-6">
+              <label className="inline-flex items-center text-gray-400">
+                <input
+                  type="checkbox"
+                  name="man"
+                  checked={selectedGender.man}
+                  onChange={handleChangee}
+                  className="w-4 h-4 mr-2 border-gray-400 rounded focus:ring-0"
+                />
+                Man
+              </label>
+              <label className="inline-flex items-center text-gray-400">
+                <input
+                  type="checkbox"
+                  name="vrouw"
+                  checked={selectedGender.vrouw}
+                  onChange={handleChangee}
+                  className="w-4 h-4 mr-2 border-gray-400 rounded focus:ring-0"
+                />
+                Vrouw
+              </label>
+              <label className="inline-flex items-center text-gray-400">
+                <input
+                  type="checkbox"
+                  name="other"
+                  checked={selectedGender.other}
+                  onChange={handleChangee}
+                  className="w-4 h-4 mr-2 border-gray-400 rounded focus:ring-0"
+                />
+                Anders
+              </label>
+              {selectedGender.other && (
+                <input
+                  type="text"
+                  placeholder="Voer geslacht in..."
+                  className="ml-2 p-1 border border-gray-300 rounded"
+                  value={customGender}
+                  onChange={(e) => setCustomGender(e.target.value)}
+                />
+              )}
             </div>
+          </div>
+
+
 
             <div>
-                <label className="block text-gray-700 text-base font-medium mt-4 mb-1">
+                <label className="block text-[rgba(38,50,56,1)] font-semibold font-plus-jakarta text-[16px] mt-4 mb-1">
                 Ontwerpvoorkeuren
                 </label>
                 <div className="relative">
                   <input
                     type="text"
-                    name="functies"
+                    name="ontwer"
                     placeholder="Eenvoudig, verfijnd, kleurrijk, modern, etc."
                     className="border border-gray-300 rounded-lg p-2 w-full pr-10 focus:outline-none focus:ring-2 focus:ring-blue-500"
                   />
@@ -489,17 +689,18 @@ const PrijzenMarketing = () => {
 
             {/* Right Side Inputs */}
             <div className="flex flex-col gap-4">
-              <h2 className="text-xl text-[#407BFF] font-semibold mb-4">
+              <h2 className="text-[28px] text-[rgba(64,123,255,1)] font-plus-jakarta font-semibold mb-4">
                 Begroting
               </h2>
               <div>
-              <label className="block text-sm font-medium text-gray-700 mb-1">
+              <label className="block text-[rgba(38,50,56,1)] font-semibold font-plus-jakarta text-[16px] mb-1">
               Budgetbereik
             </label>
             <select
               value={selectedBudget}
+              name="budget"
               onChange={(e) => setSelectedBudget(e.target.value)}
-              className={`block w-full px-3 py-2 border border-gray-300 rounded-md  focus:outline-none focus:ring-2 focus:border-blue-500 bg-white ${
+              className={`block w-full px-3 py-2 border border-gray-300 rounded-md  focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white ${
                 selectedBudget === '' ? 'text-gray-400 ' : 'text-gray-700'
               }`}
             >
@@ -511,11 +712,11 @@ const PrijzenMarketing = () => {
                   {budget}
                 </option>
               ))}
-            </select>
+            </select> 
               </div>
 
               <div>
-                <label className="block text-gray-700 font-medium mb-1">
+                <label className="block text-[rgba(38,50,56,1)] font-semibold font-plus-jakarta text-[16px] mb-1">
                   Gewenste voltooiingsdatum
                 </label>
                 <div className="relative">
@@ -529,25 +730,27 @@ const PrijzenMarketing = () => {
               </div>
               {/* comment box */}
               <div>
-                <h2 className="text-xl text-[#407BFF] font-semibold mb-4">
+                <h2 className="text-[28px] text-[rgba(64,123,255,1)] font-plus-jakarta font-semibold mb-4">
                   Aanvullende opmerkingen:
                 </h2>
-                <h2 className="block text-gray-700 font-medium mb-1">
+                <h2 className="block text-[rgba(38,50,56,1)] font-semibold font-plus-jakarta text-[16px] mb-1">
                   Verzoek en vragen
                 </h2>
 
                 <textarea
                   name="message"
                   placeholder="Verzoeken en vragen"
-                  className="textarea  textarea-bordered textarea-lg w-full max-w-full"
+                  className="textarea  textarea-bordered textarea-lg w-full max-w-full h-48"
                 ></textarea>
               </div>
             </div>
           </div>
         </div>
         <div className="flex justify-center items-center md:my-8 my-4 ">
-          <button onClick={showAlert} className="btn hover:bg-[#468AFFE6] bg-[#468AFF]  md:px-32 px-36 py-2 text-[#FFFFFF] text-lg md:text-md lg:text-xl">
-          Boek een offerte
+          <button
+          disabled={!isFormValid}
+          className="btn hover:bg-[#468AFFE6] bg-[#468AFF]  md:px-32 px-36 py-2 text-[#FFFFFF] text-lg md:text-md lg:text-xl">
+          Start Nu!
           </button>
         </div>
       </div>
