@@ -3,10 +3,165 @@ import das from "../assets/das.png";
 import bg1 from "../assets/Appnet.jpeg";
 import { useEffect,useState } from "react";
 import { useRef } from 'react';
-import emailjs from '@emailjs/browser';
-import Swal from 'sweetalert2'
+//import emailjs from '@emailjs/browser';
+//import Swal from 'sweetalert2'
 
 const PrijzenMarketing = () => {
+
+
+{/**Form validation start */}
+
+const [formData, setFormData] = useState({
+  name: '',
+  email: ''
+});
+
+
+const [errors, setErrors] = useState({});
+  const [isFormValid, setIsFormValid] = useState(false);
+
+  useEffect(() => {
+    const noErrors = Object.keys(errors).length === 0;
+    const allFilled = Object.values(formData).every(field => field.trim() !== '');
+    setIsFormValid(noErrors && allFilled);
+  }, [errors, formData]);
+
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({ ...formData, [name]: value });
+    validateField(name, value);
+  };
+
+
+  const validateField = (name, value) => {
+    let fieldErrors = { ...errors };
+
+
+    if (name === 'name') {
+      if (!value.trim()) {
+        fieldErrors.name = 'Name is required';
+      } else {
+        delete fieldErrors.name;
+      }
+    }
+
+    if (name === 'email') {
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!value.trim()) {
+        fieldErrors.email = 'Email is required';
+      } else if (!emailRegex.test(value)) {
+        fieldErrors.email = 'Invalid email format';
+      } else {
+        delete fieldErrors.email;
+      }
+    }
+
+    setErrors(fieldErrors);
+  };
+
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    if (isFormValid) {
+      alert('Form submitted successfully!');
+  
+      const form = e.target;
+  
+      const name = form.name.value;
+      const cname = form.cname.value;
+      const email = form.email.value;
+      const telephone = form.telephone.value;
+      const huidige = form.huidige.value;
+      const file = form.file.value;
+      const integrat = form.integrat.value;
+      const backend = form.backend.value;
+      const preferred = form.preferred.value;
+      const typeapp = form.typeapp.value;
+      const platform = form.platform.value;
+      const ontwer = form.ontwer.value;
+      const budget = form.budget.value;
+      const gewenste = form.gewenste.value;
+      const message = form.message.value;
+      const functies = form.functies.value;
+      const doelgroep = form.doelgroep.value;
+      const leeft = form.leeft.value;
+  
+      // ✅ Collect selected genders
+      let gender = Object.keys(selectedGender).filter(g => selectedGender[g]);
+      if (selectedGender.other && customGender.trim()) {
+        // Replace "other" with custom input
+        gender = gender.filter(g => g !== 'other');
+        gender.push(customGender.trim());
+      }
+  
+      const formValue = {
+        name,
+        cname,
+        email,
+        telephone,
+        huidige,
+        file,
+        integrat,
+        backend,
+        preferred,
+        typeapp,
+        platform,
+        ontwer,
+        budget,
+        gewenste,
+        message,
+        functies,
+        doelgroep,
+        leeft,
+        gender
+      };
+  
+      console.log(formValue);
+
+    // Send to backend
+    /*
+    fetch("http://localhost:5000/api/submit-form", {
+  method: "POST",
+  headers: {
+    "Content-Type": "application/json"
+  },
+  body: JSON.stringify(formValue)
+})
+  .then(response => response.json())
+  .then(data => {
+    console.log("Response from backend:", data);
+    alert("Data successfully sent to the server!");
+  })
+  .catch(error => {
+    console.error("Error submitting form:", error);
+    alert("Failed to submit form. Try again.");
+  });
+
+    */
+
+  form.reset();
+  setSelectedGender({ man: false, vrouw: false, other: false });
+  setCustomGender('');
+  }
+  };
+
+
+{/**Form validation End */}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
   // Dropdown 1 of app 
@@ -92,45 +247,54 @@ const PrijzenMarketing = () => {
   const [selectedGender, setSelectedGender] = useState({
     man: false,
     vrouw: false,
+    other: false
   });
+  const [customGender, setCustomGender] = useState('');
 
-  const handleChange = (e) => {
+
+  const handleChangee = (e) => {
     const { name, checked } = e.target;
-    setSelectedGender((prev) => ({
+    setSelectedGender(prev => ({
       ...prev,
-      [name]: checked,
+      [name]: checked
     }));
+  
+    // Reset custom gender input if "other" is unchecked
+    if (name === 'other' && !checked) {
+      setCustomGender('');
+    }
   };
+  
 
 
 
 
-  const showAlert=()=>{
-    Swal.fire({
-      title: "Bedankt voor je aanvraag!",
-      text: "We hebben je gegevens ontvangen en sturen je binnenkort een offerte. Mocht je vragen hebben, neem gerust contact met ons op.",
-      icon: "success"
-    });
-  }
+  // const showAlert=()=>{
+  //   Swal.fire({
+  //     title: "Bedankt voor je aanvraag!",
+  //     text: "We hebben je gegevens ontvangen en sturen je binnenkort een offerte. Mocht je vragen hebben, neem gerust contact met ons op.",
+  //     icon: "success"
+  //   });
+  // }
 
   const form = useRef();
 
-  const sendEmail = (e) => {
-    e.preventDefault();
+  // const sendEmail = (e) => {
+  //   e.preventDefault();
 
-    emailjs
-      .sendForm('service_adb605b','template_31qworp', form.current, {
-        publicKey: 'zVpdm4YG_4bymkiyw',
-      })
-      .then(
-        () => {
-          console.log('SUCCESS!');
-        },
-        (error) => {
-          console.log('FAILED...', error.text);
-        },
-      );
-  };
+  //   emailjs
+  //     .sendForm('service_adb605b','template_31qworp', form.current, {
+  //       publicKey: 'zVpdm4YG_4bymkiyw',
+  //     })
+  //     .then(
+  //       () => {
+  //         console.log('SUCCESS!');
+  //       },
+  //       (error) => {
+  //         console.log('FAILED...', error.text);
+  //       },
+  //     );
+  // };
 
 
   useEffect(() => {
@@ -184,7 +348,7 @@ const PrijzenMarketing = () => {
         </div>
       </div>
 
-      <form ref={form} onSubmit={sendEmail} >
+      <form ref={form} onSubmit={handleSubmit} >
             {/* First Part */}
       <div className="md:px-36 px-6 mx-auto">
         <div className=" flex md:gap-[496px]">
@@ -205,10 +369,15 @@ const PrijzenMarketing = () => {
               <input
                 type="text"
                 name="name"
+                value={formData.name}
+                onChange={handleChange}
                 placeholder="Naam"
+                
                 className="border border-gray-300 rounded-lg p-2 w-full focus:outline-none focus:ring-2 focus:ring-blue-500"
               />
+              {errors.name && <p className="text-red-500 text-sm">{errors.name}</p>}
             </div>
+
             <div>
               <label className="block text-[rgba(38,50,56,1)] font-semibold font-plus-jakarta text-[16px] mb-1">
                 Bedrijfsnaam (indien van toepassing)
@@ -223,14 +392,17 @@ const PrijzenMarketing = () => {
             <div className="grid grid-cols-2 gap-4">
               <div>
                 <label className="block text-[rgba(38,50,56,1)] font-semibold font-plus-jakarta text-[16px] mb-1">
-                  E -mailadres
+                  E-mailadres
                 </label>
                 <input
                   type="email"
                   name="email"
+                  value={formData.email}
+                  onChange={handleChange}
                   placeholder="E -mail"
                   className="border border-gray-300 rounded-lg p-2 w-full focus:outline-none focus:ring-2 focus:ring-blue-500"
                 />
+                {errors.email && <p className="text-red-500 text-sm">{errors.email}</p>}
               </div>
               <div>
                 <label className="block text-[rgba(38,50,56,1)] font-semibold font-plus-jakarta text-[16px] mb-1">
@@ -283,7 +455,7 @@ const PrijzenMarketing = () => {
                   <FaUpload className="text-white text-lg" />
                   <input type="file" name="file" className="hidden" id="imageUpload" />
                 </div>
-              </div>
+              </div> 
 
               {/* Image Upload Option */}
             </div>
@@ -342,6 +514,7 @@ const PrijzenMarketing = () => {
                 </label>
                 <select
                   value={selectedOption}
+                  name="typeapp"
                   onChange={(e) => setSelectedOption(e.target.value)}
                   className={`block w-full px-3 py-2 border border-gray-300 bg-white rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500
                     ${selectedOption === '' ? 'text-gray-400 ' : 'text-gray-700'}`}
@@ -364,6 +537,7 @@ const PrijzenMarketing = () => {
               </label>
               <select
                 value={selectedPlatform}
+                name="platform"
                 onChange={(e) => setSelectedPlatform(e.target.value)}
                 className={`block w-full px-3 py-2 border border-gray-300 bg-white rounded-lg  focus:outline-none focus:ring-2 focus:ring-blue-500
                   ${selectedPlatform === '' ? 'text-gray-400 ' : 'text-gray-700'}`}
@@ -405,6 +579,7 @@ const PrijzenMarketing = () => {
               </label>
               <select
                 value={selectedDoelgroep}
+                name="doelgroep"
                 onChange={(e) => setSelectedDoelgroep(e.target.value)}
                 className={`block w-full px-3 py-2 border border-gray-300 bg-white rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500
                   ${selectedDoelgroep === '' ? 'text-gray-400 ' : 'text-gray-700'}`}
@@ -428,6 +603,7 @@ const PrijzenMarketing = () => {
               </label>
               <select
                 value={selectedLeeft}
+                name="leeft"
                 onChange={(e) => setSelectedLeeft(e.target.value)}
                 className={`block w-full px-3 py-2 border border-gray-300 bg-white rounded-lg  focus:outline-none focus:ring-2 focus:ring-blue-500
                   ${selectedLeeft === '' ? 'text-gray-400 ' : 'text-gray-700'}`}
@@ -443,31 +619,54 @@ const PrijzenMarketing = () => {
               </select>
                 </div>
 
-                  <div className="font-plus-jakarta text-gray-700 mt-5">
-              <h3 className="text-[rgba(38,50,56,1)] font-semibold font-plus-jakarta text-[16px] mb-4">Op basis van demografie & geslacht</h3>
-              <div className="flex space-x-6">
-                <label className="inline-flex items-center text-gray-400">
-                  <input
-                    type="checkbox"
-                    name="man"
-                    checked={selectedGender.man}
-                    onChange={handleChange}
-                    className="w-4 h-4 mr-2 border-gray-400 rounded focus:ring-0"
-                  />
-                  Man
-                </label>
-                <label className="inline-flex items-center text-gray-400">
-                  <input
-                    type="checkbox"
-                    name="vrouw"
-                    checked={selectedGender.vrouw}
-                    onChange={handleChange}
-                    className="w-4 h-4 mr-2 border-gray-400 rounded focus:ring-0"
-                  />
-                  Vrouw
-                </label>
-              </div>
+                <div className="font-plus-jakarta text-gray-700 mt-5">
+            <h3 className="text-[rgba(38,50,56,1)] font-semibold text-[16px] mb-4">
+              Op basis van demografie & geslacht
+            </h3>
+            <div className="flex space-x-6">
+              <label className="inline-flex items-center text-gray-400">
+                <input
+                  type="checkbox"
+                  name="man"
+                  checked={selectedGender.man}
+                  onChange={handleChangee}
+                  className="w-4 h-4 mr-2 border-gray-400 rounded focus:ring-0"
+                />
+                Man
+              </label>
+              <label className="inline-flex items-center text-gray-400">
+                <input
+                  type="checkbox"
+                  name="vrouw"
+                  checked={selectedGender.vrouw}
+                  onChange={handleChangee}
+                  className="w-4 h-4 mr-2 border-gray-400 rounded focus:ring-0"
+                />
+                Vrouw
+              </label>
+              <label className="inline-flex items-center text-gray-400">
+                <input
+                  type="checkbox"
+                  name="other"
+                  checked={selectedGender.other}
+                  onChange={handleChangee}
+                  className="w-4 h-4 mr-2 border-gray-400 rounded focus:ring-0"
+                />
+                Anders
+              </label>
+              {selectedGender.other && (
+                <input
+                  type="text"
+                  placeholder="Voer geslacht in..."
+                  className="ml-2 p-1 border border-gray-300 rounded"
+                  value={customGender}
+                  onChange={(e) => setCustomGender(e.target.value)}
+                />
+              )}
             </div>
+          </div>
+
+
 
             <div>
                 <label className="block text-[rgba(38,50,56,1)] font-semibold font-plus-jakarta text-[16px] mt-4 mb-1">
@@ -476,7 +675,7 @@ const PrijzenMarketing = () => {
                 <div className="relative">
                   <input
                     type="text"
-                    name="functies"
+                    name="ontwer"
                     placeholder="Eenvoudig, verfijnd, kleurrijk, modern, etc."
                     className="border border-gray-300 rounded-lg p-2 w-full pr-10 focus:outline-none focus:ring-2 focus:ring-blue-500"
                   />
@@ -499,6 +698,7 @@ const PrijzenMarketing = () => {
             </label>
             <select
               value={selectedBudget}
+              name="budget"
               onChange={(e) => setSelectedBudget(e.target.value)}
               className={`block w-full px-3 py-2 border border-gray-300 rounded-md  focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white ${
                 selectedBudget === '' ? 'text-gray-400 ' : 'text-gray-700'
@@ -512,7 +712,7 @@ const PrijzenMarketing = () => {
                   {budget}
                 </option>
               ))}
-            </select>
+            </select> 
               </div>
 
               <div>
@@ -547,7 +747,9 @@ const PrijzenMarketing = () => {
           </div>
         </div>
         <div className="flex justify-center items-center md:my-8 my-4 ">
-          <button onClick={showAlert} className="btn hover:bg-[#468AFFE6] bg-[#468AFF]  md:px-32 px-36 py-2 text-[#FFFFFF] text-lg md:text-md lg:text-xl">
+          <button
+          disabled={!isFormValid}
+          className="btn hover:bg-[#468AFFE6] bg-[#468AFF]  md:px-32 px-36 py-2 text-[#FFFFFF] text-lg md:text-md lg:text-xl">
           Start Nu!
           </button>
         </div>

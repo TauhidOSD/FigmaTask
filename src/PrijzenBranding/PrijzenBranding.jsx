@@ -3,38 +3,38 @@ import das from "../assets/das.png";
 import bg from "../assets/BrandPrice.jpg";
 import { useEffect, useState } from "react";
 import { useRef } from 'react';
-import emailjs from '@emailjs/browser';
-import Swal from 'sweetalert2'
+//import emailjs from '@emailjs/browser';
+//import Swal from 'sweetalert2'
 import { Upload } from "lucide-react";
 
 const PrijzenBranding = () => {
 
-const showAlert=()=>{
-    Swal.fire({
-      title: "Bedankt voor je aanvraag!",
-      text: "We hebben je gegevens ontvangen en sturen je binnenkort een offerte. Mocht je vragen hebben, neem gerust contact met ons op.",
-      icon: "success"
-    });
-  }
+// const showAlert=()=>{
+//     Swal.fire({
+//       title: "Bedankt voor je aanvraag!",
+//       text: "We hebben je gegevens ontvangen en sturen je binnenkort een offerte. Mocht je vragen hebben, neem gerust contact met ons op.",
+//       icon: "success"
+//     });
+//   }
 
   const form = useRef();
 
-  const sendEmail = (e) => {
-    e.preventDefault();
+  // const sendEmail = (e) => {
+  //   e.preventDefault();
 
-    emailjs
-      .sendForm('service_hxxv27j','template_a2312ql', form.current, {
-        publicKey: 'Z3HTMkKpJIM22rfNm',
-      })
-      .then(
-        () => {
-          console.log('SUCCESS!');
-        },
-        (error) => {
-          console.log('FAILED...', error.text);
-        },
-      );
-  };
+  //   emailjs
+  //     .sendForm('service_hxxv27j','template_a2312ql', form.current, {
+  //       publicKey: 'Z3HTMkKpJIM22rfNm',
+  //     })
+  //     .then(
+  //       () => {
+  //         console.log('SUCCESS!');
+  //       },
+  //       (error) => {
+  //         console.log('FAILED...', error.text);
+  //       },
+  //     );
+  // };
 
 
   useEffect(() => {
@@ -52,7 +52,7 @@ const showAlert=()=>{
         both: false
       });
     
-      const handleChange = (e) => {
+      const handleChangee = (e) => {
         const { name, checked } = e.target;
         setSelectedGender((prev) => ({
           ...prev,
@@ -65,16 +65,16 @@ const showAlert=()=>{
 
       const fileInputRef = useRef(null);
 
-  const handleClick = () => {
-    fileInputRef.current.click();
-  };
+      const handleClick = () => {
+        fileInputRef.current.click();
+      };
 
-  const handleFileChange = (e) => {
-    const file = e.target.files[0];
-    if (file) {
-      console.log('Bestand gekozen:', file.name);
-      // Handle upload logic here
-    }
+      const handleFileChange = (e) => {
+        const file = e.target.files[0];
+        if (file) {
+          console.log('Bestand gekozen:', file.name);
+          // Handle upload logic here
+        }
   };
 
 
@@ -132,6 +132,155 @@ const showAlert=()=>{
 
 
 
+
+  {/* Form validation start*/}
+
+
+
+  const [formData, setFormData] = useState({
+    name: '',
+    email: ''
+  });
+  
+  
+  const [errors, setErrors] = useState({});
+    const [isFormValid, setIsFormValid] = useState(false);
+  
+    useEffect(() => {
+      const noErrors = Object.keys(errors).length === 0;
+      const allFilled = Object.values(formData).every(field => field.trim() !== '');
+      setIsFormValid(noErrors && allFilled);
+    }, [errors, formData]);
+  
+  
+    const handleChange = (e) => {
+      const { name, value } = e.target;
+      setFormData({ ...formData, [name]: value });
+      validateField(name, value);
+    };
+  
+  
+    const validateField = (name, value) => {
+      let fieldErrors = { ...errors };
+  
+  
+      if (name === 'name') {
+        if (!value.trim()) {
+          fieldErrors.name = 'Name is required';
+        } else {
+          delete fieldErrors.name;
+        }
+      }
+  
+      if (name === 'email') {
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!value.trim()) {
+          fieldErrors.email = 'Email is required';
+        } else if (!emailRegex.test(value)) {
+          fieldErrors.email = 'Invalid email format';
+        } else {
+          delete fieldErrors.email;
+        }
+      }
+  
+      setErrors(fieldErrors);
+    };
+
+
+
+    const handleSubmit = (e) => {
+      e.preventDefault();
+      if (isFormValid) {
+        alert('Form submitted successfully!');
+    
+        const form = e.target;
+    
+        const name = form.name.value;
+        const cname = form.cname.value;
+        const email = form.email.value;
+        const telephone = form.telephone.value;   
+        const theams = form.theams.value;
+        const file = form.file.value;
+        const inspiratie = form.inspiratie.value;
+        const filet = form.filet.value;
+        const eventuele = form.eventuele.value;
+        const branding = form.branding.value;
+        const korte= form.korte.value;
+        const doelgroep = form.doelgroep.value;
+        const ages = form.ages.value;     
+
+        const huidige = form.huidige.value;
+        const fileth = form.fileth.value;
+        const message = form.message.value;
+        const gewenste = form.gewenste.value;
+        const merkbericht = form.merkbericht.value;
+        const bereik  = form.bereik.value;
+        const voltoo = form.voltoo.value;
+
+        const gender = Object.keys(selectedGender).filter(g => selectedGender[g]);
+
+        const formValue = {
+        name,
+        cname,
+        email,
+        telephone,
+        theams,
+        file,
+        inspiratie,
+        filet,
+        eventuele,
+        branding,
+        korte,
+        ages,
+        huidige,
+        gewenste,
+        message,
+        fileth,
+        doelgroep,
+        merkbericht,
+        bereik ,
+        voltoo,
+        gender // Add gender array here
+      };
+
+
+
+      console.log(formValue);
+
+      form.reset();
+
+      
+      }
+    }
+
+
+
+
+
+
+
+
+
+  {/* Form validation end*/}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   return (
     <>
       <div className="bg-[#F5F5F5] w-full flex flex-col items-center py-16">
@@ -179,7 +328,7 @@ const showAlert=()=>{
         </div>
       </div>
 
-      <form  ref={form} onSubmit={sendEmail}>
+      <form  ref={form} onSubmit={handleSubmit} >
           {/* First Part */}
       <div className="md:px-36 px-6 mx-auto">
         <div className=" flex md:gap-[496px]">
@@ -200,9 +349,12 @@ const showAlert=()=>{
               <input
                 type="text"
                 name="name"
+                value={formData.name}
+                onChange={handleChange}
                 placeholder="Naam"
                 className="border border-gray-300 rounded-lg p-2 w-full focus:outline-none focus:ring-2 focus:ring-blue-500"
               />
+              {errors.name && <p className="text-red-500 text-sm">{errors.name}</p>}
             </div>
             <div>
               <label className="block text-[rgba(38,50,56,1)] font-semibold font-plus-jakarta text-[16px] mb-1">
@@ -223,9 +375,12 @@ const showAlert=()=>{
                 <input
                   type="email"
                   name="email"
+                  value={formData.email}
+                  onChange={handleChange}
                   placeholder="E-mail"
                   className="border border-gray-300 rounded-lg p-2 w-full focus:outline-none focus:ring-2 focus:ring-blue-500"
                 />
+                {errors.email && <p className="text-red-500 text-sm">{errors.email}</p>}
               </div>
               <div>
                 <label className="block text-[rgba(38,50,56,1)] font-semibold font-plus-jakarta text-[16px] mb-1">
@@ -269,6 +424,7 @@ const showAlert=()=>{
                     </button>
                     <input
                       type="file"
+                      name="file"
                       accept="image/*"
                       className="hidden"
                       ref={fileInputRef}
@@ -276,7 +432,7 @@ const showAlert=()=>{
                     />
               </div>
 
-            </div>
+            </div>               
 
  
             <div className="grid grid-cols-2 ">
@@ -303,6 +459,7 @@ const showAlert=()=>{
                     </button>
                     <input
                       type="file"
+                      name="filet"
                       accept="image/*"
                       className="hidden"
                       ref={fileInputRef}
@@ -344,8 +501,9 @@ const showAlert=()=>{
                 <label className="block text-[rgba(38,50,56,1)] font-semibold font-plus-jakarta text-[16px] mb-1">
                 Type branding
                 </label>
-                <select
+                <select               
                   value={brand}
+                  name="branding"
                   onChange={(e) => setSubjectBrand(e.target.value)}
                   className={`block w-full  px-3 py-2 border border-gray-300 bg-white rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500
                     ${brand === '' ? 'text-gray-400 ' : 'text-gray-700'}`}
@@ -382,6 +540,7 @@ const showAlert=()=>{
                 </label>
                 <select
                   value={doel}
+                  name="doelgroep"
                   onChange={(e) => setSubjectDoel(e.target.value)}
                   className={`block w-full  px-3 py-2 border border-gray-300 bg-white rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500
                     ${brand === '' ? 'text-gray-400 ' : 'text-gray-700'}`}
@@ -404,6 +563,7 @@ const showAlert=()=>{
                 </label>
                 <select
                   value={age}
+                  name="ages"
                   onChange={(e) => setSubjectAge(e.target.value)}
                   className={`block w-full  px-3 py-2 border border-gray-300 bg-white rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500
                     ${brand === '' ? 'text-gray-400 ' : 'text-gray-700'}`}
@@ -428,7 +588,7 @@ const showAlert=()=>{
                     type="checkbox"
                     name="men"
                     checked={selectedGender.man}
-                    onChange={handleChange}
+                    onChange={handleChangee}
                     style={{ marginRight: '0.5rem' }}
                   />
                   Men
@@ -438,7 +598,7 @@ const showAlert=()=>{
                     type="checkbox"
                     name="women"
                     checked={selectedGender.man}
-                    onChange={handleChange}
+                    onChange={handleChangee}
                     style={{ marginRight: '0.5rem' }}
                   />
                   Women
@@ -448,7 +608,7 @@ const showAlert=()=>{
                     type="checkbox"
                     name="both"
                     checked={selectedGender.vrouw}
-                    onChange={handleChange}
+                    onChange={handleChangee}
                     style={{ marginRight: '0.5rem' }}
                   />
                   Both
@@ -487,6 +647,7 @@ const showAlert=()=>{
                     </button>
                     <input
                       type="file"
+                      name="fileth"    
                       accept="image/*"
                       className="hidden"
                       ref={fileInputRef}
@@ -539,6 +700,7 @@ const showAlert=()=>{
                 </label>
                 <select
                   value={begroting}
+                  name="bereik"
                   onChange={(e) => setSubjectBegroting(e.target.value)}
                   className={`block w-full  px-3 py-2 border border-gray-300 bg-white rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500
                     ${brand === '' ? 'text-gray-400 ' : 'text-gray-700'}`}
@@ -560,7 +722,6 @@ const showAlert=()=>{
                 Gewenste voltooiingsdatum
                 </label>
                 <div className="relative">
-                  
                   <input
                     type="date"
                     name="voltoo"
@@ -588,7 +749,9 @@ const showAlert=()=>{
           </div>
         </div>
         <div className="flex justify-center items-center md:my-8 my-4 ">
-          <button onClick={showAlert} className="btn hover:bg-[#468AFFE6] bg-[#468AFF]  md:px-32 px-36 py-2 text-[#FFFFFF] text-lg md:text-md lg:text-xl">
+          <button
+          disabled={!isFormValid}  
+          className="btn hover:bg-[#468AFFE6] bg-[#468AFF]  md:px-32 px-36 py-2 text-[#FFFFFF] text-lg md:text-md lg:text-xl">
           Start Nu!
           </button>
         </div>
