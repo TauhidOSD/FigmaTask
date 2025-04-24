@@ -449,13 +449,14 @@ const Appmarket = () => {
             Slimmer HR-beheer met Geautomatiseerde Processen
             </h2>
             <p className="text-gray-600 leading-relaxed">
-              Ons HR-proces was chaotisch, met eindeloze vragen over documenten
+              Ons HR-proces was chaotisch, met eindeloze vragen over
+               documenten
               en startdata. Dankzij Younitechs CRM-systeem is alles
               geautomatiseerd, krijgen kandidaten direct updates en werkt ons
               team veel efficiënter. Dit bracht rust én verhoogde de
               productiviteit enorm!
             </p>
-            <div className="flex items-center gap-4">
+            <div className="flex items-center  gap-4">
               <img
                 src={img2}
                 alt="Mark Janssen"

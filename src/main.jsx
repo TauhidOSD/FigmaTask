@@ -102,11 +102,11 @@ const router = createBrowserRouter([
         element: <Blog />,
       },
       {
-        path: "/henna",
+        path: "/henna-artist",
         element: <Henna />,
       },
       {
-        path: "/shift",
+        path: "/shiftguide",
         element: <ShiftMode />,
       },
       {
@@ -118,11 +118,11 @@ const router = createBrowserRouter([
         element: <Fluentlee />,
       },
       {
-        path: "/ahooy",
+        path: "/marketingstrategie",
         element: <Ahoyy />,
       },
       {
-        path: "/sarbuh",
+        path: "/Van-Offline-naar-Online",
         element: <Sarbuh/>,
       },
       {

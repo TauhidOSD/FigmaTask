@@ -16,6 +16,7 @@ const Blog = () => {
   useEffect(() => {
         window.scrollTo(0, 0); 
       }, []);
+      
   const navigate = useNavigate();
 
   return (
@@ -34,7 +35,7 @@ const Blog = () => {
              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
                {/* Card 1 */}
                <div
-                 onClick={() => navigate("/shift")}
+                 onClick={() => navigate("/shiftguide")}
                  className="bg-[#F5F5F5] shadow-lg rounded-lg overflow-hidden hover:shadow-xl transition-shadow duration-300"
                >
                  <img src={img1} alt="Blog 1" className="w-full h-56 object-cover" />
@@ -136,7 +137,7 @@ const Blog = () => {
                </div>
                {/* Card 4 */}
                <div
-                 onClick={() => navigate("/ahooy")}
+                 onClick={() => navigate("/marketingstrategie")}
                  className="bg-[#F5F5F5] shadow-lg rounded-lg overflow-hidden hover:shadow-xl transition-shadow duration-300"
                >
                  <img src={img4} alt="Blog 3" className="w-full h-56 object-cover" />
@@ -161,7 +162,7 @@ const Blog = () => {
                </div>
                {/* Card 5 */}
                <div
-                 onClick={() => navigate("/henna")}
+                 onClick={() => navigate("/henna-artist")}
                  className="bg-[#F5F5F5] shadow-lg rounded-lg overflow-hidden hover:shadow-xl transition-shadow duration-300"
                >
                  <img src={img9} alt="Blog 3" className="w-full h-56 object-cover" />
@@ -189,7 +190,7 @@ const Blog = () => {
                </div>
                {/* Card 6 */}
                <div
-                 onClick={() => navigate("/sarbuh")}
+                 onClick={() => navigate("/Van-Offline-naar-Online")}
                  className="bg-[#F5F5F5] shadow-lg rounded-lg overflow-hidden hover:shadow-xl transition-shadow duration-300"
                >
                  <img src={img8} alt="Blog 3" className="w-full h-56 object-cover" />
