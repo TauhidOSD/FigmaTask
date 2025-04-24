@@ -79,7 +79,7 @@ const InputField = () => {
 
 
         const [contentAccess, setContentAccess] = useState('');
-        const [seoControl, setSeoControl] = useState('');
+        //const [seoControl, setSeoControl] = useState('');
   
 
 
@@ -156,11 +156,11 @@ const InputField = () => {
 
   const navigate = useNavigate(); // Hook to navigate between routes
   const [telephone, setNumber] = useState("");
-  const [name, setName] = useState("");
+  //const [name, setName] = useState("");
   const [email, setEmail] = useState("");
-  const [address, setAddress] = useState("");
+  //const [address, setAddress] = useState("");
   const [bestaande, setBestaande] = useState("");
-  const [hosting, setHosting] = useState("");
+  //const [hosting, setHosting] = useState("");
   const [logo, setLogo] = useState("");
   const [wensen, setWensen] = useState("");
 
@@ -173,13 +173,91 @@ const InputField = () => {
       telephone,
       name,
       email,
-      address,
+      //adres,
       bestaande,
-      hosting,
+      //hosting,
       logo,
       wensen
     });
   };
+
+
+
+{/**For validation start  */}
+
+
+const [formData, setFormData] = useState({
+  name: '',
+  adres: ''
+});
+
+
+const [errors, setErrors] = useState({});
+  const [isFormValid, setIsFormValid] = useState(false);
+
+  useEffect(() => {
+    const noErrors = Object.keys(errors).length === 0;
+    const allFilled = Object.values(formData).every(field => field.trim() !== '');
+    setIsFormValid(noErrors && allFilled);
+  }, [errors, formData]);
+
+
+  const handleCardChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({ ...formData, [name]: value });
+    validateField(name, value);
+  };
+
+
+  const validateField = (name, value) => {
+    let fieldErrors = { ...errors };
+
+
+    if (name === 'name') {
+      if (!value.trim()) {
+        fieldErrors.name = 'Name is required';
+      } else {
+        delete fieldErrors.name;
+      }
+    }
+
+    if (name === 'adres') {
+      if (!value.trim()) {
+        fieldErrors.adres = 'Address is required';
+      } else {
+        delete fieldErrors.adres;
+      }
+    }
+
+
+    setErrors(fieldErrors);
+};
+
+
+
+
+
+
+
+
+
+
+{/**For validation end  */}
+
+
+
+
+
+
+
+
+
+
+
+
+
+ const [wantsDomain, setWantsDomain] = useState(null);
+
 
   return (
 <>
@@ -193,8 +271,6 @@ const InputField = () => {
       </h2>
 
       <form onSubmit={handleSubmit}>
-        
-     
         
       
       <div className="">
@@ -216,11 +292,12 @@ const InputField = () => {
                     <input
                       type="text"
                       name="name"
-                      value={name}
-                      onChange={(e) => setName(e.target.value)}
+                      value={formData.name}
+                      onChange={handleCardChange}
                       placeholder="(Invulveld)"
                       className="border border-gray-300 rounded-lg p-2 w-full focus:outline-none focus:ring-2 focus:ring-blue-500"
                     />
+                    {errors.name && <p className="text-red-500 text-sm">{errors.name}</p>}
                   </div>
                   
                   <div className="grid grid-cols-2 gap-4">
@@ -258,12 +335,13 @@ const InputField = () => {
                     </label>
                     <input
                       type="text"
-                      name="address"
-                      value={address}
-                      onChange={(e) => setAddress(e.target.value)}
+                      name="adres"
+                      value={formData.adres}
+                      onChange={handleCardChange}
                       placeholder=" (Invulveld)"
                       className="border border-gray-300 rounded-lg p-2 w-full focus:outline-none focus:ring-2 focus:ring-blue-500"
                     />
+                    {errors.adres && <p className="text-red-500 text-sm">{errors.adres}</p>}
                   </div>
 
                   <div>
@@ -308,44 +386,43 @@ const InputField = () => {
                       Techniek & Hosting
                     </h2>
                     <label className="block text-base font-plus-jakarta text-[rgba(38,50,56,1)] font-semibold mb-1">
-                    Wil je een eigen domeinnaam?*
-                    </label>
+              Wil je een eigen domeinnaam?*
+                </label>
+                <div>
+       
+                <div className="flex items-center gap-4">
+                <label className="flex items-center gap-1">
+                  <input
+                    type="radio"
+                    name="domain"
+                    value="ja"
+                    onChange={() => setWantsDomain(true)}
+                  />
+                  Ja
+                </label>
 
+                <label className="flex items-center gap-1">
+                  <input
+                    type="radio"
+                    name="domain"
+                    value="nee"
+                    onChange={() => setWantsDomain(false)}
+                  />
+                  Nee
+                </label>
+              </div>
 
-                    <div className="flex items-center space-x-5 mb-5">
-                    <label className="inline-flex items-center">
-                    <input
-                      type="radio"
-                      name="seoControl"
-                      value="ja"
-                      checked={seoControl === 'ja'}
-                      onChange={(e) => setSeoControl(e.target.value)}
-                      className="w-4 h-4 mr-2 border-gray-400 text-black focus:ring-0"
-                    />
-                    Ja
-                  </label>
-                  <label className="inline-flex items-center">
-                    <input
-                      type="radio"
-                      name="seoControl"
-                      value="nee"
-                      checked={seoControl === 'nee'}
-                      onChange={(e) => setSeoControl(e.target.value)}
-                      className="w-4 h-4 mr-2 border-gray-400 text-black focus:ring-0"
-                    />
-                    Nee
-                  </label>
+              {wantsDomain && (
+                <div className="mt-4 mb-4">
+                  <input
+                    type="text"
+                    placeholder="Invul veld"
+                    className="border border-gray-300 rounded-lg p-2 w-full focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  />
+                </div>
+              )}
+              </div>
 
-                    </div>
-
-                    <input
-                      type="text"
-                      name="inspiratie"
-                      value={hosting}
-                      onChange={(e) => setHosting(e.target.value)}
-                      placeholder="indien Ja, geef gewenste domeinnaam op in een invulveld"
-                      className="border border-gray-300 rounded-lg p-2 w-full focus:outline-none focus:ring-2 focus:ring-blue-500"
-                    />
                   </div>
 
 
@@ -685,6 +762,7 @@ const InputField = () => {
 
           <button
             type="button"
+            disabled={!isFormValid} 
             onClick={() => navigate("/payment")} // Next button: navigate to the payment route
             className="flex  items-center gap-2 px-4 py-2 bg-[#468AFF] text-white font-semibold rounded-lg focus:outline-none hover:bg-blue-500"
           >
