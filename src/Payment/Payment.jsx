@@ -95,7 +95,7 @@ const Payment = () => {
       const price = parseFloat(productPriceText.match(/\$([0-9]+(\.[0-9]+)?)/)?.[1]);
       if (!price) throw new Error("Invalid price format");
 
-      const response = await fetch("http://localhost:5550/api/create-checkout-session", {
+      const response = await fetch("https://stripe-pk.cloudvenus.net/api/create-checkout-session", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
