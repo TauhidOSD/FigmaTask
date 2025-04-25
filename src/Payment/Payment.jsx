@@ -233,7 +233,7 @@ const Payment = () => {
           <div className="flex justify-between">
             <h2>Total:</h2>
             <h2 className="text-[#263238] text-xl" id="productPrice">
-              $75.00 USD
+              $5.00 USD
             </h2>
           </div>
         </div>
