@@ -104,7 +104,7 @@ const Payment = () => {
             description: `Purchase of ${productName}`,
             price: Math.round(price * 100),
           },
-          currency: "usd",
+          currency: "eur",
           userData: {
             userId: 1,
             name: formData.Volledige,
@@ -223,17 +223,17 @@ const Payment = () => {
         <div className="flex flex-col gap-4">
           <div className="flex justify-between">
             <h2>Subtotal</h2>
-            <h2>$61.97 USD</h2>
+            <h2>€49.99 EURO</h2>
           </div>
-          <div className="flex justify-between">
+          {/* <div className="flex justify-between">
             <h2>Coupon Discount</h2>
             <h2>8%</h2>
-          </div>
+          </div> */}
           <hr />
           <div className="flex justify-between">
             <h2>Total:</h2>
             <h2 className="text-[#263238] text-xl" id="productPrice">
-              $5.00 USD
+            €49.99 EURO
             </h2>
           </div>
         </div>
