@@ -13,13 +13,13 @@ const StripePayment = () => {
     const handleCheckout = async () => {
         setIsLoading(true);
         try {
-            const response = await fetch('http://localhost:5550/api/create-checkout-session', {
+            const response = await fetch('https://stripe-pk.cloudvenus.net/api/create-checkout-session', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
                 },
                 body: JSON.stringify({
-                    amount: 2000, // $20.00 in cents
+                    amount: 2000,
                     currency: 'usd',
                     description: 'Younitech Subscription',
                 }),
