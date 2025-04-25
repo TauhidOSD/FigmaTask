@@ -92,8 +92,11 @@ const Payment = () => {
     try {
       const productName = document.getElementById("productName")?.textContent || "FamiPress WordPress Theme";
       const productPriceText = document.getElementById("productPrice")?.textContent || "$75.00 USD";
-      const price = parseFloat(productPriceText.match(/\$([0-9]+(\.[0-9]+)?)/)?.[1]);
+      // const price = parseFloat(productPriceText.match(/\$([0-9]+(\.[0-9]+)?)/)?.[1]);
+      const price = parseFloat(productPriceText.match(/€([0-9]+(\.[0-9]+)?)/)?.[1]);
       if (!price) throw new Error("Invalid price format");
+      console.log(price);
+
 
       const response = await fetch("https://stripe-pk.cloudvenus.net/api/create-checkout-session", {
         method: "POST",
