@@ -50,7 +50,7 @@ const Payment = () => {
 
   const verifyPayment = async (sessionId) => {
     try {
-      const response = await fetch(`http://localhost:5550/api/check-payment-status/${sessionId}`);
+      const response = await fetch(`https://stripe-pk.cloudvenus.net/api/check-payment-status/${sessionId}`);
       if (!response.ok) throw new Error("Payment verification failed");
       const data = await response.json();
       if (data.status !== "paid") throw new Error("Payment not confirmed");
