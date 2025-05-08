@@ -4,6 +4,7 @@ import App from './App.jsx';
 
 import {
   createBrowserRouter,
+  Navigate,
   RouterProvider,
 } from "react-router-dom";
 import { Elements } from "@stripe/react-stripe-js";
@@ -45,6 +46,11 @@ import Dashboard from './Dashboard/Dashboard.jsx';
 
 // Load Stripe
 const stripePromise = loadStripe("your-public-stripe-key");
+
+const PrivateRoute = ({ children }) => {
+  const isAuthenticated = localStorage.getItem("isLoggedIn"); // Or use your own logic
+  return isAuthenticated ? children : <Navigate to="/admin" replace />;
+};
 
 const router = createBrowserRouter([
   {
@@ -183,7 +189,9 @@ const router = createBrowserRouter([
       },
       {
         path:"/dashboard",
-        element:<Dashboard/>
+        element:<PrivateRoute>
+                <Dashboard />
+               </PrivateRoute>
       },
     ],
   },
