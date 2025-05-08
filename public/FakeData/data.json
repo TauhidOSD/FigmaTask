@@ -13,7 +13,19 @@
         "06+ Single Product layout styles",
         "03+ pre-made Header styles "
       ],
-      "buttonText": "Choose Theme"
+      "buttonText": "Kies thema",
+          "order_summary": {
+        "monthly_price": "49,99 €/Month",
+        "duration": "12 months",
+        "tax_included": true,
+        "one_time_payment": true,
+        "tax": {
+          "rate": "21%",
+          "monthly_amount": "25 €/Month"
+        },
+        "total": "500 €/Month"
+      }
+
     },
     {
       "id": 2,
@@ -25,9 +37,20 @@
         "03+ Homepages version",
         "03+ Blog page ready-made styles",
         "06+ Single Product layout styles",
-        "03+ pre-made Header styles "
+        "03+ pre-made Header styles " 
       ],
-      "buttonText": "Choose Theme"
+      "buttonText": "Kies thema",
+      "order_summary": {
+      "monthly_price": "49,99 €/Month",
+      "duration": "12 months",
+      "tax_included": true,
+      "one_time_payment": true,
+      "tax": {
+        "rate": "21%",
+        "monthly_amount": "25 €/Month"
+      },
+      "total": "500 €/Month"
+    }
     },
     {
       "id": 3,
@@ -41,7 +64,18 @@
         "06+ Single Product layout styles",
         "03+ pre-made Header styles "
       ],
-      "buttonText": "Choose Theme"
+      "buttonText": "Kies thema",
+      "order_summary": {
+    "monthly_price": "49,99 €/Month",
+    "duration": "12 months",
+    "tax_included": true,
+    "one_time_payment": true,
+    "tax": {
+      "rate": "21%",
+      "monthly_amount": "25 €/Month"
+    },
+    "total": "500 €/Month"
+  }
     },
     {
       "id": 4,
@@ -55,7 +89,18 @@
         "06+ Single Product layout styles",
         "03+ pre-made Header styles "
       ],
-      "buttonText": "Choose Theme"
+      "buttonText": "Kies thema",
+      "order_summary": {
+    "monthly_price": "49,99 €/Month",
+    "duration": "12 months",
+    "tax_included": true,
+    "one_time_payment": true,
+    "tax": {
+      "rate": "21%",
+      "monthly_amount": "25 €/Month"
+    },
+    "total": "500 €/Month"
+  }
     },
     {
       "id": 5,
@@ -69,7 +114,18 @@
         "06+ Single Product layout styles",
         "03+ pre-made Header styles "
       ],
-      "buttonText": "Choose Theme"
+      "buttonText": "Kies thema",
+      "order_summary": {
+    "monthly_price": "49,99 €/Month",
+    "duration": "12 months",
+    "tax_included": true,
+    "one_time_payment": true,
+    "tax": {
+      "rate": "21%",
+      "monthly_amount": "25 €/Month"
+    },
+    "total": "500 €/Month"
+  }
     }
   ]
   

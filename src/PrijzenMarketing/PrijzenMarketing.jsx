@@ -3,11 +3,16 @@ import das from "../assets/das.png";
 import bg1 from "../assets/Appnet.jpeg";
 import { useEffect,useState } from "react";
 import { useRef } from 'react';
+import Select from "react-select";
 //import emailjs from '@emailjs/browser';
 //import Swal from 'sweetalert2'
+import DatePicker from "react-datepicker";
+import { format } from "date-fns";
+import "react-datepicker/dist/react-datepicker.css";
 
 const PrijzenMarketing = () => {
 
+const [selectedDate, setSelectedDate] = useState(null);
 
 {/**Form validation start */}
 
@@ -77,23 +82,38 @@ const [errors, setErrors] = useState({});
       const integrat = form.integrat.value;
       const backend = form.backend.value;
       const preferred = form.preferred.value;
-      const typeapp = form.typeapp.value;
-      const platform = form.platform.value;
+      //const typeapp = form.typeapp.value;
+      const typeapp = selectedApp ? selectedApp.value : null;
+      //const platform = form.platform.value;
       const ontwer = form.ontwer.value;
       const budget = form.budget.value;
-      const gewenste = form.gewenste.value;
+      //const gewenste = form.gewenste.value;
       const message = form.message.value;
       const functies = form.functies.value;
-      const doelgroep = form.doelgroep.value;
-      const leeft = form.leeft.value;
+      //const doelgroep = form.doelgroep.value;
+      //const leeft = form.leeft.value;
   
-      // ✅ Collect selected genders
+      // Collect selected genders
       let gender = Object.keys(selectedGender).filter(g => selectedGender[g]);
       if (selectedGender.other && customGender.trim()) {
         // Replace "other" with custom input
         gender = gender.filter(g => g !== 'other');
         gender.push(customGender.trim());
       }
+
+      const formattedDate = selectedDate
+      ? format(selectedDate, "dd-MM-yyyy")
+      : "";
+
+      // Multiple values 
+      const selectedValues = selectedPlatforms.map((option) => option.value);
+      const selectedDoelgroepValues = selectedDoelgroep.map((option) => option.value);
+      const selectedLeeftValues = selectedLeeft.map((option) => option.value);
+
+       // single values 
+      const selectedAppValue = selectedApp ? selectedApp.value : null;
+      const selectedBudgetValue = selectedBudget ? selectedBudget.value : null;
+
   
       const formValue = {
         name,
@@ -106,58 +126,173 @@ const [errors, setErrors] = useState({});
         backend,
         preferred,
         typeapp,
-        platform,
+        //platform,
         ontwer,
         budget,
-        gewenste,
+        //gewenste,
         message,
         functies,
-        doelgroep,
-        leeft,
-        gender
+        //doelgroep,
+        //leeft,
+        gender,
+        formattedDate,
+        selectedValues,
+        selectedAppValue,
+        selectedDoelgroepValues,
+        selectedLeeftValues,
+        selectedBudgetValue
+
       };
   
+      setSelectedGender({ man: false, vrouw: false, other: false });
+      setCustomGender('');
+
       console.log(formValue);
 
-    // Send to backend
-    /*
-    fetch("http://localhost:5000/api/submit-form", {
-  method: "POST",
-  headers: {
-    "Content-Type": "application/json"
-  },
-  body: JSON.stringify(formValue)
-})
-  .then(response => response.json())
-  .then(data => {
-    console.log("Response from backend:", data);
-    alert("Data successfully sent to the server!");
-  })
-  .catch(error => {
-    console.error("Error submitting form:", error);
-    alert("Failed to submit form. Try again.");
-  });
 
-    */
+    //Send to backend
 
-  form.reset();
-  setSelectedGender({ man: false, vrouw: false, other: false });
-  setCustomGender('');
-  }
-  };
+    fetch('http://localhost:5000/users',{
+      method: 'POST',
+      headers :{
+        'content-type':'application/json'
+      },
+      body:JSON.stringify(formValue)
+    })
+    .then(res =>res.json())
+    .then(data =>{
+      console.log(data);
+
+    })
 
 
+
+    // fetch("http://localhost:5500/formone",{
+    //   method: "POST",
+    //   headers: {
+    //     "Content-Type": "application/json"
+    //   },
+    //   body: JSON.stringify(formValue)
+    // })
+    //   .then(response => response.json())
+    //   .then(data => {
+    //     console.log("Response from backend:", data);
+    //     alert("Data successfully sent to the server!");
+    //     form.reset();
+    //   })
+      // .catch(error => {
+      //   console.error("Error submitting form:", error);
+      //   alert("Failed to submit form. Try again.");
+      // });
+
+      }
+      };
+
+
+  // const handleSubmit = async (e) => {
+  //   e.preventDefault();
+    
+  //   // Validate form before submission
+  //   if (!isFormValid) {
+  //     alert('Please fill in all required fields correctly.');
+  //     return;
+  //   }
+  
+  //   try {
+  //     const form = e.target;
+      
+  //     // Collect all form data
+  //     const formValue = {
+  //       name: form.name.value,
+  //       cname: form.cname.value,
+  //       email: form.email.value,
+  //       telephone: form.telephone.value,
+  //       huidige: form.huidige.value,
+  //       file: form.file.value,
+  //       integrat: form.integrat.value,
+  //       backend: form.backend.value,
+  //       preferred: form.preferred.value,
+  //       typeapp: selectedOption,
+  //       platform: selectedPlatform,
+  //       ontwer: form.ontwer.value,
+  //       budget: selectedBudget,
+  //       gewenste: form.gewenste.value,
+  //       message: form.message.value,
+  //       functies: form.functies.value,
+  //       doelgroep: selectedDoelgroep,
+  //       leeft: selectedLeeft,
+  //       gender: (() => {
+  //         let gender = Object.keys(selectedGender).filter(g => selectedGender[g]);
+  //         if (selectedGender.other && customGender.trim()) {
+  //           gender = gender.filter(g => g !== 'other');
+  //           gender.push(customGender.trim());
+  //         }
+  //         return gender;
+  //       })()
+  //     };
+  
+  //     // Send to backend
+  //     const response = await fetch("http://localhost:5500/formone", {
+  //       method: "POST",
+  //       headers: {
+  //         "Content-Type": "application/json"
+  //       },
+  //       body: JSON.stringify(formValue)
+  //     });
+  
+  //     // First check if response is JSON
+  //     const text = await response.text();
+  //   let data;
+    
+  //   try {
+  //     data = JSON.parse(text); // Try to parse as JSON
+  //   } catch {
+  //     console.error('Server returned:', text);
+  //     throw new Error('Server returned unexpected response');
+  //   }
+
+  //   if (!response.ok) {
+  //     throw new Error(data.message || `Server error: ${response.status}`);
+  //   }
+  
+  //     // Success handling
+  //     console.log("Success:", data);
+      
+  //     // Reset form fields
+  //     form.reset();
+      
+  //     // Reset all states
+  //     setFormData({ name: '', email: '' });
+  //     setSelectedGender({ man: false, vrouw: false, other: false });
+  //     setCustomGender('');
+  //     setSelectedOption('');
+  //     setSelectedPlatform('');
+  //     setSelectedDoelgroep('');
+  //     setSelectedLeeft('');
+  //     setSelectedBudget('');
+      
+  //     // Show success message
+  //     alert('Your form has been submitted successfully! We will contact you soon.');
+      
+  //   } catch (error) {
+  //     console.error("Submission error:", error);
+      
+  //     // Handle specific error cases
+  //     let errorMessage = error.message;
+      
+  //     // If server returns HTML error page
+  //     if (errorMessage.includes('<!DOCTYPE html>')) {
+  //       errorMessage = 'Server error occurred. Please try again later.';
+  //     }
+  //     // If network error
+  //     else if (error.message === 'Failed to fetch') {
+  //       errorMessage = 'Network error. Please check your connection.';
+  //     }
+      
+  //     alert(`Submission failed: ${errorMessage}`);
+  //   }
+  // };
 {/**Form validation End */}
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -166,78 +301,164 @@ const [errors, setErrors] = useState({});
 
   // Dropdown 1 of app 
 
-  const [selectedOption, setSelectedOption] = useState('');
 
-  const options = [
-    'Mobiele App',
-    'Webapplicatie',
-    'Hybride App (Web & Mobiel)',
-    'SaaS-platform',
-    'E-commerce / Webshop App',
-    'CRM / Bedrijfssoftware',
-    'IoT & Smart Device App',
-    'Gaming App',
-    'Overige (met invulveld)'
+  // const options = [
+  //   'Mobiele App',
+  //   'Webapplicatie',
+  //   'Hybride App (Web & Mobiel)',
+  //   'SaaS-platform',
+  //   'E-commerce / Webshop App',
+  //   'CRM / Bedrijfssoftware',
+  //   'IoT & Smart Device App',
+  //   'Gaming App',
+  //   'Overige (met invulveld)'
+  // ];
+
+  const appOptions = [
+    { value: "Mobiele App", label: "Mobiele App" },
+    { value: "Webapplicatie", label: "Webapplicatie" },
+    { value: "Hybride App (Web & Mobiel", label: "Hybride App (Web & Mobiel" },
+    { value: "SaaS-platform", label: "SaaS-platform" },
+    { value: "E-commerce / Webshop App", label: "E-commerce / Webshop App" },
+    { value: "CRM / Bedrijfssoftware", label: "CRM / Bedrijfssoftware" },
+    { value: "IoT & Smart Device App", label: "IoT & Smart Device App" },
+    { value: "Gaming App", label: "Gaming App" },
+    { value: "Overige (met invulveld)", label: "Overige (met invulveld)" },
   ];
+
+  const [selectedApp, setSelectedApp] = useState(null);
+
+  const handleApptype = (selectedOption) => {
+    setSelectedApp(selectedOption);
+  };
 
 
   // Dropdown of platform versist  selectedDoelgroep
 
-  const [selectedPlatform, setSelectedPlatform] = useState('');
+  // const [selectedPlatform, setSelectedPlatform] = useState('');
 
-  const platforms = [
-    'iOS',
-    'Android',
-    'Webbrowser',
-    'Windows',
-    'macOS',
-    'Cross-platform (React Native / Flutter)',
-    'Nog niet zeker',
-  ];
+  // const platforms = [
+  //   'iOS',
+  //   'Android',
+  //   'Webbrowser',
+  //   'Windows',
+  //   'macOS',
+  //   'Cross-platform (React Native / Flutter)',
+  //   'Nog niet zeker',
+  // ];
+
+
+  
+const platformOptions = [
+  { value: "iOS", label: "iOS" },
+  { value: "Android", label: "Android" },
+  { value: "Webbrowser", label: "Webbrowser" },
+  { value: "Windows", label: "Windows" },
+  { value: "macOS", label: "macOS" },
+  { value: "Cross-platform (React Native / Flutter)", label: "Cross-platform (React Native / Flutter)" },
+  { value: "Nog niet zeker", label: "Nog niet zeker" },
+];
+
+
+  const [selectedPlatforms, setSelectedPlatforms] = useState([]);
+
+  const handlePlatform = (selectedOptions) => {
+    setSelectedPlatforms(selectedOptions);
+  };
+
+
+
+
 
 
   // Dropdown of Doelgroep
 
-  const [selectedDoelgroep, setSelectedDoelgroep] = useState('');
+  // const [selectedDoelgroep, setSelectedDoelgroep] = useState('');
 
-  const odelgroeps = [
-    'Bedrijven (B2B)',
-    'Consumenten (B2C)',
-    'Overheid & Non-Profit',
-    'Startups',
-   ' E-commerce & Retail',
-    'Educatie & Training',
-    'Fintech & Banking',
-    'Zorg & Gezondheid'
+  // const odelgroeps = [
+  //   'Bedrijven (B2B)',
+  //   'Consumenten (B2C)',
+  //   'Overheid & Non-Profit',
+  //   'Startups',
+  //  ' E-commerce & Retail',
+  //   'Educatie & Training',
+  //   'Fintech & Banking',
+  //   'Zorg & Gezondheid'
+  // ];
+
+
+
+  const doelgroepOptions = [
+    { value: "Bedrijven (B2B)", label: "Bedrijven (B2B)" },
+    { value: "Consumenten (B2C)", label: "Consumenten (B2C)" },
+    { value: "Overheid & Non-Profit", label: "Overheid & Non-Profit" },
+    { value: "Startups", label: "Startups" },
+    { value: "E-commerce & Retail", label: "E-commerce & Retail" },
+    { value: "Educatie & Training", label: "Educatie & Training" },
+    { value: "Fintech & Banking", label: "Fintech & Banking" },
+    { value: "Zorg & Gezondheid", label: "Zorg & Gezondheid" },
   ];
+  
+  
+    const [selectedDoelgroep, setSelectedDoelgroep] = useState('');
+  
+    const handleDoelgroep = (selectedOptions) => {
+      setSelectedDoelgroep(selectedOptions);
+    };
 
 
   // Dropdown of Leefts
 
-  const [selectedLeeft, setSelectedLeeft] = useState('');
+  // const [selectedLeeft, setSelectedLeeft] = useState('');
 
-  const leefts = [
-    'Jongeren (13-18 jaar)',
-    'Jongvolwassenen (18-30 jaar)',
-    'Volwassenen (30-50 jaar)',
-   ' Senioren (50+)',
-    'Mannen',
-   ' Vrouwen',
-    'Beide'
+  // const leefts = [
+  //   'Jongeren (13-18 jaar)',
+  //   'Jongvolwassenen (18-30 jaar)',
+  //   'Volwassenen (30-50 jaar)',
+  //  ' Senioren (50+)'
+  // ];
+
+  const leeftOptions = [
+    { value: "Jongeren (13-18 jaar)", label: "Jongeren (13-18 jaar)" },
+    { value: "Jongvolwassenen (18-30 jaar)", label: "Jongvolwassenen (18-30 jaar)" },
+    { value: "Volwassenen (30-50 jaar)", label: "Volwassenen (30-50 jaar)" },
+    { value: "Senioren (50+", label: "Senioren (50+" },
+    
   ];
+  
+  const [selectedLeeft, setSelectedLeeft] = useState('');
+  
+    const handleLeefts = (selectedOptions) => {
+      setSelectedLeeft(selectedOptions);
+    };
 
 
   // Dropdown of 
-  const [selectedBudget, setSelectedBudget] = useState('');
+  // const [selectedBudget, setSelectedBudget] = useState('');
+
+  // const budgetOptions = [
+  //   '€5.000 - €10.000 (Basisfunctionaliteiten, MVP)',
+  //   '€10.000 – €25.000 (Middelgrote app, extra functies)',
+  //   '€25.000 – €50.000 (Complexe applicatie, maatwerk)',
+  //   '€50.000+ (Grote projecten, schaalbare oplossingen)',
+  //   'Nog niet zeker',
+  // ];
+
 
   const budgetOptions = [
-    '€5.000 - €10.000 (Basisfunctionaliteiten, MVP)',
-    '€10.000 – €25.000 (Middelgrote app, extra functies)',
-    '€25.000 – €50.000 (Complexe applicatie, maatwerk)',
-    '€50.000+ (Grote projecten, schaalbare oplossingen)',
-    'Nog niet zeker',
+    { value: "€5.000 - €10.000 (Basisfunctionaliteiten, MVP)", label: "€5.000 - €10.000 (Basisfunctionaliteiten, MVP)" },
+    { value: "€10.000 – €25.000 (Middelgrote app, extra functies)", label: "€10.000 – €25.000 (Middelgrote app, extra functies)" },
+    { value: "€25.000 – €50.000 (Complexe applicatie, maatwerk)", label: "€25.000 – €50.000 (Complexe applicatie, maatwerk)" },
+    { value: "€50.000+ (Grote projecten, schaalbare oplossingen)", label: "€50.000+ (Grote projecten, schaalbare oplossingen)" },
+    { value: "Nog niet zeker", label: "Nog niet zeker"},
+    
   ];
+  
+  const [selectedBudget, setSelectedBudget] = useState('');
 
+    const handleBudget = (selectedOptions) => {
+      setSelectedBudget(selectedOptions);
+    };
   
 
 
@@ -348,7 +569,7 @@ const [errors, setErrors] = useState({});
         </div>
       </div>
 
-      <form ref={form} onSubmit={handleSubmit} >
+      <form ref={form} onSubmit={handleSubmit}>
             {/* First Part */}
       <div className="md:px-36 px-6 mx-auto">
         <div className=" flex md:gap-[496px]">
@@ -399,7 +620,7 @@ const [errors, setErrors] = useState({});
                   name="email"
                   value={formData.email}
                   onChange={handleChange}
-                  placeholder="E -mail"
+                  placeholder="E-mail"
                   className="border border-gray-300 rounded-lg p-2 w-full focus:outline-none focus:ring-2 focus:ring-blue-500"
                 />
                 {errors.email && <p className="text-red-500 text-sm">{errors.email}</p>}
@@ -483,7 +704,7 @@ const [errors, setErrors] = useState({});
             </div>
             <div>
               <label className="block text-[rgba(38,50,56,1)] font-semibold font-plus-jakarta text-[16px] mb-1">
-                Preferred Technology Stack
+              Gewenste Technology stack
               </label>
               <input
                 type="text"
@@ -512,7 +733,7 @@ const [errors, setErrors] = useState({});
               <label className="block text-[rgba(38,50,56,1)] font-semibold font-plus-jakarta text-[16px] mb-1">
                   Type app
                 </label>
-                <select
+                {/* <select
                   value={selectedOption}
                   name="typeapp"
                   onChange={(e) => setSelectedOption(e.target.value)}
@@ -528,11 +749,19 @@ const [errors, setErrors] = useState({});
                       {option}
                     </option>
                   ))}
-                </select>
+                </select> */}
+
+                <Select
+                name="typeapp"
+                options={appOptions}
+                value={selectedApp}
+                onChange={handleApptype}
+                placeholder="Welk type applicatie wil je laten ontwikkelen?"
+              />
               </div>
 
               <div>
-              <label className="block text-[rgba(38,50,56,1)] font-semibold font-plus-jakarta text-[16px] mb-1">
+              {/*<label className="block text-[rgba(38,50,56,1)] font-semibold font-plus-jakarta text-[16px] mb-1">
                 Platform(s) vereist
               </label>
               <select
@@ -551,9 +780,21 @@ const [errors, setErrors] = useState({});
                     {platform}
                   </option>
                 ))}
-              </select>
+              </select>*/}
+
+
+            <label className="block text-[rgba(38,50,56,1)] font-semibold font-plus-jakarta text-[16px] mb-1"><strong>Platform(s) vereist</strong></label>
+                  <Select
+                    isMulti
+                    name="platform"
+                    options={platformOptions}
+                    value={selectedPlatforms}
+                    onChange={handlePlatform}
+                    placeholder="Op welke platforms moet de app beschikbaar zijn?"
+                  />
 
               </div>
+
 
               <div>
                 <label className="block text-[rgba(38,50,56,1)] font-semibold font-plus-jakarta text-[16px] mb-1">
@@ -576,47 +817,32 @@ const [errors, setErrors] = useState({});
 
                 <label className="block text-[rgba(38,50,56,1)] font-semibold font-plus-jakarta text-[16px] mb-1">
                 Doelgroep
+                
               </label>
-              <select
-                value={selectedDoelgroep}
-                name="doelgroep"
-                onChange={(e) => setSelectedDoelgroep(e.target.value)}
-                className={`block w-full px-3 py-2 border border-gray-300 bg-white rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500
-                  ${selectedDoelgroep === '' ? 'text-gray-400 ' : 'text-gray-700'}`}
-              >
-               
-                <option value="" disabled hidden>
-                Demografie, gebruikersbehoeften, enz
-                </option>
-                {odelgroeps.map((odelgroep, index) => (
-                  <option key={index} value={odelgroep} className="text-gray-700">
-                    {odelgroep}
-                  </option>
-                ))}
-              </select>
+              <Select
+                    isMulti
+                    name="doelgroep"
+                    options={doelgroepOptions}
+                    value={selectedDoelgroep}
+                    onChange={handleDoelgroep}
+                    placeholder="Demografie, gebruikersbehoeften, enz"
+                  />
                   
                 </div>
 
                 <div>
                 <label className="block text-[rgba(38,50,56,1)] font-semibold font-plus-jakarta text-[16px] mb-1">
                 Leeftijdscategorie
+                
               </label>
-              <select
-                value={selectedLeeft}
-                name="leeft"
-                onChange={(e) => setSelectedLeeft(e.target.value)}
-                className={`block w-full px-3 py-2 border border-gray-300 bg-white rounded-lg  focus:outline-none focus:ring-2 focus:ring-blue-500
-                  ${selectedLeeft === '' ? 'text-gray-400 ' : 'text-gray-700'}`}
-              >
-                <option value="" disabled hidden>
-                Uitkiezen
-                </option>
-                {leefts.map((leeft, index) => (
-                  <option key={index} value={leeft} className="text-gray-700 ">
-                    {leeft}
-                  </option>
-                ))}
-              </select>
+              <Select
+                    isMulti
+                    name="leeft"
+                    options={leeftOptions}
+                    value={selectedLeeft}
+                    onChange={handleLeefts}
+                    placeholder="Uitkiezen"
+                  />
                 </div>
 
                 <div className="font-plus-jakarta text-gray-700 mt-5">
@@ -696,7 +922,8 @@ const [errors, setErrors] = useState({});
               <label className="block text-[rgba(38,50,56,1)] font-semibold font-plus-jakarta text-[16px] mb-1">
               Budgetbereik
             </label>
-            <select
+
+            {/* <select
               value={selectedBudget}
               name="budget"
               onChange={(e) => setSelectedBudget(e.target.value)}
@@ -712,7 +939,16 @@ const [errors, setErrors] = useState({});
                   {budget}
                 </option>
               ))}
-            </select> 
+            </select>  */}
+
+              <Select
+                name="budget"
+                options={budgetOptions}
+                value={selectedBudget}
+                onChange={handleBudget}
+                placeholder="Wat is het beschikbare budget voor de ontwikkeling?"
+              />
+
               </div>
 
               <div>
@@ -720,11 +956,18 @@ const [errors, setErrors] = useState({});
                   Gewenste voltooiingsdatum
                 </label>
                 <div className="relative">
-                  <input
-                    type="text"
+                  {/* <input
+                    type="date"
                     name="gewenste"
-                    placeholder="Naam"
+                    placeholder="DD-MM-YYYY"
                     className="border border-gray-300 rounded-lg p-2 w-full pr-10 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  /> */}
+                  <DatePicker
+                    selected={selectedDate}
+                    onChange={(date) => setSelectedDate(date)}
+                    dateFormat="dd-MM-yyyy"
+                    placeholderText="DD-MM-YYYY"
+                    className="w-full px-4 py-2 md:pr-72 lg:pr-[350px] border border-gray-300 rounded-md placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
                   />
                 </div>
               </div>
@@ -750,7 +993,7 @@ const [errors, setErrors] = useState({});
           <button
           disabled={!isFormValid}
           className="btn hover:bg-[#468AFFE6] bg-[#468AFF]  md:px-32 px-36 py-2 text-[#FFFFFF] text-lg md:text-md lg:text-xl">
-          Start Nu!
+          Boek Offerte
           </button>
         </div>
       </div>

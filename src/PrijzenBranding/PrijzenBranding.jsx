@@ -3,9 +3,13 @@ import das from "../assets/das.png";
 import bg from "../assets/BrandPrice.jpg";
 import { useEffect, useState } from "react";
 import { useRef } from 'react';
+import Select from "react-select";
 //import emailjs from '@emailjs/browser';
 //import Swal from 'sweetalert2'
 import { Upload } from "lucide-react";
+import DatePicker from "react-datepicker";
+import "react-datepicker/dist/react-datepicker.css";
+import { format } from "date-fns";
 
 const PrijzenBranding = () => {
 
@@ -46,27 +50,27 @@ const PrijzenBranding = () => {
 
       // Left side checkbox 
 
-      const [selectedGender, setSelectedGender] = useState({
-        men: false,
-        women: false,
-        both: false
-      });
+      // const [selectedGender, setSelectedGender] = useState({
+      //   men: false,
+      //   women: false,
+      //   both: false
+      // });
     
-      const handleChangee = (e) => {
-        const { name, checked } = e.target;
-        setSelectedGender((prev) => ({
-          ...prev,
-          [name]: checked,
-        }));
-      };
+      // const handleChangee = (e) => {
+      //   const { name, checked } = e.target;
+      //   setSelectedGender((prev) => ({
+      //     ...prev,
+      //     [name]: checked,
+      //   }));
+      // };
 
 
-      // left side file select
+      // left side file select 1
 
-      const fileInputRef = useRef(null);
+      const fileTakeRef = useRef(null);
 
       const handleClick = () => {
-        fileInputRef.current.click();
+        fileTakeRef.current.click();
       };
 
       const handleFileChange = (e) => {
@@ -78,64 +82,181 @@ const PrijzenBranding = () => {
   };
 
 
+  //  for 2
+      const fileSpiRef = useRef(null);
+
+      const handleSpiClick = () => {
+        fileSpiRef .current.click();
+      };
+
+      const handleSpiChange = (e) => {
+        const filet = e.target.files[0];
+        if (filet) {
+          console.log('Bestand gekozen:', filet.name);
+          // Handle upload logic here
+        }
+  };
+  //  for 3
+      const fileInRef = useRef(null);
+
+      const handleInClick = () => {
+        fileInRef.current.click();
+      };
+
+      const handleFChange = (e) => {
+        const fileth = e.target.files[0];
+        if (fileth) {
+          console.log('Bestand gekozen:', fileth.name);
+          // Handle upload logic here
+        }
+  };
+
+
+
+
+
+
+  // date select 
+
+  const [selectedDate, setSelectedDate] = useState(null);
+
   // Dropdown 1
 
-  const [brand, setSubjectBrand] = useState('');
+  // const [brand, setSubjectBrand] = useState('');
   
-  const brands = [
-    " Visuele Identiteit (logo, kleuren, typografie, huisstijl)",
-    "Digitale Branding (website/webshop design, social media visuals)",
-    "Corporate Branding (merkstrategie, positionering, storytelling)",
-    " Product Branding (verpakking, campagne visuals, promotiemateriaal)",
-    "Employer Branding (werkgeversimago, recruitment branding)",
+  // const brands = [
+  //   " Visuele Identiteit (logo, kleuren, typografie, huisstijl)",
+  //   "Digitale Branding (website/webshop design, social media visuals)",
+  //   "Corporate Branding (merkstrategie, positionering, storytelling)",
+  //   " Product Branding (verpakking, campagne visuals, promotiemateriaal)",
+  //   "Employer Branding (werkgeversimago, recruitment branding)",
   
-  ];
+  // ];
+
+
+  const brandOptions = [
+      { value: "Visuele Identiteit (logo, kleuren, typografie, huisstijl)", label: "Visuele Identiteit (logo, kleuren, typografie, huisstijl)" },
+      { value: "Digitale Branding (website/webshop design, social media visuals)", label: "Digitale Branding (website/webshop design, social media visuals)" },
+      { value: "Corporate Branding (merkstrategie, positionering, storytelling)", label: "Corporate Branding (merkstrategie, positionering, storytelling)" },
+      { value: "Product Branding (verpakking, campagne visuals, promotiemateriaal)", label: "Product Branding (verpakking, campagne visuals, promotiemateriaal)" },
+      { value: "Employer Branding (werkgeversimago, recruitment branding)", label: "Employer Branding (werkgeversimago, recruitment branding)"},
+      
+    ];
+    
+    const [selectedBrand, setSelectedBrand] = useState('');
+  
+      const handleBrand = (selectedOptions) => {
+        setSelectedBrand(selectedOptions);
+      };
+
 
   // Dropdown 2
 
-  const [doel, setSubjectDoel] = useState('');
+  // const [doel, setSubjectDoel] = useState('');
   
-  const doels = [
-    " B2B (Bedrijven & Ondernemers)",
-    "B2C (Consumenten & Retail)",
-    "E-commerce & Webshops",
-    " Startups & Scale-ups",
-    "Lokale & Dienstverlenende bedrijven",
-    "High-end & Luxe merken"
+  // const doels = [
+  //   " B2B (Bedrijven & Ondernemers)",
+  //   "B2C (Consumenten & Retail)",
+  //   "E-commerce & Webshops",
+  //   " Startups & Scale-ups",
+  //   "Lokale & Dienstverlenende bedrijven",
+  //   "High-end & Luxe merken"
   
+  // ];
+
+
+  const doelOptions = [
+    { value: "B2B (Bedrijven & Ondernemers)", label: "B2B (Bedrijven & Ondernemers)" },
+    { value: "B2C (Consumenten & Retail)", label: "B2C (Consumenten & Retail)" },
+    { value: "E-commerce & Webshops", label: "E-commerce & Webshops" },
+    { value: "Startups & Scale-ups", label: "Startups & Scale-ups" },
+    { value: "Lokale & Dienstverlenende bedrijven", label: "Lokale & Dienstverlenende bedrijven"},
+    
   ];
+  
+  const [selectedDoel, setSelectedDoel] = useState('');
+
+    const handleDoel = (selectedOptions) => {
+      setSelectedDoel(selectedOptions);
+    };
+
 
   // Dropdown 3
 
-  const [age, setSubjectAge] = useState('');
+  // const [age, setSubjectAge] = useState('');
   
-  const ages = [
-    " 0-16 jaar",
-    "16-21 jaar",
-    "21-35 Jaar",
-    " 35-50 jaar",
-    "50-65 jaar",
-    "65+"
+  // const ages = [
+  //   " 0-16 jaar",
+  //   "16-21 jaar",
+  //   "21-35 Jaar",
+  //   " 35-50 jaar",
+  //   "50-65 jaar",
+  //   "65+"
   
+  // ];
+
+  const leeftOptions = [
+    { value: "0-16 jaar", label: "0-16 jaar" },
+    { value: "16-21 jaar", label: "16-21 jaar" },
+    { value: "21-35 Jaar", label: "21-35 Jaar" },
+    { value: "35-50 jaar", label: "35-50 jaar" },
+    { value: "50-65 jaar", label: "50-65 jaar"},
+    { value: "65+", label: "65+"}
+    
   ];
+  
+  const [selectedLeeft, setSelectedLeeft] = useState('');
+
+    const handleLeeft = (selectedOptions) => {
+      setSelectedLeeft(selectedOptions);
+    };
 
   // Dropdown 4
 
-  const [begroting, setSubjectBegroting] = useState('');
+  // const [begroting, setSubjectBegroting] = useState('');
   
-  const begrotings = [
-    "€1.000 - €5.000 (Basisbranding & logo-ontwerp)",
-    "€5.000 - €10.000 (Uitgebreide branding & strategie)",
-    " €10.000+ (Complete merkstrategie + digitale branding)",
+  // const begrotings = [
+  //   "€1.000 - €5.000 (Basisbranding & logo-ontwerp)",
+  //   "€5.000 - €10.000 (Uitgebreide branding & strategie)",
+  //   " €10.000+ (Complete merkstrategie + digitale branding)",
   
+  // ];
+
+
+  const begrotingOptions = [
+    { value: "€1.000 - €5.000 (Basisbranding & logo-ontwerp)", label: "€1.000 - €5.000 (Basisbranding & logo-ontwerp)" },
+    { value: "€5.000 - €10.000 (Uitgebreide branding & strategie)", label: "€5.000 - €10.000 (Uitgebreide branding & strategie)" },
+    { value: " €10.000+ (Complete merkstrategie + digitale branding)", label: " €10.000+ (Complete merkstrategie + digitale branding)" },
   ];
+  
+  const [selectedBegroting, setSelectedBegroting] = useState('');
+
+    const handleBegroting = (selectedOptions) => {
+      setSelectedBegroting(selectedOptions);
+    };
+
+
+  // Dropdown 5
+
+
+  const genOptions = [
+      { value: "man", label: "Man" },
+      { value: "vrouw", label: "Vrouw" },
+      { value: "beide", label: "Beide" },
+      
+    ];
+    
+    const [selectedGen, setSelectedGen] = useState('');
+    
+      const handleGen = (selectedOptions) => {
+        setSelectedGen(selectedOptions);
+      };
+  
 
 
 
 
   {/* Form validation start*/}
-
-
 
   const [formData, setFormData] = useState({
     name: '',
@@ -204,20 +325,36 @@ const PrijzenBranding = () => {
         const inspiratie = form.inspiratie.value;
         const filet = form.filet.value;
         const eventuele = form.eventuele.value;
-        const branding = form.branding.value;
+        //const branding = form.branding.value;
         const korte= form.korte.value;
-        const doelgroep = form.doelgroep.value;
-        const ages = form.ages.value;     
+        //const doelgroep = form.doelgroep.value;
+        //const ages = form.ages.value;     
 
         const huidige = form.huidige.value;
         const fileth = form.fileth.value;
         const message = form.message.value;
         const gewenste = form.gewenste.value;
         const merkbericht = form.merkbericht.value;
-        const bereik  = form.bereik.value;
-        const voltoo = form.voltoo.value;
+        //const bereik  = form.bereik.value;
+        //const voltoo = form.voltoo.value;
 
-        const gender = Object.keys(selectedGender).filter(g => selectedGender[g]);
+        const formattedDate = selectedDate
+      ? format(selectedDate, "dd-MM-yyyy")
+      : null;
+        // const gender = Object.keys(selectedGender).filter(g => selectedGender[g]);
+
+
+
+      // Multiple values 
+      const selectedBrandValues = selectedBrand.map((option) => option.value);
+      const selectedDoelValues = selectedDoel.map((option) => option.value);
+      const selectedLeeftValues = selectedLeeft.map((option) => option.value);
+      const selectedGenValues = selectedGen.map((option) => option.value);
+
+      // single values 
+      const selectedBegValue = selectedBegroting ? selectedBegroting.value : null;
+
+      
 
         const formValue = {
         name,
@@ -229,23 +366,43 @@ const PrijzenBranding = () => {
         inspiratie,
         filet,
         eventuele,
-        branding,
+        //branding,
         korte,
-        ages,
+        //ages,
         huidige,
         gewenste,
         message,
         fileth,
-        doelgroep,
+        //doelgroep,
         merkbericht,
-        bereik ,
-        voltoo,
-        gender // Add gender array here
+        //bereik ,
+        //voltoo,
+        formattedDate,
+        selectedBrandValues,
+        selectedDoelValues,
+        selectedLeeftValues,
+        selectedGenValues,
+        selectedBegValue,
+        formData
+
+        // gender Add gender array here
       };
 
-
-
       console.log(formValue);
+
+      fetch('http://localhost:5000/forms',{
+        method: 'POST',
+        headers :{
+          'content-type':'application/json'
+        },
+        body:JSON.stringify(formValue)
+      })
+      .then(res =>res.json())
+      .then(data =>{
+        console.log(data);
+  
+      })
+
 
       form.reset();
 
@@ -408,28 +565,29 @@ const PrijzenBranding = () => {
               <input
                 type="text"
                 name="theams"
-                placeholder="Eventuele specifieke kleurenschema's of visuele thema's"
+                placeholder="Thema’s"
                 className="border border-gray-300 rounded-lg p-2 w-full focus:outline-none focus:ring-2 focus:ring-blue-500"
               />
             </div>
 
               <div className="mt-6 ml-10">
+
               <button
-                      type="button"
-                      onClick={handleClick}
-                      className="bg-gray-800 hover:bg-gray-700 text-white font-medium py-2 px-2 rounded-lg flex items-center gap-2"
-                    >
-                      Upload afbeelding
-                      <Upload size={16} />
-                    </button>
-                    <input
-                      type="file"
-                      name="file"
-                      accept="image/*"
-                      className="hidden"
-                      ref={fileInputRef}
-                      onChange={handleFileChange}
-                    />
+                type="button"
+                onClick={handleClick}
+                className="bg-gray-800 hover:bg-gray-700 text-white font-medium py-2 px-2 rounded-lg flex items-center gap-2"
+              >
+                Upload afbeelding
+                <Upload size={16} />
+              </button>
+
+              <input
+                type="file"
+                name="file"
+                className="hidden"
+                ref={fileTakeRef}
+                onChange={handleFileChange}
+              />
               </div>
 
             </div>               
@@ -443,15 +601,17 @@ const PrijzenBranding = () => {
               <input
                 type="text"
                 name="inspiratie"
-                placeholder="Voorbeelden van merken die u bewondert of concurrenten"
+                placeholder="Inspiratie"
                 className="border border-gray-300 rounded-lg p-2 w-full focus:outline-none focus:ring-2 focus:ring-blue-500"
               />
             </div>
 
             <div className="mt-6 ml-10">
+
+            
               <button
                       type="button"
-                      onClick={handleClick}
+                      onClick={handleSpiClick}
                       className="bg-gray-800 hover:bg-gray-700 text-white font-medium py-2 px-2 rounded-lg flex items-center gap-2"
                     >
                       Upload afbeelding
@@ -462,8 +622,8 @@ const PrijzenBranding = () => {
                       name="filet"
                       accept="image/*"
                       className="hidden"
-                      ref={fileInputRef}
-                      onChange={handleFileChange}
+                      ref={fileSpiRef}
+                      onChange={handleSpiChange}
                     />
               </div>
             </div>
@@ -501,7 +661,16 @@ const PrijzenBranding = () => {
                 <label className="block text-[rgba(38,50,56,1)] font-semibold font-plus-jakarta text-[16px] mb-1">
                 Type branding
                 </label>
-                <select               
+
+                <Select
+                isMulti
+                                options={brandOptions}
+                                value={selectedBrand}
+                                onChange={handleBrand}
+                                placeholder="Uitkiezen"
+                              />
+
+                {/* <select               
                   value={brand}
                   name="branding"
                   onChange={(e) => setSubjectBrand(e.target.value)}
@@ -516,7 +685,8 @@ const PrijzenBranding = () => {
                       {Uitki}
                     </option>
                   ))}
-                </select>
+                </select> */}
+
                 </div>
               </div>
 
@@ -538,7 +708,14 @@ const PrijzenBranding = () => {
                 <label className="block text-[rgba(38,50,56,1)] font-semibold font-plus-jakarta text-[16px] mb-1">
                   Doelgroep
                 </label>
-                <select
+                <Select
+                isMulti
+                                options={doelOptions}
+                                value={selectedDoel}
+                                onChange={handleDoel}
+                                placeholder="Uitkiezen"
+                              />
+                {/* <select
                   value={doel}
                   name="doelgroep"
                   onChange={(e) => setSubjectDoel(e.target.value)}
@@ -554,14 +731,22 @@ const PrijzenBranding = () => {
                       {option}
                     </option>
                   ))}
-                </select>
+                </select> */}
               </div>
 
               <div>
                 <label className="block text-[rgba(38,50,56,1)] font-semibold font-plus-jakarta text-[16px] mb-1">
-                  Ages
+                Leeftijden
                 </label>
-                <select
+
+                <Select
+                isMulti
+                                options={leeftOptions}
+                                value={selectedLeeft}
+                                onChange={handleLeeft}
+                                placeholder="Uitkiezen"
+                              />
+                {/* <select
                   value={age}
                   name="ages"
                   onChange={(e) => setSubjectAge(e.target.value)}
@@ -577,11 +762,23 @@ const PrijzenBranding = () => {
                       {option}
                     </option>
                   ))}
-                </select>
+                </select> */}
               </div>
 
               <div className="">
-              <h3  style={{ fontWeight: '600', text:'16px',color: 'rgba(38, 50, 56, 1)', fontFamily: 'Plus Jakarta Sans, sans-serif'  }}>Op basis van demografie & geslacht</h3>
+              <label className="block text-[rgba(38,50,56,1)] font-semibold font-plus-jakarta text-[16px] mb-1">
+              Op basis van demografie & geslacht
+                </label>
+                <Select
+                 isMulti
+                 name="leeft"
+                 options={genOptions}
+                 value={selectedGen}
+                 onChange={handleGen}
+                 placeholder="Uitkiezen"
+               />  
+                                   
+              {/* <h3  style={{ fontWeight: '600', text:'16px',color: 'rgba(38, 50, 56, 1)', fontFamily: 'Plus Jakarta Sans, sans-serif'  }}>Op basis van demografie & geslacht</h3>
               <div style={{ display: 'flex', gap: '1.5rem', marginTop: '1rem' }}>
                 <label style={{ display: 'flex', alignItems: 'center', color: '#999' }}>
                   <input
@@ -613,7 +810,7 @@ const PrijzenBranding = () => {
                   />
                   Both
                 </label>
-              </div>
+              </div> */}
               </div>
 
               {/* upload image option */}
@@ -637,9 +834,11 @@ const PrijzenBranding = () => {
                   {/* Right Side Input (Moved Up) */}
                   <div className="">
                     <label className="block text-gray-700 font-medium mt-[50px]"></label>
+                    
+                    
                     <button
                       type="button"
-                      onClick={handleClick}
+                      onClick={handleInClick}
                       className="bg-gray-800 hover:bg-gray-700 text-white font-medium py-2 px-4 rounded-lg flex items-center gap-2"
                     >
                       Upload afbeelding
@@ -650,8 +849,8 @@ const PrijzenBranding = () => {
                       name="fileth"    
                       accept="image/*"
                       className="hidden"
-                      ref={fileInputRef}
-                      onChange={handleFileChange}
+                      ref={fileInRef}
+                      onChange={handleFChange}
                     />
                   </div>
 
@@ -698,7 +897,14 @@ const PrijzenBranding = () => {
                 <label className="block text-[rgba(38,50,56,1)] font-semibold font-plus-jakarta text-[16px] mb-1">
                   Budgetbereik
                 </label>
-                <select
+                <Select
+               
+                                options={begrotingOptions}
+                                value={selectedBegroting}
+                                onChange={handleBegroting}
+                                placeholder="Naam"
+                              />
+                {/* <select
                   value={begroting}
                   name="bereik"
                   onChange={(e) => setSubjectBegroting(e.target.value)}
@@ -714,21 +920,20 @@ const PrijzenBranding = () => {
                       {begrot}
                     </option>
                   ))}
-                </select>
+                </select> */}
               </div>
 
               <div>
                 <label className="block text-[rgba(38,50,56,1)] font-semibold font-plus-jakarta text-[16px] mb-1">
                 Gewenste voltooiingsdatum
                 </label>
-                <div className="relative">
-                  <input
-                    type="date"
-                    name="voltoo"
-                    placeholder="Date dd-mm-yyy"
-                    className="border border-gray-300 rounded-lg p-2 w-full pr-10 focus:outline-none focus:ring-2 focus:ring-blue-500"
-                  />
-                </div>
+                <DatePicker
+                  selected={selectedDate}
+                  onChange={(date) => setSelectedDate(date)}
+                  dateFormat="dd-MM-yyyy"
+                  placeholderText="DD-MM-YYYY"
+                  className=" relative w-full px-4 py-2 md:pr-72 lg:pr-[350px] border border-gray-300 rounded-md text-sm text-gray-700 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                />
               </div>
               {/* comment box */}
               <div>
@@ -752,7 +957,7 @@ const PrijzenBranding = () => {
           <button
           disabled={!isFormValid}  
           className="btn hover:bg-[#468AFFE6] bg-[#468AFF]  md:px-32 px-36 py-2 text-[#FFFFFF] text-lg md:text-md lg:text-xl">
-          Start Nu!
+          Boek offerte!
           </button>
         </div>
       </div>
