@@ -98,7 +98,7 @@ const SecondCardInputField = () => {
       other: false,
     });
 
-    const [customGender, setCustomGender] = useState('');
+    const [customGoal, setCustomGoal] = useState("");
   
     const handleChange = (e) => {
       const { name, checked } = e.target;
@@ -187,8 +187,9 @@ const fileInputRef = useRef(null);
     }
   };
 
-  const [wantsDomain, setWantsDomain] = useState(null);
 
+  const [wantsDomain, setWantsDomain] = useState(null); // true / false
+  const [domainName, setDomainName] = useState("");
 
 
   {/**Form validation Start */}
@@ -238,7 +239,103 @@ const fileInputRef = useRef(null);
 
 
         setErrors(fieldErrors);
+
     };
+
+    const handleSubmit = (e) => {
+      e.preventDefault();
+      if (isFormValid) {
+        alert('Form submitted successfully!');
+    
+        const form = e.target;
+    
+        const name = form.name.value;
+        const adres = form.adres.value;
+        const apptype = form.apptype.value;
+        const bestaande = form.bestaande.value;   
+        const vakgebied = form.vakgebied.value;
+        const groep = form.groep.value;
+        const heb = form.heb.value;
+        const worden = form.worden.value;
+        const opmerkingen = form.opmerkingen.value;
+        const file = form.file.value;
+        // const korte= form.korte.value;
+        // //const doelgroep = form.doelgroep.value;
+        // //const ages = form.ages.value;     
+
+        // const huidige = form.huidige.value;
+        // const fileth = form.fileth.value;
+        // const message = form.message.value;
+        // const gewenste = form.gewenste.value;
+        // const merkbericht = form.merkbericht.value;
+        // //const bereik  = form.bereik.value;
+        // //const voltoo = form.voltoo.value;
+
+        const radio1 = {
+          wantsDomain,
+          domainName: wantsDomain ? domainName : null,
+        };
+
+        const radio2 = {
+          seoControl, // either "ja" or "nee"
+        };
+
+        const check1 = {
+          ...selectedGoals,
+          customGoal: selectedGoals.other ? customGoal : null,
+        };
+
+        const check2 = {
+          ...features, // crm, forms, api as booleans
+        };
+
+        const check3 = {
+          ...pages,
+          customPage: pages.anders ? customPage : null,
+        };
+
+
+    
+
+        
+        const formValue = {
+        name,
+        adres,
+        apptype,
+        bestaande,
+        radio1,
+        vakgebied,
+        radio2,
+        check1,
+        groep,
+        check2,
+        heb,
+        check3,
+        worden,
+        opmerkingen,
+        file
+
+        
+      };
+
+      console.log(formValue );
+  
+      fetch('http://localhost:5550/maatwerk',{
+        method: 'POST',
+        headers :{
+          'content-type':'application/json'
+        },
+        body:JSON.stringify(formValue)
+      })
+      .then(res =>res.json())
+      .then(data =>{console.log(data);})
+      
+      form.reset();
+
+      
+      }
+    }
+
 
 
 
@@ -260,7 +357,7 @@ const fileInputRef = useRef(null);
         Custom Code Webbuilder Formulier
       </h1>
 
-      <form   >
+      <form  onSubmit={handleSubmit} >
 
         {/* First Part */}
       <div className="md:px-36 px-6 mx-auto">
@@ -379,11 +476,16 @@ const fileInputRef = useRef(null);
                   <input
                     type="text"
                     placeholder="Invul veld"
+                    value={domainName}
+                    onChange={(e) => setDomainName(e.target.value)}
                     className="border border-gray-300 rounded-lg p-2 w-full focus:outline-none focus:ring-2 focus:ring-blue-500"
                   />
                 </div>
               )}
               </div>
+
+
+
 
 
               <div className="mb-4">
@@ -513,11 +615,13 @@ const fileInputRef = useRef(null);
                   type="text"
                   placeholder="Schrijf je doel op..."
                   className="ml-2 p-1 border border-gray-300 rounded"
-                  value={customGender}
-                  onChange={(e) => setCustomGender(e.target.value)}
+                  value={customGoal}
+                  onChange={(e) => setCustomGoal(e.target.value)}
                 />
               )}
       </div>
+
+
             </div>
 
             <div>
@@ -526,6 +630,7 @@ const fileInputRef = useRef(null);
                 </label>
                 <select
                   value={subjectArea}
+                  name="groep"
                   onChange={(e) => setSubjectArea(e.target.value)}
                   className={`block w-full  px-3 py-2 border border-gray-300 bg-white rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500
                     ${subjectArea === '' ? 'text-gray-400 ' : 'text-gray-700'}`}
@@ -578,6 +683,9 @@ const fileInputRef = useRef(null);
                 API-koppelingen
               </label>
             </div>
+
+
+
                 </div>
 
                 <div >
@@ -586,6 +694,7 @@ const fileInputRef = useRef(null);
                 </label>
                 <select
                   value={selectedHeb}
+                  name="heb"
                   onChange={(e) => setSelectedHeb(e.target.value)}
                   className={`block w-full px-3 py-2 border border-gray-300 bg-white rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500
                     ${selectedHeb === '' ? 'text-gray-400 ' : 'text-gray-700'}`}
@@ -641,11 +750,7 @@ const fileInputRef = useRef(null);
             />
           )}
         </div>
-        {/* {errorr && (
-          <p className="text-red-500 text-sm mt-2">
-            Selecteer minstens één pagina a.u.b.
-          </p>
-        )} */}
+        
       </div>
 
                 <div>
@@ -654,6 +759,7 @@ const fileInputRef = useRef(null);
                 </label>
                 <select
                   value={subjectWorden}
+                  name="worden"
                   onChange={(e) => setSubjectWorden(e.target.value)}
                   className={`block w-full  px-3 py-2 border border-gray-300 bg-white rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500
                     ${subjectWorden === '' ? 'text-gray-400 ' : 'text-gray-700'}`}
@@ -663,7 +769,7 @@ const fileInputRef = useRef(null);
                   Select
                   </option>
                   {wordens .map((option, index) => (
-                    <option key={index} value={option} className="text-gray-700 ">
+                    <option key={index} value={option} className="text-gray-700">
                       {option}
                     </option>
                   ))}
@@ -681,6 +787,7 @@ const fileInputRef = useRef(null);
               </label>
               <input
                 type="text"
+                name="opmerkingen"
                 placeholder="(Vrij veld, optioneel)"
                 className="border border-gray-300 rounded-lg p-2 w-full focus:outline-none focus:ring-2 focus:ring-blue-500"
               />
@@ -701,6 +808,7 @@ const fileInputRef = useRef(null);
 
                 <input
                   type="file"
+                  name="file"
                   accept="image/*"
                   className="hidden"
                   ref={fileInputRef}
@@ -735,6 +843,7 @@ const fileInputRef = useRef(null);
       </div>
 
       </form>
+
     </>
   );
 };
