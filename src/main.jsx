@@ -40,6 +40,7 @@ import Ahoyy from './Ahoyy/Ahoyy.jsx';
 import Sarbuh from './Sarbuh/Sarbuh.jsx';
 import SecondCardInputField from './SecondCardInputField/SecondCardInputField.jsx';
 import StripePayment from './StripePayment/StripePayment.jsx';
+import AdminLogin from './AdminLogin/AdminLogin.jsx';
 
 // Load Stripe
 const stripePromise = loadStripe("your-public-stripe-key");
@@ -58,7 +59,7 @@ const router = createBrowserRouter([
         element: <Banner />,
       },
       {
-        path: "/contactpagina",//
+        path: "/contactpagina",
         element: < Contact />,
       },
       {
@@ -150,7 +151,7 @@ const router = createBrowserRouter([
         element: <InputField />,
       },
       {
-        path: "/payment",
+        path:`/payment/:id`,
         element: (
           <Elements stripe={stripePromise}>
             <Payment />
@@ -174,6 +175,10 @@ const router = createBrowserRouter([
       {
         path:"/stripePayment",
         element:<StripePayment/>
+      },
+      {
+        path:"/admin-login",
+        element:<AdminLogin/>
       },
     ],
   },

@@ -1,13 +1,14 @@
 import { useEffect, useRef, useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 //import { FaChevronDown} from "react-icons/fa";
 //import { ChevronDown } from 'lucide-react';
 import { FaArrowLeft, FaArrowRight} from "react-icons/fa"; // Import React Icons //FaArrowRight
 import { Upload } from "lucide-react";
+import Select from "react-select";
 
 
 
-const InputField = () => {
+const InputField = ({id}) => {
   useEffect(() => {
           window.scrollTo(0, 0); 
         }, []);
@@ -40,6 +41,9 @@ const InputField = () => {
         //   setDropdownOpen(false);
         // };
 
+
+        //const { id } = useParams();
+        console.log(id);
 
 
         const fileInputRef = useRef(null);
@@ -78,68 +82,127 @@ const InputField = () => {
 
 
 
-        const [contentAccess, setContentAccess] = useState('');
+        // const [contentAccess, setContentAccess] = useState('');
         //const [seoControl, setSeoControl] = useState('');
   
 
 
         // Dropdown 1 of Vakgebied 
   
+    // const [selectedSpecies, setSelectedSpecies] = useState('');
+  
+    // const species = [
+    //   'Basisonderwijs',
+    //   'Grafisch ontwerp',
+    //   'IT-training',
+    //   'Zakelijke dienstverlening',
+    //   'Retail / E-commerce',
+    //   'Overige (met invulveld)',
+    // ];
+
+
+
+    const doelSpecies = [
+      { value: "Basisonderwijs", label: "Basisonderwijs" },
+      { value: "Grafisch ontwerp", label: "Grafisch ontwerp" },
+      { value: "IT-training", label: "IT-training" },
+      { value: "Zakelijke dienstverlening", label: "Zakelijke dienstverlening" },
+      { value: "Retail / E-commerce", label: "Retail / E-commerce"},
+      { value: "Overige (met invulveld)", label: "Overige (met invulveld)"},
+      
+    ];
+    
     const [selectedSpecies, setSelectedSpecies] = useState('');
   
-    const species = [
-      'Basisonderwijs',
-      'Grafisch ontwerp',
-      'IT-training',
-      'Zakelijke dienstverlening',
-      'Retail / E-commerce',
-      'Overige (met invulveld)',
-    ];
+      const handleSpecies = (selectedOptions) => {
+        setSelectedSpecies(selectedOptions);
+      };
+
 
     // Dropdown 2 of Provides 
+    // const [selectedProvides, setSelectedProvides] = useState('');
+  
+    // const provides = [
+    //   'Ik heb al hosting',
+    //   'Ik heb hulp nodig bij het kiezen'
+    // ];
+
+
+    const providesOptions = [
+      { value: "Ik heb al hosting", label: "Ik heb al hosting" },
+      { value: "Ik heb hulp nodig bij het kiezen", label: "Ik heb hulp nodig bij het kiezen" },
+    ];
+    
     const [selectedProvides, setSelectedProvides] = useState('');
   
-    const provides = [
-      'Ik heb al hosting',
-      'Ik heb hulp nodig bij het kiezen'
-    ];
+      const handleProvides = (selectedOptions) => {
+        setSelectedProvides(selectedOptions);
+      };
 
 
 
     // Dropdown 3 of Vakgebied 
   
+    // const [selectedDoelgroep, setSelectedDoelgroep] = useState('');
+  
+    // const doelgroeps = [
+    //   'Studenten',
+    //   'Scholen',
+    //   'Bedrijven',
+    //   'Ouders',
+    //   'Overige (met invulveld)'
+    // ];
+
+
+    const doelOptions = [
+      { value: "Studenten", label: "Studenten" },
+      { value: "Scholen", label: "Scholen" },
+      { value: "Bedrijven", label: "Bedrijven" },
+      { value: "Ouders", label: "Ouders" },
+      { value: "Overige (met invulveld)", label: "Overige (met invulveld)"},
+      
+    ];
+    
     const [selectedDoelgroep, setSelectedDoelgroep] = useState('');
   
-    const doelgroeps = [
-      'Studenten',
-      'Scholen',
-      'Bedrijven',
-      'Ouders',
-      'Overige (met invulveld)'
-    ];
+      const handleDoel = (selectedOptions) => {
+        setSelectedDoelgroep(selectedOptions);
+      };
 
 
     // Dropdown 4 of Vakgebied 
   
-    const [selectedWorden, setSelectedWorden] = useState('');
+    // const [selectedWorden, setSelectedWorden] = useState('');
   
-    const wordens = [
-      'Al aanwezig',
-      'Moeten gemaakt worden'
-    ];
+    // const wordens = [
+    //   'Al aanwezig',
+    //   'Moeten gemaakt worden'
+    // ];
         
 
+    const wordensOptions = [
+      { value: "Al aanwezig", label: "Al aanwezig" },
+      { value: "Moeten gemaakt worden", label: "Moeten gemaakt worden" },
+      
+    ];
+    
+    const [selectedWorden, setSelectedWorden] = useState('');
+  
+      const handleWorden = (selectedOptions) => {
+        setSelectedWorden(selectedOptions);
+      };
+
+
+   // Dropdown end  
+
+   {/** For Check box 1  */}
 
         const [checkedItems, setCheckedItems] = useState({
           portfolioTonen: false,
           blogSchrijven: false,
           contactGenereren: false,
           onlineCursussenVerkopen: false,
-          home:false,
-          about:false,
-          portfolio:false,
-          blog:false,
-          contact:false
+          
           
         });
 
@@ -151,37 +214,60 @@ const InputField = () => {
 
 
 
+
+   {/** For Check box 2  */}
+
+        const [checkedPaagina, setCheckedPagina] = useState({
+          home:false,
+          about:false,
+          portfolio:false,
+          blog:false,
+          contact:false
+          
+          
+        });
+
+        const handleChangePagina = (event) => {
+          const { name, checked } = event.target;
+          setCheckedPagina({ ...checkedPaagina, [name]: checked });
+        };
+
+
+        {/**
+
+          const handleInputChange = (e) => {
+            const { name, value } = e.target;
+            setFormValues((prev) => ({ ...prev, [name]: value }));
+          };
+
+          
+
+          const handleCheckboxChange = (e) => {
+            const { name, checked } = e.target;
+            setCheckedItems((prev) => ({ ...prev, [name]: checked }));
+          };
+           */}
+
+
         
 
 
-  const navigate = useNavigate(); // Hook to navigate between routes
-  const [telephone, setNumber] = useState("");
-  //const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  //const [address, setAddress] = useState("");
-  const [bestaande, setBestaande] = useState("");
-  //const [hosting, setHosting] = useState("");
-  const [logo, setLogo] = useState("");
-  const [wensen, setWensen] = useState("");
+        const navigate = useNavigate(); // Hook to navigate between routes
+        const [telephone, setNumber] = useState("");
+        //const [name, setName] = useState("");
+        const [email, setEmail] = useState("");
+        //const [address, setAddress] = useState("");
+        const [bestaande, setBestaande] = useState("");
+        //const [hosting, setHosting] = useState("");
+        const [logo, setLogo] = useState("");
+        const [wensen, setWensen] = useState("");
 
   
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    // You can handle form submission here if necessary
-    console.log("Form submitted with data:", {
-      telephone,
-      name,
-      email,
-      //adres,
-      bestaande,
-      //hosting,
-      logo,
-      wensen
-    });
-  };
+  
 
 
+  
 
 {/**For validation start  */}
 
@@ -229,13 +315,81 @@ const [errors, setErrors] = useState({});
       }
     }
 
-
     setErrors(fieldErrors);
+
 };
 
 
 
+const handleSubmit = (e) => {
+  e.preventDefault();
+  if (isFormValid) {
+    alert('Form submitted successfully!');
 
+    const form = e.target;
+
+    const name = form.name.value;
+    const email = form.email.value;
+    const telephone = form.telephone.value;
+    const adres = form.adres.value;
+    const cname = form.cname.value;
+    // const inspiratie = form.inspiratie.value;
+    // const file = form.file.value;
+    
+
+
+
+
+    // Selected value 
+    // const selectedSpeciesValue = selectedSpecies ?selectedSpecies.value : null;
+    // const selectedprovidesValue = selectedProvides ?selectedProvides.value : null;
+    // const selectedDoelValue = selectedDoelgroep?selectedDoelgroep.value : null;
+    // const selectedWordenValue = selectedWorden ?selectedWorden .value : null;
+
+    // const payload = {
+    //   wantsDomain: wantsDomain, // true or false
+    //   domainName: wantsDomain ? domainValue : null,
+    // };
+
+
+    const formValue = {
+      name,
+      cname,
+      email,
+      telephone,
+      adres,
+      // payload,
+      // file,
+      // selectedSpeciesValue,
+      // selectedprovidesValue,
+      // selectedDoelValue,
+      // selectedWordenValue,
+      // ...checkedItems,
+      // ...checkedPaagina,
+      // inspiratie
+    }
+
+    console.log(formValue);
+
+  }}
+
+
+
+
+        // const handleSubmit = (e) => {
+        //   e.preventDefault();
+        //   // You can handle form submission here if necessary
+        //   console.log("Form submitted with data:", {
+        //     telephone,
+        //     name,
+        //     email,
+        //     //adres,
+        //     bestaande,
+        //     //hosting,
+        //     logo,
+        //     wensen
+        //   });
+        // };
 
 
 
@@ -246,17 +400,8 @@ const [errors, setErrors] = useState({});
 
 
 
-
-
-
-
-
-
-
-
-
-
  const [wantsDomain, setWantsDomain] = useState(null);
+ const [domainValue, setDomainValue] = useState("");   // input field text
 
 
   return (
@@ -266,13 +411,13 @@ const [errors, setErrors] = useState({});
 
 <div className="px-2 sm:px-4 md:px-8 lg:px-32 ">
       <h2 className="text-3xl font-semibold text-[rgba(29,32,38,1)] font-plus-jakarta mb-6 flex justify-between items-center">
-        <span> Template Webbuilder Formulier</span>
+        <span> Webbuilder Formulier</span>
         <span className="text-sm text-gray-600">{name}</span>
       </h2>
 
+
       <form onSubmit={handleSubmit}>
-        
-      
+
       <div className="">
               <div className=" flex md:gap-[496px]">
                 <h2 className="text-[28px] text-[rgba(64,123,255,1)] font-semibold font-plus-jakarta md:mt-8 mt-4 mb-4">
@@ -294,7 +439,7 @@ const [errors, setErrors] = useState({});
                       name="name"
                       value={formData.name}
                       onChange={handleCardChange}
-                      placeholder="(Invulveld)"
+                      placeholder="Naam"
                       className="border border-gray-300 rounded-lg p-2 w-full focus:outline-none focus:ring-2 focus:ring-blue-500"
                     />
                     {errors.name && <p className="text-red-500 text-sm">{errors.name}</p>}
@@ -338,7 +483,7 @@ const [errors, setErrors] = useState({});
                       name="adres"
                       value={formData.adres}
                       onChange={handleCardChange}
-                      placeholder=" (Invulveld)"
+                      placeholder="Adres"
                       className="border border-gray-300 rounded-lg p-2 w-full focus:outline-none focus:ring-2 focus:ring-blue-500"
                     />
                     {errors.adres && <p className="text-red-500 text-sm">{errors.adres}</p>}
@@ -348,7 +493,15 @@ const [errors, setErrors] = useState({});
                   <label className="block text-base font-plus-jakarta text-[rgba(38,50,56,1)] font-semibold mb-1">
                   Vakgebied en specialisatie*
                     </label>
-                    <select
+                    <Select  
+                                  
+                                                    options={doelSpecies}
+                                                    value={selectedSpecies}
+                                                    onChange={handleSpecies}
+                                                    placeholder="Uitkiezen"
+                                                  />
+                    
+                    {/* <select
                       value={selectedSpecies}
                       onChange={(e) => setSelectedSpecies(e.target.value)}
                       className={`block w-full px-3 py-2 border border-gray-300 bg-white rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500
@@ -363,7 +516,7 @@ const [errors, setErrors] = useState({});
                           {specie}
                         </option>
                       ))}
-                    </select>
+                    </select> */}
                     </div>
 
                   <div>
@@ -375,7 +528,7 @@ const [errors, setErrors] = useState({});
                       name="cname"
                       value={bestaande}
                       onChange={(e) => setBestaande(e.target.value)}
-                      placeholder="(Optioneel invulveld)"
+                      placeholder="Https://www.voorbeeld.nl"
                       className="border border-gray-300 rounded-lg p-2 w-full focus:outline-none focus:ring-2 focus:ring-blue-500"
                     />
                   </div>
@@ -388,8 +541,8 @@ const [errors, setErrors] = useState({});
                     <label className="block text-base font-plus-jakarta text-[rgba(38,50,56,1)] font-semibold mb-1">
               Wil je een eigen domeinnaam?*
                 </label>
+
                 <div>
-       
                 <div className="flex items-center gap-4">
                 <label className="flex items-center gap-1">
                   <input
@@ -416,6 +569,8 @@ const [errors, setErrors] = useState({});
                 <div className="mt-4 mb-4">
                   <input
                     type="text"
+                    value={domainValue}
+                    onChange={(e) => setDomainValue(e.target.value)}
                     placeholder="Invul veld"
                     className="border border-gray-300 rounded-lg p-2 w-full focus:outline-none focus:ring-2 focus:ring-blue-500"
                   />
@@ -430,7 +585,14 @@ const [errors, setErrors] = useState({});
                   <label className="block text-base font-plus-jakarta text-[rgba(38,50,56,1)] font-semibold mb-1">
                   Heb je al hosting of wil je hulp bij het kiezen van een provider?*
                 </label>
-                <select
+                <Select
+                                    
+                                                    options={providesOptions}
+                                                    value={selectedProvides}
+                                                    onChange={handleProvides}
+                                                    placeholder="Uitkiezen"
+                                                  />
+                {/* <select
                   value={selectedProvides}
                   onChange={(e) => setSelectedProvides(e.target.value)}
                   className={`block w-full px-3 py-2 border border-gray-300 bg-white rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500
@@ -438,18 +600,18 @@ const [errors, setErrors] = useState({});
                 >
                   
                   <option value="" disabled hidden>
-                  (Dropdown, eventueel met mogelijkheid tot meerdere selecties)
+                  Select
                   </option>
                   {provides.map((provide, index) => (
                     <option key={index} value={provide} className="text-gray-700">
                       {provide}
                     </option>
                   ))}
-                </select>
+                </select> */}
                     </div>
 
 
-                    <label className="block text-base font-plus-jakarta text-[rgba(38,50,56,1)] font-semibold mb-1">
+                    {/* <label className="block text-base font-plus-jakarta text-[rgba(38,50,56,1)] font-semibold mb-1">
                     Wil je zelf makkelijk nieuwe content kunnen toevoegen?
                     </label>
 
@@ -478,7 +640,7 @@ const [errors, setErrors] = useState({});
                     Nee
                   </label>
 
-                    </div>
+                    </div> */}
 
 
                 </div>
@@ -503,6 +665,7 @@ const [errors, setErrors] = useState({});
                     <span className="text-sm text-[rgba(146,146,146,1)]">Portfolio tonen</span>
                   </label>
                    
+
                     <label className="flex items-center space-x-2">
                       <input
                         type="checkbox"
@@ -554,9 +717,19 @@ const [errors, setErrors] = useState({});
               
                     <div>
                     <label className="block text-base font-plus-jakarta text-[rgba(38,50,56,1)] font-semibold mb-1">
-                    Wie is je doelgroep?*
+                    Wie is je doelgroep?* 
                     </label>
-                    <select
+
+                    <Select
+                                   
+                                   options={doelOptions}
+                                   value={selectedDoelgroep}
+                                   onChange={handleDoel}
+                                   placeholder="Uitkiezen"
+                                 />
+                               
+
+                    {/* <select
                       value={selectedDoelgroep}
                       onChange={(e) => setSelectedDoelgroep(e.target.value)}
                       className={`block w-full px-3 py-2 border border-gray-300 bg-white rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500
@@ -564,14 +737,14 @@ const [errors, setErrors] = useState({});
                     >
                       
                       <option value="" disabled hidden>
-                      (Dropdown, eventueel met mogelijkheid tot meerdere selecties)
+                      Select
                       </option>
                       {doelgroeps.map((doelgroep, index) => (
                         <option key={index} value={doelgroep} className="text-gray-700">
                           {doelgroep}
                         </option>
                       ))}
-                    </select>
+                    </select> */}
                     </div>
                     
                     </div>
@@ -592,7 +765,7 @@ const [errors, setErrors] = useState({});
                       name="inspiratie"
                       value={logo}
                       onChange={(e) => setLogo(e.target.value)}
-                      placeholder="(Invulveld: geef hier je gewenste kleuren en/of fonts op)"
+                      placeholder="(geef hier je gewenste kleuren en/of fonts opp)"
                       className="border border-gray-300 rounded-lg p-2 w-full focus:outline-none focus:ring-2 focus:ring-blue-500"
                     />
                   </div>
@@ -611,8 +784,8 @@ const [errors, setErrors] = useState({});
                     <input
                       type="checkbox"
                       name="home"
-                      checked={checkedItems.home}
-                      onChange={handleChange}
+                      checked={checkedPaagina.home}
+                      onChange={handleChangePagina}
                     />
                     <span className="text-sm text-[rgba(146,146,146,1)]">Home</span>
                   </label>
@@ -621,8 +794,8 @@ const [errors, setErrors] = useState({});
                       <input
                         type="checkbox"
                         name="about"
-                        checked={checkedItems.about}
-                        onChange={handleChange}
+                        checked={checkedPaagina.about}
+                        onChange={handleChangePagina}
                       />
                       <span className="text-sm text-[rgba(146,146,146,1)]">About</span>
                     </label>
@@ -631,8 +804,8 @@ const [errors, setErrors] = useState({});
                       <input
                         type="checkbox"
                         name="portfolio"
-                        checked={checkedItems.portfoloio}
-                        onChange={handleChange}
+                        checked={checkedPaagina.portfoloio}
+                        onChange={handleChangePagina}
                       />
                       <span className="text-sm text-[rgba(146,146,146,1)]">Portfolio</span>
                     </label>
@@ -642,8 +815,8 @@ const [errors, setErrors] = useState({});
                     <input
                       type="checkbox"
                       name="blog"
-                      checked={checkedItems.blog}
-                      onChange={handleChange}
+                      checked={checkedPaagina.blog}
+                      onChange={handleChangePagina}
                     />
                     <span className="text-sm text-[rgba(146,146,146,1)]">Blog</span>
                   </label>
@@ -653,8 +826,8 @@ const [errors, setErrors] = useState({});
                     <input
                       type="checkbox"
                       name="contact"
-                      checked={checkedItems.contact}
-                      onChange={handleChange}
+                      checked={checkedPaagina.contact}
+                      onChange={handleChangePagina}
                     />
                     <span className="text-sm text-[rgba(146,146,146,1)]">Contact</span>
                   </label>
@@ -669,7 +842,18 @@ const [errors, setErrors] = useState({});
                     <label className="block text-base font-plus-jakarta text-[rgba(38,50,56,1)] font-semibold mb-1">
                     Heb je de teksten en afbeeldingen al of moeten die gemaakt worden?*
                     </label>
-                    <select
+
+                    <Select 
+                                   
+                                   options={wordensOptions}
+                                   value={selectedWorden}
+                                   onChange={handleWorden}
+                                   placeholder="Uitkiezen"
+                                 />
+
+
+
+                    {/* <select
                       value={selectedWorden}
                       onChange={(e) => setSelectedWorden(e.target.value)}
                       className={`block w-full px-3 py-2 border border-gray-300 bg-white rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500
@@ -684,7 +868,7 @@ const [errors, setErrors] = useState({});
                           {worden}
                         </option>
                       ))}
-                    </select>
+                    </select> */}
                     </div>
               
                     
@@ -724,6 +908,7 @@ const [errors, setErrors] = useState({});
                   
                                   <input
                                     type="file"
+                                    name="file"
                                     accept="image/*"
                                     className="hidden"
                                     ref={fileInputRef}
@@ -763,7 +948,7 @@ const [errors, setErrors] = useState({});
           <button
             type="button"
             disabled={!isFormValid} 
-            onClick={() => navigate("/payment")} // Next button: navigate to the payment route
+            onClick={() => navigate(`/payment/${id}`)} // Next button: navigate to the payment route
             className="flex  items-center gap-2 px-4 py-2 bg-[#468AFF] text-white font-semibold rounded-lg focus:outline-none hover:bg-blue-500"
           >
             Volgende
@@ -771,6 +956,7 @@ const [errors, setErrors] = useState({});
           </button>
         </div>
       </form>
+
     </div>
 </>
     
