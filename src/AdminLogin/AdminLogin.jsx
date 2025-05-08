@@ -8,7 +8,7 @@ const AdminLogin = () => {
 
 
 
-    const navigate = useNavigate();
+  const navigate = useNavigate();
 
   const ADMIN_EMAIL = 'admin@example.com';
   const ADMIN_PASSWORD = 'admin123';
@@ -59,6 +59,7 @@ const AdminLogin = () => {
             Login
           </button>
         </form>
+
       </div>
     </div>
             
