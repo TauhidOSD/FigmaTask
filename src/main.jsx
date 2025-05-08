@@ -41,6 +41,7 @@ import Sarbuh from './Sarbuh/Sarbuh.jsx';
 import SecondCardInputField from './SecondCardInputField/SecondCardInputField.jsx';
 import StripePayment from './StripePayment/StripePayment.jsx';
 import AdminLogin from './AdminLogin/AdminLogin.jsx';
+import Dashboard from './Dashboard/Dashboard.jsx';
 
 // Load Stripe
 const stripePromise = loadStripe("your-public-stripe-key");
@@ -177,8 +178,12 @@ const router = createBrowserRouter([
         element:<StripePayment/>
       },
       {
-        path:"/admin-login",
+        path:"/admin",
         element:<AdminLogin/>
+      },
+      {
+        path:"/dashboard",
+        element:<Dashboard/>
       },
     ],
   },

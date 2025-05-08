@@ -390,7 +390,7 @@ const PrijzenBranding = () => {
 
       console.log(formValue);
 
-      fetch('http://localhost:5000/forms',{
+      fetch('http://localhost:5550/forms',{
         method: 'POST',
         headers :{
           'content-type':'application/json'

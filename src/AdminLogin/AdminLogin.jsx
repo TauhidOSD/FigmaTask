@@ -1,33 +1,66 @@
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 
 
 const AdminLogin = () => {
+
+
+
+
+    const navigate = useNavigate();
+
+  const ADMIN_EMAIL = 'admin@example.com';
+  const ADMIN_PASSWORD = 'admin123';
+
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const [error, setError] = useState('');
+
+  const handleLogin = (e) => {
+    e.preventDefault();
+
+    if (email === ADMIN_EMAIL && password === ADMIN_PASSWORD) {
+      localStorage.setItem('auth', 'true');
+      navigate('/dashboard');
+    } else {
+      setError('Wrong credentials');
+    }
+  };
+
     return (
         <div>
 
-<div className="hero bg-base-200 min-h-screen">
-  <div className="hero-content">
-    <div className="card bg-base-100 w-full max-w-2xl  shadow-2xl">
-      <div className="card-body">
-        <fieldset className="fieldset">
-          <label className="label">Email</label>
-          <input type="email"
-           name="email" 
-           className="border border-gray-300 rounded-sm p-2 w-full focus:outline-none focus:ring-2 focus:ring-blue-500" 
-           placeholder="Email" />
-
-          <label className="label">Password</label>
-          <input type="password"
-           name="password"
-           className="border border-gray-300 rounded-sm p-2 w-full focus:outline-none focus:ring-2 focus:ring-blue-500"
-           placeholder="Password" />
-          
-          <button className="btn btn-neutral mt-4">Login</button>
-        </fieldset>
+<div className="flex items-center justify-center min-h-screen bg-gradient-to-r from-blue-500 to-purple-600">
+      <div className="bg-white p-8 rounded shadow-md w-full max-w-sm">
+        <h2 className="text-2xl font-bold mb-6 text-center">Admin Login</h2>
+        <form onSubmit={handleLogin}>
+          <input
+            type="email"
+            placeholder="Email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            className="w-full p-2 border border-gray-300 rounded mb-4"
+            required
+          />
+          <input
+            type="password"
+            placeholder="Password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            className="w-full p-2 border border-gray-300 rounded mb-4"
+            required
+          />
+          {error && <p className="text-red-500 mb-4 text-sm">{error}</p>}
+          <button
+            type="submit"
+            className="w-full bg-blue-600 text-white py-2 rounded hover:bg-blue-700 transition"
+          >
+            Login
+          </button>
+        </form>
       </div>
     </div>
-  </div>
-</div>
             
         </div>
     );
