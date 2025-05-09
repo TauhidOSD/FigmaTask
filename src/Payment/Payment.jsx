@@ -93,7 +93,13 @@ const Payment = () => {
 
   if (!card) return <div className="p-8 text-center">Loading...</div>;
 
+
   const { title, description, image, list, order_summary, inputMessage } = card;
+
+  // const [isOneTime, setIsOneTime] = useState(order_summary.one_time_payment);
+
+
+
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -230,6 +236,9 @@ const Payment = () => {
     );
   }
 
+
+
+
   return (
     <div className="py-10 px-6 sm:px-10 md:px-16 lg:px-36 flex flex-col-reverse sm:flex-row gap-4">
       <div className="md:w-[744px]">
@@ -363,6 +372,115 @@ const Payment = () => {
         </form>
       </div>
 
+
+  {/* <div className="max-w-3xl mx-auto p-6 bg-white shadow-lg rounded-lg mt-6">
+      <img
+        src={card.image}
+        alt={card.title}
+        className="w-full h-72 object-cover rounded-md"
+      />
+
+      <h2 className="text-2xl font-bold mt-4">{card.title}</h2>
+
+      <div
+        className="mt-6 p-4 rounded-md text-black"
+        style={{ backgroundColor: "white" }}
+      >
+        <h3 className="font-semibold text-lg mb-2">Order Summary</h3>
+
+        <div className="flex justify-end">
+          <div>
+            <p className="text-xl font-bold">
+              {isOneTime ? "500 €" : order_summary.monthly_price}
+            </p>
+            {!isOneTime && (
+              <p>For {order_summary.duration}, tax included</p>
+            )}
+          </div>
+        </div>
+
+        <hr /> <hr />
+
+        <div className="mt-2">
+          <div className="flex justify-between items-center mb-4">
+            <label className="inline-flex items-center">
+              <input
+                type="checkbox"
+                checked={isOneTime}
+                onChange={() => setIsOneTime(!isOneTime)}
+                className="mr-2"
+              />
+              One time payment
+            </label>
+            <div>
+              <p className="mt-2">{order_summary.tax.monthly_amount}</p>
+            </div>
+          </div>
+        </div>
+
+        <hr /> <hr />
+
+        <div className="flex justify-between items-center mb-4">
+          <p>Tax</p>
+          <p>{order_summary.tax.rate}</p>
+        </div>
+
+        <hr /> <hr />
+
+        <div className="flex justify-between items-center mb-4">
+          <p>Total</p>
+          <p className="text-xl font-bold mt-4">
+            {isOneTime ? "500 €" : order_summary.total}
+          </p>
+        </div>
+      </div>
+
+      <hr /> <hr />
+
+      <div className="flex gap-8 items-center mt-6">
+        <button
+          onClick={() => navigate(-1)}
+          className="bg-gray-200 px-4 py-2 rounded hover:bg-gray-300"
+        >
+          ← Terug
+        </button>
+        <button
+          onClick={handleSubmit}
+          disabled={isLoading}
+          className="bg-blue-600 text-white px-6 py-2 rounded hover:bg-blue-500 disabled:bg-blue-300"
+        >
+          {isLoading ? (
+            <div className="flex items-center">
+              <svg
+                className="animate-spin -ml-1 mr-3 h-5 w-5 text-white"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+              >
+                <circle
+                  className="opacity-25"
+                  cx="12"
+                  cy="12"
+                  r="10"
+                  stroke="currentColor"
+                  strokeWidth="4"
+                ></circle>
+                <path
+                  className="opacity-75"
+                  fill="currentColor"
+                  d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
+                ></path>
+              </svg>
+              Verwerken...
+            </div>
+          ) : (
+            "Betalen"
+          )}
+        </button>
+      </div>
+    </div> */}
+
+
       <div className="max-w-3xl mx-auto p-6 bg-white shadow-lg rounded-lg mt-6">
         <img
           src={card.image}
@@ -372,7 +490,7 @@ const Payment = () => {
 
         <h2 className="text-2xl font-bold mt-4">{card.title}</h2>
 
-        <div className="mt-6 p-4 rounded-md text-white" style={{ backgroundColor: 'blue' }}>
+        <div className="mt-6 p-4 rounded-md text-black" style={{ backgroundColor: 'white' }}>
           <h3 className="font-semibold text-lg mb-2">Order Summary</h3>
 
           <div className="flex justify-end">
