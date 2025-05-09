@@ -77,38 +77,37 @@ const CardsComponent = () => {
           </h1>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-        {cards.map((card) => (
-          <div
-            key={card.id}
-            
-            onClick={() => handleCardClick(card.id)}
-            className={`border rounded-lg shadow-md overflow-hidden cursor-pointer ${
-              selectedCardId === card.id ? "ring-2 ring-blue-400" : ""
-            }`}
-          >
-            
-            <img
-              src={card.image}
-              alt={card.title}
-              className="w-full h-48 object-cover"
-            />
-            <div className="p-4">
-              <h2 className="text-lg font-semibold">{card.title}</h2>
-              <ul className="text-sm list-disc pl-5 mt-2 text-gray-500">
-                {card.list.map((item, i) => (
-                  <li key={i}>{item}</li>
-                ))}
-              </ul>
+  {cards.map((card) => (
+    <div
+      key={card.id}
+      onClick={() => handleCardClick(card.id)}
+      className={`flex flex-col border rounded-lg shadow-md overflow-hidden cursor-pointer ${
+        selectedCardId === card.id ? "ring-2 ring-blue-400" : ""
+      }`}
+    >
+      <img
+        src={card.image}
+        alt={card.title}
+        className="w-full h-48 object-cover"
+      />
+      
+      <div className="flex flex-col flex-grow p-4">
+        <h2 className="text-lg font-semibold">{card.title}</h2>
+        
+        <ul className="text-sm list-disc pl-5 mt-2 text-gray-500">
+          {card.list.map((item, i) => (
+            <li key={i}>{item}</li>
+          ))}
+        </ul>
 
-              <button
-                    onClick={handleNavigate(card.id)}
-                    className="bg-slate-400 mt-5 w-full text-white px-4 py-2 rounded-xl hover:bg-blue-600"
-                  >
-                    {card.buttonText}
-                  </button>
-
-            </div>
-          </div>
+        <button
+          onClick={handleNavigate(card.id)}
+          className="bg-[rgba(126,126,126,1)] w-full mt-auto text-white px-4 py-2 rounded-xl hover:bg-blue-600"
+        >
+          {card.buttonText}
+        </button>
+      </div>
+    </div>
         ))}
       </div>
 

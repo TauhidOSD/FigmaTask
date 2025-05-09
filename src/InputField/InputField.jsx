@@ -276,6 +276,7 @@ const InputField = ({ id }) => {
     }
 
     setErrors(fieldErrors);
+    
   };
 
   const handleSubmit = (e) => {
@@ -294,10 +295,13 @@ const InputField = ({ id }) => {
       const file = form.file.value;
 
       //Selected value
-      const selectedSpeciesValue = selectedSpecies ?selectedSpecies.value : null;
+      //const selectedSpeciesValue = selectedSpecies ?selectedSpecies.value : null;
       const selectedprovidesValue = selectedProvides ?selectedProvides.value : null;
       const selectedDoelValue = selectedDoelgroep?selectedDoelgroep.value : null;
       const selectedWordenValue = selectedWorden ?selectedWorden .value : null;
+
+      // Multple selctetion
+      const selectedSpeciesValue = selectedSpecies.map((option) => option.value);
 
       const payload = {
         wantsDomain: wantsDomain, // true or false
@@ -364,7 +368,7 @@ const InputField = ({ id }) => {
               <h2 className="text-[28px] text-[rgba(64,123,255,1)] font-semibold font-plus-jakarta md:mt-8 mt-4 mb-4">
                 Algemene Informatie
               </h2>
-              <h2 className="text-[28px] text-[rgba(64,123,255,1)] font-semibold font-plus-jakarta md:-ml-72  mb-4 md:mt-8 mt-4   hidden sm:block ">
+              <h2 className="text-[28px] text-[rgba(64,123,255,1)] font-semibold font-plus-jakarta md:-ml-56 lg:-ml-72  mb-4 md:mt-8 mt-4   hidden sm:block ">
                 Doel van de Website
               </h2>
             </div>
@@ -439,6 +443,7 @@ const InputField = ({ id }) => {
                     Vakgebied en specialisatie*
                   </label>
                   <Select
+                   isMulti
                     options={doelSpecies}
                     value={selectedSpecies}
                     onChange={handleSpecies}
@@ -664,7 +669,7 @@ const InputField = ({ id }) => {
                         options={doelOptions}
                         value={selectedDoelgroep}
                         onChange={handleDoel}
-                        placeholder="Uitkiezen"
+                        placeholder="Select"
                       />
 
                       {/* <select
@@ -877,8 +882,8 @@ const InputField = ({ id }) => {
 
             <button
               // type="button"
-              disabled={!isFormValid}
-              type="submit" // Next button: navigate to the payment route
+              type="submit"
+              disabled={!isFormValid} // Next button: navigate to the payment route
               className="flex  items-center gap-2 px-4 py-2 bg-[#468AFF] text-white font-semibold rounded-lg focus:outline-none hover:bg-blue-500"
             >
               Volgende
