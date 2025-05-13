@@ -5,7 +5,7 @@ import { FaLinkedin, FaFacebook } from "react-icons/fa";
 import { AiFillInstagram } from "react-icons/ai";
 import das from "../assets/das.png"
 import { useEffect, useRef, useState } from 'react';
-//import emailjs from '@emailjs/browser';
+import emailjs from '@emailjs/browser';
 //import Swal from 'sweetalert2'
 
 const Contact = () => {
@@ -96,6 +96,20 @@ const Contact = () => {
       alert('Form submitted successfully!');
   
       const form = e.target;
+
+      
+      emailjs
+      .sendForm('service_adb605b','template_sks4f0o', form.current, {
+        publicKey: 'zVpdm4YG_4bymkiyw',
+      })
+      .then(
+        () => {
+          console.log('SUCCESS!');
+        },
+        (error) => {
+          console.log('FAILED...', error.text);
+        }
+      )
   
       const from_name = form.from_name.value;
       const name = form.name.value;
@@ -104,8 +118,6 @@ const Contact = () => {
       const subject = form.subject .value;
       const topic = form.topic.value;
       const message = form.message.value;
-      
-  
       
       const formValue = {
         name,
@@ -117,6 +129,7 @@ const Contact = () => {
         message
         
       };
+
   
       console.log(formValue);
 
