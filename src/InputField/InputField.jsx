@@ -7,9 +7,6 @@ import { FaArrowLeft, FaArrowRight } from "react-icons/fa"; // Import React Icon
 import Select from "react-select";
 
 const InputField = ({ id }) => {
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
 
   // Right side 1st dropdown input box
   //const [selectedOption, setSelectedOption] = useState('')

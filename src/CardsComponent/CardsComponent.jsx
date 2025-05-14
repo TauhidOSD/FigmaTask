@@ -6,9 +6,9 @@ import { Link, useLoaderData, useNavigate } from "react-router-dom";
 
 const CardsComponent = () => {
 
-  useEffect(() => {
-      window.scrollTo(0, 0);
-    }, []);
+  // useEffect(() => {
+  //     window.scrollTo(0, 0);
+  //   }, []);
 
   // const [showInputField, setShowInputField] = useState(false);
 

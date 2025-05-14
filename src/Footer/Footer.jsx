@@ -58,16 +58,16 @@ const Footer = () => {
             <h3 className="font-bold font-plus-jakarta text-[16px] text-[#263238] ">Diensten</h3>
             <ul className="space-y-4 text-gray-900 text-sm">
               <li className="hover:text-blue-600 cursor-pointer transition-colors font-plus-jakarta text-[#263238] ">
-                <Link to="/appmarket">App ontwikkeling</Link>
+                <Link to="/appontwikkeling">App ontwikkeling</Link>
               </li>
               <li className="hover:text-blue-600 cursor-pointer transition-colors font-plus-jakarta text-[#263238] ">
-                <Link to="/Diensten">Branding</Link>
+                <Link to="/brandingdiensten">Branding</Link>
               </li>
               <li className="hover:text-blue-600 cursor-pointer transition-colors font-plus-jakarta text-[#263238] ">
-                <Link to="/marketing">Marketingsdiensten</Link>
+                <Link to="/marketingontwikkeling">Marketingsdiensten</Link>
               </li>
               <li className="hover:text-blue-600 cursor-pointer transition-colors font-plus-jakarta text-[#263238] ">
-                <Link to="/prijzen">Website builder</Link>
+                <Link to="/websitebuilder">Website builder</Link>
               </li>
             </ul>
           </div>
@@ -76,29 +76,29 @@ const Footer = () => {
             <h3 className="font-bold font-plus-jakarta text-[16px] text-[#263238] ">Prijzen</h3>
             <ul className="space-y-4 text-gray-900 text-sm">
             <li className="hover:text-blue-600 cursor-pointer transition-colors font-plus-jakarta text-[#263238]  ">
-                <Link to="/PrijzenMarkeing ">App ontwikkeling</Link>
+                <Link to="/appontwikkelingprijsplannen">App ontwikkeling</Link>
               </li>
               <li className="hover:text-blue-600 cursor-pointer transition-colors font-plus-jakarta text-[#263238] ">
-                <Link to="/PrijzenBranding">Branding</Link>
+                <Link to="/brandingprijsplannen">Branding</Link>
               </li>
               <li className="hover:text-blue-600 cursor-pointer transition-colors font-plus-jakarta text-[#263238] ">
-                <Link to="/startpagina">Marketingsdiensten</Link>
+                <Link to="/marketingprijsplannen">Marketingsdiensten</Link>
               </li>
               <li className="hover:text-blue-600 cursor-pointer transition-colors font-plus-jakarta text-[#263238] ">
-                <Link to="/prijzen">Website builder</Link>
+                <Link to="/websitebuilder">Website builder</Link>
               </li>
             </ul>
           </div>
 
           <div className="space-y-5 ">
-            <h3 className=" hover:text-blue-600 cursor-pointer transition-colors font-bold font-plus-jakarta text-[16px] text-[#263238]"><Link to="/Overons">Over ons</Link> </h3>
+            <h3 className=" hover:text-blue-600 cursor-pointer transition-colors font-bold font-plus-jakarta text-[16px] text-[#263238]"><Link to="/overons">Over ons</Link> </h3>
             <ul className="space-y-4 text-gray-900 text-sm">
               <li className="hover:text-blue-600 cursor-pointer transition-colors font-bold font-plus-jakarta text-[16px] text-[#263238]">
-              <Link to="/Veelgestelde"> FAQ</Link>
+              <Link to="/veelgesteldevragen"> FAQ</Link>
                
               </li>
               <li className="hover:text-blue-600 cursor-pointer transition-colors font-bold font-plus-jakarta text-[16px] text-[#263238] ">
-              <Link to="/blog"> Portfolio</Link>
+              <Link to="/portfolio"> Portfolio</Link>
                 
               </li>
             </ul>

@@ -4,11 +4,7 @@ import { useEffect,useRef,useState } from "react";
 //import { FaUpload } from "react-icons/fa";
 
 const SecondCardInputField = () => {
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
-
-
+  
 
   // Dropdown 1 of Vakgebied 
   
