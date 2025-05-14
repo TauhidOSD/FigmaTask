@@ -1,15 +1,17 @@
-import { useEffect, useState } from "react";
-import img from "../assets/rafiki6.png";
-import img1 from "../assets/Group 1000005744.png";
+import { useRef, useState } from "react";
 import das from "../assets/das.png";
+import img1 from "../assets/Group 1000005744.png";
+import img from "../assets/rafiki6.png";
 import CardsComponent from "../CardsComponent/CardsComponent";
 import SecondCardInputField from "../SecondCardInputField/SecondCardInputField";
 // import SecondCardInputField from "../SecondCardInputField"; // Ensure correct import
 
 const Prijzen = () => {
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
+  const sectionRef = useRef(null);
+
+  const scrollToSection = () => {
+    sectionRef.current?.scrollIntoView({ behavior: "smooth" });
+  };
 
   const [cards, setCards] = useState([]);
   const [selectedCard, setSelectedCard] = useState(null);
@@ -26,6 +28,7 @@ const Prijzen = () => {
         console.error("Error fetching data:", error);
       }
     }
+    scrollToSection();
   };
 
   return (
@@ -42,7 +45,7 @@ const Prijzen = () => {
       <div className="px-6 py-12">
         <div className="text-center mb-12">
           <h1 className="text-3xl font-bold text-gray-800">
-          Bouw je eigen website
+            Bouw je eigen website
           </h1>
         </div>
 
@@ -98,11 +101,13 @@ const Prijzen = () => {
         </div>
       </div>
 
-      {/* Show CardsComponent when 1st card is clicked */}
-      {selectedCard === 1 && <CardsComponent cards={cards} />}
+      <div ref={sectionRef}>
+        {/* Show CardsComponent when 1st card is clicked */}
+        {selectedCard === 1 && <CardsComponent cards={cards} />}
 
-      {/* Show SecondCardInputField when 2nd card is clicked */}
-      {selectedCard === 2 && <SecondCardInputField />}
+        {/* Show SecondCardInputField when 2nd card is clicked */}
+        {selectedCard === 2 && <SecondCardInputField />}
+      </div>
     </>
   );
 };
