@@ -9,6 +9,7 @@ import Select from "react-select";
 import DatePicker from "react-datepicker";
 import { format } from "date-fns";
 import "react-datepicker/dist/react-datepicker.css";
+import emailjs from '@emailjs/browser';
 
 const PrijzenMarketing = () => {
 
@@ -67,6 +68,20 @@ const [errors, setErrors] = useState({});
 
 
   const handleSubmit = (e) => {
+
+    emailjs
+            .sendForm('service_adb605b','template_31qworp', form.current, {
+              publicKey: 'zVpdm4YG_4bymkiyw',
+            })
+            .then(
+              () => {
+                console.log('SUCCESS!');
+              },
+              (error) => {
+                console.log('FAILED...', error.text);
+              }
+            )
+
     e.preventDefault();
     if (isFormValid) {
       alert('Form submitted successfully!');

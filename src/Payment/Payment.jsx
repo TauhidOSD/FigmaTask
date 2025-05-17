@@ -100,6 +100,7 @@ const Payment = () => {
     const price = parseFloat(priceMatch[0]);
     const currency = currencyMatch ? (currencyMatch[0] === "€" ? "eur" : "usd") : "eur";
 
+    console.log(isOneTime);
     fetch(`${import.meta.env.VITE_API_URL}/api/create-checkout-session`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
@@ -108,6 +109,8 @@ const Payment = () => {
           name: title,
           description: `Purchase of ${title}`,
           price: Math.round(price * 100),
+          oneTimePrice: isOneTime,
+          
         },
         currency,
         userData: {
@@ -240,7 +243,7 @@ const Payment = () => {
               />
               One time payment
             </label>
-            <p>{order_summary.tax.monthly_amount}</p>
+            <p >{order_summary.tax.monthly_amount}</p>
           </div>
 
           <hr />

@@ -1,15 +1,13 @@
-
 // import { useNavigate } from 'react-router-dom';
 
 // const Dashboard = () => {
 
 //         const navigate = useNavigate();
-      
+
 //         const handleLogout = () => {
 //           localStorage.removeItem('auth');
 //           navigate('/');
 //         };
-
 
 //     return (
 //         <div>
@@ -23,29 +21,30 @@
 //         Logout
 //       </button>
 //     </div>
-            
+
 //         </div>
 //     );
 // };
 
 // export default Dashboard;
 
-
 import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 // Define your tables and their respective API URLs
 const tableConfig = {
- Applicatie_Ontwikkeling: "http://localhost:5550/users",
- Branding: "http://localhost:5550/forms",
- Standard_Template: "http://localhost:5550/maatwerk",
- Maatwerk_Website: "http://localhost:5550/custom",
- Payment: "http://localhost:5550/payment",
+  Applicatie_Ontwikkeling: "http://localhost:5550/users",
+  Branding: "http://localhost:5550/forms",
+  Standard_Template: "http://localhost:5550/custom",
+  Maatwerk_Website: "http://localhost:5550/maatwerk",
+  Payment: "http://localhost:5550/payment",
 };
 
 const Dashboard = () => {
   const [activeTable, setActiveTable] = useState("Users");
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(true);
+  const navigate = useNavigate();
 
   useEffect(() => {
     const fetchTableData = async () => {
@@ -65,10 +64,15 @@ const Dashboard = () => {
     fetchTableData();
   }, [activeTable]);
 
+  const handleLogOut = () => {
+    navigate("/");
+    localStorage.removeItem("auth");
+  };
+
   return (
     <div className="flex min-h-screen  text-black bg-gray-100">
       {/* Sidebar */}
-      <aside className="w-64 min-w-[16rem] max-w-[16rem] bg-white p-4 h-screen">
+      <aside className="w-64 min-w-[16rem] max-w-[16rem] bg-white p-4 h-screen flex flex-col shadow-lg">
         <h2 className="text-xl font-bold mb-4">Admin Dashboard</h2>
         <ul className="space-y-2">
           {Object.keys(tableConfig).map((tableName) => (
@@ -85,6 +89,12 @@ const Dashboard = () => {
             </li>
           ))}
         </ul>
+        <button
+          onClick={handleLogOut}
+          className="hidden lg:block hover:bg-[#468AFFE6] bg-[#468AFF] font-plus-jakarta text-white px-6 py-2 rounded-md shadow-md mt-6 "
+        >
+          Log Out
+        </button>
       </aside>
 
       {/* Main Content */}
@@ -134,4 +144,3 @@ const Dashboard = () => {
 };
 
 export default Dashboard;
-

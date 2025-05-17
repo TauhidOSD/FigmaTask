@@ -1,34 +1,31 @@
 import { useRef, useState } from "react";
+import { Outlet, useNavigate } from "react-router-dom";
 import das from "../assets/das.png";
 import img1 from "../assets/Group 1000005744.png";
 import img from "../assets/rafiki6.png";
-import CardsComponent from "../CardsComponent/CardsComponent";
-import SecondCardInputField from "../SecondCardInputField/SecondCardInputField";
-// import SecondCardInputField from "../SecondCardInputField"; // Ensure correct import
 
 const Prijzen = () => {
   const sectionRef = useRef(null);
+  const [cards, setCards] = useState([]);
+  const [selectedCard, setSelectedCard] = useState(null);
+  const [idInLocalstorage, setIdInLocalStorage] = useState(null);
+  const [reload, setReload] = useState(false);
+  const navigate = useNavigate();
 
   const scrollToSection = () => {
     sectionRef.current?.scrollIntoView({ behavior: "smooth" });
   };
 
-  const [cards, setCards] = useState([]);
-  const [selectedCard, setSelectedCard] = useState(null);
-
   const handleCardClick = async (cardId) => {
     setSelectedCard(cardId);
-
     if (cardId === 1) {
-      try {
-        const response = await fetch("/FakeData/data.json");
-        const data = await response.json();
-        setCards(data.slice(0, 5));
-      } catch (error) {
-        console.error("Error fetching data:", error);
-      }
+      navigate("/websitebuilder/standard-template");
+      scrollToSection();
     }
-    scrollToSection();
+    if (cardId === 2) {
+      navigate("/websitebuilder/maatwerk-website");
+      scrollToSection();
+    }
   };
 
   return (
@@ -101,12 +98,8 @@ const Prijzen = () => {
         </div>
       </div>
 
-      <div ref={sectionRef}>
-        {/* Show CardsComponent when 1st card is clicked */}
-        {selectedCard === 1 && <CardsComponent cards={cards} />}
-
-        {/* Show SecondCardInputField when 2nd card is clicked */}
-        {selectedCard === 2 && <SecondCardInputField />}
+      <div ref={sectionRef} className="pt-12">
+        <Outlet />
       </div>
     </>
   );
