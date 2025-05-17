@@ -1,13 +1,13 @@
 import { useEffect, useRef, useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 //import { FaChevronDown} from "react-icons/fa";
 //import { ChevronDown } from 'lucide-react';
 import { Upload } from "lucide-react";
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa"; // Import React Icons //FaArrowRight
 import Select from "react-select";
 
-const InputField = ({ id }) => {
-
+const InputField = () => {
+  const { id } = useParams();
   // Right side 1st dropdown input box
   //const [selectedOption, setSelectedOption] = useState('')
   // const [isOpen, setIsOpen] = useState(false);
@@ -91,7 +91,7 @@ const InputField = ({ id }) => {
     { value: "Overige (met invulveld)", label: "Overige (met invulveld)" },
   ];
 
-  const [selectedSpecies, setSelectedSpecies] = useState("");
+  const [selectedSpecies, setSelectedSpecies] = useState([]);
 
   const handleSpecies = (selectedOptions) => {
     setSelectedSpecies(selectedOptions);
@@ -273,7 +273,6 @@ const InputField = ({ id }) => {
     }
 
     setErrors(fieldErrors);
-    
   };
 
   const handleSubmit = (e) => {
@@ -293,12 +292,18 @@ const InputField = ({ id }) => {
 
       //Selected value
       //const selectedSpeciesValue = selectedSpecies ?selectedSpecies.value : null;
-      const selectedprovidesValue = selectedProvides ?selectedProvides.value : null;
-      const selectedDoelValue = selectedDoelgroep?selectedDoelgroep.value : null;
-      const selectedWordenValue = selectedWorden ?selectedWorden .value : null;
+      const selectedprovidesValue = selectedProvides
+        ? selectedProvides.value
+        : null;
+      const selectedDoelValue = selectedDoelgroep
+        ? selectedDoelgroep.value
+        : null;
+      const selectedWordenValue = selectedWorden ? selectedWorden.value : null;
 
       // Multple selctetion
-      const selectedSpeciesValue = selectedSpecies.map((option) => option.value);
+      const selectedSpeciesValue = selectedSpecies.map(
+        (option) => option.value
+      );
 
       const payload = {
         wantsDomain: wantsDomain, // true or false
@@ -311,38 +316,36 @@ const InputField = ({ id }) => {
         email,
         telephone,
         adres,
-          payload,
-          file,
-          selectedSpeciesValue,
-          selectedprovidesValue,
-          selectedDoelValue,
-          selectedWordenValue,
-          ...checkedItems,
-          ...checkedPaagina,
-          inspiratie
+        payload,
+        file,
+        selectedSpeciesValue,
+        selectedprovidesValue,
+        selectedDoelValue,
+        selectedWordenValue,
+        ...checkedItems,
+        ...checkedPaagina,
+        inspiratie,
       };
 
       console.log(formValue);
 
-      fetch('http://localhost:5550/custom',{
-        method: 'POST',
-        headers :{
-          'content-type':'application/json'
+      fetch("http://localhost:5550/custom", {
+        method: "POST",
+        headers: {
+          "content-type": "application/json",
         },
-        body:JSON.stringify(formValue)
+        body: JSON.stringify(formValue),
       })
-      .then(res =>res.json())
-      .then(data =>{console.log(data);})
-      
+        .then((res) => res.json())
+        .then((data) => {
+          console.log(data);
+        });
+
       form.reset();
-
-      }
-
-    navigate(`/payment/${id}`)
-
     }
-
-    
+    console.log(id);
+    navigate(`/payment/${id}`);
+  };
 
   {
     /**For validation end  */
@@ -440,7 +443,7 @@ const InputField = ({ id }) => {
                     Vakgebied en specialisatie*
                   </label>
                   <Select
-                   isMulti
+                    isMulti
                     options={doelSpecies}
                     value={selectedSpecies}
                     onChange={handleSpecies}

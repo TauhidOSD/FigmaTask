@@ -127,7 +127,7 @@
     "one_time_payment": true,
     "tax": {
       "rate": "21%",
-      "monthly_amount": "25 €/Month"
+      "monthly_amount": "25 €/Month after first year"
     },
     "total": "500 €/Month"
   }

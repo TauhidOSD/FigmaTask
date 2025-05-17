@@ -10,6 +10,7 @@ import { Upload } from "lucide-react";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import { format } from "date-fns";
+import emailjs from '@emailjs/browser';
 
 const PrijzenBranding = () => {
 
@@ -311,6 +312,20 @@ const PrijzenBranding = () => {
 
     const handleSubmit = (e) => {
       e.preventDefault();
+
+      emailjs
+            .sendForm('service_adb605b','template_31qworp', form.current, {
+              publicKey: 'zVpdm4YG_4bymkiyw',
+            })
+            .then(
+              () => {
+                console.log('SUCCESS!');
+              },
+              (error) => {
+                console.log('FAILED...', error.text);
+              }
+            )
+
       if (isFormValid) {
         alert('Form submitted successfully!');
     

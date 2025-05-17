@@ -2,50 +2,128 @@
 import { Upload } from "lucide-react";
 import { useEffect,useRef,useState } from "react";
 //import { FaUpload } from "react-icons/fa";
+import Select from "react-select";
 
 const SecondCardInputField = () => {
   
 
   // Dropdown 1 of Vakgebied 
   
-    const [selectedOption, setSelectedOption] = useState('');
+    // const [selectedOption, setSelectedOption] = useState('');
   
+    // const options = [
+    //   'Basisonderwijs',
+    //   'Grafisch ontwerp',
+    //   'IT-training',
+    //   'Zakelijke dienstverlening',
+    //   'Retail / E-commerce',
+    //   'Overige (met invulveld)',
+    // ];
+
+
     const options = [
-      'Basisonderwijs',
-      'Grafisch ontwerp',
-      'IT-training',
-      'Zakelijke dienstverlening',
-      'Retail / E-commerce',
-      'Overige (met invulveld)',
-    ];
+        { value: "Basisonderwijs", label: "Basisonderwijs" },
+        { value: "Grafisch ontwerp", label: "Grafisch ontwerp" },
+        { value: "IT-training", label: "IT-training" },
+        { value: "Zakelijke dienstverlening", label: "Zakelijke dienstverlening" },
+        { value: "Retail / E-commerce", label: "Retail / E-commerce" },
+        { value: "Overige (met invulveld)", label: "Overige (met invulveld)" },
+      ];
+  
+      const [selectedOption, setSelectedOption] = useState([]);
+      const handleOptions = (selectedOptions) => {
+        setSelectedOption(selectedOptions || []);
+      };
+
+
+      const [customSpecialization, setCustomSpecialization] = useState('');
+
+      const showCustomField = selectedOption.some(
+        (option) => option.value === "Overige (met invulveld)"
+      );
+    
+
+
 
 
     // Dropdown 2
 
-    const [subjectArea, setSubjectArea] = useState('');
+  //   const [subjectArea, setSubjectArea] = useState('');
   
-  const subjectOptions = [
-    "Basisonderwijs",
-    "Grafisch ontwerp",
-    "IT-training",
-    "Zakelijke dienstverlening",
-    "Retail / E-commerce",
-    "Overige (met invulveld)"
+  // const subjectOptions = [
+  //   "Basisonderwijs",
+  //   "Grafisch ontwerp",
+  //   "IT-training",
+  //   "Zakelijke dienstverlening",
+  //   "Retail / E-commerce",
+  //   "Overige (met invulveld)"
+  // ];
+
+
+  const doelgroeps = [
+    { value: "Basisonderwijs", label: "Basisonderwijs" },
+    { value: "Grafisch ontwerp", label: "Grafisch ontwerp" },
+    { value: "IT-training", label: "IT-training" },
+    { value: "Zakelijke dienstverlening", label: "Zakelijke dienstverlening" },
+    { value: "Retail / E-commerce", label: "Retail / E-commerce" },
+    { value: "Overige (met invulveld)", label: "Overige (met invulveld)" },
   ];
 
+  const [selectedDoelgroep, setSelectedDoelgroep] = useState([]);
+  
+  const handleDoelgroeps = (selectedOptions) => {
+    setSelectedDoelgroep(selectedOptions || []);
+  };
+
+  const [customDoelgroep, setCustomDoelgroep] = useState('');
+  const showCustomDoelgroep = selectedDoelgroep.some(
+    (option) => option.value === "Overige (met invulveld)"
+  );
+
+
+  
 
   // Dropdown 3
   
-  const [selectedHeb, setSelectedHeb] = useState('');
+  // const [selectedHeb, setSelectedHeb] = useState('');
   
-  const hebs = [
-    'Basisonderwijs',
-    'Grafisch ontwerp',
-    'IT-training',
-    'Zakelijke dienstverlening',
-    'Retail / E-commerce',
-    'Overige (met invulveld)',
+  // const hebs = [
+  //   'Basisonderwijs',
+  //   'Grafisch ontwerp ',
+  //   'IT-training',
+  //   'Zakelijke dienstverlening',
+  //   'Retail / E-commerce',
+  //   'Overige (met invulveld)',
+  // ];
+
+
+
+
+  const wensens = [
+    { value: "Basisonderwijs", label: "Basisonderwijs" },
+    { value: "Grafisch ontwerp", label: "Grafisch ontwerp" },
+    { value: "IT-training", label: "IT-training" },
+    { value: "Zakelijke dienstverlening", label: "Zakelijke dienstverlening" },
+    { value: "Retail / E-commerce", label: "Retail / E-commerce" },
+    { value: "Overige (met invulveld)", label: "Overige (met invulveld)" },
   ];
+
+  const [selectedWensen, setSelectedWensen] = useState([]);
+  
+  const handleWensen = (selectedOptions) => {
+    setSelectedWensen(selectedOptions || []);
+  };
+
+  const [customWensen, setCustomWensen] = useState('');
+  const showCustomWensen = selectedWensen.some(
+    (option) => option.value === "Overige (met invulveld)"
+  );
+
+
+
+
+
+
 
 
   // Dropdown 4
@@ -80,7 +158,7 @@ const SecondCardInputField = () => {
 
 
   //const [contentAccess, setContentAccess] = useState('');
-  const [seoControl, setSeoControl] = useState('');
+  
   
 
 
@@ -187,6 +265,9 @@ const fileInputRef = useRef(null);
   const [wantsDomain, setWantsDomain] = useState(null); // true / false
   const [domainName, setDomainName] = useState("");
 
+  const [seoControl, setSeoControl] = useState('');
+  const [seoControlName, setSeoControlName] = useState('');
+
 
   {/**Form validation Start */}
 
@@ -247,26 +328,15 @@ const fileInputRef = useRef(null);
     
         const name = form.name.value;
         const adres = form.adres.value;
-        const apptype = form.apptype.value;
+        //const apptype = form.apptype.value;
         const bestaande = form.bestaande.value;   
         const vakgebied = form.vakgebied.value;
-        const groep = form.groep.value;
-        const heb = form.heb.value;
-        const worden = form.worden.value;
+        //const groep = form.groep.value;
+        //const heb = form.heb.value;
+        //const worden = form.worden.value;
         const opmerkingen = form.opmerkingen.value;
         const file = form.file.value;
-        // const korte= form.korte.value;
-        // //const doelgroep = form.doelgroep.value;
-        // //const ages = form.ages.value;     
-
-        // const huidige = form.huidige.value;
-        // const fileth = form.fileth.value;
-        // const message = form.message.value;
-        // const gewenste = form.gewenste.value;
-        // const merkbericht = form.merkbericht.value;
-        // //const bereik  = form.bereik.value;
-        // //const voltoo = form.voltoo.value;
-
+        
         const radio1 = {
           wantsDomain,
           domainName: wantsDomain ? domainName : null,
@@ -274,6 +344,7 @@ const fileInputRef = useRef(null);
 
         const radio2 = {
           seoControl, // either "ja" or "nee"
+          seoControlName: seoControl ? seoControlName: null,
         };
 
         const check1 = {
@@ -291,25 +362,48 @@ const fileInputRef = useRef(null);
         };
 
 
-    
+        // Multple selctetion
+       const selectedOptionValue = selectedOption.map((option) => option.value);
+       const selectedDuelValue = selectedDoelgroep.map((option) => option.value);
+       const selectedWensenValue =selectedWensen.map((option) => option.value);
 
+       const dataOptions = {
+        Select: selectedOptionValue,
+        Overige: selectedOptionValue.includes("Overige (met invulveld)") ? customSpecialization : ''
+      };
+
+       const dataDuelgrouep = {
+        Select: selectedDuelValue,
+        Overige: selectedDuelValue.includes("Overige (met invulveld)") ? customDoelgroep : ''
+      };
+       
+       const dataWensen = {
+        Select:selectedWensenValue,
+        Overige: selectedWensenValue.includes("Overige (met invulveld)") ? customWensen : ''
+      };
+
+      
         
         const formValue = {
         name,
         adres,
-        apptype,
+        //apptype,
         bestaande,
         radio1,
         vakgebied,
         radio2,
         check1,
-        groep,
+        //groep,
         check2,
-        heb,
+        //heb,
         check3,
-        worden,
+       // worden,
         opmerkingen,
-        file
+        file,
+        // selectedOptionValue,
+        dataOptions ,
+        dataDuelgrouep,
+        dataWensen
 
         
       };
@@ -378,7 +472,7 @@ const fileInputRef = useRef(null);
                 name="name"
                 value={formData.name}
                 onChange={handleCardChange}
-                placeholder="Invul veld"
+                placeholder="Naam"
                 className="border border-gray-300 rounded-lg p-2 w-full focus:outline-none focus:ring-2 focus:ring-blue-500"
               />
                {errors.name && <p className="text-red-500 text-sm">{errors.name}</p>}
@@ -392,8 +486,8 @@ const fileInputRef = useRef(null);
                 name="adres"
                 value={formData.adres}
                 onChange={handleCardChange}
-                placeholder="(Invulveld)"
-                className="border border-gray-300 rounded-lg p-2 w-full focus:outline-none focus:ring-2 focus:ring-blue-500"
+                placeholder="Adres"
+                className="border border-gray-300 rounded-lg px-3 py-2 w-full focus:outline-none focus:ring-2 focus:ring-blue-500"
               />
               {errors.adres && <p className="text-red-500 text-sm">{errors.adres}</p>}
             </div>
@@ -402,7 +496,28 @@ const fileInputRef = useRef(null);
               <label className="block text-base font-plus-jakarta text-[rgba(38,50,56,1)] font-semibold mb-1">
                   Type app
                 </label>
-                <select
+
+                <Select
+                  isMulti
+                  options={options}
+                  value={selectedOption}
+                  onChange={handleOptions}
+                  placeholder="Select"
+                />
+
+              {showCustomField && (
+                <div>
+                  <input
+                    type="text"
+                    value={customSpecialization}
+                    onChange={(e) => setCustomSpecialization(e.target.value)}
+                    placeholder="Type App"
+                    className="w-full border border-gray-300 mt-2 rounded-md px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  />
+                </div>
+              )}
+
+                {/* <select
                   value={selectedOption}
                   name="apptype"
                   onChange={(e) => setSelectedOption(e.target.value)}
@@ -418,7 +533,7 @@ const fileInputRef = useRef(null);
                       {option}
                     </option>
                   ))}
-                </select>
+                </select> */}
               </div>
               
             
@@ -510,37 +625,7 @@ const fileInputRef = useRef(null);
 
               <div>
 
-              <label className="block text-base font-plus-jakarta text-[rgba(38,50,56,1)] font-semibold mb-1">
-              Wil je zelf makkelijk nieuwe content kunnen toevoegen?
-                </label>
-  
-              <div>
-
-        <div className="flex gap-6 text-gray-400">
-          <label className="inline-flex items-center">
-            <input
-              type="radio"
-              name="seoControl"
-              value="ja"
-              checked={seoControl === 'ja'}
-              onChange={(e) => setSeoControl(e.target.value)}
-              className="w-4 h-4 mr-2 border-gray-400 text-black focus:ring-0"
-            />
-            Ja
-          </label>
-          <label className="inline-flex items-center">
-            <input
-              type="radio"
-              name="seoControl"
-              value="nee"
-              checked={seoControl === 'nee'}
-              onChange={(e) => setSeoControl(e.target.value)}
-              className="w-4 h-4 mr-2 border-gray-400 text-black focus:ring-0"
-            />
-            Nee
-          </label>
-        </div>
-        </div>
+              
               </div>
                   
             </div>
@@ -624,7 +709,30 @@ const fileInputRef = useRef(null);
             <label className="block text-base font-plus-jakarta text-[rgba(38,50,56,1)] font-semibold mb-1">
             Wie is je doelgroep?*
                 </label>
-                <select
+
+              
+                <Select
+                  isMulti
+                  options={doelgroeps}
+                  value={selectedDoelgroep}
+                  onChange={handleDoelgroeps}
+                  placeholder="Select"
+                />
+
+              {showCustomDoelgroep && (
+                <div>
+                  <input
+                    type="text"
+                    value={customDoelgroep}
+                    onChange={(e) => setCustomDoelgroep(e.target.value)}
+                    placeholder="Type App"
+                    className="w-full border border-gray-300 mt-2 rounded-md px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  />
+                </div>
+              )}
+
+
+                {/* <select
                   value={subjectArea}
                   name="groep"
                   onChange={(e) => setSubjectArea(e.target.value)}
@@ -640,7 +748,7 @@ const fileInputRef = useRef(null);
                       {option}
                     </option>
                   ))}
-                </select>
+                </select> */}
                 </div>
 
                 <div>
@@ -688,7 +796,29 @@ const fileInputRef = useRef(null);
                 <label className="block text-base font-plus-jakarta text-[rgba(38,50,56,1)] font-semibold mb-1">
                 Heb je specifieke wensen voor UI/UX design?
                 </label>
-                <select
+
+                <Select
+                  isMulti
+                  options={wensens}
+                  value={selectedWensen}
+                  onChange={handleWensen}
+                  placeholder="Select"
+                />
+
+              {showCustomWensen && (
+                <div>
+                  <input
+                    type="text"
+                    value={customWensen}
+                    onChange={(e) => setCustomWensen(e.target.value)}
+                    placeholder="Type App"
+                    className="w-full border border-gray-300 mt-2 rounded-md px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  />
+                </div>
+              )}
+
+
+                {/* <select
                   value={selectedHeb}
                   name="heb"
                   onChange={(e) => setSelectedHeb(e.target.value)}
@@ -704,7 +834,7 @@ const fileInputRef = useRef(null);
                       {option}
                     </option>
                   ))}
-                </select>
+                </select> */}
                 </div>
 
 
@@ -712,7 +842,7 @@ const fileInputRef = useRef(null);
         <h2 className="text-3xl text-[rgba(64,123,255,1)] font-semibold font-plus-jakarta md:mt-8 mt-4 mb-4">
           Inhoud & Pagina’s
         </h2>
-        <h3 className="text-base font-plus-jakarta text-[rgba(38,50,56,1)] font-semibold mb-4">
+        {/* <h3 className="text-base font-plus-jakarta text-[rgba(38,50,56,1)] font-semibold mb-4">
           Welke pagina’s wil je?*
         </h3>
         <div className="flex flex-wrap gap-6 text-gray-400">
@@ -745,11 +875,57 @@ const fileInputRef = useRef(null);
               onChange={(e) => setCustomPage(e.target.value)}
             />
           )}
-        </div>
+        </div> */}
         
       </div>
 
-                <div>
+
+      <label className="block text-base font-plus-jakarta text-[rgba(38,50,56,1)] font-semibold mb-1">
+      Heb je de teksten en afbeeldingen al of moeten die gemaakt worden?*
+                </label>
+  
+              <div>
+
+        <div className="">
+        <div className="flex gap-6 text-gray-400">
+          <label className="inline-flex items-center">
+            <input
+              type="radio"
+              name="seoControl"
+              value="ja"
+              // checked={seoControl === 'ja'}
+              onChange={(e) => setSeoControl(true)}
+              className="w-4 h-4 mr-2 border-gray-400 text-black focus:ring-0"
+            />
+            Ja
+          </label>
+          <label className="inline-flex items-center">
+            <input
+              type="radio"
+              name="seoControl"
+              value="nee"
+              // checked={seoControl === 'nee'}
+              onChange={(e) => setSeoControl(false)}
+              className="w-4 h-4 mr-2 border-gray-400 text-black focus:ring-0"
+            />
+            Nee
+          </label>
+        </div>
+        {seoControl && (
+                <div className="mt-4 mb-4">
+                  <input
+                    type="text"
+                    placeholder="Invul veld"
+                    value={seoControlName}
+                    onChange={(e) => setSeoControlName(e.target.value)}
+                    className="border border-gray-300 rounded-lg p-2 w-full focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  />
+                </div>
+              )}
+        </div>
+        </div>
+
+                {/* <div>
             <label className="block text-base font-plus-jakarta text-[rgba(38,50,56,1)] font-semibold mb-1">
             Heb je de teksten en afbeeldingen al of moeten die gemaakt worden?*
                 </label>
@@ -770,7 +946,7 @@ const fileInputRef = useRef(null);
                     </option>
                   ))}
                 </select>
-                </div>
+                </div> */}
 
 
                 <div>
@@ -832,7 +1008,7 @@ const fileInputRef = useRef(null);
 
         <div className="flex justify-center items-center md:my-8 my-4 ">
           <button disabled={!isFormValid} 
-          className="btn hover:bg-[#468AFFE6] bg-[#468AFF]  md:px-32 px-36 py-2 text-[#FFFFFF] text-lg md:text-md lg:text-xl">
+          className="btn hover:bg-[#468AFFE6] bg-[#468AFF]  md:px-32 px-36 py-3 text-[#FFFFFF] rounded-xl text-lg md:text-md lg:text-xl">
           Vraag offerte aan
           </button>
         </div>

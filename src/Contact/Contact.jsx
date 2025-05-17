@@ -92,13 +92,8 @@ const Contact = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (isFormValid) {
-      alert('Form submitted successfully!');
-  
-      const form = e.target;
 
-      
-      emailjs
+    emailjs
       .sendForm('service_adb605b','template_sks4f0o', form.current, {
         publicKey: 'zVpdm4YG_4bymkiyw',
       })
@@ -110,6 +105,11 @@ const Contact = () => {
           console.log('FAILED...', error.text);
         }
       )
+      
+    if (isFormValid) {
+      alert('Form submitted successfully!');
+  
+      const form = e.target;
   
       const from_name = form.from_name.value;
       const name = form.name.value;
