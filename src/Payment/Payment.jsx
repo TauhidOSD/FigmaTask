@@ -233,7 +233,7 @@ const Payment = () => {
 
          <hr />
 
-          <div className="flex justify-between items-center mb-4">
+          <div className="flex justify-between items-center mb-2">
             <label className="inline-flex items-center">
               <input
                 type="checkbox"
@@ -243,7 +243,7 @@ const Payment = () => {
               />
               One time payment
             </label>
-            <p >{order_summary.tax.monthly_amount}</p>
+            <p ><span className="font-bold">{order_summary.tax.monthly_amount}</span> <br /> <span>After first year</span> </p>
           </div>
 
           <hr />

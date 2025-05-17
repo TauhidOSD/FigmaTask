@@ -16,13 +16,13 @@
       ],
       "buttonText": "Kies thema",
           "order_summary": {
-        "monthly_price": "49,99 €/Month",
+        "monthly_price": "49,99 €/Month ",
         "duration": "12 months",
         "tax_included": true,
         "one_time_payment": true,
         "tax": {
           "rate": "21%",
-          "monthly_amount": "25 €/Month"
+          "monthly_amount": "25 €/Month "
         },
         "total": "500 €/Month"
       }
@@ -48,7 +48,7 @@
       "one_time_payment": true,
       "tax": {
         "rate": "21%",
-        "monthly_amount": "25 €/Month"
+        "monthly_amount": "25 €/Month "
       },
       "total": "500 €/Month"
     }
@@ -75,7 +75,7 @@
     "one_time_payment": true,
     "tax": {
       "rate": "21%",
-      "monthly_amount": "25 €/Month"
+      "monthly_amount": "25 €/Month "
     },
     "total": "500 €/Month"
   }
