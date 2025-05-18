@@ -222,10 +222,18 @@ const Payment = () => {
 
           <div className="flex justify-end">
          <div>
-           <p className="text-xl font-bold">{order_summary.monthly_price}</p>
+           
            <div className="flex gap-2">
-            {!isOneTime && <p>For {order_summary.duration}</p>} 
-            <p>tax included</p>
+            {!isOneTime && <p>
+              <p className="text-xl font-bold">{order_summary.monthly_price}</p>
+              <div className="flex gap-2">
+              <p>For {order_summary.duration}</p>
+              <p>tax included</p>
+              </div>
+              </p>
+              
+              } 
+            
             </div>
           
         </div>
