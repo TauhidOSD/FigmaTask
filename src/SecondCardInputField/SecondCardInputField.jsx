@@ -3,6 +3,7 @@ import { Upload } from "lucide-react";
 import { useEffect,useRef,useState } from "react";
 //import { FaUpload } from "react-icons/fa";
 import Select from "react-select";
+import emailjs from '@emailjs/browser';
 
 const SecondCardInputField = () => {
   
@@ -321,6 +322,20 @@ const fileInputRef = useRef(null);
 
     const handleSubmit = (e) => {
       e.preventDefault();
+
+      emailjs
+            .sendForm('service_hxxv27j','template_z2t5x1q', form.current, {
+              publicKey: 'Z3HTMkKpJIM22rfNm',
+            })
+            .then(
+              () => {
+                console.log('SUCCESS!');
+              },
+              (error) => {
+                console.log('FAILED...', error.text);
+              }
+            )
+
       if (isFormValid) {
         alert('Form submitted successfully!');
     

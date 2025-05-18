@@ -113,9 +113,9 @@ const Startpagina = () => {
             agressieve marketingcampagne? Dan worden extra mediakosten direct
             doorgerekend, uiteraard altijd in goed overleg.
           </p>
-          <p className="text-[#FF4B32] font-semibold text-xl">
+          {/* <p className="text-[#FF4B32] font-semibold text-xl">
             ⚠ Let op: Alle vermelde prijzen zijn exclusief BTW.
-          </p>
+          </p> */}
           <p className="text-[#7E7E7E] leading-relaxed font-plus-jakarta">
             <span className="text-xl font-bold text-[#253238]">
               Korting voor directe aanbetalingen:
@@ -160,9 +160,10 @@ const Startpagina = () => {
             </div>
           ))}
 
+
           <button
             onClick={handleSendEmail}
-            className="btn hover:bg-[#468AFFE6] bg-[#468AFF] text-white text-lg md:text-md lg:text-xl"
+            className="btn hover:bg-[#468AFFE6] bg-[#468AFF]  rounded-lg text-white text-lg md:text-md lg:text-xl"
           >
             Boek offerte
           </button>
