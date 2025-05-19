@@ -611,7 +611,7 @@ const PrijzenBranding = () => {
             <div className="grid grid-cols-2 ">
             <div>
               <label className="block text-[rgba(38,50,56,1)] font-semibold font-plus-jakarta text-[16px] mb-1">
-                Inspiratie of concurrenten
+              Inspiratie
               </label>
               <input
                 type="text"
@@ -917,7 +917,7 @@ const PrijzenBranding = () => {
                                 options={begrotingOptions}
                                 value={selectedBegroting}
                                 onChange={handleBegroting}
-                                placeholder="Naam"
+                                placeholder="Uitkiezen"
                               />
                 {/* <select
                   value={begroting}

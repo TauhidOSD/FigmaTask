@@ -218,7 +218,7 @@ const Payment = () => {
         <h2 className="text-2xl font-bold mt-4">{title}</h2>
 
         <div className="mt-6 p-4 rounded-md bg-white text-black">
-          <h3 className="font-semibold text-lg mb-2">Order Summary</h3>
+          <h3 className="font-semibold text-lg mb-2">Bestellingsoverzicht</h3>
 
           <div className="flex justify-end">
          <div>
@@ -227,8 +227,8 @@ const Payment = () => {
             {!isOneTime && <p>
               <p className="text-xl font-bold">{order_summary.monthly_price}</p>
               <div className="flex gap-2">
-              <p>For {order_summary.duration}</p>
-              <p>tax included</p>
+              <p>Voor {order_summary.duration}</p>
+              <p>inc. btw</p>
               </div>
               </p>
               
@@ -249,20 +249,20 @@ const Payment = () => {
                 onChange={() => setIsOneTime(!isOneTime)}
                 className="mr-2"
               />
-              One time payment
+              In één keer betalen
             </label>
-            <p ><span className="font-bold">{order_summary.tax.monthly_amount}</span> <br /> <span>After first year</span> </p>
+            <p ><span className="font-bold">{order_summary.tax.monthly_amount}</span> <br /> <span>Na het eerste jaar</span> </p>
           </div>
 
           <hr />
           <div className="flex justify-between items-center mb-4 mt-2">
-            <p>Tax</p>
+            <p>Btw</p>
             <p>{order_summary.tax.rate}</p>
           </div>
 
           <hr />
           <div className="flex justify-between items-center mb-4 mt-2">
-            <p>Total</p>
+            <p>Totaal</p>
             <p className="text-xl font-bold">
               {isOneTime ? "500 €" : order_summary.monthly_price}
             </p>
