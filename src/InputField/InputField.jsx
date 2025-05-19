@@ -704,7 +704,7 @@ const InputField = () => {
                     name="inspiratie"
                     value={logo}
                     onChange={(e) => setLogo(e.target.value)}
-                    placeholder="(geef hier je gewenste kleuren en/of fonts opp)"
+                    placeholder="Geef hier je gewenste kleuren en/of fonts op"
                     className="border border-gray-300 rounded-lg p-2 w-full focus:outline-none focus:ring-2 focus:ring-blue-500"
                   />
                 </div>
@@ -825,7 +825,7 @@ const InputField = () => {
                     name="inspiratie"
                     value={wensen}
                     onChange={(e) => setWensen(e.target.value)}
-                    placeholder="(Vrij veld, optioneel)"
+                    placeholder="Vrij veld,optioneel"
                     className="border border-gray-300 rounded-lg p-2 w-full focus:outline-none focus:ring-2 focus:ring-blue-500"
                   />
                 </div>
