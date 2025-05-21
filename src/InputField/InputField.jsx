@@ -884,7 +884,11 @@ const InputField = () => {
               // type="button"
               type="submit"
               disabled={!isFormValid} // Next button: navigate to the payment route
-              className="flex  items-center gap-2 px-4 py-2 bg-[#468AFF] text-white font-semibold rounded-lg focus:outline-none hover:bg-blue-500"
+              className={`flex items-center gap-2 px-4 py-2 text-white font-semibold rounded-lg focus:outline-none transition 
+                ${isFormValid 
+                  ? 'bg-blue-500 hover:bg-blue-600 cursor-pointer' 
+                  : 'bg-gray-400 cursor-not-allowed'
+                }`}
             >
               Volgende
               <FaArrowRight />

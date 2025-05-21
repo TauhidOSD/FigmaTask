@@ -48,10 +48,10 @@ const Blog = () => {
                       Appdevelopment
                     </button>
                   </div>
-                  <h2 className="text-xl font-bold font-plus-jakarta text-[18px]  text-[#263238] mb-2">
+                  <h2 className="text-xl font-bold font-plus-jakarta text-[18px]  text-[#263238] mt-14  mb-2">
                     Van Idee naar Realiteit: Klantgerichte App-ontwikkeling
                   </h2>
-                  <p className="text-[#7E7E7E] font-plus-jakarta text-[14px] mb-4 line-clamp-3">
+                  <p className="text-[#7E7E7E] font-plus-jakarta text-[14px] mb-4 mt-2 line-clamp-3">
                     Een succesvolle app begint met een slim concept, maar de echte
                     uitdaging ligt in de uitvoering. Wij ontwikkelen op maat gemaakte
                     applicaties die perfect aansluiten bij de wensen van onze klanten
@@ -92,10 +92,10 @@ const Blog = () => {
                     </button>
                   </div>
       
-                  <h2 className="text-xl font-bold font-plus-jakarta text-[18px]  text-[#263238] mb-2">
+                  <h2 className="text-xl font-bold font-plus-jakarta text-[18px]  text-[#263238] mt-5 mb-2">
                     Branding in de Digitale Wereld: Bouwen aan een Sterk Merk
                   </h2>
-                  <p className="text-[#7E7E7E] font-plus-jakarta text-[14px] mb-4 line-clamp-3">
+                  <p className="text-[#7E7E7E] font-plus-jakarta text-[14px] mb-4 mt-2 line-clamp-3">
                     In een tijdperk vol digitale prikkels is een krachtige
                     merkidentiteit geen luxe, maar een noodzaak. Ontdek hoe
                     strategische branding jouw merk herkenbaar en onvergetelijk maakt.
@@ -131,10 +131,10 @@ const Blog = () => {
                       Marketing
                     </button>
                   </div>
-                  <h2 className="text-xl font-bold font-plus-jakarta text-[18px]  text-[#263238] mb-2">
+                  <h2 className="text-xl font-bold font-plus-jakarta text-[18px]  text-[#263238] mt-5 mb-2">
                     De Toekomst van Mobiele Apps: Trends die je Niet Mag Missen
                   </h2>
-                  <p className="text-[#7E7E7E] font-plus-jakarta text-[14px] line-clamp-3">
+                  <p className="text-[#7E7E7E] font-plus-jakarta text-[14px] mb-4 line-clamp-3">
                     Technologie verandert razendsnel. Welke ontwikkelingen zijn
                     cruciaal om als bedrijf relevant te blijven? Wij delen inzichten
                     en strategieën om mee te groeien met de markt.
@@ -160,7 +160,7 @@ const Blog = () => {
                       marketing
                     </button>
                   </div>
-                  <h2 className="text-xl font-bold font-plus-jakarta text-[18px]  text-[#263238] mb-2">
+                  <h2 className="text-xl font-bold font-plus-jakarta text-[18px]  text-[#263238] mt-14 mb-2">
                     Meer dan Alleen een App: Hoe je jouw Product naar de Markt Brengt
                   </h2>
                   <p className="text-[#7E7E7E] font-plus-jakarta text-[14px] mb-4 line-clamp-3">
@@ -192,10 +192,10 @@ const Blog = () => {
                       marketing
                     </button>
                   </div>
-                  <h2 className="text-xl font-bold font-plus-jakarta text-[18px]  text-[#263238] mb-2">
+                  <h2 className="text-xl font-bold font-plus-jakarta text-[18px]  text-[#263238] mt-14 mb-2">
                     SEO: De Sleutel tot Online Succes
                   </h2>
-                  <p className="text-[#7E7E7E] font-plus-jakarta text-[14px] mb-4 line-clamp-3">
+                  <p className="text-[#7E7E7E] font-plus-jakarta text-[14px] mb-11 line-clamp-3">
                     Zichtbaarheid in zoekmachines bepaalt of jouw bedrijf gevonden
                     wordt of verdwijnt in de massa. Leer hoe effectieve SEO-technieken
                     jouw online aanwezigheid versterken.
@@ -227,10 +227,10 @@ const Blog = () => {
                       Branding
                     </button>
                   </div>
-                  <h2 className="text-xl font-bold font-plus-jakarta text-[18px]  text-[#263238] mb-2">
+                  <h2 className="text-xl font-bold font-plus-jakarta text-[18px]  text-[#263238] mt-4 mb-2">
                     Van Visie naar Realiteit: De Kunst van een Sterk Merk
                   </h2>
-                  <p className="text-[#7E7E7E] font-plus-jakarta text-[14px] mb-4 line-clamp-3">
+                  <p className="text-[#7E7E7E] font-plus-jakarta text-[14px] mb-12 line-clamp-3">
                     Een merk is meer dan een logo; het is een visie die tot leven komt
                     met de juiste strategie en experts. Internationale bedrijven die
                     groot denken, moeten ook aandacht hebben voor de kleinste details
