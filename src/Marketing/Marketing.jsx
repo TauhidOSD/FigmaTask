@@ -12,6 +12,7 @@ import meet from "../assets/meet.jpg";
 import tik from "../assets/tik.png"
 import das from "../assets/das.png"
 import { useNavigate } from "react-router-dom";
+import { IoCheckmarkCircle } from "react-icons/io5";
 
 const Marketing = () => {
 
@@ -53,7 +54,7 @@ const Marketing = () => {
             {/* <img className="-mt-6 w-40 lg:w-64" src="/article/Heading 2.png" alt=""></img>*/}
           </div>
 
-          <p className="text-left text-base lg:text-lg text-slate-500">
+          <p className="text-left text-base lg:text-lg text-slate-500 mb-5">
             Creëer een krachtige marketingstrategie voor uw bedrijf Bij
             Younitech helpen we bedrijven om op te vallen in een steeds
             veranderend digitaal landschap. Wij combineren innovatieve
@@ -61,38 +62,38 @@ const Marketing = () => {
             maken en uw doelgroep te bereiken.
           </p>
 
-          <div className="flex gap-5 items-center mt-6">
-            <img src={tik} alt="" />
-            <h1 className="text-[rgba(38,50,56,1) text-[18px] font-medium">
+          <div className="flex gap-5 items-center ">
+          <IoCheckmarkCircle className="text-teal-500 text-3xl" />
+            <h1 className="text-[rgba(38,50,56,1) text-[22px] font-medium">
               Data-gedreven strategieën
             </h1>
           </div>
 
           <div className="flex gap-5 items-center">
-            <img src={tik} alt="" />
-            <h1 className="text-[rgba(38,50,56,1) text-[18px] font-medium">
+          <IoCheckmarkCircle className="text-teal-500 text-3xl" />
+            <h1 className="text-[rgba(38,50,56,1) text-[22px] font-medium">
               Multichannel campagnes
             </h1>
           </div>
 
           <div className="flex gap-5 items-center">
-            <img src={tik} alt="" />
-            <h1 className="text-[rgba(38,50,56,1) text-[18px] font-medium">
+          <IoCheckmarkCircle className="text-teal-500 text-3xl" />
+            <h1 className="text-[rgba(38,50,56,1) text-[22px] font-medium">
               Contentcreatie
             </h1>
           </div>
 
           <div className="flex gap-5 items-center">
-            <img src={tik} alt="" />
-            <h1 className="text-[rgba(38,50,56,1) text-[18px] font-medium">
+          <IoCheckmarkCircle className="text-teal-500 text-3xl"/>
+            <h1 className="text-[rgba(38,50,56,1) text-[22px] font-medium">
               Resultaatgericht
             </h1>
           </div>
 
           <div className="mt-5 mr-6">
             <button
-              onClick={() => navigate("/startpagina")}
-              className="btn btn-sm hover:bg-[#468AFFE6] bg-[rgba(70,138,255,1)] text-slate-100 w-40"
+              onClick={() => navigate("/marketingprijsplannen")}
+              className="btn btn-sm hover:bg-[#468AFFE6]  text-sm p-5 bg-[rgba(70,138,255,1)] rounded-xl text-slate-100 w-40"
             >
               Bereik jouw klant
             </button>
@@ -245,7 +246,7 @@ const Marketing = () => {
           <p className="mb-7 font-plus-jakarta font-medium text-[20px] text-slate-600">
             U heeft de ideeën, wij hebben de tools
           </p>
-          <button  onClick={() => navigate("/startpagina")} className=" btn-info relative text-white btn bg-[#468AFF] px-6 py-2 sm:px-8 sm:py-3 rounded-lg shadow-lg transition-all duration-300 ease-in-out hover:bg-[#3570D4] hover:scale-105 active:scale-95 focus:outline-none text-sm sm:text-base ">
+          <button  onClick={() => navigate("/marketingprijsplannen")} className=" btn-info relative text-white btn bg-[#468AFF] px-6 py-2 sm:px-8 sm:py-3 rounded-lg shadow-lg transition-all duration-300 ease-in-out hover:bg-[#3570D4] hover:scale-105 active:scale-95 focus:outline-none text-sm sm:text-base ">
             Aan de Slag
           </button>
         </div>

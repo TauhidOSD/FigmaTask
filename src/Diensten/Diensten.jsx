@@ -142,7 +142,7 @@ const Diensten = () => {
               Onze brandingoplossingen
             </h1>
             <div className="flex items-center gap-4">
-              <button onClick={() => navigate("/PrijzenBranding")} className="px-4 py-2 flex justify-center items-center gap-2 bg-blue-500 text-white font-semibold rounded-lg shadow-md hover:bg-blue-600">
+              <button onClick={() => navigate("/brandingprijsplannen")} className="px-4 py-2 flex justify-center items-center gap-2 bg-blue-500 text-white font-semibold rounded-lg shadow-md hover:bg-blue-600">
               Boek een offerte{" "}
                 <span className="text-xl">
                   <GoArrowRight />
@@ -266,7 +266,7 @@ const Diensten = () => {
           Wij ondersteunen een breed scala aan bedrijven. Geef je merk de boost die het verdient!
           </p>
           <button 
-          onClick={() => navigate("/portfolio")}
+          onClick={() => navigate("/brandingprijsplannen")}
           className="bg-[#468AFF] text-white py-2 px-6 rounded-md hover:bg-blue-600 transition duration-300">
           Boek nu je offerte!
           </button>

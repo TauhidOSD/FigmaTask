@@ -408,7 +408,7 @@ const Appmarket = () => {
 
           <div className=" flex justify-start">
             {" "}
-            <button onClick={() => navigate("/PrijzenMarkeing")} className="px-4 py-2 rounded-lg bg-[rgba(70,138,255,1)] text-[16px] text-[rgba(255,255,255,1)] font-plus-jakarta">
+            <button onClick={() => navigate("/appontwikkelingprijsplannen")} className="px-4 py-2 rounded-lg bg-[rgba(70,138,255,1)] text-[16px] text-[rgba(255,255,255,1)] font-plus-jakarta">
               Boek nu je offerte!
             </button>
           </div>
