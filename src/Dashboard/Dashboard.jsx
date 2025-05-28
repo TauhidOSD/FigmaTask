@@ -1,33 +1,3 @@
-// import { useNavigate } from 'react-router-dom';
-
-// const Dashboard = () => {
-
-//         const navigate = useNavigate();
-
-//         const handleLogout = () => {
-//           localStorage.removeItem('auth');
-//           navigate('/');
-//         };
-
-//     return (
-//         <div>
-
-// <div className="p-10 text-center">
-//       <h1 className="text-3xl font-bold mb-4">Welcome to Admin Dashboard</h1>
-//       <button
-//         onClick={handleLogout}
-//         className="bg-red-500 text-white px-4 py-2 rounded hover:bg-red-600"
-//       >
-//         Logout
-//       </button>
-//     </div>
-
-//         </div>
-//     );
-// };
-
-// export default Dashboard;
-
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
@@ -41,7 +11,7 @@ const tableConfig = {
 };
 
 const Dashboard = () => {
-  const [activeTable, setActiveTable] = useState("Users");
+  const [activeTable, setActiveTable] = useState("Applicatie_Ontwikkeling");
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(true);
   const navigate = useNavigate();
@@ -68,6 +38,8 @@ const Dashboard = () => {
     navigate("/");
     localStorage.removeItem("auth");
   };
+
+  console.log(data);
 
   return (
     <div className="flex min-h-screen  text-black bg-gray-100">
@@ -109,12 +81,14 @@ const Dashboard = () => {
               <table className="min-w-full bg-white border-collapse">
                 <thead className="bg-gray-200 sticky top-0 z-10">
                   <tr>
-                    {Object.keys(data[0]).map((key) => (
+                    {Object.keys(data[0]).map((key, i) => (
                       <th
                         key={key}
                         className="p-2 text-left capitalize border-b"
                       >
-                        {key}
+                        {i === 0 && key === "_id"
+                          ? "SL"
+                          : key.replace(/_/g, " ")}
                       </th>
                     ))}
                   </tr>
@@ -122,13 +96,19 @@ const Dashboard = () => {
                 <tbody>
                   {data.map((item, index) => (
                     <tr key={index} className="border-t">
-                      {Object.values(item).map((val, i) => (
-                        <td key={i} className="p-2 text-sm border-b">
-                          {Array.isArray(val)
-                            ? val.join(", ")
-                            : val?.toString()}
-                        </td>
-                      ))}
+                      {/* SL number */}
+                      <td className="p-2 text-sm border-b">{index + 1}</td>
+
+                      {/* All other fields except _id */}
+                      {Object.entries(item)
+                        .filter(([key]) => key !== "_id")
+                        .map(([key, val], i) => (
+                          <td key={i} className="p-2 text-sm border-b">
+                            {Array.isArray(val)
+                              ? val.join(", ")
+                              : val?.toString()}
+                          </td>
+                        ))}
                     </tr>
                   ))}
                 </tbody>
