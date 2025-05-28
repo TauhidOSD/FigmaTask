@@ -16,7 +16,7 @@ const Footer = () => {
         {/* Company Info */}
         <div className="space-y-5 w-full md:w-1/2">
           <img src={logo} alt="Logo" className="mb-6 w-32 sm:w-40" />
-          <p className="text-gray-900 text-sm leading-relaxed">
+          <p className="font-plus-jakarta text-[#263238] text-[16px]  leading-relaxed">
             Younitech is een softwarebedrijf gespecialiseerd in
             app-ontwikkeling, marketing en branding. Het bedrijf onderscheidt
             zich door oprechte en eerlijke bedrijfsvoering, met aandacht voor
@@ -55,50 +55,50 @@ const Footer = () => {
         {/* Useful Links */}
         <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 gap-10 sm:gap-16 mt-10 md:mt-0">
           <div className="space-y-5">
-            <h3 className="text-lg font-semibold">Diensten</h3>
+            <h3 className="font-bold font-plus-jakarta text-[16px] text-[#263238] ">Diensten</h3>
             <ul className="space-y-4 text-gray-900 text-sm">
-              <li className="hover:text-blue-600 cursor-pointer transition-colors">
-                <Link to="/appmarket">App ontwikkeling</Link>
+              <li className="hover:text-blue-600 cursor-pointer transition-colors font-plus-jakarta text-[#263238] ">
+                <Link to="/appontwikkeling">App ontwikkeling</Link>
               </li>
-              <li className="hover:text-blue-600 cursor-pointer transition-colors">
-                <Link to="/Diensten">Branding</Link>
+              <li className="hover:text-blue-600 cursor-pointer transition-colors font-plus-jakarta text-[#263238] ">
+                <Link to="/brandingdiensten">Branding</Link>
               </li>
-              <li className="hover:text-blue-600 cursor-pointer transition-colors">
-                <Link to="/marketing">Marketingsdiensten</Link>
+              <li className="hover:text-blue-600 cursor-pointer transition-colors font-plus-jakarta text-[#263238] ">
+                <Link to="/marketingontwikkeling">Marketingsdiensten</Link>
               </li>
-              <li className="hover:text-blue-600 cursor-pointer transition-colors">
-                <Link to="/prijzen">Website builder</Link>
+              <li className="hover:text-blue-600 cursor-pointer transition-colors font-plus-jakarta text-[#263238] ">
+                <Link to="/websitebuilder">Website builder</Link>
               </li>
             </ul>
           </div>
 
           <div className="space-y-5">
-            <h3 className="text-lg font-semibold">Prijzen</h3>
+            <h3 className="font-bold font-plus-jakarta text-[16px] text-[#263238] ">Prijzen</h3>
             <ul className="space-y-4 text-gray-900 text-sm">
-            <li className="hover:text-blue-600 cursor-pointer transition-colors">
-                <Link to="/startpagina">App ontwikkeling</Link>
+            <li className="hover:text-blue-600 cursor-pointer transition-colors font-plus-jakarta text-[#263238]  ">
+                <Link to="/appontwikkelingprijsplannen">App ontwikkeling</Link>
               </li>
-              <li className="hover:text-blue-600 cursor-pointer transition-colors">
-                <Link to="/PrijzenBranding">Branding</Link>
+              <li className="hover:text-blue-600 cursor-pointer transition-colors font-plus-jakarta text-[#263238] ">
+                <Link to="/brandingprijsplannen">Branding</Link>
               </li>
-              <li className="hover:text-blue-600 cursor-pointer transition-colors">
-                <Link to="/PrijzenMarkeing">Marketingsdiensten</Link>
+              <li className="hover:text-blue-600 cursor-pointer transition-colors font-plus-jakarta text-[#263238] ">
+                <Link to="/marketingprijsplannen">Marketingsdiensten</Link>
               </li>
-              <li className="hover:text-blue-600 cursor-pointer transition-colors">
-                <Link to="/prijzen">Website builder</Link>
+              <li className="hover:text-blue-600 cursor-pointer transition-colors font-plus-jakarta text-[#263238] ">
+                <Link to="/websitebuilder">Website builder</Link>
               </li>
             </ul>
           </div>
 
           <div className="space-y-5 ">
-            <h3 className="text-lg font-semibold">Over ons</h3>
+            <h3 className=" hover:text-blue-600 cursor-pointer transition-colors font-bold font-plus-jakarta text-[16px] text-[#263238]"><Link to="/overons">Over ons</Link> </h3>
             <ul className="space-y-4 text-gray-900 text-sm">
-              <li className="hover:text-blue-600 cursor-pointer transition-colors font-bold">
-              <Link to="/Veelgestelde"> FAQ</Link>
+              <li className="hover:text-blue-600 cursor-pointer transition-colors font-bold font-plus-jakarta text-[16px] text-[#263238]">
+              <Link to="/veelgesteldevragen"> FAQ</Link>
                
               </li>
-              <li className="hover:text-blue-600 cursor-pointer transition-colors font-bold">
-              <Link to="/blog"> Portfolio</Link>
+              <li className="hover:text-blue-600 cursor-pointer transition-colors font-bold font-plus-jakarta text-[16px] text-[#263238] ">
+              <Link to="/portfolio"> Portfolio</Link>
                 
               </li>
             </ul>

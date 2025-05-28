@@ -1,46 +1,56 @@
-import { createRoot } from 'react-dom/client';
-import './index.css';
-import App from './App.jsx';
+import { createRoot } from "react-dom/client";
+import App from "./App.jsx";
+import "./index.css";
 
-import {
-  createBrowserRouter,
-  RouterProvider,
-} from "react-router-dom";
 import { Elements } from "@stripe/react-stripe-js";
 import { loadStripe } from "@stripe/stripe-js";
-import Banner from './Banner/Banner.jsx';
-import Home from './Home/Home.jsx';
-import Navbar from './Navbar/Navbar.jsx';
-import Footer from './Footer/Footer.jsx';
-import Onze from './Onze/Onze.jsx';
-import Waaram from './Waarom/Waaram.jsx';
-import Prest from './Prest/Prest.jsx';
-import Card from './Card/Card.jsx';
-import Startpagina from './Startpagina/startpagina.jsx';
+import {
+  createBrowserRouter,
+  Navigate,
+  RouterProvider,
+} from "react-router-dom";
+import Banner from "./Banner/Banner.jsx";
+import Card from "./Card/Card.jsx";
+import Footer from "./Footer/Footer.jsx";
+import Home from "./Home/Home.jsx";
+import Navbar from "./Navbar/Navbar.jsx";
+import Onze from "./Onze/Onze.jsx";
+import Prest from "./Prest/Prest.jsx";
+import Startpagina from "./Startpagina/startpagina.jsx";
+import Waaram from "./Waarom/Waaram.jsx";
 
-import Veelgestelde from './Veelgestelde/Veelgestelde.jsx';
-import Diensten from './Diensten/Diensten.jsx';
-import Prijzen from './Prijzen/Prijzen.jsx';
-import CardsComponent from './CardsComponent/CardsComponent.jsx';
-import InputField from './InputField/InputField.jsx';
-import Payment from './Payment/Payment.jsx';
-import { Toaster } from 'react-hot-toast'; // Toast for notifications
-import Contact from './Contact/Contact.jsx';
-import Appmarket from './Appmarket/Appmarket.jsx';
-import Marketing from './Marketing/Marketing.jsx';
-import Blog from './Blog/Blog.jsx';
-import Henna from './Henna/Henna.jsx';
-import Overons from './Overons/overons.jsx';
-import PrijzenBranding from './PrijzenBranding/PrijzenBranding.jsx';
-import PrijzenMarketing from './PrijzenMarketing/PrijzenMarketing.jsx';
-import ShiftMode from './ShiftMode/ShiftMode.jsx';
-import Finguide from './Finguide/Finguide.jsx';
-import Fluentlee from './Fluentlee/Fluentlee.jsx';
-import Ahoyy from './Ahoyy/Ahoyy.jsx';
-import Sarbuh from './Sarbuh/Sarbuh.jsx';
+import { Toaster } from "react-hot-toast"; // Toast for notifications
+import AdminLogin from "./AdminLogin/AdminLogin.jsx";
+import Ahoyy from "./Ahoyy/Ahoyy.jsx";
+import Appmarket from "./Appmarket/Appmarket.jsx";
+import Blog from "./Blog/Blog.jsx";
+import CardsComponent from "./CardsComponent/CardsComponent.jsx";
+import Contact from "./Contact/Contact.jsx";
+import Dashboard from "./Dashboard/Dashboard.jsx";
+import Diensten from "./Diensten/Diensten.jsx";
+import Finguide from "./Finguide/Finguide.jsx";
+import Fluentlee from "./Fluentlee/Fluentlee.jsx";
+import Henna from "./Henna/Henna.jsx";
+import InputField from "./InputField/InputField.jsx";
+import Marketing from "./Marketing/Marketing.jsx";
+import Overons from "./Overons/overons.jsx";
+import Payment from "./Payment/Payment.jsx";
+import Prijzen from "./Prijzen/Prijzen.jsx";
+import PrijzenBranding from "./PrijzenBranding/PrijzenBranding.jsx";
+import PrijzenMarketing from "./PrijzenMarketing/PrijzenMarketing.jsx";
+import Sarbuh from "./Sarbuh/Sarbuh.jsx";
+import SecondCardInputField from "./SecondCardInputField/SecondCardInputField.jsx";
+import ShiftMode from "./ShiftMode/ShiftMode.jsx";
+import StripePayment from "./StripePayment/StripePayment.jsx";
+import Veelgestelde from "./Veelgestelde/Veelgestelde.jsx";
 
 // Load Stripe
 const stripePromise = loadStripe("your-public-stripe-key");
+
+const PrivateRoute = ({ children }) => {
+  const isAuthenticated = localStorage.getItem("auth"); // Or use your own logic
+  return isAuthenticated ? children : <Navigate to="/admin" replace />;
+};
 
 const router = createBrowserRouter([
   {
@@ -56,8 +66,8 @@ const router = createBrowserRouter([
         element: <Banner />,
       },
       {
-        path: "/Contact",
-        element: < Contact />,
+        path: "/contactpagina",
+        element: <Contact />,
       },
       {
         path: "NavBar",
@@ -84,60 +94,74 @@ const router = createBrowserRouter([
         element: <Card />,
       },
       {
-        path: "/startpagina",
+        path: "/marketingprijsplannen", //
         element: <Startpagina />,
       },
       {
-        path: "/appmarket",
-        element: <Appmarket/>,
+        path: "/appontwikkeling", //
+        element: <Appmarket />,
       },
       {
-        path: "/marketing",
+        path: "/marketingontwikkeling", //
         element: <Marketing />,
       },
       {
-        path: "/blog",
+        path: "/portfolio",
         element: <Blog />,
       },
       {
-        path: "/henna",
+        path: "/henna-artist",
         element: <Henna />,
       },
       {
-        path: "/shift",
+        path: "/shiftguide",
         element: <ShiftMode />,
       },
       {
         path: "/finguide",
-        element: <Finguide/>,
+        element: <Finguide />,
       },
       {
         path: "/fluentlee",
         element: <Fluentlee />,
       },
       {
-        path: "/ahooy",
+        path: "/marketingstrategie",
         element: <Ahoyy />,
       },
       {
-        path: "/sarbuh",
-        element: <Sarbuh/>,
+        path: "/Van-Offline-naar-Online",
+        element: <Sarbuh />,
       },
       {
-        path: "/overons",
-        element: <Overons/>,
+        path: "/overons", //
+        element: <Overons />,
       },
       {
-        path: "/Veelgestelde",
+        path: "/veelgesteldevragen",
         element: <Veelgestelde />,
       },
       {
-        path: "/Diensten",
+        path: "/brandingdiensten",
         element: <Diensten />,
       },
       {
-        path: "/prijzen",
+        path: "/websitebuilder",
         element: <Prijzen />,
+        children: [
+          {
+            path: "standard-template",
+            element: <CardsComponent />,
+          },
+          {
+            path: "maatwerk-website",
+            element: <SecondCardInputField />,
+          },
+          {
+            path: "payment-form/:id",
+            element: <InputField />,
+          },
+        ],
       },
       {
         path: "/CardComponent",
@@ -147,9 +171,8 @@ const router = createBrowserRouter([
         path: "/InputField",
         element: <InputField />,
       },
-
       {
-        path: "/payment",
+        path: `/payment/:id`,
         element: (
           <Elements stripe={stripePromise}>
             <Payment />
@@ -157,19 +180,40 @@ const router = createBrowserRouter([
         ),
       },
       {
-        path:"/PrijzenBranding",
-        element: <PrijzenBranding/>
+        path: "/SecondCardInputField",
+        element: <SecondCardInputField />,
+      },
+
+      {
+        path: "/brandingprijsplannen", //
+        element: <PrijzenBranding />,
       },
       {
-        path:"/PrijzenMarkeing",
-        element: <PrijzenMarketing/>
+        path: "/appontwikkelingprijsplannen", //
+        element: <PrijzenMarketing />,
+      },
+      {
+        path: "/stripePayment",
+        element: <StripePayment />,
+      },
+      {
+        path: "/admin",
+        element: <AdminLogin />,
+      },
+      {
+        path: "/dashboard",
+        element: (
+          <PrivateRoute>
+            <Dashboard />
+          </PrivateRoute>
+        ),
       },
     ],
   },
 ]);
 
-createRoot(document.getElementById('root')).render(
-  <div className='max-w-[1440px] w-full mx-auto px-4'>
+createRoot(document.getElementById("root")).render(
+  <div className="max-w-[1440px] w-full mx-auto px-4">
     <RouterProvider router={router} />
     <Toaster position="top-center" reverseOrder={false} />
   </div>

@@ -8,8 +8,13 @@ import i2 from "../assets/Vector12.png";
 import i3 from "../assets/Vector13.png";
 import i4 from "../assets/Vector14.png";
 import das from "../assets/das.png";
+import { useEffect } from "react";
 
 const Overons = () => {
+
+  useEffect(() => {
+        window.scrollTo(0, 0); 
+      }, []);
   return (
     <>
       <div className="bg-[#F5F5F5] w-full flex flex-col items-center py-16">

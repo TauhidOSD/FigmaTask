@@ -1,9 +1,13 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import icon from "../assets/Vector (2).png";
 import das from "../assets/das.png";
 import { RiArrowDropDownLine } from "react-icons/ri";
 
 const Veelgestelde = () => {
+
+  useEffect(() => {
+        window.scrollTo(0, 0); 
+      }, []);
   const [activeIndex, setActiveIndex] = useState(null);
 
   const toggleContent = (index) => {
@@ -47,8 +51,10 @@ const Veelgestelde = () => {
         <>
           <h2>Heeft u een specifieke vraag of wilt u een vrijblijvend gesprek? U kunt ons bereiken via:</h2>
           <ul>
-            <li>• E-mail: info@younitech.nl</li>
-            <li>• Telefoon: +31 (0)20 123 4567</li>
+            <li>• E-mail: <a href="mailto:info@younitech.nl" className="text-blue-600 underline hover:text-blue-800">
+              info@younitech.nl
+            </a></li>
+            <li>• Telefoon: 085-203 15 20</li>
           </ul>
         </>
       ),
@@ -82,38 +88,36 @@ const Veelgestelde = () => {
         </p>
         <div className="flex items-center gap-4 mb-4">
           <img src={icon} alt="Icon" className="w-6 h-6" />
-          <h2 className="text-lg font-semibold">Heeft u vragen?</h2>
+          <h2 className="text-[14px] text-[rgba(38,50,56,1)] font-plus-jakarta font-bold">HEEFT U VRAGEN?</h2>
         </div>
-        <h2 className="text-blue-600 font-semibold">info@younitech.nl</h2>
+        <h2><a href="mailto:info@younitech.nl" className="text-[rgba(38,50,56,1)] font-plus-jakarta font-bold text-[24px]   hover:underline hover:text-blue-800">
+          info@younitech.nl
+        </a></h2>
       </div>
 
       {/* Right Section */}
       <div className="w-full md:w-1/2">
-        {questions.map((item, index) => (
-          <div key={index} className="mb-4">
-            <button
-              onClick={() => toggleContent(index)}
-              className={`flex justify-between items-center w-full text-left px-6 py-2 rounded-md shadow-md  
-              ${
-                activeIndex === index
-                  ? "text-[#FFFFFF] bg-[#468AFF]"
-                  : "text-black "
-              }`}
-            >
-              {item.question}
-              <RiArrowDropDownLine
-                className={`w-6 h-6 text-black transition-transform duration-300 ${
-                  activeIndex === index ? "rotate-180" : ""
-                }`}
-              />
-            </button>
-            {activeIndex === index && (
-              <div className=" p-4 rounded  mt-2">
-                <p className="text-sm">{item.answer}</p>
-              </div>
-            )}
-          </div>
-        ))}
+      {questions.map((item, index) => (
+            <div key={index} className="mb-4">
+              <button
+                onClick={() => toggleContent(index)}
+                className={`flex justify-between items-center w-full text-left px-6 py-2 rounded-md shadow-md  
+              ${activeIndex === index ? "text-[#FFFFFF] bg-[#468AFF]" : "text-black"}`}
+              >
+                {item.question}
+                <RiArrowDropDownLine
+                  className={`w-6 h-6 transition-transform duration-300 ${
+                    activeIndex === index ? "rotate-180 text-[#FFFFFF]" : "text-black"
+                  }`}
+                />
+              </button>
+              {activeIndex === index && (
+                <div className="p-4 rounded mt-2">
+                  <p className="text-sm">{item.answer}</p>
+                </div>
+              )}
+            </div>
+          ))}
       </div>
     </div>
    </>
