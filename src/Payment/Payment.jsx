@@ -21,7 +21,7 @@ const Payment = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [paymentStatus, setPaymentStatus] = useState(null);
   const [isOneTime, setIsOneTime] = useState(false); // New state
-
+  console.log(isOneTime);
   const clearUrlParameters = () => {
     window.history.replaceState({}, document.title, window.location.pathname);
   };
@@ -81,8 +81,8 @@ const Payment = () => {
     e.preventDefault();
     setIsLoading(true);
     const form = document.getElementById("paymentform");
-
-    const formData = {
+    console.log(isOneTime);
+    const userData = {
       name: form.name.value,
       bedrijfsnaam: form.bedrijfsnaam.value,
       btwNummer: form.btwNummer.value,
@@ -98,9 +98,12 @@ const Payment = () => {
     const priceMatch = priceString.match(/(\d+(\.\d+)?)/);
     const currencyMatch = priceString.match(/([€$])/);
     const price = parseFloat(priceMatch[0]);
-    const currency = currencyMatch ? (currencyMatch[0] === "€" ? "eur" : "usd") : "eur";
+    const currency = currencyMatch
+      ? currencyMatch[0] === "€"
+        ? "eur"
+        : "usd"
+      : "eur";
 
-    console.log(isOneTime);
     fetch(`${import.meta.env.VITE_API_URL}/api/create-checkout-session`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
@@ -109,16 +112,10 @@ const Payment = () => {
           name: title,
           description: `Purchase of ${title}`,
           price: Math.round(price * 100),
-          oneTimePrice: isOneTime,
-          
         },
         currency,
-        userData: {
-          userId: 1,
-          name: formData.name,
-          postcode: formData.postcode,
-          city: formData.stad,
-        },
+        userData,
+        oneTimePrice: isOneTime,
         productId: id,
       }),
     })
@@ -155,12 +152,20 @@ const Payment = () => {
               viewBox="0 0 24 24"
               stroke="currentColor"
             >
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M5 13l4 4L19 7"
+              />
             </svg>
           </div>
-          <h2 className="text-2xl font-bold text-gray-800 mb-2">Payment Successful!</h2>
+          <h2 className="text-2xl font-bold text-gray-800 mb-2">
+            Payment Successful!
+          </h2>
           <p className="text-gray-600 mb-6">
-            Thank you for your purchase. We've sent a confirmation email with your order details.
+            Thank you for your purchase. We've sent a confirmation email with
+            your order details.
           </p>
           <button
             onClick={() => (window.location.href = "/")}
@@ -179,10 +184,17 @@ const Payment = () => {
       <div className="md:w-[744px]">
         <div className="md:flex grid grid-cols-3 md:gap-6 gap-4">
           {[pay, pay1, pay2, pay3, pay4, pay5, pay6].map((src, i) => (
-            <img key={i} src={src} alt={`Payment method ${i + 1}`} className="h-[48px] w-[86px]" />
+            <img
+              key={i}
+              src={src}
+              alt={`Payment method ${i + 1}`}
+              className="h-[48px] w-[86px]"
+            />
           ))}
         </div>
-        <h2 className="text-[#1D2026] font-semibold text-xl my-6">Verzendadres</h2>
+        <h2 className="text-[#1D2026] font-semibold text-xl my-6">
+          Verzendadres
+        </h2>
 
         <form id="paymentform">
           <div className="md:w-[668px] flex flex-col gap-4">
@@ -198,7 +210,9 @@ const Payment = () => {
               ["factuuradres", "Factuuradres", "Adres"],
             ].map(([name, label, placeholder]) => (
               <div key={name}>
-                <label className="block font-semibold text-[16px] mb-1 text-gray-800">{label}</label>
+                <label className="block font-semibold text-[16px] mb-1 text-gray-800">
+                  {label}
+                </label>
                 <input
                   type="text"
                   name={name}
@@ -214,32 +228,35 @@ const Payment = () => {
 
       {/* Right Section - Summary */}
       <div className="max-w-3xl mx-auto p-6 bg-white shadow-lg rounded-lg mt-6">
-        <img src={image} alt={title} className="w-full h-72 object-cover rounded-md" />
+        <img
+          src={image}
+          alt={title}
+          className="w-full h-72 object-cover rounded-md"
+        />
         <h2 className="text-2xl font-bold mt-4">{title}</h2>
 
         <div className="mt-6 p-4 rounded-md bg-white text-black">
           <h3 className="font-semibold text-lg mb-2">Bestellingsoverzicht</h3>
 
           <div className="flex justify-end">
-         <div>
-           
-           <div className="flex gap-2">
-            {!isOneTime && <p>
-              <p className="text-xl font-bold">{order_summary.monthly_price}</p>
+            <div>
               <div className="flex gap-2">
-              <p>Voor {order_summary.duration}</p>
-              <p>inc. btw</p>
+                {!isOneTime && (
+                  <p>
+                    <p className="text-xl font-bold">
+                      {order_summary.monthly_price}
+                    </p>
+                    <div className="flex gap-2">
+                      <p>Voor {order_summary.duration}</p>
+                      <p>inc. btw</p>
+                    </div>
+                  </p>
+                )}
               </div>
-              </p>
-              
-              } 
-            
             </div>
-          
-        </div>
-         </div>
+          </div>
 
-         <hr />
+          <hr />
 
           <div className="flex justify-between items-center mb-2">
             <label className="inline-flex items-center">
@@ -251,7 +268,12 @@ const Payment = () => {
               />
               In één keer betalen
             </label>
-            <p ><span className="font-bold">{order_summary.tax.monthly_amount}</span> <br /> <span>Na het eerste jaar</span> </p>
+            <p>
+              <span className="font-bold">
+                {order_summary.tax.monthly_amount}
+              </span>{" "}
+              <br /> <span>Na het eerste jaar</span>{" "}
+            </p>
           </div>
 
           <hr />
@@ -270,7 +292,10 @@ const Payment = () => {
         </div>
 
         <div className="flex gap-8 items-center mt-6">
-          <button onClick={() => navigate(-1)} className="bg-gray-200 px-4 py-2 rounded hover:bg-gray-300">
+          <button
+            onClick={() => navigate(-1)}
+            className="bg-gray-200 px-4 py-2 rounded hover:bg-gray-300"
+          >
             ← Terug
           </button>
           <button
@@ -280,8 +305,19 @@ const Payment = () => {
           >
             {isLoading ? (
               <div className="flex items-center">
-                <svg className="animate-spin h-5 w-5 mr-3 text-white" fill="none" viewBox="0 0 24 24">
-                  <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" />
+                <svg
+                  className="animate-spin h-5 w-5 mr-3 text-white"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                >
+                  <circle
+                    className="opacity-25"
+                    cx="12"
+                    cy="12"
+                    r="10"
+                    stroke="currentColor"
+                    strokeWidth="4"
+                  />
                   <path
                     className="opacity-75"
                     fill="currentColor"
