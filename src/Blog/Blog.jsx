@@ -9,7 +9,7 @@ const Blog = () => {
   
   return (
     <>
-      <div className="bg-[#F5F5F5] w-full flex flex-col items-center py-16">
+      <div className="bg-[#F5F5F5] w-full flex flex-col items-center py-16 mb-10">
         <h1 className="text-xl font-bold text-gray-800">Portfolio</h1>
         <h1 className="flex items-center gap-2 text-gray-600 text-sm md:text-base">
           Home
