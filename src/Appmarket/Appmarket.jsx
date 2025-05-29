@@ -1,23 +1,23 @@
 import { useEffect, useState } from "react";
 // import { GoChevronDown } from "react-icons/go";
-import span4 from "../shassets/span (4).png";
-import span5 from "../shassets/span (5).png";
-import link13 from "../shassets/Link (13).png";
+import "@fontsource/plus-jakarta-sans/500.css";
+import "@fontsource/plus-jakarta-sans/700.css";
+import { RiArrowDropDownLine } from "react-icons/ri";
+import { useNavigate } from "react-router-dom";
 import img2 from "../assets/avater-testi-2.png.png";
 import img3 from "../assets/avater-testi-3.png.png";
+import computer from "../assets/computer.jpg";
+import das from "../assets/das.png";
+import man from "../assets/man.jpg";
 import miss from "../assets/miss.png";
 import miss1 from "../assets/miss1.png";
 import miss2 from "../assets/miss2.png";
-import computer from "../assets/computer.jpg";
-import man from "../assets/man.jpg";
 import t1 from "../assets/t1.png";
 import t2 from "../assets/t2.png";
 import t3 from "../assets/t3.png";
-import das from "../assets/das.png";
-import "@fontsource/plus-jakarta-sans/700.css";
-import "@fontsource/plus-jakarta-sans/500.css";
-import { RiArrowDropDownLine } from "react-icons/ri";
-import { useNavigate } from "react-router-dom";
+import link13 from "../shassets/Link (13).png";
+import span4 from "../shassets/span (4).png";
+import span5 from "../shassets/span (5).png";
 const Appmarket = () => {
   const navigate = useNavigate();
   useEffect(() => {
@@ -273,7 +273,7 @@ const Appmarket = () => {
           </h1>
         </div>
 
-        <div className=" md:pl-16 grid grid-cols-1 lg:grid-cols-4 gap-5 m-10 lg:m-24">
+        <div className=" lg:pl-16 grid grid-cols-1 lg:grid-cols-4 gap-5 m-10 lg:m-24">
           {[
             {
               imgSrc: t1,
@@ -319,7 +319,7 @@ const Appmarket = () => {
 
         {/** fifth part start from here */}
 
-        <div className=" flex flex-col md:ml-12 lg:flex-row gap-8 px-6 lg:px-30 py-8 mx-auto">
+        <div className=" flex flex-col lg:ml-12 lg:flex-row gap-8 px-6 lg:px-30 py-8 mx-auto">
           <div className="lg:ml-20  my-6  lg:mr-16">
             <div className="mr-10">
               <p className="rounded-3xl bg-[#B479D926] text-[#B479D9] font-bold p-1 lg:p-2 lg:text-[18px] text-center  mb-3 font-plus-jakarta   w-3/6  lg:w-3/5">
@@ -385,7 +385,7 @@ const Appmarket = () => {
 
         {/** sixth part start here flex justify-between m-24 items-center */}
 
-        <div className="flex flex-col md:ml-16 lg:flex-row gap-8 px-6 lg:px-20 py-10 mx-auto">
+        <div className="flex flex-col lg:ml-16 lg:flex-row gap-8 px-6 lg:px-20 py-10 mx-auto">
           {/* Left Section */}
           <div className="mt-6 ml-3">
             <p className="rounded-3xl  p-1 lg:p-2 text-center font-bold text-[18px] bg-[#B479D926] text-[#B479D9] mb-3 font-plus-jakarta  w-2/5 lg:w-3/5">

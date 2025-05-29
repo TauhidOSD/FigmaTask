@@ -172,7 +172,7 @@ const Overons = () => {
                 Onze Missie
               </button>
             </h1>
-            <h2 className="text-sm w-full px-20 text-center font-sans  text-[#263238] mt-4">
+            <h2 className="text-sm w-full lg:px-20 text-center font-sans  text-[#263238] mt-4">
               Bij Younitech bouwen we voort op jarenlange ervaring in
               dienstverlening die echt verder helpt. Onze visie? Bedrijven zo{" "}
               ondersteunen dat samenwerken met ons niet alleen vanzelfsprekend

@@ -6,7 +6,7 @@ const Blog = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
-
+  
   return (
     <>
       <div className="bg-[#F5F5F5] w-full flex flex-col items-center py-16 mb-10">
