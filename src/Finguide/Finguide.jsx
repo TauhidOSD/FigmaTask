@@ -5,6 +5,7 @@ import finguide2 from "/src/assets/Finguide2.png"
 import finguide3 from "/src/assets/Finguide3.png"
 
 
+
 const Finguide = () => {
 
    useEffect(() => {

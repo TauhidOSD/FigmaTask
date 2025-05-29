@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 
+
 import ahoyy1 from "../assets/Onze1.png"
 import ahoyy2 from "../assets/Onze2.png"
 import ahoyy3 from "../assets/Onze3.png"
