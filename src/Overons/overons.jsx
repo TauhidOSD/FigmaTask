@@ -1,4 +1,4 @@
-import img from "../assets/rafiki.png";
+import { useEffect } from "react";
 import icon1 from "../assets/Icon (2).png";
 import icon2 from "../assets/Icon (3).png";
 import icon3 from "../assets/Icon (4).png";
@@ -8,19 +8,16 @@ import i2 from "../assets/Vector12.png";
 import i3 from "../assets/Vector13.png";
 import i4 from "../assets/Vector14.png";
 import das from "../assets/das.png";
-import { useEffect } from "react";
+import img from "../assets/rafiki.png";
 
 const Overons = () => {
-
   useEffect(() => {
-        window.scrollTo(0, 0); 
-      }, []);
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <>
       <div className="bg-[#F5F5F5] w-full flex flex-col items-center py-16">
-        <h1 className="text-xl font-bold text-gray-800">
-        Over Ons
-        </h1>
+        <h1 className="text-xl font-bold text-gray-800">Over Ons</h1>
         <h1 className="flex items-center gap-2 text-gray-600 text-sm md:text-base">
           Home
           <img className="w-5 h-[2px]" src={das} alt="separator" />
@@ -29,16 +26,16 @@ const Overons = () => {
       </div>
       <div className="w-full  py-12 bg-gray-50">
         {/* First Section */}
-        <div className="flex flex-col md:flex-row md:px-36 items-start gap-8">
+        <div className="flex flex-col lg:flex-row lg:px-36 items-start gap-8">
           {/* Left Section */}
-          <div className="md:w-1/2">
+          <div className="lg:w-1/2">
             <h1 className="text-3xl font-bold text-gray-800 mb-4">
               Wat wij doen
             </h1>
           </div>
 
           {/* Right Section */}
-          <div className="md:w-1/2 space-y-6">
+          <div className="lg:w-1/2 space-y-6">
             <h2 className="text-lg text-gray-600 leading-relaxed">
               Bij Younitech brengen we bedrijven verder met innovatieve, op maat
               gemaakte digitale oplossingen. Of het nu gaat om het ontwerpen van
@@ -70,7 +67,7 @@ const Overons = () => {
         {/* Second Section  */}
 
         <div className="bg-[#F8F8F8] md:px-32  my-16  grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 text-center">
-          <div className="p-6 text-start ">
+          <div className="p-6 flex flex-col justify-center items-center">
             <div className="">
               {" "}
               <img
@@ -87,7 +84,7 @@ const Overons = () => {
             </p>
           </div>
 
-          <div className="p-6 text-start">
+          <div className="p-6 flex flex-col justify-center items-center">
             <div className="">
               <img src={i2} alt="" />
             </div>
@@ -99,7 +96,7 @@ const Overons = () => {
             </p>
           </div>
 
-          <div className="p-6  text-start">
+          <div className="p-6 flex flex-col justify-center items-center">
             <div className="">
               <img src={i3} alt="" />
             </div>
@@ -110,7 +107,7 @@ const Overons = () => {
               concurrerende markt.
             </p>
           </div>
-          <div className="p-6 text-start ">
+          <div className="p-6 flex flex-col justify-center items-center ">
             <div className="">
               {" "}
               <img src={i4} alt="" />
@@ -125,9 +122,9 @@ const Overons = () => {
 
         {/* Third Section  */}
 
-        <div className="flex flex-col md:px-36 lg:flex-row items-center my-16 lg:gap-12">
+        <div className="flex flex-col lg:px-36 lg:flex-row items-center my-16 lg:gap-12">
           {/* Left Section */}
-          <div className="w-full lg:w-1/2 text-center lg:text-left space-y-6">
+          <div className="w-full lg:w-1/2 text-start lg:text-left space-y-6">
             <h1 className="text-3xl font-bold text-blue-600">Onze Missie</h1>
             <h2 className="text-2xl font-semibold text-gray-800">
               “Uw succes is onze missie.”
@@ -169,23 +166,22 @@ const Overons = () => {
 
         <div className="my-16  px-6 lg:px-16">
           {/* Header Section */}
-          <div className="text-center mb-12">
+          <div className="flex flex-col items-center justify-center mb-12">
             <h1>
-              <button className="text-2xl font-bold border px-4 py-1 bg-[#EFECFF] rounded-full text-blue-600 hover:text-blue-800 transition">
+              <button className="text-xl lg:text-2xl font-bold border px-4 py-4 bg-[#EFECFF] rounded-full text-blue-600 hover:text-blue-800 transition">
                 Onze Missie
               </button>
             </h1>
-            <h2 className="text-sm font-sans text-[#263238] mt-4">
+            <h2 className="text-sm w-full lg:px-20 text-center font-sans  text-[#263238] mt-4">
               Bij Younitech bouwen we voort op jarenlange ervaring in
               dienstverlening die echt verder helpt. Onze visie? Bedrijven zo{" "}
-              <br />
               ondersteunen dat samenwerken met ons niet alleen vanzelfsprekend
               is, maar een blijvende verbinding creëert.
             </h2>
           </div>
 
           {/* Grid Section */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:px-20">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:px-20">
             {/* Card 1 */}
             <div className="flex items-center bg-gray-50 p-6 rounded-lg shadow-md">
               <div className="flex-shrink-0">

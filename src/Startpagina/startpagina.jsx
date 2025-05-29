@@ -87,9 +87,9 @@ const Startpagina = () => {
           Prijzen
         </h1>
       </div>
-      <div className="py-8 flex flex-col md:flex-row gap-8 p-6 md:px-36">
+      <div className="py-8 flex flex-col lg:flex-row gap-8 p-6 md:px- 36">
         {/* Left Section */}
-        <div className="md:w-1/2 flex flex-col items-start gap-4">
+        <div className="lg:w-1/2 flex flex-col items-start gap-4">
           <img src={img} alt="Illustration" className="w-full rounded-lg" />
           <h2 className="text-3xl font-bold text-gray-800">
             Kies een plan en begin meteen
@@ -127,7 +127,7 @@ const Startpagina = () => {
         </div>
 
         {/* Right Section (Cards) */}
-        <div className="md:w-1/2 grid gap-6">
+        <div className="lg:w-1/2 grid gap-6">
           {cards.map((card) => (
             <div
               key={card.id}
@@ -159,7 +159,6 @@ const Startpagina = () => {
               </ul>
             </div>
           ))}
-
 
           <button
             onClick={handleSendEmail}

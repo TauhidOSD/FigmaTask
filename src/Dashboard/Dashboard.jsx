@@ -102,7 +102,7 @@ const Dashboard = () => {
                       {/* All other fields except _id */}
                       {Object.entries(item)
                         .filter(([key]) => key !== "_id")
-                        .map(([key, val], i) => (
+                        .map(([val], i) => (
                           <td key={i} className="p-2 text-sm border-b">
                             {Array.isArray(val)
                               ? val.join(", ")
