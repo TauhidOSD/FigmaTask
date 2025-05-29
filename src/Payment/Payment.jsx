@@ -179,7 +179,7 @@ const Payment = () => {
   }
 
   return (
-    <div className="py-10 px-6 sm:px-10 md:px-16 lg:px-36 flex flex-col sm:flex-row gap-4">
+    <div className="py-10 px-6 sm:px-10 md:px-16 lg:px-36 flex flex-col lg:flex-row gap-4">
       {/* Left Section - Form */}
       <div className="md:w-[744px]">
         <div className="md:flex grid grid-cols-3 md:gap-6 gap-4">

@@ -646,7 +646,7 @@ const PrijzenMarketing = () => {
                   Heeft u een huidige app of een prototype?
                 </label>
 
-                <div className="grid grid-cols-2 gap-4">
+                <div className="grid grid-cols-2 gap-1">
                   {/* Left Side Input */}
                   <div>
                     <div className="relative">
@@ -661,7 +661,7 @@ const PrijzenMarketing = () => {
 
                   {/* Right Side Input (Moved Up) */}
                   <div className="">
-                    <div className="border border-gray-300 rounded-lg p-2 flex items-center justify-around cursor-pointer bg-black hover:bg-gray-800 transition">
+                    <div className="border border-gray-300 rounded-lg py-2 flex items-center justify-around md:gap-1 cursor-pointer bg-black hover:bg-gray-800 transition">
                       <label
                         htmlFor="imageUpload"
                         className="text-white cursor-pointer"
@@ -916,7 +916,7 @@ const PrijzenMarketing = () => {
               </div>
             </div>
           </div>
-          <div className="flex justify-center items-center md:my-8 my-4 ">
+          <div className="flex justify-center items-center md:my-8 my-4">
             <button
               disabled={!isFormValid}
               className="btn hover:bg-[#468AFFE6] bg-[#468AFF] rounded-lg  md:px-32 px-36 py-2  text-[#FFFFFF] text-lg md:text-md lg:text-xl"
