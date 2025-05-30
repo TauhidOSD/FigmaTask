@@ -162,7 +162,7 @@ const PrijzenMarketing = () => {
 
       //Send to backend
 
-      fetch("http://localhost:5550/users", {
+      fetch(`${import.meta.env.VITE_API_URL}/users`, {
         method: "POST",
         headers: {
           "content-type": "application/json",
