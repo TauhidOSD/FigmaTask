@@ -329,7 +329,7 @@ const InputField = () => {
 
       console.log(formValue);
 
-      fetch("http://localhost:5550/custom", {
+      fetch(`${import.meta.env.VITE_API_URL}/custom`, {
         method: "POST",
         headers: {
           "content-type": "application/json",
