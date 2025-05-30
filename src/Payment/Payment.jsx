@@ -21,7 +21,7 @@ const Payment = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [paymentStatus, setPaymentStatus] = useState(null);
   const [isOneTime, setIsOneTime] = useState(false); // New state
-  console.log(isOneTime);
+
   const clearUrlParameters = () => {
     window.history.replaceState({}, document.title, window.location.pathname);
   };

@@ -382,9 +382,9 @@ const SecondCardInputField = () => {
         dataWensen,
       };
 
-      console.log(formValue);
+      // console.log(formValue);
 
-      fetch("http://localhost:5550/maatwerk", {
+      fetch(`${import.meta.env.VITE_API_URL}/maatwerk`, {
         method: "POST",
         headers: {
           "content-type": "application/json",
