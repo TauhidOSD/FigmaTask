@@ -911,7 +911,7 @@ const PrijzenBranding = () => {
           <div className="flex justify-center items-center md:my-8 my-4 ">
             <button
               disabled={!isFormValid}
-              className="btn hover:bg-[#468AFFE6] bg-[#468AFF] rounded-lg  md:px-32 px-36 py-2 text-[#FFFFFF] text-lg md:text-md lg:text-xl"
+              className="btn hover:bg-[#468AFFE6] bg-[#468AFF] rounded-lg  md:px-32 px-10 py-2 text-[#FFFFFF] text-lg md:text-md lg:text-xl"
             >
               Boek offerte!
             </button>
