@@ -3,11 +3,11 @@ import { useNavigate } from "react-router-dom";
 
 // Define your tables and their respective API URLs
 const tableConfig = {
-  Applicatie_Ontwikkeling: "http://localhost:5550/users",
-  Branding: "http://localhost:5550/forms",
-  Standard_Template: "http://localhost:5550/custom",
-  Maatwerk_Website: "http://localhost:5550/maatwerk",
-  Payment: "http://localhost:5550/payment",
+  Applicatie_Ontwikkeling: `${import.meta.env.VITE_API_URL}/users`,
+  Branding: `${import.meta.env.VITE_API_URL}/forms`,
+  Standard_Template: `${import.meta.env.VITE_API_URL}/custom`,
+  Maatwerk_Website: `${import.meta.env.VITE_API_URL}/maatwerk`,
+  Payment: `${import.meta.env.VITE_API_URL}/payment`,
 };
 
 const Dashboard = () => {
