@@ -30,16 +30,6 @@ const Navbar = () => {
 
   return (
     <header className="bg-[#FFFFFF] lg:px-32 shadow-sm sticky top-0 z-50">
-      <meta name="google-site-verification" content="v_0Eb4BqCj_hgcgn20NAc-TfEQ73RVJuDPUkAzVvYX4" />
-       {/* <script async src="https://www.googletagmanager.com/gtag/js?id=G-C4WFCTTZDK"></script>
-        <script>
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments)}
-          gtag('js', new Date());
-
-          gtag('config', 'G-C4WFCTTZDK');
-          </script> */}
-
       <nav className="container mx-auto flex justify-between lg:items-center px-4 py-3 lg:py-5">
         <a href="/" className="flex items-center space-x-2">
           <img src={NavLogo} alt="Logo" className="h-8 lg:h-10 w-auto" />
