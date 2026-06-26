@@ -36,3 +36,6 @@ Make sure you have **Node.js** (v18 or higher) and **npm** installed on your sys
 ```bash
 git clone <repository-url>
 cd <project-folder-name>
+
+2. npm install
+3. npm run dev
